@@ -1,0 +1,632 @@
+"""                       
+   _________  ___  _____
+  / ___/ __ \/ _ \/ ___/
+ (__  ) /_/ /  __/ /__  
+/____/ .___/\___/\___/  
+    /_/ 
+    
++-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
++-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+  _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _  
+ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+( d | b | u | s | c | o | m | b | e | @ | u | s | g | s | . | g | o | v )
+ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ 
+
++-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|
++-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+"""
+
+# import libraries
+from __future__ import division
+import numpy as np
+cimport numpy as np
+cimport cython
+
+from scipy.integrate import trapz
+from scipy.stats import linregress
+import statsmodels.api as smapi
+
+import warnings
+warnings.filterwarnings("ignore")
+
+# =========================================================
+cdef class spec:
+   """
+   Returns an instance. All spectral parameters requested through .getdata()
+   """
+   cdef object data, x_space, k_space
+
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   # =========================================================
+   def __init__(self, np.ndarray[np.float64_t, ndim=2] im, int nbin, double res, int proctype=1, int lentype=1, int taper=1): 
+      '''
+      get spectral parameters from point cloud
+      '''
+
+      cdef int nx, ny, i
+      im = im - np.nanmean(im)
+
+      ny, nx= np.shape(im)
+
+      cdef double ma
+      cdef np.ndarray[np.complex128_t, ndim=2] ft1 = np.empty((nx,ny),dtype=np.complex128)
+      cdef np.ndarray[np.float64_t, ndim=2] mag1 = np.empty((nx,ny),dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] auto = np.empty((nx,ny),dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] autoarray = np.empty((nx,ny),dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((nx,ny),dtype=np.float64)
+
+      cdef double slope, intercept, r_value, p_value, std_err, out, rms1, rms2, w, Z, E, sigma, T0_1, T0_2, sw1, sw2
+      cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)
+
+      cdef np.ndarray[np.float64_t, ndim=1] s 
+      cdef np.ndarray[np.float64_t, ndim=1] s_b 
+      cdef np.ndarray[np.float64_t, ndim=1] k_back 
+
+      # is all nans just return nans
+      if np.sum(np.isnan(im)) == np.prod(np.shape(im)):
+
+         slope = np.nan
+         intercept = np.nan
+         r_value = np.nan
+         p_value = np.nan
+         std_err = np.nan
+         out = np.nan
+         rms1 = np.nan
+         rms2 = np.nan
+         Z = np.nan
+         E = np.nan										
+         sigma = np.nan
+         T0_1 = np.nan
+         T0_2 = np.nan
+         sw1 = np.nan
+         sw2 = np.nan
+         w = np.nan
+         moment = moment * np.nan
+
+         self.data = [slope, intercept, r_value, p_value, std_err, out, rms1, rms2, w, Z, E, sigma, T0_1, T0_2, sw1, sw2] + moment.tolist()
+         return
+
+      else:
+
+         im[np.isnan(im)] = np.nanmean(im.flatten())
+         im[np.isinf(im)] = np.nanmean(im.flatten())
+
+         if taper==1:
+            im, Wss = self._Hanning2D(im)
+         elif taper==2:
+            im, Wss = self._Hamming2D(im)
+         elif taper==3:
+            im, Wss = self._Blackman(im)
+         else:
+            im, Wss = self._Bartlett(im)
+
+         # =========================================================
+         # autocorrelation
+         # 2D fourier transform of demeaned image
+         ft1 = np.fft.fft2(im)
+         mag1 = pow(abs(ft1),2) # power spectrum
+         # autocovariance as inverse fourier transform as zero-centred power spectrum
+         auto = np.fft.fftshift(np.real(np.fft.ifft2(mag1)))
+         autoarray = np.asarray(auto) # make 1d to find max
+         ma = autoarray.max() # find max
+         # get integral lengthscale
+         if ma>0:
+            auto = np.dot(auto,pow(ma,-1))
+            h = self._radial_data(np.squeeze(auto))
+            try:
+               if lentype==1:
+                  out = res*((2*np.pi)*(np.where(h<0.5)[0][0]+1))
+               else:
+                  out = res*(np.where(h<0)[0][0]+1)
+            except:
+               out = np.nan
+         else:
+            out = np.nan
+
+         if proctype==1: #no spectral smoothing
+
+            from nifty import rg_space, field
+            try:
+
+               # set up field and get the power spectrum
+               if nx%2==0:
+                  x_space = rg_space((nx,ny), naxes=2)
+               else:
+                  x_space = rg_space((nx-1,ny-1), naxes=2)
+               k_space = x_space.get_codomain()
+
+               if nx%2==0:
+                  s = field(x_space, target=k_space, val=im).power(smooth=0) # actual power spectrum
+               else:
+                  s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=0) # actual power spectrum
+
+               k = k_space.power_indices["kindex"]*res #(res**2)
+               # generate synthetic field and get binned power spectrum
+               s_b = field(x_space, target=k_space, random="syn", spec=s).power(nbin=nbin) #field.power(a) 
+               k_back = k_space.power_indices["kindex"]*res #(res**2)
+
+               slope, intercept, r_value, p_value, std_err = self._do_linreg(np.c_[np.log10(k_back),np.log10(s_b)])
+               std_err = std_err*res
+
+               # interpolate background spectrum onto wavenumber array
+               s_b = np.interp(k,k_back,s_b)
+
+               # get peak wavelength
+               w = res*((2*np.pi)/k[np.argmax(np.abs(s-s_b))]) #res*((2*np.pi)/k[np.argmax(s/s_b)])
+
+               # get rms amplitudes
+               rms1 = np.sqrt(np.abs(trapz(s, k)))/res
+               rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
+
+               # get moments of spectrum
+               for i from 0 <= i < 5:
+               #for i in xrange(0,5):
+                  moment[i] = np.abs(trapz((k)**i,s_b,np.median(np.gradient(k))))
+
+               Z = res*(2*np.sqrt(moment[2]/moment[0])) # zero crossings per second
+               E = 2*np.sqrt(moment[4]/moment[2]) # extrema per second										
+               sigma = (moment[2]/moment[0])*res #stdev
+
+               T0_1 = (moment[0]/moment[1]) #/res    # average period m0/m1
+               T0_2 = T0_1**0.5  #average period (m0/m2)^0.5
+               sw1 = np.abs(moment[0]*moment[2]/moment[1]**2-1)**0.5 # spectral width parameter
+               sw2 = np.abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5 # spectral width paramenter
+
+            except:
+                     
+               slope = np.nan
+               intercept = np.nan
+               r_value = np.nan
+               p_value = np.nan
+               std_err = np.nan
+               out = np.nan
+               rms1 = np.nan
+               rms2 = np.nan
+               w = np.nan
+               Z = np.nan
+               E = np.nan										
+               sigma = np.nan
+               T0_1 = np.nan
+               T0_2 = np.nan
+               sw1 = np.nan
+               sw2 = np.nan
+
+            self.data = [slope, intercept, r_value, p_value, std_err, out, rms1, rms2, w, Z, E, sigma, T0_1, T0_2, sw1, sw2] + moment.tolist()
+            return
+
+         elif proctype==2: # with spectral smoothing
+
+            from nifty import rg_space, field
+            try:
+
+               # set up field and get the smoothed power spectrum
+               if nx%2==0:
+                  x_space = rg_space((nx,ny), naxes=2)
+               else:
+                  x_space = rg_space((nx-1,ny-1), naxes=2)
+               k_space = x_space.get_codomain()
+
+               if nx%2==0:
+                  s = field(x_space, target=k_space, val=im).power(smooth=1) # actual power spectrum
+               else:
+                  s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=1) # actual power spectrum
+
+               k = k_space.power_indices["kindex"]*res #(res**2)
+               # generate synthetic field and get binned power spectrum
+               s_b = field(x_space, target=k_space, random="syn", spec=s).power(nbin=nbin) #field.power(a) 
+               k_back = k_space.power_indices["kindex"]*res #(res**2)
+
+               slope, intercept, r_value, p_value, std_err = self._do_linreg(np.c_[np.log10(k_back),np.log10(s_b)])
+               std_err = std_err*res
+
+               # interpolate background spectrum onto wavenumber array
+               s_b = np.interp(k,k_back,s_b)
+
+               # get peak wavelength
+               w = res*((2*np.pi)/k[np.argmax(np.abs(s-s_b))]) #res*((2*np.pi)/k[np.argmax(s/s_b)])
+
+               # get rms amplitudes
+               rms1 = np.sqrt(np.abs(trapz(s, k)))/res
+               rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
+
+               # get moments of spectrum
+               for i from 0 <= i < 5:
+               #for i in xrange(0,5):
+                  moment[i] = np.abs(trapz((k)**i,s_b,np.median(np.gradient(k))))# np.gradient(k)))
+
+               Z = res*(2*np.sqrt(moment[2]/moment[0])) # zero crossings per second
+               E = 2*np.sqrt(moment[4]/moment[2]) # extrema per second										
+               sigma = (moment[2]/moment[0])*res #stdev
+
+               T0_1 = (moment[0]/moment[1]) #/res    # average period m0/m1
+               T0_2 = T0_1**0.5  #average period (m0/m2)^0.5
+               sw1 = np.abs(moment[0]*moment[2]/moment[1]**2-1)**0.5 # spectral width parameter
+               sw2 = np.abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5 # spectral width paramenter
+
+            except:
+                     
+               slope = np.nan
+               intercept = np.nan
+               r_value = np.nan
+               p_value = np.nan
+               std_err = np.nan
+               out = np.nan
+               rms1 = np.nan
+               rms2 = np.nan
+               w = np.nan
+               Z = np.nan
+               E = np.nan										
+               sigma = np.nan
+               T0_1 = np.nan
+               T0_2 = np.nan
+               sw1 = np.nan
+               sw2 = np.nan
+
+            self.data = [slope, intercept, r_value, p_value, std_err, out, rms1, rms2, w, Z, E, sigma, T0_1, T0_2, sw1, sw2] + moment.tolist()
+            return
+
+         else: #proctype==3
+
+            self.data = [out]
+            return
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef np.ndarray _radial_data(self, np.ndarray[np.float64_t, ndim=2] data, int annulus_width=1):
+       '''
+       efficient radial average of matrix
+       '''
+
+       cdef int npix, npiy, nrad, irad
+       cdef double rmax
+
+       npix, npiy = np.shape(data)
+
+       cdef np.ndarray[np.float64_t, ndim=2] r = np.empty((npix, npiy),dtype=np.float64)
+       cdef np.ndarray[np.float64_t, ndim=2] x = np.empty((npix, npiy),dtype=np.float64)
+       cdef np.ndarray[np.float64_t, ndim=2] y = np.empty((npix, npiy),dtype=np.float64)  
+       cdef np.ndarray[np.float64_t, ndim=1] x1 = np.empty(npix,dtype=np.float64)
+       cdef np.ndarray[np.float64_t, ndim=1] y1 = np.empty(npiy,dtype=np.float64)
+
+       cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)
+       cdef np.ndarray[np.float64_t, ndim=1] maxrad = np.empty(1,dtype=np.float64)
+       cdef np.ndarray[np.float64_t, ndim=1] dr = np.empty(1,dtype=np.float64)
+
+       x1 = np.arange(-np.float64(npix/2),np.float64(npix/2))
+       y1 = np.arange(-np.float64(npiy/2),np.float64(npiy/2))
+       x,y = np.meshgrid(y1,x1)
+       r = np.abs(x+1j*y)
+
+       rmax = np.max(r)
+       dr = np.abs([x[0,0] - x[0,1]]) * annulus_width
+    
+       cdef int sizeout = np.ceil(rmax/dr)
+
+       cdef np.ndarray[np.float64_t, ndim=1] radial = np.empty(sizeout,dtype=np.float64)
+       cdef np.ndarray[np.float64_t, ndim=1] radialdatamean = np.empty(sizeout,dtype=np.float64)
+
+       radial = np.arange(rmax/dr)*dr + np.float64(dr/2)
+       nrad = len(radial)
+
+       # Loop through the bins
+       for irad from 0 <= irad < nrad:
+         minrad = irad*dr
+         maxrad = minrad + dr
+         radialdatamean[irad] = data[(r>=minrad) * (r<maxrad)].mean()
+
+       return radialdatamean
+
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef tuple _Hanning2D(self, np.ndarray[np.float64_t, ndim=2] im):
+      '''
+      return a 2D Hanning (a weighted cosine) taper
+      '''
+      cdef int nx, ny
+      ny, nx= np.shape(im)
+
+      cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
+
+      Wss = np.sqrt(np.outer(np.hanning(ny),np.hanning(nx)))
+      return (im*Wss, Wss)
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef tuple _Hamming2D(self, np.ndarray[np.float64_t, ndim=2] im):
+      '''
+      return a 2D Hamming (a weighted cosine) taper
+      '''
+      cdef int nx, ny
+      ny, nx= np.shape(im)
+
+      cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
+
+      Wss = np.sqrt(np.outer(np.hamming(ny),np.hamming(nx)))
+      return (im*Wss, Wss)
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef tuple _Blackman2D(self, np.ndarray[np.float64_t, ndim=2] im):
+      '''
+      return a 2D Blackman (a summation of cosines) taper
+      '''
+      cdef int nx, ny
+      ny, nx= np.shape(im)
+
+      cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
+
+      Wss = np.sqrt(np.outer(np.blackman(ny),np.blackman(nx)))
+      return (im*Wss, Wss)
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef tuple _Bartlett2D(self, np.ndarray[np.float64_t, ndim=2] im):
+      '''
+      return a 2D Bartlett (a triangular) taper
+      '''
+      cdef int nx, ny
+      ny, nx= np.shape(im)
+
+      cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
+
+      Wss = np.sqrt(np.outer(np.bartlett(ny),np.bartlett(nx)))
+      return (im*Wss, Wss)
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef list getdata(self):
+      return self.data
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef tuple _do_linreg(self, np.ndarray[np.float64_t, ndim=2] B):
+      '''
+      do a robust linear regression
+      '''
+      cdef float slope, intercept, r_value, p_value, std_err
+      cdef object regression
+
+      # remove any rows with nans and infs
+      B = B[np.where(np.logical_not(np.any(np.isinf(B),axis=1)))[0],:]
+      B = B[np.where(np.logical_not(np.any(np.isnan(B),axis=1)))[0],:]
+
+      # get OLS regression
+      slope, intercept, r_value, p_value, std_err = linregress(B[:,0], B[:,1])
+      # try to RLM regression for slope and intercept
+      try:
+         regression = smapi.RLM(B[:,1], smapi.add_constant(B[:,0], prepend=True) ).fit()
+         intercept = regression.params[0]
+         slope = regression.params[1]
+      except:
+         pass
+      return (slope, intercept, r_value, p_value, std_err)
+
+
+
+      #x = B[:,0]; y= B[:,1]
+         #X = smapi.add_constant(B[:,0], prepend=True)
+         #regression = smapi.OLS(X, y).fit()
+
+
+               #a = field(x_space, target=k_space, random="syn", spec=s)
+               # get power spectrum from synthetic field
+               #k = k_space.power_indices["kindex"]*res #(res**2)
+               #k_back = k_space.get_power_indices()[0]*(res**2)
+
+               #k_back = k_back[1:]
+               #s = s[1:]
+               #spec_back = spec_back[1:]
+
+      #cdef tuple index
+      #cdef np.ndarray[np.float64_t, ndim=1] spec_back 
+      #cdef np.float eps
+      #cdef int xc, yc, nxh
+      #cdef double dfx, dfy, df
+
+      #nxh = int(nx/2)+1
+      #cdef np.ndarray[np.float64_t, ndim=2] B = np.empty((nbin,2),dtype=np.float64)
+      #cdef np.ndarray[np.complex128_t, ndim=2] M = np.empty((nx,ny),dtype=np.complex128)
+      #cdef np.ndarray[np.int64_t, ndim=2] rows = np.empty((nx,ny),dtype=np.int64)
+      #cdef np.ndarray[np.int64_t, ndim=2] cols = np.empty((nx,ny),dtype=np.int64)
+      #cdef np.ndarray[np.float64_t, ndim=2] fm = np.empty((nx,ny),dtype=np.float64)
+      #cdef np.ndarray[np.complex128_t, ndim=2] Pm = np.empty((nx,ny),dtype=np.complex128)
+      #cdef np.ndarray[np.complex128_t, ndim=2] Pmc = np.empty((nx,nxh),dtype=np.complex128)
+      #cdef np.ndarray[np.float64_t, ndim=2] fv = np.empty((nx,nxh),dtype=np.float64)
+
+      #cdef np.ndarray[np.complex128_t, ndim=2] a 
+      #cdef np.ndarray[np.float64_t, ndim=1] Pv 
+      #cdef np.ndarray[np.float64_t, ndim=1] fv2 
+
+
+#   # =========================================================
+#   @cython.boundscheck(False)
+#   @cython.cdivision(True)
+#   #@cython.wraparound(False)
+#   @cython.nonecheck(False)
+#   cpdef np.ndarray _bin(self, np.ndarray[np.float64_t, ndim=1] x, np.ndarray[np.float64_t, ndim=1] y, int nbin, int overlap):
+#      '''
+#      bin average with overlap
+#      '''
+#      cdef int i
+#      cdef float xmin = x[0]
+#      cdef float xmax = x[-1]
+#      cdef float x_range = xmax - xmin
+#      cdef float w, mini, maxi, xlo, xhi
+#      cdef np.ndarray[np.float64_t, ndim=2] s = np.zeros((nbin, 8),dtype=np.float64)
+
+#      if overlap==1:
+#         w = 2*x_range/(nbin+1)
+#      else:
+#         w = x_range/nbin
+
+#      #s = np.zeros((nbin, 8))
+#      for i from 0 <= i < nbin:
+#      #for i in xrange(nbin):
+#         if overlap==1:
+#            xlo = xmin+i*(w/2)
+#         else:
+#            xlo = xmin+i*w
+#         xhi = xlo+w
+#         window = np.where((x >= xlo) & (x <= xhi) )[0]
+#         if len(window)<2:
+#            s[i,:] = np.mean((xlo,xhi)),0,0,0,0,0,0,0
+#         else:
+#            mini = np.min(window)
+#            maxi = np.max(window)
+#            s[i,:] = np.mean((xlo,xhi)), np.mean(y[mini:maxi]), np.std(y[mini:maxi]), np.std(y[mini:maxi])/np.sqrt(maxi-mini+1), maxi-mini+1, np.max(y[mini:maxi]), np.min(y[mini:maxi]), np.median(y[mini:maxi])
+#      return s
+
+
+#            eps = 2.22e-16
+#            dfx =1/np.asarray(nx).astype(float)
+#            dfy = 1/np.asarray(ny).astype(float)
+
+#            # 2D fourier transform of demeaned image  
+#            M= np.fft.fftshift(np.fft.fft2(im - im.mean())) # sp.detrend(im)))# im-imMean))
+#            # zero out the DC component
+#            M[int(ny/2) + 1, int(nx/2) + 1] = 0
+
+#            xc = nx/2+1; yc = ny/2+1
+#            cols, rows = np.meshgrid(np.r_[:nx],np.r_[:ny])
+#            # frequency matrix
+#            fm = np.sqrt((dfy*(rows-yc))**2 + (dfx*(cols-xc))**2)
+#            # Calculate the DFT periodogram, which has units of amplitude^2
+#            # Dividing by Wss*twopower^2 corrects for the reduction of
+#            # amplitude by the windowing function
+#            Pm = M * np.conj(M) / (nx * ny * Wss)
+
+#            # get 1D spectrum
+#            # Create sorted, non-redundant vectors of frequency and power
+#            Pmc = Pm[:,:nxh]
+#            fv = fm[:,:nxh]
+#            fv[ np.asarray(np.r_[(yc+1):ny],'int') , : ] = -1 # % This half-column is redundant. 
+#            a = np.vstack( (fv.flatten(), Pmc.flatten()) ).T
+#            a = a[a[:,0].argsort(),]	#Sort rows (by first row)
+#            a = a[a[:,0]>0,:]
+#            Pv = np.real(2*a[:,1])
+#            fv2 = np.real(a[:,0])
+#     
+#            # remove tiny powers less than machine precision
+#            index = np.where(Pv>eps)
+#            Pv = Pv[index]
+#            fv2 = fv2[index]*1/res
+
+#            try:
+#               B = self._bin(np.log10(fv2),np.log10(Pv),nbin,0) # Bin the log-transformed data
+#               B[np.where(B[:,1]==0),:] = np.nan  # remove zeros
+#               B = B[~np.isnan(B).any(axis=1)]
+#               # slope of non-normalised spectrum
+#               slope, intercept, r_value, p_value, std_err = self._do_linreg(B) # get linear regression parameters
+
+#               # area under the spectrum = variance of height distribution = square of rms roughness
+#               rms1 = np.sqrt(np.abs(trapz(Pv, fv2)))
+#               rms2 = np.sqrt(np.abs(trapz(10**B[:,1], (10**B[:,0]))))
+
+#               w = fv2[np.argmax(10**(Pv))]*res #(1/res**2)
+
+#               for i from 0 <= i < 5:
+#               #for i in xrange(0,5):
+#                  moment[i] = np.abs(trapz(fv2**i,Pv,np.gradient(fv2)))
+
+#               Z = 2*np.sqrt(moment[2]/moment[0]) # zero crossings per second
+#               E = 2*np.sqrt(moment[4]/moment[2]) # extrema per second										
+#               Tp = 1/fv2[np.argmax(Pv)] # Peak period
+#               sigma = np.sqrt(moment[2]/moment[0])**2 #stdev
+
+#               T0_1 = moment[0]/moment[1]    # average period m0/m1
+#               T0_2 = (moment[0]/moment[2])**0.5  #average period (m0/m2)^0.5
+#               sw1 = (moment[0]*moment[2]/moment[1]**2-1)**0.5 # spectral width parameter
+#               sw2 = (1 - moment[2]**2/(moment[0]*moment[4]))**0.5 # spectral width paramenter
+
+
+               #B = self._bin(np.log10(k_back),np.log10(s),nbin,0)
+               #slope, intercept, r_value, p_value, std_err = self._do_linreg(np.log10(np.c_[k,s_b]))
+               #s_b = np.interp(k_back,10**B[:,0],10**B[:,1]) # background spectrum
+               #w = 1/(10**B[:,0][np.argmax(10**B[:,1])])*(1/res**2)
+               #w = 1/k_back[np.argmax(10**(s/s_b))]*res #(1/res**2)
+               #rms1 = 1/np.sqrt(np.abs(trapz(s, k)))*res #(1/res**2)
+               #rms2 = 1/np.sqrt(np.abs(trapz(10**B[:,1], 1/(10**B[:,0]))))*res #(1/res**2)
+               #f = res/(((2*np.pi)/k)) # frequency
+
+#   # =========================================================
+#   @cython.boundscheck(False)
+#   @cython.cdivision(True)
+#   @cython.wraparound(False)
+#   @cython.nonecheck(False)
+#   cpdef np.ndarray _do_linreg(self, np.ndarray[np.float64_t, ndim=2] B):
+#       '''
+#       robust linear regression
+#       '''
+#       cdef double slope, intercept, r_value, p_value, std_err
+#       slope, intercept, r_value, p_value, std_err = linregress(B[:,0], B[:,1])
+#       try:
+#          regression = smapi.RLM(B[:,1], smapi.add_constant(B[:,0], prepend=True) ).fit()
+#          intercept = regression.params[0]
+#          slope = regression.params[1]
+#       except:
+#          slope = np.nan
+#          intercept = np.nan
+#       return slope, intercept, r_value, p_value, std_err 
+
+#   # =========================================================
+#   @cython.boundscheck(False)
+#   @cython.cdivision(True)
+#   #@cython.wraparound(False)
+#   @cython.nonecheck(False)
+#   cpdef np.ndarray _bin(self, np.ndarray[np.float64_t, ndim=1] x,  np.ndarray[np.float64_t, ndim=1] y, int nbin, int overlap):
+#       '''
+#       bin average with overlap
+#       '''
+#       cdef double xmin, xmax, x_range, w, xlo, xhi, mini, maxi
+#       xmin = x[0]
+#       xmax = x[-1]
+#       x_range = xmax - xmin
+#       if overlap==1:
+#         w = 2*x_range/(nbin+1)
+#       else:
+#         w = x_range/nbin
+
+#       cdef np.ndarray[np.float64_t, ndim=2] s = np.zeros((nbin, 8), dtype=np.float64)
+#       #for i in xrange(nbin):
+#       for i from 0 <= i < nbin:
+#          if overlap==1:
+#             xlo = xmin+i*(w/2)
+#          else:
+#             xlo = xmin+i*w
+#          xhi = xlo+w
+#          window = np.where((x >= xlo) & (x <= xhi) )[0]
+#          if len(window)<2:
+#             s[i,:] = np.mean((xlo,xhi)),0,0,0,0,0,0,0
+#          else:
+#             mini = np.min(window)
+#             maxi = np.max(window)
+#             s[i,:] = np.mean((xlo,xhi)), np.mean(y[mini:maxi]), np.std(y[mini:maxi]), np.std(y[mini:maxi])/np.sqrt(maxi-mini+1), maxi-mini+1, np.max(y[mini:maxi]), np.min(y[mini:maxi]), np.median(y[mini:maxi])
+#       return s
+

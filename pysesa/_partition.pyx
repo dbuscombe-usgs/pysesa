@@ -43,13 +43,48 @@ cdef class partition:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    #==================================================
-   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, list allpoints, list p, np.ndarray[np.float64_t, ndim=1] xvec, np.ndarray[np.float64_t, ndim=1] yvec, float out=0.5, float res=0.05, float mxpts=256, float win=100):
+   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=256, float win=100):
+
+      toproc = toproc[~np.isnan(toproc).any(axis=1)]
+      cdef list p
+      cdef list allpoints
+      cdef float xmin = np.min(toproc[:,0])
+      cdef float xmax = np.max(toproc[:,0])
+      cdef float ymin = np.min(toproc[:,1])
+      cdef float ymax = np.max(toproc[:,1])
+      cdef int orig_pts = len(toproc)
+      cdef int lenx = np.ceil((xmax-xmin)/out)
+      cdef int leny = np.ceil((ymax-ymin)/out)
+      cdef int lenx2 = lenx/2    
+      cdef int leny2 = leny/2   
+      
+#      cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
+#      cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
+
+      cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
    
+      cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
+
+      x = np.arange(xmin, xmax, out)
+      y = np.arange(ymin, ymax, out)
+      xx, yy = np.meshgrid(x, y)
+      p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
+
+      # format points for kd-tree
+      allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
+        
+      # find all points within 'out' metres of each centroid in p 
+      xvec = np.arange(xmin-2*res,xmax+2*res)
+      yvec = np.arange(ymin-2*res,ymax+2*res)            
+
       cdef int k
       cdef tuple cx, cy
       cdef list indices_list
       cdef list w = []
       cdef list indices2 = []
+
       cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
       cdef np.ndarray[np.int64_t, ndim=2] indices = np.empty((len(p),mxpts), dtype=np.int64)
       cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)

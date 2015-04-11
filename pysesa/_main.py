@@ -211,7 +211,7 @@ def pysesa(infile, out, order, proctype, mxpts, res, nbin, lentype, taper, prc_o
 
    # max distance for nearest neighbour search
    # specified by spacing (output res) and prc overlap
-   win =  np.multiply(0.5, 1+(prc_overlap/100))
+   win =  np.multiply(out/2, 1+(prc_overlap/100))
 
    method = 'nearest'
 
@@ -224,35 +224,12 @@ def pysesa(infile, out, order, proctype, mxpts, res, nbin, lentype, taper, prc_o
    #==============================================================================
    print "(1) Reading data from file ..."
    #toproc = np.genfromtxt(infile)
-   toproc = txtread(infile)
-
-   toproc = toproc[~np.isnan(toproc).any(axis=1)]
-
-   xmin = np.min(toproc[:,0])
-   xmax = np.max(toproc[:,0])
-   ymin = np.min(toproc[:,1])
-   ymax = np.max(toproc[:,1])
+   #toproc = txtread(infile)
+   toproc = pysesa_read.txtread(infile)
 
    orig_pts = len(toproc)
-
-   #==============================================================================
-   print "(2) KD-tree for nearest-neighbour lookup ..."
-   # make vector of points decimated to 'out' metres
-   # to be used as search nodes
-   x = np.arange(xmin, xmax, out)
-   y = np.arange(ymin, ymax, out)
-   xx, yy = np.meshgrid(x, y)
-   p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
-
-   # format points for kd-tree
-   allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
-
-   # find all points within 'out' metres of each centroid in p 
-   xvec = np.arange(xmin-2*res,xmax+2*res)
-   yvec = np.arange(ymin-2*res,ymax+2*res)
-   nr_pts = partition.partition(toproc, allpoints, p, xvec, yvec, out, res, mxpts, win).getdata()
-
-   del allpoints, x, y, xx, yy, p
+   
+   nr_pts = pysesa_partition.partition(toproc, out, res, mxpts, win).getdata()
 
    # start 2nd timer
    if os.name=='posix': # true if linux/mac or cygwin on windows
@@ -271,10 +248,18 @@ def pysesa(infile, out, order, proctype, mxpts, res, nbin, lentype, taper, prc_o
    # parse to variables
    if proctype==1: 
       x,y,zmean,zmax,zmin,range,stdev,stdev_d,sk,sk_d,ku,ku_d,zmean_d,n,w2,gamma,r_value,p_value,std_err,l,rms1,rms2,wav,Z,E,sigma,T0_1,T0_2,sw1,sw2,m0,m1,m2,m3,m4 = zip(*w)
-   
+
+      w2 = np.asarray(w2)
+      gamma = np.asarray(gamma)
+      w2 = (10**w2)**(1/(2-gamma))
+      
    elif proctype==2: 
       x,y,zmean,zmax,zmin,range,stdev,stdev_d,sk,sk_d,ku,ku_d,zmean_d,n,w2,gamma,r_value,p_value,std_err,l,rms1,rms2,wav,Z,E,sigma,T0_1,T0_2,sw1,sw2,m0,m1,m2,m3,m4 = zip(*w)
-   
+
+      w2 = np.asarray(w2)
+      gamma = np.asarray(gamma)
+      w2 = (10**w2)**(1/(2-gamma))
+      
    elif proctype==3: 
       x,y,zmean,zmax,zmin,range,stdev,stdev_d,sk,sk_d,ku,ku_d,zmean_d,n,l = zip(*w)  
 
@@ -321,6 +306,35 @@ def pysesa(infile, out, order, proctype, mxpts, res, nbin, lentype, taper, prc_o
       elapsed = (clock() - start1)
 
    print "Done! %s points decimated to %s points. Program ran for %s seconds" % (str(orig_pts), str(len(towrite)), str(elapsed))
+
+
+#   toproc = toproc[~np.isnan(toproc).any(axis=1)]
+
+#   xmin = np.min(toproc[:,0])
+#   xmax = np.max(toproc[:,0])
+#   ymin = np.min(toproc[:,1])
+#   ymax = np.max(toproc[:,1])
+
+#   orig_pts = len(toproc)
+
+#   #==============================================================================
+#   print "(2) KD-tree for nearest-neighbour lookup ..."
+#   # make vector of points decimated to 'out' metres
+#   # to be used as search nodes
+#   x = np.arange(xmin, xmax, out)
+#   y = np.arange(ymin, ymax, out)
+#   xx, yy = np.meshgrid(x, y)
+#   p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
+
+#   # format points for kd-tree
+#   allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
+
+#   # find all points within 'out' metres of each centroid in p 
+#   xvec = np.arange(xmin-2*res,xmax+2*res)
+#   yvec = np.arange(ymin-2*res,ymax+2*res)
+#   nr_pts = partition.partition(toproc, allpoints, p, xvec, yvec, out, res, mxpts, win).getdata()
+
+#   del allpoints, x, y, xx, yy, p
 
 # for debug
 #order = 3

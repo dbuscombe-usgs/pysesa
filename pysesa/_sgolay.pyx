@@ -1,24 +1,53 @@
+## PySESA (Python program for Spatially Explicit Spectral Analysis) 
+## has been developed at the Grand Canyon Monitorinf & Research Center,
+## U.S. Geological Survey
+##
+## Author: Daniel Buscombe
+## Project homepage: <https://github.com/dbuscombe-usgs/pysesa>
+##
+##This software is in the public domain because it contains materials that originally came from 
+##the United States Geological Survey, an agency of the United States Department of Interior. 
+##For more information, see the official USGS copyright policy at 
+##http://www.usgs.gov/visual-id/credit_usgs.html#copyright
+##
+## This program is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License, or
+## (at your option) any later version.
+##
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+## See the GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 """
-                     _ __       __                           __           
-   _________ __   __(_) /______/ /____  __      ____ _____  / /___ ___  __
-  / ___/ __ `/ | / / / __/ ___/ //_/ / / /_____/ __ `/ __ \/ / __ `/ / / /
- (__  ) /_/ /| |/ / / /_(__  ) ,< / /_/ /_____/ /_/ / /_/ / / /_/ / /_/ / 
-/____/\__,_/ |___/_/\__/____/_/|_|\__, /      \__, /\____/_/\__,_/\__, /  
-                                 /____/      /____/              /____/   
-                               
+ ___      ___ ___ ___   _     _   _ 
+| _ \_  _/ __| __/ __| /_\   (_) (_)
+|  _/ || \__ \ _|\__ \/ _ \   _   _ 
+|_|  \_, |___/___|___/_/ \_\ (_) (_)
+     |__/                           
+   _____             _ __       __               ______      __           
+  / ___/____ __   __(_) /______/ /____  __      / ____/___  / /___ ___  __
+  \__ \/ __ `/ | / / / __/ ___/ //_/ / / /_____/ / __/ __ \/ / __ `/ / / /
+ ___/ / /_/ /| |/ / / /_(__  ) ,< / /_/ /_____/ /_/ / /_/ / / /_/ / /_/ / 
+/____/\__,_/ |___/_/\__/____/_/|_|\__, /      \____/\____/_/\__,_/\__, /  
+                                 /____/                          /____/   
+
 +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
 |b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
 +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
-  _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _   _  
- / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
-( d | b | u | s | c | o | m | b | e | @ | u | s | g | s | . | g | o | v )
- \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ 
-
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 +-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
 |U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|
 +-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
 """
 
+# import libraries
 from __future__ import division
 import numpy as np
 cimport numpy as np
@@ -27,7 +56,40 @@ import scipy.signal as sp
 
 # =========================================================
 cdef class sgolay2d:
-            
+           
+    '''
+    Create a Savitsky-Golay digital filter from a 2D signal
+    based on code from http://www.scipy.org/Cookbook/SavitzkyGolay
+
+    Syntax
+    ----------
+    Z = sgolay.sgolay2d(z, window_size, order).getdata()
+
+    Parameters
+    ----------
+    z : array_like, shape (N,)
+      the 2D signal.
+    window_size : int
+       the length of the window. Must be an odd integer number.
+    order : int
+       the order of the polynomial used in the filtering.
+       Must be less than `window_size` - 1.
+
+    Returns
+    -------
+    self.data : ndarray, shape (N)
+       the smoothed signal.
+
+    References
+    ----------
+    .. [1] A. Savitzky, M. J. E. Golay, Smoothing and Differentiation of
+       Data by Simplified Least Squares Procedures. Analytical
+       Chemistry, 1964, 36 (8), pp 1627-1639.
+    .. [2] Numerical Recipes 3rd Edition: The Art of Scientific Computing
+       W.H. Press, S.A. Teukolsky, W.T. Vetterling, B.P. Flannery
+       Cambridge University Press ISBN-13: 9780521880688
+    '''
+ 
     cdef object data
     
     # =========================================================
@@ -36,10 +98,38 @@ cdef class sgolay2d:
     @cython.wraparound(False)
     @cython.nonecheck(False)
     def __init__(self, np.ndarray[np.float32_t, ndim=2] z, int window_size, int order ):
-       """
-       do 2d filtering on matrix
-       from http://www.scipy.org/Cookbook/SavitzkyGolay
-       """
+       '''
+       Create a Savitsky-Golay digital filter from a 2D signal
+       based on code from http://www.scipy.org/Cookbook/SavitzkyGolay
+
+       Syntax
+       ----------
+       Z = sgolay.sgolay2d(z, window_size, order).getdata()
+
+       Parameters
+       ----------
+       z : array_like, shape (N,)
+         the 2D signal.
+       window_size : int
+          the length of the window. Must be an odd integer number.
+       order : int
+          the order of the polynomial used in the filtering.
+          Must be less than `window_size` - 1.
+
+       Returns
+       -------
+       self.data : ndarray, shape (N)
+          the smoothed signal.
+
+       References
+       ----------
+       .. [1] A. Savitzky, M. J. E. Golay, Smoothing and Differentiation of
+          Data by Simplified Least Squares Procedures. Analytical
+          Chemistry, 1964, 36 (8), pp 1627-1639.
+       .. [2] Numerical Recipes 3rd Edition: The Art of Scientific Computing
+          W.H. Press, S.A. Teukolsky, W.T. Vetterling, B.P. Flannery
+          Cambridge University Press ISBN-13: 9780521880688
+       '''
 
        # number of terms in the polynomial expression
        cdef float n_terms = ( order + 1 ) * ( order + 2)  / 2.0
@@ -104,10 +194,29 @@ cdef class sgolay2d:
        out = sp.fftconvolve(Z.astype('f'), m.astype('f'), mode='valid')
        self.data = out
        return
-
-    # =========================================================    
-    def getdata(self):
-       return self.data
        
-       
+    # =========================================================
+    @cython.boundscheck(False)
+    @cython.cdivision(True)
+    @cython.wraparound(False)
+    @cython.nonecheck(False)
+    cpdef np.ndarray[np.float64_t,ndim=2] getdata(self):
+       '''
+       Create a Savitsky-Golay digital filter from a 2D signal
+       based on code from http://www.scipy.org/Cookbook/SavitzkyGolay
 
+       Syntax
+       ----------
+       nr_pts = sgolay.sgolay2d.getdata()
+
+       Parameters
+       ----------
+       self : instance
+   	    sgolay.sgolay2d instance
+
+       Returns
+       -------
+       self.data : ndarray, shape (N)
+          the smoothed signal.
+       '''
+       return self.data  

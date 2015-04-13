@@ -33,7 +33,15 @@ __version__ = '0.0.1'
 # Imports
 #-----------------------------------------------------------------------------
 
-from pysesa._main import pysesa
+from pysesa._pysesa import process
 from pysesa.test import *
 
+import pysesa.read
+import pysesa.write
+from pysesa.partition import partition
+from pysesa.sgolay import sgolay2d
+from pysesa.spatial import spatial
+from pysesa.spectral import spec
+from pysesa.lengthscale import lengthscale
+from pysesa.detrend import detrend
 

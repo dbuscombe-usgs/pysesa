@@ -60,17 +60,8 @@ if USE_CYTHON:
       from Cython.Distutils import build_ext
    except:
       msg = ("No module named Cython. "
-           "Please install Cython first, it is needed before installing PyHum.")
+           "Please install Cython first, it is needed before installing pysesa.")
       raise ImportError(msg)
-
-#if USE_CYTHON:
-#    try:
-#        from Cython.Distutils import build_ext
-#    except ImportError:
-#        if USE_CYTHON=='auto':
-#            USE_CYTHON=False
-#        else:
-#            raise
 
 # Read version from distmesh/__init__.py
 with open(os.path.join('pysesa', '__init__.py')) as f:
@@ -84,11 +75,19 @@ cmdclass = { }
 
 if USE_CYTHON:
     ext_modules += [
+        Extension("pysesa.read", [ "pysesa/_read.pyx" ],
+        include_dirs=[np.get_include()]),
+        Extension("pysesa.write", [ "pysesa/_write.pyx" ],
+        include_dirs=[np.get_include()]),
+        Extension("pysesa.detrend", [ "pysesa/_detrend.pyx" ],
+        include_dirs=[np.get_include()]),
+        Extension("pysesa.lengthscale", [ "pysesa/_lengthscale.pyx" ],
+        include_dirs=[np.get_include()]),        
         Extension("pysesa.partition", [ "pysesa/_partition.pyx" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.spec", [ "pysesa/_spec.pyx" ],
+        Extension("pysesa.spectral", [ "pysesa/_spectral.pyx" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.worker", [ "pysesa/_worker.pyx" ],
+        Extension("pysesa.spatial", [ "pysesa/_spatial.pyx" ],
         include_dirs=[np.get_include()]),    
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.pyx" ],
         include_dirs=[np.get_include()]),
@@ -97,18 +96,26 @@ if USE_CYTHON:
     cmdclass.update({ 'build_ext': build_ext })
 else:
     ext_modules += [
+        Extension("pysesa.read", [ "pysesa/_read.c" ],
+        include_dirs=[np.get_include()]),
+        Extension("pysesa.write", [ "pysesa/_write.c" ],
+        include_dirs=[np.get_include()]),
+        Extension("pysesa.detrend", [ "pysesa/_detrend.c" ],
+        include_dirs=[np.get_include()]),
+        Extension("pysesa.lengthscale", [ "pysesa/_lengthscale.c" ],
+        include_dirs=[np.get_include()]), 
         Extension("pysesa.partition", [ "pysesa/_partition.c" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.spec", [ "pysesa/_spec.c" ],
+        Extension("pysesa.spectral", [ "pysesa/_spectral.c" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.worker", [ "pysesa/_worker.c" ],
+        Extension("pysesa.spatial", [ "pysesa/_spatial.c" ],
         include_dirs=[np.get_include()]),    
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.c" ],
         include_dirs=[np.get_include()]),
         Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
 install_requires = [
-    'numpy','scipy','matplotlib', 'cython', 
+    'numpy','scipy','matplotlib', 'cython', 'statsmodels'
 ]
 #long_description = open('README.md').read()
 

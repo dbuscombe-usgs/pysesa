@@ -13,10 +13,10 @@ Python/Cython scripts to:
 
  Author |    Daniel Buscombe 
  ------ | ---------------
-         |  Grand Canyon Monitoring and Research Center
-          | United States Geological Survey
-          | Flagstaff, AZ 86001
-          | dbuscombe@usgs.gov
+        |  Grand Canyon Monitoring and Research Center
+        | United States Geological Survey
+        | Flagstaff, AZ 86001
+        | dbuscombe@usgs.gov
 Version: 0.0.1    |  Revision: Apr, 2015
 
 For latest code version please visit:
@@ -39,11 +39,15 @@ The programs in this package are as follows:
 
 1. py_sesa
 
-2. py_sesa_worker
+2. py_sesa_detrend
 
 3. py_sesa_partition
 
-4. py_sesa_plot
+4. py_sesa_spectral
+
+5. py_sesa_spatial
+
+6. py_sesa_plot
 
 These are all command-line programs which take a number of input (some required, some optional). Please see the individual files for a comprehensive list of input options
 
@@ -118,6 +122,7 @@ PYTHON LIBRARIES YOU MAY NEED TO INSTALL TO USE pysesa:
 3. Numpy (http://www.scipy.org/scipylib/download.html)
 4. Matplotlib (http://matplotlib.org/downloads.html)
 5. cython ()
+6. statsmodels ()
 
 All of the above are available through pip (https://pypi.python.org/pypi/pip) and easy_install (https://pythonhosted.org/setuptools/easy_install.html)
 
@@ -138,7 +143,7 @@ which carries out the following operations:
 
 on the following files:
 
-x_y_z_25cm.xyz
+example_100000.xyz
 
 and results in 
 

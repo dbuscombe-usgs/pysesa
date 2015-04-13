@@ -1,4 +1,4 @@
- PyHum
+ pysesa
  
  Written by Daniel Buscombe
  while at

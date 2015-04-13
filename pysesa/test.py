@@ -44,22 +44,23 @@ def dotest():
 
    # copy files over to somewhere read/writeable
    dircopy(pysesa.__path__[0], os.path.expanduser("~")+os.sep+'pysesa_test')
-   shutil.copy(pysesa.__path__[0]+os.sep+'x_y_z_25cm.xyz', os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'test.DAT')
+   shutil.copy(pysesa.__path__[0]+os.sep+'example_100000pts.xyz', os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'test.DAT')
 
    # general settings   
-   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'x_y_z_25cm.xyz' 
+   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
 
-   out = 1 #m output grid
-   order = 3 #ODR plane
-   proctype = 1 #Processing focal stats, lengthscale and spectral parameters (no smoothing)
-   mxpts = 256 # max pts per window
+   out = 0.5 #m output grid
+   detrend = 4 #ODR plane
+   proctype = 1 #Processing spectral parameters (no smoothing)
+   mxpts = 512 # max pts per window
    res = 0.05 #cm internal grid resolution
    nbin = 20 #number of bins for spectral binning
    lentype = 1 # l<0.5
    taper = 1 # yes do taper
    prc_overlap = 0 # no overlap between successive windows
+   minpts = 16 # min pts per window
 
-   pysesa.pysesa(infile, out, order, proctype, mxpts, res, nbin, lentype, taper, prc_overlap)
+   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
    
 if __name__ == '__main__':
    dotest()

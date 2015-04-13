@@ -186,57 +186,58 @@ These are all command-line/modular programs which take a number of input (some r
 
 ### Read
     '''
-   Custom fast (up to 3.5x faster than numpy's genfromtxt) txt file to numpy array
-   accepts comma, tab or space delimited files of 3 columns: x, y, and amplitude
+    Custom fast (up to 3.5x faster than numpy's genfromtxt) txt file to numpy array
+    accepts comma, tab or space delimited files of 3 columns: x, y, and amplitude
 
-   Syntax
-   ----------
-   pts = pysesa_read.txtread(infile)
+    Syntax
+    ----------
+    pts = pysesa_read.txtread(infile)
 
-   Parameters
-   ----------
-   infile : str
+    Parameters
+    ----------
+    infile : str
    	3-column ASCII file containing Nx3 point cloud
 
-   Returns
-   ----------
-   data: ndarray
+    Returns
+    ----------
+    data: ndarray
    	Nx3 point cloud, 32 bit precision
 
     '''
 
 ### Partition
     '''
-   Partition a Nx3 point cloud into M windows of nx3 points
-   with specified spacing between centroids of adjacent windows
-   and with specified overlap between windows.
-   Implemented using a binary search tree for fast nearest neighbour 
-   point check with boundary pruning
-   Syntax
-   ----------
-   nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
+    Partition a Nx3 point cloud into M windows of nx3 points
+    with specified spacing between centroids of adjacent windows
+    and with specified overlap between windows.
+    Implemented using a binary search tree for fast nearest neighbour 
+    point check with boundary pruning
+   
+    Syntax
+    ----------
+    nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
 
-   Parameters
-   ----------
-   toproc : ndarray
+    Parameters
+    ----------
+    toproc : ndarray
    	Nx3 point cloud
 
-   Other Parameters
-   ----------
-   out : float, *optional* [default = 0.5]
+    Other Parameters
+    ----------
+    out : float, *optional* [default = 0.5]
    	output grid resolution
-   res : float, *optional* [default = 0.05]
+    res : float, *optional* [default = 0.05]
    	spatial grid resolution to create a grid for the boundary pruning
-   mxpts : float, *optional* [default = 1024]
+    mxpts : float, *optional* [default = 1024]
    	maximum number of points allowed in a window
-   minpts : float, *optional* [default = 16]
+    minpts : float, *optional* [default = 16]
    	minimum number of points allowed in a window
-   prc_overlap : float, *optional"  [default = 0]
+    prc_overlap : float, *optional"  [default = 0]
         percentage overlap between windows
 
-   Returns
-   ----------
-   self.data: list
+    Returns
+    ----------
+    self.data: list
    	list of M ndarrays, each containing n indices 
         of original point cloud, toproc, to partition space 
         to create M windows
@@ -246,18 +247,17 @@ These are all command-line/modular programs which take a number of input (some r
 
 ### Detrend
     '''
-   Detrend a Nx3 point cloud
-   by specified method
+    Detrend a Nx3 point cloud by specified method
 
-   Syntax
-   ----------
-   detrended_pts = pysesa.detrend(points, proctype, res, method).getdata()
+    Syntax
+    ----------
+    detrended_pts = pysesa.detrend(points, proctype, res, method).getdata()
 
-   Parameters
-   ----------
-   points : ndarray
+    Parameters
+    ----------
+    points : ndarray
    	Nx3 point cloud
-   proctype : int
+    proctype : int
    	type of detrending.
         1 = remove mean
         2 = remove Ordinary least squares plane
@@ -265,18 +265,18 @@ These are all command-line/modular programs which take a number of input (some r
         4 = remove Orthogonal Distance Regression plane
         5 = remove Savitsky-Golay digital filter, order 1
 
-   Other Parameters
-   ----------
-   res : float, *optional* [default = 0.05]
+    Other Parameters
+    ----------
+    res : float, *optional* [default = 0.05]
    	for proctype==4 only
         spatial grid resolution to create a grid
-   method : str, *optional* [default = 'nearest']
+    method : str, *optional* [default = 'nearest']
    	for proctype==4 only
    	gridding type
 
-   Returns
-   ----------
-   self.data: ndarray
+    Returns
+    ----------
+    self.data: ndarray
    	Nx3 detrended point cloud
 
     '''
@@ -366,94 +366,94 @@ These are all command-line/modular programs which take a number of input (some r
 
 ### Lengthscale
     '''
-   Calculates the integral lengthscale of a Nx3 point cloud
-   using 1 of 3 available methods
-   and also returns the tapered 2D grid of 3D pointcloud for spectral analysis
+    Calculates the integral lengthscale of a Nx3 point cloud
+    using 1 of 3 available methods
+    and also returns the tapered 2D grid of 3D pointcloud for spectral analysis
 
-   Syntax
-   ----------
-   im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()
-   lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()
+    Syntax
+    ----------
+    im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()
+    lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()
 
-   Parameters
-   ----------
-   points : ndarray
+    Parameters
+    ----------
+    points : ndarray
    	Nx3 point cloud
 
-   Other Parameters
-   ----------
-   res : float, *optional* [default = 0.05]
+    Other Parameters
+    ----------
+    res : float, *optional* [default = 0.05]
         spatial grid resolution to create a grid
-   lentype : int, *optional* [default = 0, l<0.5]
+    lentype : int, *optional* [default = 0, l<0.5]
    	lengthscale type:
         1, l<0.5
         2, l<1/e
         3, l<0
-   taper : int, *optional* [default = Hanning]
+    taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
         2, Hamming
         3, Blackman
         4, Bartlett
-   method : str, *optional* [default = 'nearest']
+    method : str, *optional* [default = 'nearest']
    	gridding type
 
-   Returns [requested through .getdata()]
-   ----------
-   self.data: ndarray
+    Returns [requested through .getdata()]
+    ----------
+    self.data: ndarray
    	tapered 2D grid of 3D pointcloud
 
-   Returns [requested through .getlengthscale()]
-   ----------
-   self.lengthscale: float
+    Returns [requested through .getlengthscale()]
+    ----------
+    self.lengthscale: float
    	integral lengthscale
 
     '''
 
 ### Spectral
     '''
-   Calculate spectral statistics of a Nx3 point cloud
+    Calculate spectral statistics of a Nx3 point cloud
 
-   Syntax
-   ----------
-   data = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()
-   lengths = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()
-   psdparams= pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()
-   lengthscale = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
-   moments = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()
+    Syntax
+    ----------
+    data = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()
+    lengths = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()
+    psdparams= pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()
+    lengthscale = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
+    moments = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()
 
-   Parameters
-   ----------
-   points : ndarray
+    Parameters
+    ----------
+    points : ndarray
    	Nx3 point cloud
 
-   Other Parameters
-   ----------
-   nbin : int, *optional* [default = 20]
+    Other Parameters
+    ----------
+    nbin : int, *optional* [default = 20]
         number of bins for power spectral binning
-   res : float, *optional* [default = 0.05]
+    res : float, *optional* [default = 0.05]
         spatial grid resolution to create a grid
-   proctype : int, *optional* [default = 1, no spectral smoothing]
+    proctype : int, *optional* [default = 1, no spectral smoothing]
    	proctype type:
         1, no spectral smoothing
         2, spectrum smoothed with Gaussian
-   lentype : int, *optional* [default = 1, l<0.5]
+    lentype : int, *optional* [default = 1, l<0.5]
    	lengthscale type:
         1, l<0.5
         2, l<1/e
         3, l<0
-   taper : int, *optional* [default = Hanning]
+    taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
         2, Hamming
         3, Blackman
         4, Bartlett
-   method : str, *optional* [default = 'nearest']
+    method : str, *optional* [default = 'nearest']
    	gridding type
 
-   Returns [requested through .getdata()]
-   ----------
-   self.data: list
+    Returns [requested through .getdata()]
+    ----------
+    self.data: list
    	slope = slope of regression line through log-log 1D power spectral density
         intercept = intercept of regression line through log-log 1D power spectral density
         r_value = correlation of regression through log-log 1D power spectral density
@@ -478,9 +478,9 @@ These are all command-line/modular programs which take a number of input (some r
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
 
-   Returns [requested through .getpsdparams()]
-   ----------
-   self.psdparams: list
+    Returns [requested through .getpsdparams()]
+    ----------
+    self.psdparams: list
    	slope = slope of regression line through log-log 1D power spectral density
         intercept = intercept of regression line through log-log 1D power spectral density
         r_value = correlation of regression through log-log 1D power spectral density
@@ -488,22 +488,22 @@ These are all command-line/modular programs which take a number of input (some r
         std_err = standard error of regression through log-log 1D power spectral density
         d = fractal dimension
 
-   Returns [requested through .getlengths()]
-   ----------
-   self.lengths: list
+    Returns [requested through .getlengths()]
+    ----------
+    self.lengths: list
         wmax = peak wavelength
         wmean = mean wavelength
         rms1 = RMS amplitude from power spectral density
         rms2 = RMS amplitude from bin averaged power spectral density
 
-   Returns [requested through .getlengthscale()]
-   ----------
-   self.lengthscale: float
+    Returns [requested through .getlengthscale()]
+    ----------
+    self.lengthscale: float
         l = integral lengthscale
 
-   Returns [requested through .getmoments()]
-   ----------
-   self.moments: list
+    Returns [requested through .getmoments()]
+    ----------
+    self.moments: list
         Z = zero-crossings per unit length
         E = extreme per unit length
         sigma = RMS amplitude
@@ -521,61 +521,61 @@ These are all command-line/modular programs which take a number of input (some r
 
 ### Process
     '''
-   Calculate spectral and spatial statistics of a Nx3 point cloud
+    Calculate spectral and spatial statistics of a Nx3 point cloud
 
-   Syntax
-   ----------
-   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
+    Syntax
+    ----------
+    () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
 
-   Parameters
-   ----------
-   infile : str
+    Parameters
+    ----------
+    infile : str
    	ASCII file containing an Nx3 point cloud in 3 columns
 
-   Other Parameters
-   ----------
-   out : float, *optional* [default = 0.5]
+    Other Parameters
+    ----------
+    out : float, *optional* [default = 0.5]
    	output grid resolution
-   detrend : int, *optional* [default = 4]
+    detrend : int, *optional* [default = 4]
    	type of detrending.
         1 = remove mean
         2 = remove Ordinary least squares plane
         3 = remove Robust linear model plane
         4 = remove Orthogonal Distance Regression plane
         5 = remove Savitsky-Golay digital filter, order 1
-   proctype : int, *optional* [default = 1, no spectral smoothing]
+    proctype : int, *optional* [default = 1, no spectral smoothing]
    	proctype type:
         1 = spectral only, no spectral smoothing
         2 = spectral only, spectrum smoothed with Gaussian
         3 = spatial only
         4 = spatial + spectrum, no spectral smoothing
         5 = spatial + spectrum smoothed with Gaussian
-   mxpts : float, *optional* [default = 1024]
+    mxpts : float, *optional* [default = 1024]
    	maximum number of points allowed in a window
-   res : float, *optional* [default = 0.05]
+    res : float, *optional* [default = 0.05]
         spatial grid resolution to create a grid
-   nbin : int, *optional* [default = 20]
+    nbin : int, *optional* [default = 20]
         number of bins for power spectral binning
-   lentype : int, *optional* [default = 1, l<0.5]
+    lentype : int, *optional* [default = 1, l<0.5]
    	lengthscale type:
         1 = l<0.5
         2 = l<1/e
         3 = l<0
-   minpts : float, *optional* [default = 16]
+    minpts : float, *optional* [default = 16]
    	minimum number of points allowed in a window
-   taper : int, *optional* [default = Hanning]
+    taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1 = Hanning (Hann)
         2 = Hamming
         3 = Blackman
         4 = Bartlett
-   prc_overlap : float, *optional"  [default = 0]
+    prc_overlap : float, *optional"  [default = 0]
         percentage overlap between windows
 
 
-   Returns [proctype = 1 or proctype = 2]
-   ----------
-   data: list
+    Returns [proctype = 1 or proctype = 2]
+    ----------
+    data: list
    	x = centroid in horizontal coordinate
         y = centroid in laterial coordinate
    	slope = slope of regression line through log-log 1D power spectral density
@@ -602,9 +602,9 @@ These are all command-line/modular programs which take a number of input (some r
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
 
-   Returns [proctype = 3]
-   ----------
-   data: list
+    Returns [proctype = 3]
+    ----------
+    data: list
    	x = centroid in horizontal coordinate
         y = centroid in laterial coordinate
         z_mean = centroid in amplitude
@@ -616,9 +616,9 @@ These are all command-line/modular programs which take a number of input (some r
         kurtosis = skewness of amplitudes
         n = number of 3D coordinates
 
-   Returns [proctype = 4 or proctype = 4]
-   ----------
-   data: list
+    Returns [proctype = 4 or proctype = 4]
+    ----------
+    data: list
    	x = centroid in horizontal coordinate
         y = centroid in laterial coordinate
         z_mean = centroid in amplitude
@@ -657,27 +657,27 @@ These are all command-line/modular programs which take a number of input (some r
 
 ### Write
     '''
-   Custom fast numpy array to comma-delimited ASCII txt file
+    Custom fast numpy array to comma-delimited ASCII txt file
 
-   Syntax
-   ----------
-   () = pysesa.write.txtwrite(infile, towrite)
+    Syntax
+    ----------
+    () = pysesa.write.txtwrite(infile, towrite)
 
-   Parameters
-   ----------
-   outfile : str
+    Parameters
+    ----------
+    outfile : str
    	name of file to write to
-   towrite : ndarray
+    towrite : ndarray
    	ndarray containing Nx3 point cloud
 
-   Other Parameters
-   ----------
-   header : str, *optional* [default = None]
+    Other Parameters
+    ----------
+    header : str, *optional* [default = None]
    	header string
 
-   Returns
-   ----------
-   None
+    Returns
+    ----------
+    None
 
     '''
 

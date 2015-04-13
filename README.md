@@ -317,22 +317,22 @@ These are all command-line/modular programs which take a number of input (some r
 
 ### Spatial
     '''
-   Calculate spatial statistics of a Nx3 point cloud
+    Calculate spatial statistics of a Nx3 point cloud
 
-   Syntax
-   ----------
-   stats = pysesa.spatial(points).getdata()
-   centroids = pysesa.spatial(points).getcentroid()
-   stats = pysesa.spatial(points).getstats()
+    Syntax
+    ----------
+    stats = pysesa.spatial(points).getdata()
+    centroids = pysesa.spatial(points).getcentroid()
+    stats = pysesa.spatial(points).getstats()
 
-   Parameters
-   ----------
-   points : ndarray
+    Parameters
+    ----------
+    points : ndarray
    	Nx3 point cloud
 
-   Returns [requested through .getdata()]
-   ----------
-   self.data: list
+    Returns [requested through .getdata()]
+    ----------
+    self.data: list
    	x = centroid in horizontal coordinate
         y = centroid in laterial coordinate
         z_mean = centroid in amplitude
@@ -344,14 +344,14 @@ These are all command-line/modular programs which take a number of input (some r
         kurtosis = skewness of amplitudes
         n = number of 3D coordinates
 
-   Returns [requested through .getcentroid()]
-   ----------
-   self.centroid: list
+    Returns [requested through .getcentroid()]
+    ----------
+    self.centroid: list
    	1x3 point cloud centroid [x,y,z]
 
-   Returns [requested through .getstats()]
-   ----------
-   self.stats: list
+    Returns [requested through .getstats()]
+    ----------
+    self.stats: list
         z_mean = centroid in amplitude
         z_max = max amplitude
         z_min = min amplitude

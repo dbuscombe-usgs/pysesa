@@ -69,7 +69,7 @@ cdef class detrend:
 
    Syntax
    ----------
-   detrended_pts = pysesa_detrend.detrend(points, proctype, res, method).getdata()
+   detrended_pts = pysesa.detrend(points, proctype, res, method).getdata()
 
    Parameters
    ----------
@@ -85,7 +85,7 @@ cdef class detrend:
 
    Other Parameters
    ----------
-   res : float, *optional* [default = 0.25]
+   res : float, *optional* [default = 0.05]
    	for proctype==4 only
         spatial grid resolution to create a grid
    method : str, *optional* [default = 'nearest']
@@ -106,7 +106,7 @@ cdef class detrend:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    # =========================================================
-   def __init__(self, np.ndarray[np.float32_t, ndim=2] points, int proctype, float res=0.25, str method='nearest'): 
+   def __init__(self, np.ndarray[np.float32_t, ndim=2] points, int proctype, float res=0.05, str method='nearest'): 
 
       '''
       Detrend a Nx3 point cloud
@@ -114,7 +114,7 @@ cdef class detrend:
 
       Syntax
       ----------
-      detrended_pts = pysesa_detrend.detrend(points, proctype, res, method).getdata()
+      detrended_pts = pysesa.detrend(points, proctype, res, method).getdata()
 
       Parameters
       ----------
@@ -130,7 +130,7 @@ cdef class detrend:
 
       Other Parameters
       ----------
-      res : float, *optional* [default = 0.25]
+      res : float, *optional* [default = 0.05]
    	   for proctype==4 only
            spatial grid resolution to create a grid
       method : str, *optional* [default = 'nearest']
@@ -229,7 +229,7 @@ cdef class detrend:
 
          dat = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
      
-         Zf = sgolay.sgolay2d( dat, 3, order=0).getdata() 
+         Zf = sgolay.sgolay( dat, 3, order=0).getdata() 
 
          Zf[Zf>(np.mean(Zf)+3*np.std(Zf))] = np.nan
          Zf[Zf<(np.mean(Zf)-3*np.std(Zf))] = np.nan
@@ -283,12 +283,12 @@ cdef class detrend:
 
       Syntax
       ----------
-      detrended_pts = pysesa_detrend.detrend.getdata()
+      detrended_pts = pysesa.detrend.getdata()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_detrend.detrend instance
+   	   pysesa.detrend instance
 
       Returns
       ----------
@@ -297,119 +297,6 @@ cdef class detrend:
 
       '''
       return self.data
-
-
-
-#import RunningStats
-#import py_sesa_spec
-      #cdef np.ndarray[np.float64_t, ndim=2] dt = np.empty((lenx,lenx), dtype=np.float64)
-      #cdef np.ndarray[np.float64_t, ndim=1] resid = np.empty((len(points),), dtype=np.float64)
-
-
-#      rs1.Clear()
-#      rs2.Clear()
-
-#      # pre-allocate arrays
-#      cdef list filled
-#      cdef list ft
-#      # get the (x,y) centroid
-#      cdef float x = np.min(points[:,0]) + ( np.max(points[:,0]) - np.min(points[:,0]) )/2      
-#      cdef float y = np.min(points[:,1]) + ( np.max(points[:,1]) - np.min(points[:,1]) )/2                   
-#                    
-      # detrend the x and y to help out the floating point arithmetic    
-      #points[:,:2] = points[:,:2] - np.min(points[:,:2],axis=0)
-
-#         if proctype<3:
-#            self.data = np.zeros(36).tolist()
-#            return
-#         else:
-#            self.data = np.zeros(15).tolist()
-#            return
-#         rs1 = RunningStats.RunningStats()
-#         # global stats, not detrended
-#         for k in points[:,2].astype('float64'):
-#            rs1.Push(k)
-# 
-#         rs2 = RunningStats.RunningStats()
-#         # global stats, detrended
-#         for k in dt.flatten(): #.astype('float64'):
-#            rs2.Push(k)
-#         Zf = self._func(est.params, [grid_x, grid_y])
-
-#         dt = (dat-Zf)#.astype('float32')
-         
-#         rs1 = RunningStats.RunningStats()
-#         # global stats, not detrended
-#         for k in points[:,2].astype('float64'):
-#            rs1.Push(k)
-# 
-#         rs2 = RunningStats.RunningStats()
-#         # global stats, detrended
-#         for k in resid: #.astype('float64'):
-#            rs2.Push(k)
-#         # plot the hyperplane by evaluating the parameters on the grid
-#         Zf = self._func(est.params, [grid_x, grid_y])
-
-#         dt = (dat-Zf)#.astype('float32')
-         
-#         rs1 = RunningStats.RunningStats()
-#         # global stats, not detrended
-#         for k in points[:,2].astype('float64'):
-#            rs1.Push(k)
-# 
-#         rs2 = RunningStats.RunningStats()
-#         # global stats, detrended
-#         for k in resid: #.astype('float64'):
-#            rs2.Push(k)
-#         # plot the hyperplane by evaluating the parameters on the grid
-#         Zf = self._func(est.beta, [grid_x, grid_y])
-#         dt = (dat-Zf) #.astype('float32')
-
-#         rs1 = RunningStats.RunningStats()
-#         # global stats, not detrended
-#         for k in points[:,2].astype('float64'):
-#            rs1.Push(k)
-# 
-#         rs2 = RunningStats.RunningStats()
-#         # global stats, detrended
-#         for k in resid: #.astype('float64'): #flatten():
-#            rs2.Push(k)
-
-#         rs1 = RunningStats.RunningStats()
-#         # global stats, not detrended
-#         for k in points[:,2].astype('float64'):
-#            rs1.Push(k)
-# 
-#         rs2 = RunningStats.RunningStats()
-#         # global stats, detrended
-#         for k in resid.flatten():#.astype('float64'):
-#            rs2.Push(k)
-
-#      # calls the spectral analysis routine
-#      ft = py_sesa_spec.RN(dt, nbin, res, proctype, lentype, taper).getdata()    #.astype('float64')  
-#    
-#      # compile all parameters into a list
-#      filled = [x, y, rs1.Mean(), np.max(points[:,2]), np.min(points[:,2]), np.max(points[:,2])-np.min(points[:,2]), rs1.StandardDeviation(), rs2.StandardDeviation(), rs1.Skewness(), rs2.Skewness(), rs1.Kurtosis(), rs2.Kurtosis(), rs2.Mean(), len(points)] + ft
-
-
-#   def func(beta,data):
-#      '''
-#      minimization function for plane fitting
-#      '''
-#      x,y = data
-#      a,b,c = beta
-#      return a*x+b*y+c
-
-
-#         myModel = Model(func)
-#         myOdr = ODR(Data([points[:,0], points[:,1]], points[:,2]), myModel, beta0 = [1,1,1])
-#         myOdr.set_job(fit_type=2)
-#         est = myOdr.run()
-
-#         myModel = Model(func)
-#         myOdr = ODR(Data([points[:,0], points[:,1]], points[:,2]), myModel, beta0 = est.beta)
-#         myOdr.set_job(fit_type=0)
-#         est = myOdr.run()
 
 
 

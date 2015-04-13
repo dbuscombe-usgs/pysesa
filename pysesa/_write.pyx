@@ -64,7 +64,7 @@ def txtwrite(str outfile, np.ndarray[np.float64_t, ndim=2] towrite, str header=N
 
    Syntax
    ----------
-   () = pysesa_write.txtwrite(infile, towrite)
+   () = pysesa.write.txtwrite(infile, towrite)
 
    Parameters
    ----------
@@ -85,14 +85,5 @@ def txtwrite(str outfile, np.ndarray[np.float64_t, ndim=2] towrite, str header=N
    '''
    with open(outfile, 'w') as f:
 
-      np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) #delimiter=' ', 
-
-
-#   # write points out to a file formated
-#   if (proctype==1) or (proctype==2):
-#      with open(outfile, 'w') as f:
-#         np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], delimiter=' ', fmt="%8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f")
-#   elif proctype==3:
-#      with open(outfile, 'w') as f:
-#         np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], delimiter=' ', fmt="%8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f, %8.6f")
+      np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) 
 

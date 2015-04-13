@@ -68,17 +68,17 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # =========================================================
-cdef class spec:
+cdef class spectral:
    '''
    Calculate spectral statistics of a Nx3 point cloud
 
    Syntax
    ----------
-   data = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()
-   lengths = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()
-   psdparams= pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()
-   lengthscale = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
-   moments = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()
+   data = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()
+   lengths = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()
+   psdparams= pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()
+   lengthscale = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
+   moments = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()
 
    Parameters
    ----------
@@ -89,17 +89,17 @@ cdef class spec:
    ----------
    nbin : int, *optional* [default = 20]
         number of bins for power spectral binning
-   res : float, *optional* [default = 0.25]
+   res : float, *optional* [default = 0.05]
         spatial grid resolution to create a grid
    proctype : int, *optional* [default = 1, no spectral smoothing]
    	proctype type:
         1, no spectral smoothing
         2, spectrum smoothed with Gaussian
-   lentype : int, *optional* [default = 0, l<0.5]
+   lentype : int, *optional* [default = 1, l<0.5]
    	lengthscale type:
-        0, l<0.5
-        1, l<1/e
-        2, l<0
+        1, l<0.5
+        2, l<1/e
+        3, l<0
    taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
@@ -183,17 +183,17 @@ cdef class spec:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    # =========================================================
-   def __init__(self, np.ndarray[np.float64_t, ndim=2] points, int nbin=20, double res=0.25, int proctype=1, int lentype=0, int taper=1, str method='nearest'): 
+   def __init__(self, np.ndarray[np.float64_t, ndim=2] points, int nbin=20, double res=0.05, int proctype=1, int lentype=1, int taper=1, str method='nearest'): 
       '''
       Calculate spectral statistics of a Nx3 point cloud
 
       Syntax
       ----------
-      data = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()
-      lengths = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()
-      psdparams= pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()
-      lengthscale = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
-      moments = pysesa_spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()
+      data = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getdata()
+      lengths = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengths()
+      psdparams= pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getstats()
+      lengthscale = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
+      moments = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getmoments()
 
       Parameters
       ----------
@@ -204,17 +204,17 @@ cdef class spec:
       ----------
       nbin : int, *optional* [default = 20]
         number of bins for power spectral binning
-      res : float, *optional* [default = 0.25]
+      res : float, *optional* [default = 0.05]
         spatial grid resolution to create a grid
       proctype : int, *optional* [default = 1, no spectral smoothing]
    	proctype type:
         1, no spectral smoothing
         2, spectrum smoothed with Gaussian
-      lentype : int, *optional* [default = 0, l<0.5]
+      lentype : int, *optional* [default = 1, l<0.5]
    	lengthscale type:
-        0, l<0.5
-        1, l<1/e
-        2, l<0
+        1, l<0.5
+        2, l<1/e
+        3, l<0
       taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
@@ -300,7 +300,7 @@ cdef class spec:
       cdef np.ndarray[np.float64_t, ndim=1] k_back 
       cdef np.ndarray[np.float64_t, ndim=1] k
       
-      r = pysesa.lengthscale.lengthscale(points, res, lentype, taper, method)
+      r = pysesa.lengthscale(points, res, lentype, taper, method)
       im = r.getdata()
       l = r.getlengthscale()
       self.lengthscale = l
@@ -669,12 +669,12 @@ cdef class spec:
 
       Syntax
       ----------
-      data = pysesa_spectral.spec.getdata()
+      data = pysesa.spectral.getdata()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spectral.spec instance
+   	   pysesa.spectral instance
 
       Returns [requested through .getdata()]
       ----------
@@ -716,12 +716,12 @@ cdef class spec:
 
       Syntax
       ----------
-      moments = pysesa_spectral.spec.getmoments()
+      moments = pysesa.spectral.getmoments()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spectral.spec instance
+   	   pysesa.spectral instance
 
       Returns [requested through .getmoments()]
       ----------
@@ -752,12 +752,12 @@ cdef class spec:
 
       Syntax
       ----------
-      lengthscale = pysesa_spectral.spec.getlengthscale()
+      lengthscale = pysesa.spectral.getlengthscale()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spectral.spec instance
+   	   pysesa.spectral instance
 
       Returns [requested through .getlengthscale()]
       ----------
@@ -777,12 +777,12 @@ cdef class spec:
 
       Syntax
       ----------
-      lengths = pysesa_spectral.spec.getlengths()
+      lengths = pysesa.spectral.getlengths()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spectral.spec instance
+   	   pysesa.spectral instance
 
       Returns [requested through .getlengths()]
       ----------
@@ -805,12 +805,12 @@ cdef class spec:
 
       Syntax
       ----------
-      psdparams= pysesa_spectral.spec.getstats()
+      psdparams= pysesa.spectral.getstats()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spectral.spec instance
+   	   pysesa.spectral.spec instance
 
       Returns [requested through .getpsdparams()]
       ----------

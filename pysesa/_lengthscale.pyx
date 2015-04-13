@@ -71,8 +71,8 @@ cdef class lengthscale:
 
    Syntax
    ----------
-   im = pysesa_lengthscale.lengthscale(points, res, lentype, taper, method).getdata()
-   lengthscale = pysesa_lengthscale.lengthscale(points, res, lentype, taper, method).getlengthscale()
+   im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()
+   lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()
 
    Parameters
    ----------
@@ -81,13 +81,13 @@ cdef class lengthscale:
 
    Other Parameters
    ----------
-   res : float, *optional* [default = 0.25]
+   res : float, *optional* [default = 0.05]
         spatial grid resolution to create a grid
    lentype : int, *optional* [default = 0, l<0.5]
    	lengthscale type:
-        0, l<0.5
-        1, l<1/e
-        2, l<0
+        1, l<0.5
+        2, l<1/e
+        3, l<0
    taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
@@ -116,7 +116,7 @@ cdef class lengthscale:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    # =========================================================
-   def __init__(self, np.ndarray[np.float64_t, ndim=2] points, float res=0.25, int lentype=0, int taper=1, str method='nearest'): 
+   def __init__(self, np.ndarray[np.float64_t, ndim=2] points, float res=0.05, int lentype=1, int taper=1, str method='nearest'): 
       '''
       Calculates the integral lengthscale of a Nx3 point cloud
       using 1 of 3 available methods
@@ -124,8 +124,8 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale.lengthscale(points, res, lentype, taper, method).getdata()
-      lengthscale = pysesa_lengthscale.lengthscale(points, res, lentype, taper, method).getlengthscale()
+      im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()
+      lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()
 
       Parameters
       ----------
@@ -134,13 +134,13 @@ cdef class lengthscale:
 
       Other Parameters
       ----------
-      res : float, *optional* [default = 0.25]
+      res : float, *optional* [default = 0.05]
            spatial grid resolution to create a grid
-      lentype : int, *optional* [default = 0, l<0.5]
+      lentype : int, *optional* [default = 1, l<0.5]
    	   lengthscale type:
-           0, l<0.5
-           1, l<1/e
-           2, l<0
+           1, l<0.5
+           2, l<1/e
+           3, l<0
       taper : int, *optional* [default = Hanning]
    	   flag for taper type:
            1, Hanning (Hann)
@@ -211,7 +211,7 @@ cdef class lengthscale:
 
        Syntax
        ----------
-       h = pysesa_lengthscale._radial_data(data, annulus_width)
+       h = pysesa.lengthscale._radial_data(data, annulus_width)
 
        Parameters
        ----------
@@ -278,7 +278,7 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      lengthscale = pysesa_lengthscale._get_lengthscale(points, lentype, res, nx, ny)
+      lengthscale = pysesa.lengthscale._get_lengthscale(points, lentype, res, nx, ny)
 
       Parameters
       ----------
@@ -288,9 +288,9 @@ cdef class lengthscale:
            spatial grid resolution to create a grid
       lentype : int
    	   lengthscale type:
-           0, l<0.5
-           1, l<1/e
-           2, l<0
+           1, l<0.5
+           2, l<1/e
+           3, l<0
       nx : int
       	   size of im in x direction
       ny : int
@@ -328,9 +328,9 @@ cdef class lengthscale:
          auto = np.dot(auto,pow(ma,-1))
          h = self._radial_data(np.squeeze(auto))
          try:
-            if lentype==0: #l<0.5
+            if lentype==1: #l<0.5
                return res*((2*np.pi)*(np.where(h<0.5)[0][0]+1))
-            elif lentype==1: #l<1/e
+            elif lentype==2: #l<1/e
                return res*((2*np.pi)*(np.where(h<(1/np.exp(1)))[0][0]+1))
             else: #l<0
                return res*(np.where(h<0)[0][0]+1)
@@ -350,7 +350,7 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale. _Hanning2D(im)
+      im = pysesa.lengthscale._Hanning2D(im)
 
       Parameters
       ----------
@@ -382,7 +382,7 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale. _Hamming2D(im)
+      im = pysesa.lengthscale._Hamming2D(im)
 
       Parameters
       ----------
@@ -414,7 +414,7 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale. _Blackman2D(im)
+      im = pysesa.lengthscale._Blackman2D(im)
 
       Parameters
       ----------
@@ -446,7 +446,7 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale. _Bartlett2D(im)
+      im = pysesa.lengthscale._Bartlett2D(im)
 
       Parameters
       ----------
@@ -478,7 +478,7 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale._taper(im, taper)
+      im = pysesa.lengthscale._taper(im, taper)
 
       Parameters
       ----------
@@ -506,9 +506,9 @@ cdef class lengthscale:
       elif taper==2:
          im = self._Hamming2D(im)
       elif taper==3:
-         im = self._Blackman(im)
+         im = self._Blackman2D(im)
       else:
-         im = self._Bartlett(im)
+         im = self._Bartlett2D(im)
       return im
 
    # =========================================================
@@ -522,12 +522,12 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      lengthscale = pysesa_lengthscale.lengthscale.getlengthscale()
+      lengthscale = pysesa.lengthscale.getlengthscale()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_lengthscale.lengthscale instance
+   	   pysesa.lengthscale instance
 
       Returns
       ----------
@@ -549,12 +549,12 @@ cdef class lengthscale:
 
       Syntax
       ----------
-      im = pysesa_lengthscale.lengthscale.getdata()
+      im = pysesa.lengthscale.getdata()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_lengthscale.lengthscale instance
+   	   pysesa.lengthscale instance
 
       Returns 
       ----------

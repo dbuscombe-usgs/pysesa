@@ -1,11 +1,48 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+## PySESA (Python program for Spatially Explicit Spectral Analysis) 
+## has been developed at the Grand Canyon Monitorinf & Research Center,
+## U.S. Geological Survey
+##
+## Author: Daniel Buscombe
+## Project homepage: <https://github.com/dbuscombe-usgs/pysesa>
+##
+##This software is in the public domain because it contains materials that originally came from 
+##the United States Geological Survey, an agency of the United States Department of Interior. 
+##For more information, see the official USGS copyright policy at 
+##http://www.usgs.gov/visual-id/credit_usgs.html#copyright
+##
+## This program is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License, or
+## (at your option) any later version.
+##
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+## See the GNU General Public License for more details.
+##
+## You should have received a copy of the GNU General Public License
+## along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 """
-pysesa - a Python framework for .......
+PySESA - a Python framework for Spatially Explicit Spectral Analysis
 
-pysesa is an open-source project dedicated to provide a Python framework for ...
+PySESA is an open-source project dedicated to provide a generic Python framework 
+for spatially explicit statistical analyses of point clouds and other geospatial data, 
+in the spatial and frequency domains, for use in the geosciences
 
-For more information visit http://dbuscombe-usgs.github.io/pysesa/
+The program is detailed in:
+Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+
+:Author:  
+    Daniel Buscombe
+    Grand Canyon Monitoring and Research Center
+    United States Geological Survey
+    Flagstaff, AZ 86001
+    dbuscombe@usgs.gov
+
+For more information visit http://dbuscombe-usgs.github.io/PySESA/
 
 :install:
     python setup.py install
@@ -37,7 +74,7 @@ try:
     import numpy as np
 except:
     msg = ("No module named numpy. "
-           "Please install numpy first, it is needed before installing pysesa.")
+           "Please install numpy first, it is needed before installing PySESA.")
     raise ImportError(msg)
 
 from distutils.core import setup
@@ -91,7 +128,7 @@ if USE_CYTHON:
         include_dirs=[np.get_include()]),    
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.pyx" ],
         include_dirs=[np.get_include()]),
-        Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
+        Extension('RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
     cmdclass.update({ 'build_ext': build_ext })
 else:
@@ -112,17 +149,16 @@ else:
         include_dirs=[np.get_include()]),    
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.c" ],
         include_dirs=[np.get_include()]),
-        Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
+        Extension('RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
 install_requires = [
-    'numpy','scipy','matplotlib', 'cython', 'statsmodels'
+    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty'
 ]
-#long_description = open('README.md').read()
 
 def setupPackage():
    setup(name='pysesa',
          version=__version__,
-         description='Python/Cython scripts to ..... detailed in Buscombe, "Computational considerations for spatially explicit spectral analysis of point clouds", forthcoming.',
+         description='PySESA is an open-source project dedicated to provide a generic Python framework for spatially explicit statistical analyses of point clouds and other geospatial data, in the spatial and frequency domains, for use in the geosciences. The program is detailed in Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.',
          #long_description=long_description,
          classifiers=[
              'Intended Audience :: Science/Research',
@@ -132,7 +168,10 @@ def setupPackage():
              'Programming Language :: Python :: 2.7',
              'Programming Language :: Cython',
              'Topic :: Scientific/Engineering',
-             'Topic :: Scientific/Engineering :: Physics',
+             'Topic :: Scientific/Engineering :: Geophysics',
+             'Topic :: Scientific/Engineering :: Geology',
+             'Topic :: Scientific/Engineering :: Geomorphology',
+             'Topic :: Scientific/Engineering :: Remote Sensing',
          ],
          keywords='point clouds',
          author='Daniel Buscombe',

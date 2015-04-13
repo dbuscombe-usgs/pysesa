@@ -55,7 +55,7 @@ cimport cython
 import scipy.signal as sp
 
 # =========================================================
-cdef class sgolay2d:
+cdef class sgolay:
            
     '''
     Create a Savitsky-Golay digital filter from a 2D signal
@@ -63,7 +63,7 @@ cdef class sgolay2d:
 
     Syntax
     ----------
-    Z = sgolay.sgolay2d(z, window_size, order).getdata()
+    Z = pysesa.sgolay(z, window_size, order).getdata()
 
     Parameters
     ----------
@@ -104,7 +104,7 @@ cdef class sgolay2d:
 
        Syntax
        ----------
-       Z = sgolay.sgolay2d(z, window_size, order).getdata()
+       Z = pysesa.sgolay(z, window_size, order).getdata()
 
        Parameters
        ----------
@@ -207,12 +207,12 @@ cdef class sgolay2d:
 
        Syntax
        ----------
-       nr_pts = sgolay.sgolay2d.getdata()
+       nr_pts = pysesa.sgolay.getdata()
 
        Parameters
        ----------
        self : instance
-   	    sgolay.sgolay2d instance
+   	    pysesa.sgolay instance
 
        Returns
        -------

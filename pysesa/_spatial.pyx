@@ -69,9 +69,9 @@ cdef class spatial:
 
    Syntax
    ----------
-   stats = pysesa_spatial.spatial(points).getdata()
-   centroids = pysesa_spatial.spatial(points).getcentroid()
-   stats = pysesa_spatial.spatial(points).getstats()
+   stats = pysesa.spatial(points).getdata()
+   centroids = pysesa.spatial(points).getcentroid()
+   stats = pysesa.spatial(points).getstats()
 
    Parameters
    ----------
@@ -124,9 +124,9 @@ cdef class spatial:
 
       Syntax
       ----------
-      stats = pysesa_spatial.spatial(points).getdata()
-      centroids = pysesa_spatial.spatial(points).getcentroid()
-      stats = pysesa_spatial.spatial(points).getstats()
+      stats = pysesa.spatial(points).getdata()
+      centroids = pysesa.spatial(points).getcentroid()
+      stats = pysesa.spatial(points).getstats()
 
       Parameters
       ----------
@@ -188,12 +188,12 @@ cdef class spatial:
 
       Syntax
       ----------
-      stats = pysesa_spatial.spatial.getdata()
+      stats = pysesa.spatial.getdata()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spatial.spatial instance
+   	   pysesa.spatial instance
 
       Returns [requested through .getdata()]
       ----------
@@ -222,12 +222,12 @@ cdef class spatial:
 
       Syntax
       ----------
-      centroids = pysesa_spatial.spatial.getcentroid()
+      centroids = pysesa.spatial.getcentroid()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spatial.spatial instance
+   	   pysesa.spatial instance
 
       Returns [requested through .getcentroid()]
       ----------
@@ -248,12 +248,12 @@ cdef class spatial:
 
       Syntax
       ----------
-      stats = pysesa_spatial.spatial.getstats()
+      stats = pysesa.spatial.getstats()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_spatial.spatial instance
+   	   pysesa.spatial instance
 
       Returns [requested through .getstats()]
       ----------
@@ -280,7 +280,7 @@ cdef class spatial:
 
       Syntax
       ----------
-      centroids = pysesa_spatial.spatial.getcentroid(points)
+      centroids = pysesa.spatial.getcentroid(points)
 
       Parameters
       ----------
@@ -308,7 +308,7 @@ cdef class spatial:
 
       Syntax
       ----------
-      stats = pysesa_spatial.spatial.getstats(points)
+      stats = pysesa.spatial.getstats(points)
 
       Parameters
       ----------

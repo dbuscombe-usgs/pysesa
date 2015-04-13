@@ -66,7 +66,7 @@ cdef class partition:
    point check with boundary pruning
    Syntax
    ----------
-   nr_pts = pysesa_partition.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
+   nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
 
    Parameters
    ----------
@@ -113,7 +113,7 @@ cdef class partition:
 
       Syntax
       ----------
-      nr_pts = pysesa_partition.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
+      nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
 
       Parameters
       ----------
@@ -260,12 +260,12 @@ cdef class partition:
 
       Syntax
       ----------
-      nr_pts = pysesa_partition.partition.getdata()
+      nr_pts = pysesa.partition.getdata()
 
       Parameters
       ----------
       self : instance
-   	   pysesa_partition.partition instance
+   	   pysesa.partition instance
 
       Returns
       ----------

@@ -1,5 +1,3 @@
-### Pysesa
-
 ![alt tag](http://dbuscombe-usgs.github.io/figs/pysesa_colour.jpg)
 
 PySESA - a Python framework for Spatially Explicit Spectral Analysis
@@ -13,15 +11,6 @@ Buscombe, D. "Computational considerations for spatially explicit spectral analy
 
 For more information visit http://dbuscombe-usgs.github.io/pysesa/
 
-:install:
-    python setup.py install
-    sudo python setup.py install
-    
-:test:
-    python -c "import pysesa; pysesa.test.dotest()"
-
-:license:
-
     This software is in the public domain because it contains materials that
     originally came from the United States Geological Survey, an agency of the
     United States Department of Interior. For more information, 
@@ -29,6 +18,17 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
     http://www.usgs.gov/visual-id/credit_usgs.html#copyright
     Any use of trade, product, or firm names is for descriptive purposes only 
     and does not imply endorsement by the U.S. government.
+
+### Install
+```
+    python setup.py install
+    sudo python setup.py install
+```   
+ 
+### Test
+```
+    python -c "import pysesa; pysesa.test.dotest()"
+```
 
 ### Contributing & Credits
 
@@ -185,7 +185,7 @@ These are all command-line/modular programs which take a number of input (some r
 
 
 ### Read
-   '''
+    '''
    Custom fast (up to 3.5x faster than numpy's genfromtxt) txt file to numpy array
    accepts comma, tab or space delimited files of 3 columns: x, y, and amplitude
 
@@ -203,10 +203,10 @@ These are all command-line/modular programs which take a number of input (some r
    data: ndarray
    	Nx3 point cloud, 32 bit precision
 
-   '''
+    '''
 
 ### Partition
-   '''
+    '''
    Partition a Nx3 point cloud into M windows of nx3 points
    with specified spacing between centroids of adjacent windows
    and with specified overlap between windows.
@@ -241,11 +241,11 @@ These are all command-line/modular programs which take a number of input (some r
         of original point cloud, toproc, to partition space 
         to create M windows
 
-   '''
+    '''
 
 
 ### Detrend
-   '''
+    '''
    Detrend a Nx3 point cloud
    by specified method
 
@@ -279,7 +279,7 @@ These are all command-line/modular programs which take a number of input (some r
    self.data: ndarray
    	Nx3 detrended point cloud
 
-   '''
+    '''
 
 ### Sgolay
     '''
@@ -316,7 +316,7 @@ These are all command-line/modular programs which take a number of input (some r
     '''
 
 ### Spatial
-   '''
+    '''
    Calculate spatial statistics of a Nx3 point cloud
 
    Syntax
@@ -361,11 +361,11 @@ These are all command-line/modular programs which take a number of input (some r
         kurtosis = skewness of amplitudes
         n = number of 3D coordinates
 
-   '''
+    '''
 
 
 ### Lengthscale
-   '''
+    '''
    Calculates the integral lengthscale of a Nx3 point cloud
    using 1 of 3 available methods
    and also returns the tapered 2D grid of 3D pointcloud for spectral analysis
@@ -408,10 +408,10 @@ These are all command-line/modular programs which take a number of input (some r
    self.lengthscale: float
    	integral lengthscale
 
-   '''
+    '''
 
 ### Spectral
-   '''
+    '''
    Calculate spectral statistics of a Nx3 point cloud
 
    Syntax
@@ -517,10 +517,10 @@ These are all command-line/modular programs which take a number of input (some r
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
 
-   '''
+    '''
 
 ### Process
-   '''
+    '''
    Calculate spectral and spatial statistics of a Nx3 point cloud
 
    Syntax
@@ -653,10 +653,10 @@ These are all command-line/modular programs which take a number of input (some r
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
 
-   '''
+    '''
 
 ### Write
-   '''
+    '''
    Custom fast numpy array to comma-delimited ASCII txt file
 
    Syntax
@@ -679,5 +679,5 @@ These are all command-line/modular programs which take a number of input (some r
    ----------
    None
 
-   '''
+    '''
 

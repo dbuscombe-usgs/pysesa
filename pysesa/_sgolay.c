@@ -1155,8 +1155,7 @@ static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
 static char __pyx_k_np[] = "np";
 static char __pyx_k_sp[] = "sp";
-static char __pyx_k__37[] = "\n ___      ___ ___ ___   _     _   _ \n| _ \\_  _/ __| __/ __| /_\\   (_) (_)\n|  _/ || \\__ \\ _|\\__ \\/ _ \\   _   _ \n|_|  \\_, |___/___|___/_/ \\_\\ (_) (_)\n     |__/                           \n   _____             _ __       __               ______      __           \n  / ___/____ __   __(_) /______/ /____  __      / ____/___  / /___ ___  __\n  \\__ \\/ __ `/ | / / / __/ ___/ //_/ / / /_____/ / __/ __ \\/ / __ `/ / / /\n ___/ / /_/ /| |/ / / /_(__  ) ,< / /_/ /_____/ /_/ / /_/ / / /_/ / /_/ / \n/____/\\__,_/ |___/_/\\__/____/_/|_|\\__, /      \\____/\\____/_/\\__,_/\\__, /  \n                                 /____/                          /____/   \n\n+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+\n|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|\n+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+\n|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|\n+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+\n";
-static char __pyx_k__38[] = "*";
+static char __pyx_k__37[] = "*";
 static char __pyx_k_abs[] = "abs";
 static char __pyx_k_main[] = "__main__";
 static char __pyx_k_mode[] = "mode";
@@ -1201,7 +1200,7 @@ static PyObject *__pyx_kp_u_Format_string_allocated_too_shor_2;
 static PyObject *__pyx_kp_u_Non_native_byte_order_not_suppor;
 static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_n_s_ValueError;
-static PyObject *__pyx_n_s__38;
+static PyObject *__pyx_n_s__37;
 static PyObject *__pyx_n_s_abs;
 static PyObject *__pyx_n_s_arange;
 static PyObject *__pyx_n_s_astype;
@@ -6161,7 +6160,7 @@ static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
   #endif
     "sgolay",
-    __pyx_k__37, /* m_doc */
+    0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
     NULL, /* m_reload */
@@ -6177,7 +6176,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_Non_native_byte_order_not_suppor, __pyx_k_Non_native_byte_order_not_suppor, sizeof(__pyx_k_Non_native_byte_order_not_suppor), 0, 1, 0, 0},
   {&__pyx_n_s_RuntimeError, __pyx_k_RuntimeError, sizeof(__pyx_k_RuntimeError), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
-  {&__pyx_n_s__38, __pyx_k__38, sizeof(__pyx_k__38), 0, 0, 1, 1},
+  {&__pyx_n_s__37, __pyx_k__37, sizeof(__pyx_k__37), 0, 0, 1, 1},
   {&__pyx_n_s_abs, __pyx_k_abs, sizeof(__pyx_k_abs), 0, 0, 1, 1},
   {&__pyx_n_s_arange, __pyx_k_arange, sizeof(__pyx_k_arange), 0, 0, 1, 1},
   {&__pyx_n_s_astype, __pyx_k_astype, sizeof(__pyx_k_astype), 0, 0, 1, 1},
@@ -6518,7 +6517,7 @@ PyMODINIT_FUNC PyInit_sgolay(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("sgolay", __pyx_methods, __pyx_k__37, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("sgolay", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -6609,9 +6608,9 @@ PyMODINIT_FUNC PyInit_sgolay(void)
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s__38);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s__38);
-  __Pyx_GIVEREF(__pyx_n_s__38);
+  __Pyx_INCREF(__pyx_n_s__37);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s__37);
+  __Pyx_GIVEREF(__pyx_n_s__37);
   __pyx_t_2 = __Pyx_Import(__pyx_n_s_scipy_signal, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 55; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;

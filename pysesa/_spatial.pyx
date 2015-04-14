@@ -23,29 +23,29 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""                       
- ___      ___ ___ ___   _     _   _ 
-| _ \_  _/ __| __/ __| /_\   (_) (_)
-|  _/ || \__ \ _|\__ \/ _ \   _   _ 
-|_|  \_, |___/___|___/_/ \_\ (_) (_)
-     |__/                           
-                     __  _       __
-   _________  ____ _/ /_(_)___ _/ /
-  / ___/ __ \/ __ `/ __/ / __ `/ / 
- (__  ) /_/ / /_/ / /_/ / /_/ / /  
-/____/ .___/\__,_/\__/_/\__,_/_/   
-    /_/                            
+#"""                       
+# ___      ___ ___ ___   _     _   _ 
+#| _ \_  _/ __| __/ __| /_\   (_) (_)
+#|  _/ || \__ \ _|\__ \/ _ \   _   _ 
+#|_|  \_, |___/___|___/_/ \_\ (_) (_)
+#     |__/                           
+#                     __  _       __
+#   _________  ____ _/ /_(_)___ _/ /
+#  / ___/ __ \/ __ `/ __/ / __ `/ / 
+# (__  ) /_/ / /_/ / /_/ / /_/ / /  
+#/____/ .___/\__,_/\__/_/\__,_/_/   
+#    /_/                            
 
-+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
-|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
-+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|
-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-"""
+#+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+#|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
+#+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|
+#+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+#|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|
+#+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+#"""
 
 # import libraries
 from __future__ import division
@@ -70,43 +70,62 @@ cdef class spatial:
    Syntax
    ----------
    stats = pysesa.spatial(points).getdata()
+
    centroids = pysesa.spatial(points).getcentroid()
+
    stats = pysesa.spatial(points).getstats()
 
    Parameters
-   ----------
+   -------------
    points : ndarray
    	Nx3 point cloud
 
    Returns [requested through .getdata()]
-   ----------
+   ---------------------------------------
    self.data: list
    	x = centroid in horizontal coordinate
+
         y = centroid in laterial coordinate
+
         z_mean = centroid in amplitude
+
         z_max = max amplitude
+
         z_min = min amplitude
+
         z_range = range in amplitude
+
         sigma = standard deviation of amplitudes
+
         skewness = skewness of amplitudes
+
         kurtosis = skewness of amplitudes
+
         n = number of 3D coordinates
 
+
    Returns [requested through .getcentroid()]
-   ----------
+   --------------------------------------------
    self.centroid: list
    	1x3 point cloud centroid [x,y,z]
 
    Returns [requested through .getstats()]
-   ----------
+   ----------------------------------------
    self.stats: list
         z_mean = centroid in amplitude
+
         z_max = max amplitude
+
         z_min = min amplitude
+
         z_range = range in amplitude
+
         sigma = standard deviation of amplitudes
+
         skewness = skewness of amplitudes
+
         kurtosis = skewness of amplitudes
+
         n = number of 3D coordinates
 
    '''
@@ -125,44 +144,64 @@ cdef class spatial:
       Syntax
       ----------
       stats = pysesa.spatial(points).getdata()
+
       centroids = pysesa.spatial(points).getcentroid()
+
       stats = pysesa.spatial(points).getstats()
 
       Parameters
-      ----------
+      -------------
       points : ndarray
    	   Nx3 point cloud
 
       Returns [requested through .getdata()]
-      ----------
+      -----------------------------------------
       self.data: list
    	   x = centroid in horizontal coordinate
+
            y = centroid in laterial coordinate
+
            z_mean = centroid in amplitude
+
            z_max = max amplitude
+
            z_min = min amplitude
+
            z_range = range in amplitude
+
            sigma = standard deviation of amplitudes
+
            skewness = skewness of amplitudes
+
            kurtosis = skewness of amplitudes
+
            n = number of 3D coordinates
 
+
       Returns [requested through .getcentroid()]
-      ----------
+      --------------------------------------------
       self.centroid: list
    	   1x3 point cloud centroid [x,y,z]
 
       Returns [requested through .getstats()]
-      ----------
+      -----------------------------------------
       self.stats: list
            z_mean = centroid in amplitude
+
            z_max = max amplitude
+
            z_min = min amplitude
+
            z_range = range in amplitude
+
            sigma = standard deviation of amplitudes
+
            skewness = skewness of amplitudes
+
            kurtosis = skewness of amplitudes
+
            n = number of 3D coordinates
+
       '''
       
       cdef float x, y, z_mean,z_maz,z_min,z_range,sigma,skewness,kurtosis,n     
@@ -191,23 +230,33 @@ cdef class spatial:
       stats = pysesa.spatial.getdata()
 
       Parameters
-      ----------
+      -------------
       self : instance
    	   pysesa.spatial instance
 
       Returns [requested through .getdata()]
-      ----------
+      ---------------------------------------
       self.data: list
    	   x = centroid in horizontal coordinate
+
            y = centroid in laterial coordinate
+
            z_mean = centroid in amplitude
+
            z_max = max amplitude
+
            z_min = min amplitude
+
            z_range = range in amplitude
+
            sigma = standard deviation of amplitudes
+
            skewness = skewness of amplitudes
+
            kurtosis = skewness of amplitudes
+
            n = number of 3D coordinates
+
       '''
       return self.data
 
@@ -225,12 +274,12 @@ cdef class spatial:
       centroids = pysesa.spatial.getcentroid()
 
       Parameters
-      ----------
+      -------------
       self : instance
    	   pysesa.spatial instance
 
       Returns [requested through .getcentroid()]
-      ----------
+      --------------------------------------------
       self.centroid: list
    	   1x3 point cloud centroid [x,y,z]
 
@@ -251,21 +300,29 @@ cdef class spatial:
       stats = pysesa.spatial.getstats()
 
       Parameters
-      ----------
+      ------------
       self : instance
    	   pysesa.spatial instance
 
       Returns [requested through .getstats()]
-      ----------
+      -----------------------------------------
       self.stats: list
            z_mean = centroid in amplitude
+
            z_max = max amplitude
+
            z_min = min amplitude
+
            z_range = range in amplitude
+
            sigma = standard deviation of amplitudes
+
            skewness = skewness of amplitudes
+
            kurtosis = skewness of amplitudes
+
            n = number of 3D coordinates
+
       '''
       return self.stats
 
@@ -283,12 +340,12 @@ cdef class spatial:
       centroids = pysesa.spatial.getcentroid(points)
 
       Parameters
-      ----------
+      ------------
       points : ndarray
    	   Nx3 point cloud
 
       Returns [requested through .getcentroid()]
-      ----------
+      --------------------------------------------
       self.centroid: list
    	   1x3 point cloud centroid [x,y,z]
 
@@ -311,21 +368,29 @@ cdef class spatial:
       stats = pysesa.spatial.getstats(points)
 
       Parameters
-      ----------
+      ------------
       points : ndarray
    	   Nx3 point cloud
 
       Returns [requested through .getstats()]
-      ----------
+      ----------------------------------------
       self.stats: list
            z_mean = centroid in amplitude
+
            z_max = max amplitude
+
            z_min = min amplitude
+
            z_range = range in amplitude
+
            sigma = standard deviation of amplitudes
+
            skewness = skewness of amplitudes
+
            kurtosis = skewness of amplitudes
+
            n = number of 3D coordinates
+
       '''
       rs1 = RunningStats.RunningStats()
       for k in points[:,2]:

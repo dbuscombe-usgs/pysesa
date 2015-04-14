@@ -23,29 +23,29 @@
 ## You should have received a copy of the GNU General Public License
 ## along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-"""                       
- ___      ___ ___ ___   _     _   _ 
-| _ \_  _/ __| __/ __| /_\   (_) (_)
-|  _/ || \__ \ _|\__ \/ _ \   _   _ 
-|_|  \_, |___/___|___/_/ \_\ (_) (_)
-     |__/                           
-                         __             __
-   _________  ___  _____/ /__________ _/ /
-  / ___/ __ \/ _ \/ ___/ __/ ___/ __ `/ / 
- (__  ) /_/ /  __/ /__/ /_/ /  / /_/ / /  
-/____/ .___/\___/\___/\__/_/   \__,_/_/   
-    /_/                                   
+##"""                       
+## ___      ___ ___ ___   _     _   _ 
+##| _ \_  _/ __| __/ __| /_\   (_) (_)
+##|  _/ || \__ \ _|\__ \/ _ \   _   _ 
+##|_|  \_, |___/___|___/_/ \_\ (_) (_)
+##     |__/                           
+##                         __             __
+##   _________  ___  _____/ /__________ _/ /
+##  / ___/ __ \/ _ \/ ___/ __/ ___/ __ `/ / 
+## (__  ) /_/ /  __/ /__/ /_/ /  / /_/ / /  
+##/____/ .___/\___/\___/\__/_/   \__,_/_/   
+##    /_/                                   
 
-+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
-|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
-+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|
-+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
-"""
+##+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+##|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
+##+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
+##+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+##|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|
+##+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+##+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+##|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|
+##+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+
+##"""
 
 # import libraries
 from __future__ import division
@@ -75,18 +75,22 @@ cdef class spectral:
    Syntax
    ----------
    data = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()
+
    lengths = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()
+
    psdparams= pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()
+
    lengthscale = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
+
    moments = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()
 
    Parameters
-   ----------
+   ------------
    points : ndarray
    	Nx3 point cloud
 
    Other Parameters
-   ----------
+   -------------------
    nbin : int, *optional* [default = 20]
         number of bins for power spectral binning
    res : float, *optional* [default = 0.05]
@@ -94,85 +98,135 @@ cdef class spectral:
    proctype : int, *optional* [default = 1, no spectral smoothing]
    	proctype type:
         1, no spectral smoothing
+
         2, spectrum smoothed with Gaussian
+
    lentype : int, *optional* [default = 1, l<0.5]
    	lengthscale type:
         1, l<0.5
+
         2, l<1/e
+
         3, l<0
+
    taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
+
         2, Hamming
+
         3, Blackman
+
         4, Bartlett
+
    method : str, *optional* [default = 'nearest']
    	gridding type
 
    Returns [requested through .getdata()]
-   ----------
+   ----------------------------------------
    self.data: list
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         d = fractal dimension
+
         l = integral lengthscale
+
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
+
         Z = zero-crossings per unit length
+
         E = extreme per unit length
+
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
 
    Returns [requested through .getpsdparams()]
-   ----------
+   --------------------------------------------
    self.psdparams: list
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         d = fractal dimension
 
    Returns [requested through .getlengths()]
-   ----------
+   -------------------------------------------
    self.lengths: list
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
 
+
    Returns [requested through .getlengthscale()]
-   ----------
+   ----------------------------------------------
    self.lengthscale: float
         l = integral lengthscale
 
    Returns [requested through .getmoments()]
-   ----------
+   ------------------------------------------
    self.moments: list
         Z = zero-crossings per unit length
+
         E = extreme per unit length
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
 
    '''
@@ -190,18 +244,22 @@ cdef class spectral:
       Syntax
       ----------
       data = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getdata()
+
       lengths = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengths()
+
       psdparams= pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getstats()
+
       lengthscale = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengthscale()
+
       moments = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getmoments()
 
       Parameters
-      ----------
+      ------------
       points : ndarray
    	Nx3 point cloud
 
       Other Parameters
-      ----------
+      ------------------
       nbin : int, *optional* [default = 20]
         number of bins for power spectral binning
       res : float, *optional* [default = 0.05]
@@ -209,86 +267,140 @@ cdef class spectral:
       proctype : int, *optional* [default = 1, no spectral smoothing]
    	proctype type:
         1, no spectral smoothing
+
         2, spectrum smoothed with Gaussian
+
       lentype : int, *optional* [default = 1, l<0.5]
    	lengthscale type:
         1, l<0.5
+
         2, l<1/e
+
         3, l<0
+
       taper : int, *optional* [default = Hanning]
    	flag for taper type:
         1, Hanning (Hann)
+
         2, Hamming
+
         3, Blackman
+
         4, Bartlett
+
       method : str, *optional* [default = 'nearest']
    	gridding type
 
       Returns [requested through .getdata()]
-      ----------
+      ---------------------------------------
       self.data: list
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         d = fractal dimension
+
         l = integral lengthscale
+
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
+
         Z = zero-crossings per unit length
+
         E = extreme per unit length
+
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
 
+
       Returns [requested through .getpsdparams()]
-      ----------
+      ---------------------------------------------
       self.psdparams: list
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         d = fractal dimension
 
+
       Returns [requested through .getlengths()]
-      ----------
+      -------------------------------------------
       self.lengths: list
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
 
+
       Returns [requested through .getlengthscale()]
-      ----------
+      -----------------------------------------------
       self.lengthscale: float
         l = integral lengthscale
 
       Returns [requested through .getmoments()]
-      ----------
+      -------------------------------------------
       self.moments: list
         Z = zero-crossings per unit length
+
         E = extreme per unit length
+
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
+
       '''
 
       cdef int nx, ny
@@ -391,7 +503,7 @@ cdef class spectral:
       Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = pysesa_spectral.spec._moments(k, s_b, res)
 
       Parameters
-      ----------
+      ------------
       k : ndarray
    	   N x 1 wavenumbers
       s_b : ndarray
@@ -403,17 +515,29 @@ cdef class spectral:
       ----------
       data: tuple of floats
         Z = zero-crossings per unit length
+
         E = extreme per unit length
+
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
+
       '''
       cdef double Z, E, sigma, T0_1, T0_2, sw1, sw2
       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)
@@ -470,9 +594,13 @@ cdef class spectral:
       ----------
       data: tuple of floats
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
+
       '''
       cdef double wmax, wmean, rms1, rms2
       
@@ -520,9 +648,13 @@ cdef class spectral:
       ----------
       data: tuple of ndarrays
    	s = power spectral density
+
         s_b = background power spectral density
+
         k = wavenumber index of s 
+
         k_back = wavenumber index of s_b
+
       '''
       from nifty import rg_space, field, about
       about.warnings='OFF'
@@ -574,7 +706,7 @@ cdef class spectral:
       slope, intercept, r_value, p_value, std_err, d = pysesa_spectral.spec._psdparams(k_back, s_b, res)
 
       Parameters
-      ----------
+      ------------
       k_back : ndarray
    	   N x 1 wavenumbers
       s_b : ndarray
@@ -586,11 +718,17 @@ cdef class spectral:
       ----------
       data: tuple
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         d = fractal dimension
+
       '''
       cdef double slope, intercept, r_value, p_value, std_err, d
       
@@ -626,7 +764,7 @@ cdef class spectral:
       slope, intercept, r_value, p_value, std_err = pysesa_spectral.spec._do_linreg(B)
 
       Parameters
-      ----------
+      ------------
       B : ndarray
    	   N x 2 array of wavenumber and power spectral density
 
@@ -634,10 +772,15 @@ cdef class spectral:
       ----------
       data: tuple
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
       '''
 
       cdef float slope, intercept, r_value, p_value, std_err
@@ -672,36 +815,59 @@ cdef class spectral:
       data = pysesa.spectral.getdata()
 
       Parameters
-      ----------
+      ------------
       self : instance
    	   pysesa.spectral instance
 
       Returns [requested through .getdata()]
-      ----------
+      -----------------------------------------
       self.data: list
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         l = integral lengthscale
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
+
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         Z = zero-crossings per unit length
+
         E = extreme per unit length
+
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         d = fractal dimension
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
+
       '''
       return self.data
 
@@ -719,25 +885,37 @@ cdef class spectral:
       moments = pysesa.spectral.getmoments()
 
       Parameters
-      ----------
+      ------------
       self : instance
    	   pysesa.spectral instance
 
       Returns [requested through .getmoments()]
-      ----------
+      ------------------------------------------
       self.moments: list
         Z = zero-crossings per unit length
+
         E = extreme per unit length
+
         sigma = RMS amplitude
+
         T0_1 = average spatial period (m_0/m_1)
+
         T0_2 = average spatial period (m_0/m_2)^0.5
+
         sw1 = spectral width 
+
         sw2 = spectral width (normalised radius of gyration)
+
         m0 = zeroth moment of spectrum
+
         m1 = first moment of spectrum
+
         m2 = second moment of spectrum
+
         m3 = third moment of spectrum
+
         m4 = fourth moment of spectrum
+
       '''
       return self.moments
 
@@ -755,12 +933,12 @@ cdef class spectral:
       lengthscale = pysesa.spectral.getlengthscale()
 
       Parameters
-      ----------
+      ------------
       self : instance
    	   pysesa.spectral instance
 
       Returns [requested through .getlengthscale()]
-      ----------
+      -----------------------------------------------
       self.lengthscale: float
         l = integral lengthscale
       '''
@@ -785,12 +963,16 @@ cdef class spectral:
    	   pysesa.spectral instance
 
       Returns [requested through .getlengths()]
-      ----------
+      ------------------------------------------
       self.lengths: list
         wmax = peak wavelength
+
         wmean = mean wavelength
+
         rms1 = RMS amplitude from power spectral density
+
         rms2 = RMS amplitude from bin averaged power spectral density
+
       '''
       return self.lengths
 
@@ -808,19 +990,25 @@ cdef class spectral:
       psdparams= pysesa.spectral.getstats()
 
       Parameters
-      ----------
+      ------------
       self : instance
    	   pysesa.spectral.spec instance
 
       Returns [requested through .getpsdparams()]
-      ----------
+      ---------------------------------------------
       self.psdparams: list
    	slope = slope of regression line through log-log 1D power spectral density
+
         intercept = intercept of regression line through log-log 1D power spectral density
+
         r_value = correlation of regression through log-log 1D power spectral density
+
         p_value = probability that slope of regression through log-log 1D power spectral density is not zero
+
         std_err = standard error of regression through log-log 1D power spectral density
+
         d = fractal dimension
+
       '''
       return self.psdparams
 

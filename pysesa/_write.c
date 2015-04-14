@@ -1152,7 +1152,6 @@ static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
 static char __pyx_k__4[] = " ";
 static char __pyx_k_np[] = "np";
-static char __pyx_k__12[] = "\n ___      ___ ___ ___   _     _   _ \n| _ \\_  _/ __| __/ __| /_\\   (_) (_)\n|  _/ || \\__ \\ _|\\__ \\/ _ \\   _   _ \n|_|  \\_, |___/___|___/_/ \\_\\ (_) (_)\n     |__/                           \n                _ __     \n _      _______(_) /____ \n| | /| / / ___/ / __/ _ | |/ |/ / /  / / /_/  __/\n|__/|__/_/  /_/\\__/\\___/ \n                         \n\n+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+\n|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|\n+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n|d|b|u|s|c|o|m|b|e|@|u|s|g|s|.|g|o|v|\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+\n|U|.|S|.| |G|e|o|l|o|g|i|c|a|l| |S|u|r|v|e|y|\n+-+-+-+-+ +-+-+-+-+-+-+-+-+-+-+ +-+-+-+-+-+-+\n\n";
 static char __pyx_k_fmt[] = "fmt";
 static char __pyx_k_8_6f[] = "%8.6f,";
 static char __pyx_k_exit[] = "__exit__";
@@ -1224,8 +1223,8 @@ static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_tuple__9;
 static PyObject *__pyx_tuple__10;
 static PyObject *__pyx_tuple__11;
-static PyObject *__pyx_tuple__13;
-static PyObject *__pyx_codeobj__14;
+static PyObject *__pyx_tuple__12;
+static PyObject *__pyx_codeobj__13;
 
 /* "pysesa/_write.pyx":61
  * @cython.wraparound(False)
@@ -1237,7 +1236,7 @@ static PyObject *__pyx_codeobj__14;
 
 /* Python wrapper */
 static PyObject *__pyx_pw_6pysesa_5write_1txtwrite(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5write_txtwrite[] = "\n   Custom fast numpy array to comma-delimited ASCII txt file\n\n   Syntax\n   ----------\n   () = pysesa.write.txtwrite(infile, towrite)\n\n   Parameters\n   ----------\n   outfile : str\n   \tname of file to write to\n   towrite : ndarray\n   \tndarray containing Nx3 point cloud\n\n   Other Parameters\n   ----------\n   header : str, *optional* [default = None]\n   \theader string\n\n   Returns\n   ----------\n   None\n\n   ";
+static char __pyx_doc_6pysesa_5write_txtwrite[] = "\n   Custom fast numpy array to comma-delimited ASCII txt file\n\n   Syntax\n   ----------\n   () = pysesa.write.txtwrite(infile, towrite)\n\n   Parameters\n   ------------\n   outfile : str\n   \tname of file to write to\n   towrite : ndarray\n   \tndarray containing Nx3 point cloud\n\n   Other Parameters\n   -----------------\n   header : str, *optional* [default = None]\n   \theader string\n\n   Returns\n   ----------\n   None\n\n   ";
 static PyMethodDef __pyx_mdef_6pysesa_5write_1txtwrite = {"txtwrite", (PyCFunction)__pyx_pw_6pysesa_5write_1txtwrite, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5write_txtwrite};
 static PyObject *__pyx_pw_6pysesa_5write_1txtwrite(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_outfile = 0;
@@ -3666,7 +3665,7 @@ static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
   #endif
     "write",
-    __pyx_k__12, /* m_doc */
+    0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
     NULL, /* m_reload */
@@ -3825,10 +3824,10 @@ static int __Pyx_InitCachedConstants(void) {
  *    '''
  *    Custom fast numpy array to comma-delimited ASCII txt file
  */
-  __pyx_tuple__13 = PyTuple_Pack(4, __pyx_n_s_outfile, __pyx_n_s_towrite, __pyx_n_s_header, __pyx_n_s_f); if (unlikely(!__pyx_tuple__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__13);
-  __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_txtwrite, 61, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__12 = PyTuple_Pack(4, __pyx_n_s_outfile, __pyx_n_s_towrite, __pyx_n_s_header, __pyx_n_s_f); if (unlikely(!__pyx_tuple__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__12);
+  __Pyx_GIVEREF(__pyx_tuple__12);
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_txtwrite, 61, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -3888,7 +3887,7 @@ PyMODINIT_FUNC PyInit_write(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("write", __pyx_methods, __pyx_k__12, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("write", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif

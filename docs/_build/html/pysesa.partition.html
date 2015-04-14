@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pysesa.partition module &mdash; pysesa 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pysesa 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="pysesa package" href="pysesa.html" />
+    <link rel="next" title="pysesa.pysesa module" href="pysesa.pysesa.html" />
+    <link rel="prev" title="pysesa.lengthscale module" href="pysesa.lengthscale.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/pysesa_colour.jpg" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="pysesa.pysesa.html" title="pysesa.pysesa module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pysesa.lengthscale.html" title="pysesa.lengthscale module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+
+          <li class="nav-item nav-item-1"><a href="pysesa.html" accesskey="U">pysesa package</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">pysesa.partition module</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#other-parameters">Other Parameters</a></li>
+<li><a class="reference internal" href="#returns">Returns</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pysesa.lengthscale.html"
+                        title="previous chapter">pysesa.lengthscale module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="pysesa.pysesa.html"
+                        title="next chapter">pysesa.pysesa module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pysesa.partition.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pysesa-partition-module">
+<span id="pysesa-partition"></span><h1>pysesa.partition module<a class="headerlink" href="#pysesa-partition-module" title="Permalink to this headline">¶</a></h1>
+<p>Partition a Nx3 point cloud into M windows of nx3 points
+with specified spacing between centroids of adjacent windows
+and with specified overlap between windows.
+Implemented using a binary search tree for fast nearest neighbour
+point check with boundary pruning</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>You call the function like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">nr_pts</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="n">toproc</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">mxpts</span><span class="p">,</span> <span class="n">minpts</span><span class="p">,</span> <span class="n">prc_overlap</span><span class="p">)</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>toproc <span class="classifier-delimiter">:</span> <span class="classifier">ndarray</span></dt>
+<dd>Nx3 point cloud</dd>
+</dl>
+</div>
+<div class="section" id="other-parameters">
+<h2>Other Parameters<a class="headerlink" href="#other-parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>out <span class="classifier-delimiter">:</span> <span class="classifier">float, <em>optional</em> [default = 0.5]</span></dt>
+<dd>output grid resolution</dd>
+<dt>res <span class="classifier-delimiter">:</span> <span class="classifier">float, <em>optional</em> [default = 0.05]</span></dt>
+<dd>spatial grid resolution to create a grid for the boundary pruning</dd>
+<dt>mxpts <span class="classifier-delimiter">:</span> <span class="classifier">float, <em>optional</em> [default = 1024]</span></dt>
+<dd>maximum number of points allowed in a window</dd>
+<dt>minpts <span class="classifier-delimiter">:</span> <span class="classifier">float, <em>optional</em> [default = 16]</span></dt>
+<dd>minimum number of points allowed in a window</dd>
+<dt>prc_overlap <span class="classifier-delimiter">:</span> <span class="classifier">float, <a href="#id1"><span class="problematic" id="id2">*</span></a>optional&#8221;  [default = 0]</span></dt>
+<dd>percentage overlap between windows</dd>
+</dl>
+</div>
+<div class="section" id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>self.data: list</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>list of M ndarrays, each containing n indices</div></blockquote>
+<p>of original point cloud, toproc, to partition space
+to create M windows</p>
+</div></blockquote>
+<img alt="_images/pysesa_colour.jpg" class="last" src="_images/pysesa_colour.jpg" />
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="pysesa.pysesa.html" title="pysesa.pysesa module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pysesa.lengthscale.html" title="pysesa.lengthscale module"
+             >previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+
+          <li class="nav-item nav-item-1"><a href="pysesa.html" >pysesa package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Daniel Buscombe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

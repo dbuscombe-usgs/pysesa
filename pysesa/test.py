@@ -81,14 +81,14 @@ def test():
        Flagstaff, AZ 86001
        dbuscombe@usgs.gov
 
-   For more information visit http://dbuscombe-usgs.github.io/PySESA/
+   For more information visit http://dbuscombe-usgs.github.io/pysesa/
 
    :install:
        python setup.py install
        sudo python setup.py install
     
    :test:
-       python -c "import pysesa; pysesa.test.dotest()"
+       python -c "import pysesa; pysesa.test()"
 
    :license:
        GNU Lesser General Public License, Version 3

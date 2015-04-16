@@ -211,7 +211,7 @@ cdef class spatial:
       z_mean,z_max,z_min,z_range,sigma,skewness,kurtosis,n = self._get_stats(points)
 
       self.stats = [z_mean,z_max,z_min,z_range,sigma,skewness,kurtosis,n]
-      self.centroid = [x,y]
+      self.centroid = [x,y,z]
 
       #x,y,z_mean,z_max,z_min,z_range,sigma,skewness,kurtosis,n
       self.data = [x,y,z_mean,z_max,z_min,z_range,sigma,skewness,kurtosis,n] 
@@ -351,8 +351,10 @@ cdef class spatial:
 
       '''
       cdef float x = np.min(points[:,0]) + ( np.max(points[:,0]) - np.min(points[:,0]) )/2      
-      cdef float y = np.min(points[:,1]) + ( np.max(points[:,1]) - np.min(points[:,1]) )/2                   
-      return [x, y, np.mean(points[:,2])] 
+      cdef float y = np.min(points[:,1]) + ( np.max(points[:,1]) - np.min(points[:,1]) )/2 
+      cdef float z = np.min(points[:,2]) + ( np.max(points[:,2]) - np.min(points[:,2]) )/2 
+                  
+      return [x, y, z] 
 
    # =========================================================
    @cython.boundscheck(False)

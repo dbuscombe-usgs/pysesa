@@ -154,6 +154,9 @@ cdef class detrend:
       cdef float nx = np.max(points[:,0]) - np.min(points[:,0])
       cdef float ny = np.max(points[:,1]) - np.min(points[:,1])
 
+      cdef np.float64_t mz = np.empty((1,), dtype=np.float64)      
+      mz = np.mean(points[:,2]).astype('float64')
+
       cdef float lenx
 
       # enfore square matrix in gridding
@@ -189,7 +192,7 @@ cdef class detrend:
          est = sm.OLS(points[:,2], Xr).fit()    
 
          # plot the hyperplane by evaluating the parameters on the grid
-         dt = (est.resid)
+         dt = (est.resid).astype('float64')   
                  
       # =2, RLM plane detrending is carried out                                       
       elif proctype==3:
@@ -199,7 +202,7 @@ cdef class detrend:
          ## fit a RLM model with intercept on x and y
          Xr = sm.add_constant(points[:,:2])
          est = sm.RLM(points[:,2], Xr).fit()    
-         dt = (est.resid)
+         dt = (est.resid).astype('float64')   
          
       # =3, ODR plane detrending is carried out                                       
       elif proctype==4:
@@ -216,7 +219,7 @@ cdef class detrend:
          myOdr.set_job(fit_type=0)
          est = myOdr.run()
 
-         dt = -(est.delta[0] + est.delta[1])
+         dt = -(est.delta[0] + est.delta[1]).astype('float64')   
        
       # otherwise, Savitsky-Golay order 0 detrending is carried out                                       
       else:
@@ -242,10 +245,11 @@ cdef class detrend:
          Zf[np.isnan(Zf)] = np.nanmean(Zf)
 
          Zf = (dat-Zf)
-         dt = np.random.choice(Zf.flatten(),len(points))
+         dt = np.random.choice(Zf.flatten(),len(points)).astype('float64')   
 
-      points[:,2] = dt
-      self.data = points.astype('float64')
+      points[:,2] = dt + mz
+
+      self.data = points.astype('float64')    
 
       return
 

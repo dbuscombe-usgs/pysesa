@@ -229,6 +229,8 @@ cdef class spectral:
 
         m4 = fourth moment of spectrum
 
+        phi = effective slope (degrees)
+
    '''
    cdef object data, x_space, k_space, r, moments, lengthscale, lengths, psdparams
 
@@ -340,6 +342,7 @@ cdef class spectral:
 
         m4 = fourth moment of spectrum
 
+        phi = effective slope (degrees)
 
       Returns [requested through .getpsdparams()]
       ---------------------------------------------
@@ -422,7 +425,7 @@ cdef class spectral:
       # is all nans just return nans
       if np.sum(np.isnan(im)) == np.prod(np.shape(im)):
 
-         self.data = [np.ones(23)*np.nan] 
+         self.data = [np.ones(24)*np.nan] 
          return
 
       else:
@@ -450,11 +453,12 @@ cdef class spectral:
                Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
                self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
 
-               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments
+               # concetanate and add effective slope
+               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
 
             except:
                      
-               self.data = [np.ones(23)*np.nan] 
+               self.data = [np.ones(24)*np.nan] 
 
             return
 
@@ -481,11 +485,12 @@ cdef class spectral:
                Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
                self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
 
-               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments
+               # concetanate and add effective slope
+               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
 
             except:
 
-               self.data = [np.ones(23)*np.nan] 
+               self.data = [np.ones(24)*np.nan] 
 
             return
 
@@ -546,24 +551,28 @@ cdef class spectral:
       # get moments of spectrum
       for i from 0 <= i < 5:
       #for i in xrange(0,5):
-         moment[i] = np.abs(trapz((k)**i,s_b,np.median(np.gradient(k))))
+         moment[i] = np.abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
+
+      # s is actually 10**length^4
+      moment = np.sqrt((10**4)*moment)
 
       # zero crossings per second
-      Z = res*(2*np.sqrt(moment[2]/moment[0])) 
+      Z = 2*np.sqrt(moment[2]/moment[0])
       # extrema per second										
       E = 2*np.sqrt(moment[4]/moment[2]) 
       #rms
-      sigma = (moment[2]/moment[0])*res 
+      sigma = (moment[2]/moment[0])
 
       # average period m0/m1
       T0_1 = (moment[0]/moment[1])
       #average period (m0/m2)^0.5
       T0_2 = T0_1**0.5  
       # spectral width parameter
-      sw1 = np.abs(moment[0]*moment[2]/moment[1]**2-1)**0.5 
+      sw1 = (moment[0]*moment[2]/moment[1]**2-1)**0.5 
       # spectral width paramenter
       sw2 = np.abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5 
       
+
       return [Z, E, sigma, T0_1, T0_2, sw1, sw2] + moment.tolist()               
       
    # =========================================================
@@ -868,6 +877,7 @@ cdef class spectral:
 
         m4 = fourth moment of spectrum
 
+        phi = effective slope (degrees)
       '''
       return self.data
 

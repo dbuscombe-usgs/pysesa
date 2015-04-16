@@ -53,6 +53,7 @@ import numpy as np
 cimport numpy as np
 cimport cython
 from scipy.interpolate import griddata
+from scipy.integrate import trapz
 
 # suppress divide and invalid warnings
 np.seterr(divide='ignore')
@@ -334,17 +335,30 @@ cdef class lengthscale:
       if ma>0:
          auto = np.dot(auto,pow(ma,-1))
          h = self._radial_data(np.squeeze(auto))
+
          try:
             if lentype==1: #l<0.5
-               return res*((2*np.pi)*(np.where(h<0.5)[0][0]+1))
+               return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0.5)[0][0]+1], np.arange(np.where(h<0.5)[0][0]+1) ))
             elif lentype==2: #l<1/e
-               return res*((2*np.pi)*(np.where(h<(1/np.exp(1)))[0][0]+1))
+               return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<(1/np.exp(1)))[0][0]+1], np.arange(np.where(h<(1/np.exp(1)))[0][0]+1) ))
             else: #l<0
-               return res*(np.where(h<0)[0][0]+1)
+               return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0)[0][0]+1], np.arange(np.where(h<0)[0][0]+1) ))
          except:
             return np.nan
       else:
          return np.nan
+
+#         try:
+#            if lentype==1: #l<0.5
+#               return res*((2*np.pi)*(np.where(h<0.5)[0][0]+1))
+#            elif lentype==2: #l<1/e
+#               return res*((2*np.pi)*(np.where(h<(1/np.exp(1)))[0][0]+1))
+#            else: #l<0
+#               return res*(np.where(h<0)[0][0]+1)
+#         except:
+#            return np.nan
+#      else:
+#         return np.nan
 
    # =========================================================
    @cython.boundscheck(False)

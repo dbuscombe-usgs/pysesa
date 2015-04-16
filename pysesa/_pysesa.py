@@ -1,5 +1,5 @@
 ## PySESA (Python program for Spatially Explicit Spectral Analysis) 
-## has been developed at the Grand Canyon Monitorinf & Research Center,
+## has been developed at the Grand Canyon Monitoring & Research Center,
 ## U.S. Geological Survey
 ##
 ## Author: Daniel Buscombe
@@ -126,7 +126,7 @@ def get_spec_spat(pts, spectype, out, detrend, res, method, nbin, lentype, taper
 # =========================================================
 # ==================== begin program ======================
 # =========================================================
-def process(infile, out=0.5, detrend=4, proctype=1, mxpts=512, res=0.05, nbin=20, lentype=1, minpts=16, taper=1, prc_overlap=0):
+def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0):
    '''
    Calculate spectral and spatial statistics of a Nx3 point cloud
 

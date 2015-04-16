@@ -23,6 +23,11 @@ Contents:
 
    pysesa.rst
 
+.. toctree::
+   :maxdepth: 2
+
+   examples.rst
+   
 Indices and tables
 ==================
 

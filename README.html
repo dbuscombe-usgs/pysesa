@@ -187,16 +187,16 @@ deactivate #(or source venv/bin/deactivate)
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># general settings</span>
 <span class="n">infile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">)</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">+</span><span class="s">&#39;pysesa_test&#39;</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">+</span><span class="s">&#39;example_100000pts.xyz&#39;</span>
 
-<span class="n">out</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c">#m output grid</span>
+<span class="n">out</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#m output grid</span>
 <span class="n">detrend</span> <span class="o">=</span> <span class="mi">4</span> <span class="c">#ODR plane</span>
 <span class="n">proctype</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#Processing spectral parameters (no smoothing)</span>
-<span class="n">mxpts</span> <span class="o">=</span> <span class="mi">512</span> <span class="c"># max pts per window</span>
+<span class="n">mxpts</span> <span class="o">=</span> <span class="mi">1024</span> <span class="c"># max pts per window</span>
 <span class="n">res</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="c">#cm internal grid resolution</span>
 <span class="n">nbin</span> <span class="o">=</span> <span class="mi">20</span> <span class="c">#number of bins for spectral binning</span>
 <span class="n">lentype</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#l less than 0.5</span>
 <span class="n">taper</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#Hann taper</span>
 <span class="n">prc_overlap</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">#no overlap between successive windows</span>
-<span class="n">minpts</span> <span class="o">=</span> <span class="mi">16</span> <span class="c">#min pts per window</span>
+<span class="n">minpts</span> <span class="o">=</span> <span class="mi">64</span> <span class="c">#min pts per window</span>
 
 <span class="n">pysesa</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">detrend</span><span class="p">,</span> <span class="n">proctype</span><span class="p">,</span> <span class="n">mxpts</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">nbin</span><span class="p">,</span> <span class="n">lentype</span><span class="p">,</span> <span class="n">minpts</span><span class="p">,</span> <span class="n">taper</span><span class="p">,</span> <span class="n">prc_overlap</span><span class="p">)</span>
 </pre></div>

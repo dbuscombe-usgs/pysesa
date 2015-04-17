@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Examples &mdash; pysesa 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pysesa 0.0.1 documentation" href="index.html" />
+    <link rel="prev" title="pysesa.test module" href="pysesa.test.html" /> 
+  </head>
+  <body role="document">
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/pysesa_colour.jpg" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="pysesa.test.html" title="pysesa.test module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Examples</a><ul>
+<li><a class="reference internal" href="#process-module">Process module</a></li>
+<li><a class="reference internal" href="#test-module">Test module</a></li>
+<li><a class="reference internal" href="#minimal-example-on-1-window">Minimal example on 1 window</a></li>
+<li><a class="reference internal" href="#minimal-example-all-windows-using-parallel-processing">Minimal example, all windows using parallel processing</a></li>
+<li><a class="reference internal" href="#lengthscale-module">Lengthscale module</a></li>
+<li><a class="reference internal" href="#spatial-module">Spatial module</a></li>
+<li><a class="reference internal" href="#spectral-module">Spectral module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pysesa.test.html"
+                        title="previous chapter">pysesa.test module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/examples.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="examples">
+<span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="process-module">
+<h2>Process module<a class="headerlink" href="#process-module" title="Permalink to this headline">¶</a></h2>
+<p>The submodule <em>process</em> allows full control over all types of workflows through use of a number of processing flags. A minimum working example usage of the the PySESA module, accepting all default values for parameters, is:</p>
+<div class="highlight-python"><div class="highlight"><pre>import pysesa
+infile = `/home/me/mypointcloudfile.txt&#39;
+pysesa.process(infile)
+</pre></div>
+</div>
+<p>This instance writes out the following results file whose name contains some of the processing parameters:</p>
+<div class="highlight-python"><div class="highlight"><pre>/home/me/mypointcloudfile.txt_zstat_detrend4_outres0.5_proctype1_mxpts512_minpts16.xyz
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-module">
+<h2>Test module<a class="headerlink" href="#test-module" title="Permalink to this headline">¶</a></h2>
+<p>The above is the same as passing a list of default-valued variables to <em>process</em>, which is included for completeness in the <em>test</em> module:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">out</span> <span class="o">=</span> <span class="mi">1</span>               <span class="c"># 1 m output grid</span>
+<span class="n">detrend</span> <span class="o">=</span> <span class="mi">4</span>           <span class="c"># detrend type: ODR plane</span>
+<span class="n">proctype</span> <span class="o">=</span> <span class="mi">1</span>          <span class="c"># Processing type: spectral parameters (no smoothing) only</span>
+<span class="n">mxpts</span> <span class="o">=</span> <span class="mi">1024</span>          <span class="c"># Maximum points per window</span>
+<span class="n">res</span> <span class="o">=</span> <span class="mf">0.05</span>            <span class="c"># 5 cm grid resolution for detrending and spectral analysis</span>
+<span class="n">nbin</span> <span class="o">=</span> <span class="mi">20</span>             <span class="c"># Number of bins for spectral binning</span>
+<span class="n">lentype</span> <span class="o">=</span> <span class="mi">1</span>           <span class="c"># Integral lengthscale type: l&lt;0.5</span>
+<span class="n">taper</span> <span class="o">=</span> <span class="mi">1</span>             <span class="c"># Hann taper before spectral analysis</span>
+<span class="n">prc_overlap</span> <span class="o">=</span> <span class="mi">0</span>       <span class="c"># No overlap between successive windows</span>
+<span class="n">minpts</span> <span class="o">=</span> <span class="mi">64</span>           <span class="c"># Minimum points per window</span>
+
+<span class="n">pysesa</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">detrend</span><span class="p">,</span> <span class="n">proctype</span><span class="p">,</span> <span class="n">mxpts</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">nbin</span><span class="p">,</span> <span class="n">lentype</span><span class="p">,</span> <span class="n">minpts</span><span class="p">,</span> <span class="n">taper</span><span class="p">,</span> <span class="n">prc_overlap</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="minimal-example-on-1-window">
+<h2>Minimal example on 1 window<a class="headerlink" href="#minimal-example-on-1-window" title="Permalink to this headline">¶</a></h2>
+<p>A minimal example analysis of spatial and spectral analysis on just 1 window of data:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># import module</span>
+<span class="kn">import</span> <span class="nn">pysesa</span>
+
+<span class="c"># read point cloud from file</span>
+<span class="n">pointcloud</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">txtread</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+
+<span class="c"># create windows of data</span>
+<span class="n">windows</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">)</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
+
+<span class="c"># process window number 50</span>
+<span class="n">k</span><span class="o">=</span><span class="mi">50</span>
+
+<span class="c"># get all spectral statistics for that window</span>
+<span class="n">spec_stats</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">spectral</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">[</span><span class="n">windows</span><span class="p">[</span><span class="n">k</span><span class="p">],:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float64&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
+
+<span class="c"># get all spatial statistics for that window</span>
+<span class="n">spat_stats</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">spatial</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">[</span><span class="n">windows</span><span class="p">[</span><span class="n">k</span><span class="p">],:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float64&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="minimal-example-all-windows-using-parallel-processing">
+<h2>Minimal example, all windows using parallel processing<a class="headerlink" href="#minimal-example-all-windows-using-parallel-processing" title="Permalink to this headline">¶</a></h2>
+<p>and to extend this to all windows, utilising parallel processing over all available cores, could be achieved using the following minimal example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># define a function that will get repeatedly read by the parallel processing queue</span>
+<span class="k">def</span> <span class="nf">get_spat_n_spec</span><span class="p">(</span><span class="n">pts</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">spatial</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float64&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span> <span class="o">+</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">spectral</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float64&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
+
+<span class="c"># import the parallel processing libraries</span>
+<span class="kn">from</span> <span class="nn">joblib</span> <span class="kn">import</span> <span class="n">Parallel</span><span class="p">,</span> <span class="n">delayed</span><span class="p">,</span> <span class="n">cpu_count</span>
+
+<span class="c"># Processing type: spatial plus spectral parameters (no smoothing)</span>
+<span class="n">proctype</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c"># process each window with all available cores, by queueing each window in a sequence</span>
+<span class="c"># and processing until they are all done</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">Parallel</span><span class="p">(</span><span class="n">n_jobs</span><span class="o">=</span><span class="n">cpu_count</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)(</span><span class="n">delayed</span><span class="p">(</span><span class="n">get_spat_n_spec</span><span class="p">)(</span><span class="n">pointcloud</span><span class="p">[</span><span class="n">windows</span><span class="p">[</span><span class="n">k</span><span class="p">],:</span><span class="mi">3</span><span class="p">])</span>
+      <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">windows</span><span class="p">)))</span>
+
+<span class="c"># parse out the outputs into variables</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z_mean</span><span class="p">,</span> <span class="n">z_max</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_range</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">skewness</span><span class="p">,</span> <span class="n">kurtosis</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">std_err</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">wmax</span><span class="p">,</span> <span class="n">wmean</span><span class="p">,</span> <span class="n">rms1</span><span class="p">,</span> <span class="n">rms2</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">Z</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">T0_1</span><span class="p">,</span> <span class="n">T0_2</span><span class="p">,</span> <span class="n">sw1</span><span class="p">,</span> <span class="n">sw2</span><span class="p">,</span> <span class="n">m0</span><span class="p">,</span> <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">m3</span><span class="p">,</span> <span class="n">m4</span><span class="p">,</span> <span class="n">phi</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lengthscale-module">
+<h2>Lengthscale module<a class="headerlink" href="#lengthscale-module" title="Permalink to this headline">¶</a></h2>
+<p>To obtain just the integral lengthscale of the kth window, detrended using the orthogonal distance regression detrending technique, one could use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">detrend</span> <span class="o">=</span> <span class="mi">4</span>   <span class="c"># Orthogonal distance regression</span>
+<span class="n">pysesa</span><span class="o">.</span><span class="n">lengthscale</span><span class="p">(</span><span class="n">pysesa</span><span class="o">.</span><span class="n">detrend</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">[</span><span class="n">windows</span><span class="p">[</span><span class="n">k</span><span class="p">],:</span><span class="mi">3</span><span class="p">],</span><span class="n">detrend</span><span class="p">)</span><span class="o">.</span><span class="n">getdata</span><span class="p">())</span><span class="o">.</span><span class="n">getlengthscale</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spatial-module">
+<h2>Spatial module<a class="headerlink" href="#spatial-module" title="Permalink to this headline">¶</a></h2>
+<p>and to get the spatial statistics from the same data:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">pysesa</span><span class="o">.</span><span class="n">spatial</span><span class="p">(</span><span class="n">pysesa</span><span class="o">.</span><span class="n">detrend</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">[</span><span class="n">windows</span><span class="p">[</span><span class="n">k</span><span class="p">],:</span><span class="mi">3</span><span class="p">],</span><span class="n">detrend</span><span class="p">)</span><span class="o">.</span><span class="n">getdata</span><span class="p">())</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spectral-module">
+<h2>Spectral module<a class="headerlink" href="#spectral-module" title="Permalink to this headline">¶</a></h2>
+<p>Here, the output grid resolution is changed to 25 cm, and the various outputs from the <em>spectral</em> module are obtained separately:</p>
+<div class="highlight-python"><div class="highlight"><pre># 25 cm output grid
+out = 0.25
+
+# re-create windows of data
+windows = pysesa.partition(pointcloud, out).getdata()
+
+result = pysesa.spectral(pointcloud[windows[k],:3].astype(&#39;float64&#39;))
+
+# get all spectral parameters
+result.getdata()
+
+# get the fit parameters for log-log power spectrum
+result.getpsdparams()
+
+# get integral lengthscale
+result.getlengthscale()
+
+# get spectral moment parameters
+result.getmoments()
+
+# get rms and wavelength parameters
+result.getlengths()
+
+.. image:: _static/pysesa_colour.jpg
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="pysesa.test.html" title="pysesa.test module"
+             >previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Daniel Buscombe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

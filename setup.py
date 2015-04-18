@@ -33,7 +33,7 @@ for spatially explicit statistical analyses of point clouds and other geospatial
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
-Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
 
 :Author:  
     Daniel Buscombe
@@ -45,6 +45,7 @@ Buscombe, D. "Computational considerations for spatially explicit spectral analy
 For more information visit http://dbuscombe-usgs.github.io/pysesa/
 
 :install:
+    pip install pysesa
     python setup.py install
     sudo python setup.py install
     

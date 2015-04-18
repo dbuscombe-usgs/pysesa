@@ -7,7 +7,7 @@ for spatially explicit statistical analyses of point clouds and other geospatial
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
-Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
 
 For more information visit http://dbuscombe-usgs.github.io/pysesa/
 
@@ -19,17 +19,6 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
     Any use of trade, product, or firm names is for descriptive purposes only 
     and does not imply endorsement by the U.S. government.
 
-### Install
-```
-    python setup.py install
-    sudo python setup.py install
-```   
- 
-### Test
-```
-    python -c "import pysesa; pysesa.test.dotest()"
-```
-
 ### Contributing & Credits
 
  Author |    Daniel Buscombe 
@@ -38,7 +27,7 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
         | United States Geological Survey
         | Flagstaff, AZ 86001
         | dbuscombe@usgs.gov
-Version: 0.0.1    |  Revision: Apr, 2015
+Version: 0.0.10    |  Revision: Apr, 2015
 
 For latest code version please visit:
 
@@ -66,7 +55,10 @@ http://www.gnu.org/copyleft/lesser.html
 
 ## Setup
 
+### Install
+
 ### Automatic Installation from PyPI 
+The PyPI repository is here: https://pypi.python.org/pypi/pysesa
 
 ```
 pip uninstall pysesa (removes previous installation)
@@ -143,16 +135,16 @@ which carries out the following operations:
    # general settings   
    infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
 
-   out = 0.5 #m output grid
+   out = 1 #m output grid
    detrend = 4 #ODR plane
    proctype = 1 #Processing spectral parameters (no smoothing)
-   mxpts = 512 # max pts per window
+   mxpts = 1024 # max pts per window
    res = 0.05 #cm internal grid resolution
    nbin = 20 #number of bins for spectral binning
-   lentype = 1 #l les sthan 0.5
-   taper = 1 #Hann taper
-   prc_overlap = 0 #no overlap between successive windows
-   minpts = 16 #min pts per window
+   lentype = 1 # l < 0.5
+   taper = 1 # Hann taper
+   prc_overlap = 50 # no overlap between successive windows
+   minpts = 64 # min pts per window
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
 
@@ -477,7 +469,8 @@ These are all command-line/modular programs which take a number of input (some r
         m2 = second moment of spectrum
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
-
+        phi = effective slope (degrees)
+        
     Returns [requested through .getpsdparams()]
     ----------
     self.psdparams: list
@@ -516,7 +509,8 @@ These are all command-line/modular programs which take a number of input (some r
         m2 = second moment of spectrum
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
-
+        phi = effective slope (degrees)
+        
     '''
 
 ### Process
@@ -601,7 +595,8 @@ These are all command-line/modular programs which take a number of input (some r
         m2 = second moment of spectrum
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
-
+        phi = effective slope (degrees)
+        
     Returns [proctype = 3]
     ----------
     data: list
@@ -652,7 +647,7 @@ These are all command-line/modular programs which take a number of input (some r
         m2 = second moment of spectrum
         m3 = third moment of spectrum
         m4 = fourth moment of spectrum
-
+        phi = effective slope (degrees)
     '''
 
 ### Write

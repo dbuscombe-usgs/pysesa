@@ -1,22 +1,26 @@
-{% extends "!layout.html" %}
+{% extends '!layout.html' %}
 
+{%- if pagename == 'index' %}
+    {% set title = 'PySESA: spatially explicit spectral analysis' %}
+{%- endif %}
 
-{% block rootrellink %}
-        <li><a href="{{ pathto('index') }}">home</a>|&nbsp;</li>
-        <li><a href="{{ pathto('search') }}">search</a>|&nbsp;</li>
+{%- block sidebarsourcelink %}
 {% endblock %}
 
-
-{% block relbar1 %}
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
-<a href="{{ pathto('index') }}"><img src="{{
-pathto("_static/pysesa_colour.jpg", 1) }}" border="0" alt="py4sci"/></a>
-</div>
+{%- block sidebarsearch %}
+    <hr/>
 {{ super() }}
+    <hr/>
+    <div>
+	<h3>Mailing list</h3>
+	<a href="https://github.com/dbuscombe-usgs/pysesa/">dbuscombe@usgs.gov</a>
+    <p class="searchtip" style="font-size: 80%">
+    Send an email to subscribe</p>
+    </div>
+{%- if show_source and has_source and sourcename %}
+<hr/>
+<small><a href="{{ pathto('_sources/' + sourcename, true)|e }}"
+           rel="nofollow">{{ _('Show this page source') }}</a>
+</small>
+{%- endif %}
 {% endblock %}
-
-{# put the sidebar before the body #}
-{% block sidebar1 %}{{ sidebar() }}{% endblock %}
-{% block sidebar2 %}{% endblock %}
-

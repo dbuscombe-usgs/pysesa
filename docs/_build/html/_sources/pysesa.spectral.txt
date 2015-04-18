@@ -114,6 +114,8 @@ self.data: list
         m3 = third moment of spectrum
 
         m4 = fourth moment of spectrum
+        
+        phi = effective slope (degrees)
 
 Returns [requested through .getpsdparams()]
 --------------------------------------------

@@ -1,9 +1,10 @@
 .. _modules:
 
-
 ***************
 Modules
 ***************
+
+.. image:: _static/pysesa_colour.jpg
 
 .. _overview:
 

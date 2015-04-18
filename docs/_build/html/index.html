@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PySESA: Python program for Spatially Explicit Spectral Analysis &mdash; pysesa 0.0.1 documentation</title>
+    <title>PySESA: spatially explicit spectral analysis &mdash; pysesa 0.0.9 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,15 +23,10 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pysesa 0.0.1 documentation" href="#" />
+    <link rel="top" title="pysesa 0.0.9 documentation" href="#" />
     <link rel="next" title="Getting started" href="README.html" /> 
   </head>
   <body role="document">
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
-<a href="#"><img src="_static/pysesa_colour.jpg" border="0" alt="py4sci"/></a>
-</div>
-
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -41,47 +36,9 @@
         <li class="right" >
           <a href="README.html" title="Getting started"
              accesskey="N">next</a> |</li>
-        <li><a href="#">home</a>|&nbsp;</li>
-        <li><a href="search.html">search</a>|&nbsp;</li>
- 
+        <li class="nav-item nav-item-0"><a href="#">pysesa 0.0.9 documentation</a> &raquo;</li> 
       </ul>
-    </div>
-
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">PySESA: Python program for Spatially Explicit Spectral Analysis</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-
-  <h4>Next topic</h4>
-  <p class="topless"><a href="README.html"
-                        title="next chapter">Getting started</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -90,6 +47,7 @@
             
   <div class="section" id="pysesa-python-program-for-spatially-explicit-spectral-analysis">
 <h1>PySESA: Python program for Spatially Explicit Spectral Analysis<a class="headerlink" href="#pysesa-python-program-for-spatially-explicit-spectral-analysis" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -99,6 +57,7 @@
 <li class="toctree-l2"><a class="reference internal" href="README.html#setup">Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="README.html#virtual-environment">Virtual environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="README.html#manual-installation">Manual installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="README.html#installation-on-amazon-linux-ec-2-instance">Installation on Amazon Linux EC-2 instance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="README.html#test">Test</a></li>
 <li class="toctree-l2"><a class="reference internal" href="README.html#support">Support</a></li>
 </ul>
@@ -122,6 +81,20 @@
 </li>
 </ul>
 </div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#process-module">Process module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#test-module">Test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#minimal-example-on-1-window">Minimal example on 1 window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#minimal-example-all-windows-using-parallel-processing">Minimal example, all windows using parallel processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#lengthscale-module">Lengthscale module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#spatial-module">Spatial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#spectral-module">Spectral module</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
@@ -140,6 +113,49 @@
           </div>
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">PySESA: Python program for Spatially Explicit Spectral Analysis</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="README.html"
+                        title="next chapter">Getting started</a></p>
+
+    <hr/>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    <hr/>
+    <div>
+	<h3>Mailing list</h3>
+	<a href="https://github.com/dbuscombe-usgs/pysesa/">dbuscombe@usgs.gov</a>
+    <p class="searchtip" style="font-size: 80%">
+    Send an email to subscribe</p>
+    </div>
+<hr/>
+<small><a href="_sources/index.txt"
+           rel="nofollow">Show this page source</a>
+</small>
+
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -151,9 +167,7 @@
         <li class="right" >
           <a href="README.html" title="Getting started"
              >next</a> |</li>
-        <li><a href="#">home</a>|&nbsp;</li>
-        <li><a href="search.html">search</a>|&nbsp;</li>
- 
+        <li class="nav-item nav-item-0"><a href="#">pysesa 0.0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

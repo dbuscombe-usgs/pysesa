@@ -127,6 +127,7 @@ Returns [proctype = 1 or proctype = 2]
 
         m4 = fourth moment of spectrum
 
+        phi = effective slope (degrees)
 
 Returns [proctype = 3]
 ------------------------
@@ -221,6 +222,7 @@ Returns [proctype = 4 or proctype = 4]
 
         m4 = fourth moment of spectrum
 
+        phi = effective slope (degrees)
 
   .. image:: _static/pysesa_colour.jpg
 

@@ -6,6 +6,8 @@
 PySESA: Python program for Spatially Explicit Spectral Analysis
 ================================================================
 
+.. image:: _static/pysesa_colour.jpg
+
 Contents:
 
 .. toctree::

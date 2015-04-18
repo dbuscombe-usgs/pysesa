@@ -1,6 +1,8 @@
 pysesa package
 ==============
 
+.. image:: _static/pysesa_colour.jpg
+
 Submodules
 ----------
 

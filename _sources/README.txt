@@ -10,6 +10,8 @@ Getting started
 About
 ======
 
+.. image:: _static/pysesa_colour.jpg
+
 PySESA - a Python framework for Spatially Explicit Spectral Analysis
 
 PySESA is an open-source project dedicated to provide a generic Python framework 
@@ -17,7 +19,7 @@ for spatially explicit statistical analyses of point clouds and other geospatial
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
-Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
 
 For the source code visit `my project github site <http://dbuscombe-usgs.github.io/pysesa/>`_
 
@@ -106,8 +108,22 @@ Python libraries you need to have installed to use pysesa:
 4. `Matplotlib <http://matplotlib.org/downloads.html>`_
 5. `cython <http://cython.org/>`_
 6. `statsmodels <http://statsmodels.sourceforge.net/>`_
+7. `joblib <https://pythonhosted.org/joblib/>`_
 
 All of the above are available through `pip <https://pypi.python.org/pypi/pip>`_ and `easy_install <https://pythonhosted.org/setuptools/easy_install.html>`_
+
+
+Installation on Amazon Linux EC-2 instance
+============================================
+
+It's best to install numpy, scipy, cython and matplotlib through the OS package manager::
+
+  sudo yum install gcc gcc-c++
+  sudo yum install python27-numpy python27-Cython python27-scipy python27-matplotlib
+   
+Then pysesa using pip (which will install nifty, joblib and statsmodels)::
+
+  sudo pip install pysesa
 
 
 .. _test:

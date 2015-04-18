@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Examples &mdash; pysesa 0.0.1 documentation</title>
+    <title>Examples &mdash; pysesa 0.0.9 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,15 +23,10 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pysesa 0.0.1 documentation" href="index.html" />
+    <link rel="top" title="pysesa 0.0.9 documentation" href="index.html" />
     <link rel="prev" title="pysesa.test module" href="pysesa.test.html" /> 
   </head>
   <body role="document">
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
-<a href="index.html"><img src="_static/pysesa_colour.jpg" border="0" alt="py4sci"/></a>
-</div>
-
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -41,53 +36,9 @@
         <li class="right" >
           <a href="pysesa.test.html" title="pysesa.test module"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">home</a>|&nbsp;</li>
-        <li><a href="search.html">search</a>|&nbsp;</li>
- 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.9 documentation</a> &raquo;</li> 
       </ul>
-    </div>
-
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Examples</a><ul>
-<li><a class="reference internal" href="#process-module">Process module</a></li>
-<li><a class="reference internal" href="#test-module">Test module</a></li>
-<li><a class="reference internal" href="#minimal-example-on-1-window">Minimal example on 1 window</a></li>
-<li><a class="reference internal" href="#minimal-example-all-windows-using-parallel-processing">Minimal example, all windows using parallel processing</a></li>
-<li><a class="reference internal" href="#lengthscale-module">Lengthscale module</a></li>
-<li><a class="reference internal" href="#spatial-module">Spatial module</a></li>
-<li><a class="reference internal" href="#spectral-module">Spectral module</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="pysesa.test.html"
-                        title="previous chapter">pysesa.test module</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/examples.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -96,6 +47,7 @@
             
   <div class="section" id="examples">
 <span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
 <div class="section" id="process-module">
 <h2>Process module<a class="headerlink" href="#process-module" title="Permalink to this headline">¶</a></h2>
 <p>The submodule <em>process</em> allows full control over all types of workflows through use of a number of processing flags. A minimum working example usage of the the PySESA module, accepting all default values for parameters, is:</p>
@@ -193,37 +145,85 @@ pysesa.process(infile)
 <div class="section" id="spectral-module">
 <h2>Spectral module<a class="headerlink" href="#spectral-module" title="Permalink to this headline">¶</a></h2>
 <p>Here, the output grid resolution is changed to 25 cm, and the various outputs from the <em>spectral</em> module are obtained separately:</p>
-<div class="highlight-python"><div class="highlight"><pre># 25 cm output grid
-out = 0.25
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># 25 cm output grid</span>
+<span class="n">out</span> <span class="o">=</span> <span class="mf">0.25</span>
 
-# re-create windows of data
-windows = pysesa.partition(pointcloud, out).getdata()
+<span class="c"># re-create windows of data</span>
+<span class="n">windows</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
 
-result = pysesa.spectral(pointcloud[windows[k],:3].astype(&#39;float64&#39;))
+<span class="n">result</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">spectral</span><span class="p">(</span><span class="n">pointcloud</span><span class="p">[</span><span class="n">windows</span><span class="p">[</span><span class="n">k</span><span class="p">],:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;float64&#39;</span><span class="p">))</span>
 
-# get all spectral parameters
-result.getdata()
+<span class="c"># get all spectral parameters</span>
+<span class="n">result</span><span class="o">.</span><span class="n">getdata</span><span class="p">()</span>
 
-# get the fit parameters for log-log power spectrum
-result.getpsdparams()
+<span class="c"># get the fit parameters for log-log power spectrum</span>
+<span class="n">result</span><span class="o">.</span><span class="n">getpsdparams</span><span class="p">()</span>
 
-# get integral lengthscale
-result.getlengthscale()
+<span class="c"># get integral lengthscale</span>
+<span class="n">result</span><span class="o">.</span><span class="n">getlengthscale</span><span class="p">()</span>
 
-# get spectral moment parameters
-result.getmoments()
+<span class="c"># get spectral moment parameters</span>
+<span class="n">result</span><span class="o">.</span><span class="n">getmoments</span><span class="p">()</span>
 
-# get rms and wavelength parameters
-result.getlengths()
-
-.. image:: _static/pysesa_colour.jpg
+<span class="c"># get rms and wavelength parameters</span>
+<span class="n">result</span><span class="o">.</span><span class="n">getlengths</span><span class="p">()</span>
 </pre></div>
 </div>
+<img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
 </div>
 </div>
 
 
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Examples</a><ul>
+<li><a class="reference internal" href="#process-module">Process module</a></li>
+<li><a class="reference internal" href="#test-module">Test module</a></li>
+<li><a class="reference internal" href="#minimal-example-on-1-window">Minimal example on 1 window</a></li>
+<li><a class="reference internal" href="#minimal-example-all-windows-using-parallel-processing">Minimal example, all windows using parallel processing</a></li>
+<li><a class="reference internal" href="#lengthscale-module">Lengthscale module</a></li>
+<li><a class="reference internal" href="#spatial-module">Spatial module</a></li>
+<li><a class="reference internal" href="#spectral-module">Spectral module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pysesa.test.html"
+                        title="previous chapter">pysesa.test module</a></p>
+
+    <hr/>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    <hr/>
+    <div>
+	<h3>Mailing list</h3>
+	<a href="https://github.com/dbuscombe-usgs/pysesa/">dbuscombe@usgs.gov</a>
+    <p class="searchtip" style="font-size: 80%">
+    Send an email to subscribe</p>
+    </div>
+<hr/>
+<small><a href="_sources/examples.txt"
+           rel="nofollow">Show this page source</a>
+</small>
+
         </div>
       </div>
       <div class="clearer"></div>
@@ -237,9 +237,7 @@ result.getlengths()
         <li class="right" >
           <a href="pysesa.test.html" title="pysesa.test module"
              >previous</a> |</li>
-        <li><a href="index.html">home</a>|&nbsp;</li>
-        <li><a href="search.html">search</a>|&nbsp;</li>
- 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

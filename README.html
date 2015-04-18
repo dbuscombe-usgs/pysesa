@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Getting started &mdash; pysesa 0.0.1 documentation</title>
+    <title>Getting started &mdash; pysesa 0.0.9 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,16 +23,11 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pysesa 0.0.1 documentation" href="index.html" />
+    <link rel="top" title="pysesa 0.0.9 documentation" href="index.html" />
     <link rel="next" title="Modules" href="modules.html" />
     <link rel="prev" title="PySESA: Python program for Spatially Explicit Spectral Analysis" href="index.html" /> 
   </head>
   <body role="document">
-
-<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
-<a href="index.html"><img src="_static/pysesa_colour.jpg" border="0" alt="py4sci"/></a>
-</div>
-
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -45,56 +40,9 @@
         <li class="right" >
           <a href="index.html" title="PySESA: Python program for Spatially Explicit Spectral Analysis"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">home</a>|&nbsp;</li>
-        <li><a href="search.html">search</a>|&nbsp;</li>
- 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.9 documentation</a> &raquo;</li> 
       </ul>
-    </div>
-
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Getting started</a><ul>
-<li><a class="reference internal" href="#about">About</a></li>
-<li><a class="reference internal" href="#license">License</a></li>
-<li><a class="reference internal" href="#setup">Setup</a></li>
-<li><a class="reference internal" href="#virtual-environment">Virtual environment</a></li>
-<li><a class="reference internal" href="#manual-installation">Manual installation</a></li>
-<li><a class="reference internal" href="#test">Test</a></li>
-<li><a class="reference internal" href="#support">Support</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">PySESA: Python program for Spatially Explicit Spectral Analysis</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="modules.html"
-                        title="next chapter">Modules</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/README.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -105,12 +53,13 @@
 <span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="about">
 <span id="id2"></span><h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
 <p>PySESA - a Python framework for Spatially Explicit Spectral Analysis</p>
 <p>PySESA is an open-source project dedicated to provide a generic Python framework
 for spatially explicit statistical analyses of point clouds and other geospatial data,
 in the spatial and frequency domains, for use in the geosciences</p>
 <p>The program is detailed in:
-Buscombe, D. &#8220;Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data&#8221;, forthcoming.</p>
+Buscombe, D. &#8220;Spatially explicit spectral analysis of point clouds and geospatial data&#8221;, forthcoming.</p>
 <p>For the source code visit <a class="reference external" href="http://dbuscombe-usgs.github.io/pysesa/">my project github site</a></p>
 </div>
 <div class="section" id="license">
@@ -174,8 +123,21 @@ deactivate #(or source venv/bin/deactivate)
 <li><a class="reference external" href="http://matplotlib.org/downloads.html">Matplotlib</a></li>
 <li><a class="reference external" href="http://cython.org/">cython</a></li>
 <li><a class="reference external" href="http://statsmodels.sourceforge.net/">statsmodels</a></li>
+<li><a class="reference external" href="https://pythonhosted.org/joblib/">joblib</a></li>
 </ol>
 <p>All of the above are available through <a class="reference external" href="https://pypi.python.org/pypi/pip">pip</a> and <a class="reference external" href="https://pythonhosted.org/setuptools/easy_install.html">easy_install</a></p>
+</div>
+<div class="section" id="installation-on-amazon-linux-ec-2-instance">
+<h2>Installation on Amazon Linux EC-2 instance<a class="headerlink" href="#installation-on-amazon-linux-ec-2-instance" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s best to install numpy, scipy, cython and matplotlib through the OS package manager:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install gcc gcc-c++
+sudo yum install python27-numpy python27-Cython python27-scipy python27-matplotlib
+</pre></div>
+</div>
+<p>Then pysesa using pip (which will install nifty, joblib and statsmodels):</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install pysesa
+</pre></div>
+</div>
 </div>
 <div class="section" id="test">
 <span id="id5"></span><h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
@@ -216,6 +178,59 @@ deactivate #(or source venv/bin/deactivate)
           </div>
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting started</a><ul>
+<li><a class="reference internal" href="#about">About</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#virtual-environment">Virtual environment</a></li>
+<li><a class="reference internal" href="#manual-installation">Manual installation</a></li>
+<li><a class="reference internal" href="#installation-on-amazon-linux-ec-2-instance">Installation on Amazon Linux EC-2 instance</a></li>
+<li><a class="reference internal" href="#test">Test</a></li>
+<li><a class="reference internal" href="#support">Support</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">PySESA: Python program for Spatially Explicit Spectral Analysis</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="next chapter">Modules</a></p>
+
+    <hr/>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    <hr/>
+    <div>
+	<h3>Mailing list</h3>
+	<a href="https://github.com/dbuscombe-usgs/pysesa/">dbuscombe@usgs.gov</a>
+    <p class="searchtip" style="font-size: 80%">
+    Send an email to subscribe</p>
+    </div>
+<hr/>
+<small><a href="_sources/README.txt"
+           rel="nofollow">Show this page source</a>
+</small>
+
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -230,9 +245,7 @@ deactivate #(or source venv/bin/deactivate)
         <li class="right" >
           <a href="index.html" title="PySESA: Python program for Spatially Explicit Spectral Analysis"
              >previous</a> |</li>
-        <li><a href="index.html">home</a>|&nbsp;</li>
-        <li><a href="search.html">search</a>|&nbsp;</li>
- 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

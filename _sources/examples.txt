@@ -2,6 +2,7 @@
 
 Examples
 ===================
+.. image:: _static/pysesa_colour.jpg
 
 Process module
 ---------------
@@ -119,4 +120,4 @@ Here, the output grid resolution is changed to 25 cm, and the various outputs fr
   # get rms and wavelength parameters
   result.getlengths()
 
-  .. image:: _static/pysesa_colour.jpg
+.. image:: _static/pysesa_colour.jpg

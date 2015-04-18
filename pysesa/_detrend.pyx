@@ -180,7 +180,7 @@ cdef class detrend:
       # =0, no plane detrending is carried out 
       if proctype==1:
 
-         dt = (points[:,2] - np.nanmean(points[:,2])).astype('float64')
+         dt = (points[:,2] - np.mean(points[:,2])).astype('float64')
 
       # =1, OLS plane detrending is carried out                               
       elif proctype==2:
@@ -242,7 +242,7 @@ cdef class detrend:
          Zf[Zf>(np.mean(Zf)+3*np.std(Zf))] = np.nan
          Zf[Zf<(np.mean(Zf)-3*np.std(Zf))] = np.nan
 
-         Zf[np.isnan(Zf)] = np.nanmean(Zf)
+         Zf[np.isnan(Zf)] = np.mean(Zf)
 
          Zf = (dat-Zf)
          dt = np.random.choice(Zf.flatten(),len(points)).astype('float64')   

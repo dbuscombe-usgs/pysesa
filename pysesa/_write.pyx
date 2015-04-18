@@ -83,7 +83,7 @@ def txtwrite(str outfile, np.ndarray[np.float64_t, ndim=2] towrite, str header=N
    None
 
    '''
-   with open(outfile, 'w') as f:
+   with open(outfile, 'wb') as f:
 
       np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) 
 

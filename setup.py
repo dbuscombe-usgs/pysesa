@@ -128,7 +128,7 @@ if USE_CYTHON:
         include_dirs=[np.get_include()]),    
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.pyx" ],
         include_dirs=[np.get_include()]),
-        Extension('RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
+        Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
     cmdclass.update({ 'build_ext': build_ext })
 else:
@@ -149,7 +149,7 @@ else:
         include_dirs=[np.get_include()]),    
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.c" ],
         include_dirs=[np.get_include()]),
-        Extension('RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
+        Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
 install_requires = [
     'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty'
@@ -168,10 +168,6 @@ def setupPackage():
              'Programming Language :: Python :: 2.7',
              'Programming Language :: Cython',
              'Topic :: Scientific/Engineering',
-             'Topic :: Scientific/Engineering :: Geophysics',
-             'Topic :: Scientific/Engineering :: Geology',
-             'Topic :: Scientific/Engineering :: Geomorphology',
-             'Topic :: Scientific/Engineering :: Remote Sensing',
          ],
          keywords='point clouds',
          author='Daniel Buscombe',
@@ -184,7 +180,7 @@ def setupPackage():
          cmdclass = cmdclass,
          ext_modules=ext_modules,
          platforms='OS Independent',
-         package_data={'pysesa': ['*.xyz']}
+         package_data={'pysesa': ['*.xyz','*.h']}
    )
 
 if __name__ == '__main__':

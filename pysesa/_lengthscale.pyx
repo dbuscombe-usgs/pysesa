@@ -196,7 +196,7 @@ cdef class lengthscale:
 
       im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
 
-      im = im - np.nanmean(im)
+      im = im - np.mean(im)
       ny, nx= np.shape(im)
 
       #taper
@@ -518,9 +518,9 @@ cdef class lengthscale:
    	   tapered 2D grid of 3D pointcloud
 
       '''
-      im[np.isnan(im)] = np.nanmean(im.flatten())
-      im[np.isinf(im)] = np.nanmean(im.flatten())
-      im[im<=0] = np.nanmean(im.flatten())
+      im[np.isnan(im)] = np.mean(im.flatten())
+      im[np.isinf(im)] = np.mean(im.flatten())
+      im[im<=0] = np.mean(im.flatten())
 
       if taper==1:
          im = self._Hanning2D(im)

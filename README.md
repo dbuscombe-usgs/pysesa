@@ -27,7 +27,7 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
         | United States Geological Survey
         | Flagstaff, AZ 86001
         | dbuscombe@usgs.gov
-Version: 0.0.12    |  Revision: Apr, 2015
+Version: 0.0.13    |  Revision: Apr, 2015
 
 For latest code version please visit:
 

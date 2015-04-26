@@ -1,8 +1,6 @@
 pysesa package
 ==============
 
-.. image:: _static/pysesa_colour.jpg
-
 Submodules
 ----------
 
@@ -18,4 +16,4 @@ Submodules
    pysesa.spectral
    pysesa.write
    pysesa.test
-
+   pysesa.plot

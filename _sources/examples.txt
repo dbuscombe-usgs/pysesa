@@ -2,7 +2,6 @@
 
 Examples
 ===================
-.. image:: _static/pysesa_colour.jpg
 
 Process module
 ---------------
@@ -120,4 +119,55 @@ Here, the output grid resolution is changed to 25 cm, and the various outputs fr
   # get rms and wavelength parameters
   result.getlengths()
 
+Plot module
+------------------
+This assumes you have run the *process* module and have an output file ('/home/my_pysesa_output_file.xyz')::
+
+  # load pysesa
+  import pysesa
+
+  # create a pysesa::plot instance
+  p = pysesa.plot('/home/my_pysesa_output_file.xyz')
+
+  # create a 3d plot of the point cloud
+  p.plt_xyz()
+
+  # create a 2d plot of the gridded surface from the decimated point cloud
+  p.grd_xyz()
+
+  # create a 3d plot of the gridded surface from the decimated point cloud
+  # colour-coded by amplitude
+  p.grd_xyz3d()
+
+  # create a 3d plot of the decimated spectral slope
+  # colour-coded by amplitude
+  p.plt_xy_var('slope')
+
+  # create a 3d plot of all output decimated parameters
+  # colour-coded by amplitude
+  p.plt_xy_vars()
+
+  # create a 3d plot of decimated fractal dimension
+  # gridded and colour-coded by amplitude
+  p.grd_var_3d('d')
+
+  # create a 3d plot of all output decimated parameters
+  # gridded and colour-coded by amplitude
+  p.grd_vars_3d()
+
+  # plot also supports data retrieval
+  # retrieve the original point cloud
+  xyz = p.get_xyz()
+
+  # retrieve the decimated point cloud of all parameters
+  pc = p.get_pc()
+
+  # retrieve the decimated point cloud of all parameters
+  # in dictionary format
+  pc_dict = p.parse_pc_vars()
+  # then show what's in there
+  print pc.dict.keys()
+
 .. image:: _static/pysesa_colour.jpg
+
+

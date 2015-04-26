@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Examples &mdash; pysesa 0.0.11 documentation</title>
+    <title>Examples &mdash; pysesa 0.0.12 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.11',
+        VERSION:     '0.0.12',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pysesa 0.0.11 documentation" href="index.html" />
-    <link rel="prev" title="pysesa.test module" href="pysesa.test.html" /> 
+    <link rel="top" title="pysesa 0.0.12 documentation" href="index.html" />
+    <link rel="prev" title="pysesa.plot module" href="pysesa.plot.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -34,9 +34,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="pysesa.test.html" title="pysesa.test module"
+          <a href="pysesa.plot.html" title="pysesa.plot module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.11 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.12 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -47,7 +47,6 @@
             
   <div class="section" id="examples">
 <span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
 <div class="section" id="process-module">
 <h2>Process module<a class="headerlink" href="#process-module" title="Permalink to this headline">¶</a></h2>
 <p>The submodule <em>process</em> allows full control over all types of workflows through use of a number of processing flags. A minimum working example usage of the the PySESA module, accepting all default values for parameters, is:</p>
@@ -169,6 +168,56 @@ pysesa.process(infile)
 <span class="n">result</span><span class="o">.</span><span class="n">getlengths</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="plot-module">
+<h2>Plot module<a class="headerlink" href="#plot-module" title="Permalink to this headline">¶</a></h2>
+<p>This assumes you have run the <em>process</em> module and have an output file (&#8216;/home/my_pysesa_output_file.xyz&#8217;):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># load pysesa</span>
+<span class="kn">import</span> <span class="nn">pysesa</span>
+
+<span class="c"># create a pysesa::plot instance</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pysesa</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s">&#39;/home/my_pysesa_output_file.xyz&#39;</span><span class="p">)</span>
+
+<span class="c"># create a 3d plot of the point cloud</span>
+<span class="n">p</span><span class="o">.</span><span class="n">plt_xyz</span><span class="p">()</span>
+
+<span class="c"># create a 2d plot of the gridded surface from the decimated point cloud</span>
+<span class="n">p</span><span class="o">.</span><span class="n">grd_xyz</span><span class="p">()</span>
+
+<span class="c"># create a 3d plot of the gridded surface from the decimated point cloud</span>
+<span class="c"># colour-coded by amplitude</span>
+<span class="n">p</span><span class="o">.</span><span class="n">grd_xyz3d</span><span class="p">()</span>
+
+<span class="c"># create a 3d plot of the decimated spectral slope</span>
+<span class="c"># colour-coded by amplitude</span>
+<span class="n">p</span><span class="o">.</span><span class="n">plt_xy_var</span><span class="p">(</span><span class="s">&#39;slope&#39;</span><span class="p">)</span>
+
+<span class="c"># create a 3d plot of all output decimated parameters</span>
+<span class="c"># colour-coded by amplitude</span>
+<span class="n">p</span><span class="o">.</span><span class="n">plt_xy_vars</span><span class="p">()</span>
+
+<span class="c"># create a 3d plot of decimated fractal dimension</span>
+<span class="c"># gridded and colour-coded by amplitude</span>
+<span class="n">p</span><span class="o">.</span><span class="n">grd_var_3d</span><span class="p">(</span><span class="s">&#39;d&#39;</span><span class="p">)</span>
+
+<span class="c"># create a 3d plot of all output decimated parameters</span>
+<span class="c"># gridded and colour-coded by amplitude</span>
+<span class="n">p</span><span class="o">.</span><span class="n">grd_vars_3d</span><span class="p">()</span>
+
+<span class="c"># plot also supports data retrieval</span>
+<span class="c"># retrieve the original point cloud</span>
+<span class="n">xyz</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_xyz</span><span class="p">()</span>
+
+<span class="c"># retrieve the decimated point cloud of all parameters</span>
+<span class="n">pc</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_pc</span><span class="p">()</span>
+
+<span class="c"># retrieve the decimated point cloud of all parameters</span>
+<span class="c"># in dictionary format</span>
+<span class="n">pc_dict</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">parse_pc_vars</span><span class="p">()</span>
+<span class="c"># then show what&#39;s in there</span>
+<span class="k">print</span> <span class="n">pc</span><span class="o">.</span><span class="n">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
 <img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
 </div>
 </div>
@@ -179,6 +228,9 @@ pysesa.process(infile)
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/pysesa_black.jpg" alt="Logo"/>
+            </a></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Examples</a><ul>
@@ -189,13 +241,14 @@ pysesa.process(infile)
 <li><a class="reference internal" href="#lengthscale-module">Lengthscale module</a></li>
 <li><a class="reference internal" href="#spatial-module">Spatial module</a></li>
 <li><a class="reference internal" href="#spectral-module">Spectral module</a></li>
+<li><a class="reference internal" href="#plot-module">Plot module</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="pysesa.test.html"
-                        title="previous chapter">pysesa.test module</a></p>
+  <p class="topless"><a href="pysesa.plot.html"
+                        title="previous chapter">pysesa.plot module</a></p>
 
     <hr/>
 
@@ -235,9 +288,9 @@ pysesa.process(infile)
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="pysesa.test.html" title="pysesa.test module"
+          <a href="pysesa.plot.html" title="pysesa.plot module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.11 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.12 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

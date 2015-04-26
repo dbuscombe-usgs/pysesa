@@ -122,7 +122,7 @@ PYTHON LIBRARIES YOU MAY NEED TO INSTALL TO USE pysesa:
 
 All of the above are available through pip (https://pypi.python.org/pypi/pip) and easy_install (https://pythonhosted.org/setuptools/easy_install.html)
 
-##Installation on Amazon Linux EC-2 instance
+###Installation on Amazon Linux EC-2 instance
 It's best to install numpy, scipy, cython and matplotlib through the OS package manager:
 
 ```
@@ -694,46 +694,46 @@ These are all command-line/modular programs which take a number of input (some r
 
 
 ### Plot
-   '''
-   Initialise the pysesa plot class
-   Takes a file output from pysesa.process and allows a number
-   of different 2d or 3d plots of the outputs
+    '''
+    Initialise the pysesa plot class
+    Takes a file output from pysesa.process and allows a number
+    of different 2d or 3d plots of the outputs
 
-   Syntax
-   ----------
-   p = pysesa.plot()
-   p = pysesa.plot('/home/my_pysesa_output_file.xyz')
+    Syntax
+    ----------
+    p = pysesa.plot()
+    p = pysesa.plot('/home/my_pysesa_output_file.xyz')
 
-   Parameters
-   -----------
-   pysesa_file : str
+    Parameters
+    -----------
+    pysesa_file : str
    	pysesa::process output file
 
-   If no arguments given, it prompts you to choose a pysesa::process output file
+    If no arguments given, it prompts you to choose a pysesa::process output file
 
-   Returns
-   ----------
-   self : instance
+    Returns
+    ----------
+    self : instance
       pysesa.plot instance
 
-   DATA functions
-   ---------------
-   pc = p.get_pc() : ndarray
+    DATA functions
+    ---------------
+    pc = p.get_pc() : ndarray
       NxM contents of pysesa_file
   
-   xyz = p.get_xyz() : ndarray        
+    xyz = p.get_xyz() : ndarray        
       Nx3 contents of raw point cloud (the file processed by pysesa::process)
 
-   vars = p.parse_pc_vars() : dict
+    vars = p.parse_pc_vars() : dict
       NxM contents of pysesa_file parsed into dict object
       1 key per variable in p.get_pc()
       vars.keys() returns list of variables in dict
 
-   2D plotting functions (mayavi not required)
-   --------------------------------------------
+    2D plotting functions (mayavi not required)
+    --------------------------------------------
 
-   p.grd_xyz()
-   ------------- 
+    p.grd_xyz()
+    ------------- 
       produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,
       as returned by parse_pc_vars()
 
@@ -783,8 +783,8 @@ These are all command-line/modular programs which take a number of input (some r
       labelsize : int, *optional* [default = 6]
            size of x and y axes labels
 
-   p.grd_var()
-   ------------      
+    p.grd_var()
+    ------------      
       produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()
       e.g. p.grd_var('sigma')
 
@@ -850,8 +850,8 @@ These are all command-line/modular programs which take a number of input (some r
            size of x and y axes labels
 
 
-   p.grd_vars()
-   -------------
+    p.grd_vars()
+    -------------
       produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()
 
       Syntax
@@ -911,11 +911,11 @@ These are all command-line/modular programs which take a number of input (some r
            size of x and y axes labels
 
 
-   3D plotting functions (mayavi not required)
-   --------------------------------------------
+    3D plotting functions (mayavi not required)
+    --------------------------------------------
 
-   p.plt_xyz()
-   ------------ 
+    p.plt_xyz()
+    ------------ 
       produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()
 
       Syntax
@@ -949,8 +949,8 @@ These are all command-line/modular programs which take a number of input (some r
            size of x and y axes labels       
 
 
-   p.plt_xy_var()  
-   --------------- 
+    p.plt_xy_var()  
+    --------------- 
       produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')
 
       Syntax
@@ -992,8 +992,8 @@ These are all command-line/modular programs which take a number of input (some r
            azimuth angle in the x,y plane          
 
 
-   p.plt_xy_vars()
-   ----------------
+    p.plt_xy_vars()
+    ----------------
       produces a 3d plot of each output variable in p.parse_pc_vars() 
 
       Syntax
@@ -1031,11 +1031,11 @@ These are all command-line/modular programs which take a number of input (some r
            azimuth angle in the x,y plane        
    
 
-   3D plotting functions (requires mayavi) 
-   ----------------------------------------
+    3D plotting functions (requires mayavi) 
+    ----------------------------------------
 
-   p.grd_xyz3d() 
-   -------------  
+    p.grd_xyz3d() 
+    -------------  
       produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,
       as returned by p.get_xyz()
 
@@ -1079,8 +1079,8 @@ These are all command-line/modular programs which take a number of input (some r
       ysize : int, *optional* [default = 1000]
    	   size (number of pixels) of output image in y dimension
    
-   p.grd_var_3d()  
-   ---------------
+    p.grd_var_3d()  
+    ---------------
       produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()
 
       Syntax
@@ -1137,8 +1137,8 @@ These are all command-line/modular programs which take a number of input (some r
       ysize : int, *optional* [default = 1000]
    	   size (number of pixels) of output image in y dimension
           
-   p.grd_vars_3d() 
-   ----------------
+    p.grd_vars_3d() 
+    ----------------
       produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()
 
       Syntax
@@ -1190,4 +1190,4 @@ These are all command-line/modular programs which take a number of input (some r
       ysize : int, *optional* [default = 1000]
    	   size (number of pixels) of output image in y dimension
 
-   '''
+    '''

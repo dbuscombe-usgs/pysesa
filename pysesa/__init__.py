@@ -64,7 +64,7 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
     
 """
 
-__version__ = '0.0.13'
+__version__ = '0.0.14'
 
 #-----------------------------------------------------------------------------
 # Imports

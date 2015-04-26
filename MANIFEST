@@ -9,6 +9,7 @@ pysesa/__init__.py
 pysesa/_detrend.pyx
 pysesa/_lengthscale.pyx
 pysesa/_partition.pyx
+pysesa/_plot.pyx
 pysesa/_pysesa.py
 pysesa/_read.pyx
 pysesa/_sgolay.pyx

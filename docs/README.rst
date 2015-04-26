@@ -10,8 +10,6 @@ Getting started
 About
 ======
 
-.. image:: _static/pysesa_colour.jpg
-
 PySESA - a Python framework for Spatially Explicit Spectral Analysis
 
 PySESA is an open-source project dedicated to provide a generic Python framework 
@@ -21,7 +19,7 @@ in the spatial and frequency domains, for use in the geosciences
 The program is detailed in:
 Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
 
-For the source code visit `my project github site <http://dbuscombe-usgs.github.io/pysesa/>`_
+For the source code visit `the project github site <https://github.com/dbuscombe-usgs/pysesa/>`_
 
 
 .. _license:

@@ -64,7 +64,7 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
     
 """
 
-__version__ = '0.0.11'
+__version__ = '0.0.12'
 
 #-----------------------------------------------------------------------------
 # Imports
@@ -81,4 +81,7 @@ from pysesa.spatial import spatial
 from pysesa.spectral import spectral
 from pysesa.lengthscale import lengthscale
 from pysesa.detrend import detrend
+
+from pysesa.plot import plot
+
 

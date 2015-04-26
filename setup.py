@@ -113,6 +113,8 @@ cmdclass = { }
 
 if USE_CYTHON:
     ext_modules += [
+        Extension("pysesa.plot", [ "pysesa/_plot.pyx" ],
+        include_dirs=[np.get_include()]),
         Extension("pysesa.read", [ "pysesa/_read.pyx" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.write", [ "pysesa/_write.pyx" ],
@@ -134,6 +136,8 @@ if USE_CYTHON:
     cmdclass.update({ 'build_ext': build_ext })
 else:
     ext_modules += [
+        Extension("pysesa.plot", [ "pysesa/_plot.c" ],
+        include_dirs=[np.get_include()]),
         Extension("pysesa.read", [ "pysesa/_read.c" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.write", [ "pysesa/_write.c" ],
@@ -159,7 +163,7 @@ install_requires = [
 def setupPackage():
    setup(name='pysesa',
          version=__version__,
-         description='PySESA is an open-source project dedicated to provide a generic Python framework for spatially explicit statistical analyses of point clouds and other geospatial data, in the spatial and frequency domains, for use in the geosciences. The program is detailed in Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.',
+         description='PySESA is an open-source project dedicated to provide a generic Python framework for spatially explicit statistical analyses of point clouds and other geospatial data, in the spatial and frequency domains, for use in the geosciences. The program is detailed in Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.',
          #long_description=long_description,
          classifiers=[
              'Intended Audience :: Science/Research',

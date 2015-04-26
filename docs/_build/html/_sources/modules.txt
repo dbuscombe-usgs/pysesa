@@ -4,8 +4,6 @@
 Modules
 ***************
 
-.. image:: _static/pysesa_colour.jpg
-
 .. _overview:
 
 Overview
@@ -32,6 +30,8 @@ The programs in this package are as follows:
 **write**: write program outputs to a comma delimited text file 
 
 **test**: program testing suite 
+
+**plot**: program utilities for creating 2d and 3d plots
 
 These are all command-line/modular programs which take a number of input (some required, some optional). Please see the individual files for a comprehensive list of input options
 

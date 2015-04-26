@@ -234,6 +234,9 @@ html_static_path = ['_static']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'pysesadoc'
 
+# A logo displayed in the html sidebar.
+html_logo = 'pysesa_black.jpg'
+
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {

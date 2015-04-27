@@ -6,7 +6,7 @@ pysesa.test module
 You call the function like this::
   python -c "import pysesa; pysesa.test.dotest()"
 
-which calls pysesa.process with the following default parameters:
+which calls pysesa.process with the following default parameters::
 
   # copy files over to somewhere read/writeable
   dircopy(pysesa.__path__[0], os.path.expanduser("~")+os.sep+'pysesa_test')

@@ -58,13 +58,14 @@
 <dd>python -c &#8220;import pysesa; pysesa.test.dotest()&#8221;</dd>
 </dl>
 <p>which calls pysesa.process with the following default parameters:</p>
-<blockquote>
-<div><p># copy files over to somewhere read/writeable
-dircopy(pysesa.__path__[0], os.path.expanduser(&#8220;~&#8221;)+os.sep+&#8217;pysesa_test&#8217;)
-shutil.copy(pysesa.__path__[0]+os.sep+&#8217;example_100000pts.xyz&#8217;, os.path.expanduser(&#8220;~&#8221;)+os.sep+&#8217;pysesa_test&#8217;+os.sep+&#8217;test.DAT&#8217;)</p>
-<p># general settings
-infile = os.path.expanduser(&#8220;~&#8221;)+os.sep+&#8217;pysesa_test&#8217;+os.sep+&#8217;example_100000pts.xyz&#8217;</p>
-<p>out = 0.5 #m output grid
+<div class="highlight-python"><div class="highlight"><pre># copy files over to somewhere read/writeable
+dircopy(pysesa.__path__[0], os.path.expanduser(&quot;~&quot;)+os.sep+&#39;pysesa_test&#39;)
+shutil.copy(pysesa.__path__[0]+os.sep+&#39;example_100000pts.xyz&#39;, os.path.expanduser(&quot;~&quot;)+os.sep+&#39;pysesa_test&#39;+os.sep+&#39;test.DAT&#39;)
+
+# general settings
+infile = os.path.expanduser(&quot;~&quot;)+os.sep+&#39;pysesa_test&#39;+os.sep+&#39;example_100000pts.xyz&#39;
+
+out = 0.5 #m output grid
 detrend = 4 #ODR plane
 proctype = 1 #Processing spectral parameters (no smoothing)
 mxpts = 512 # max pts per window
@@ -73,10 +74,13 @@ nbin = 20 #number of bins for spectral binning
 lentype = 1 # l&lt;0.5
 taper = 1 # Hann taper
 prc_overlap = 0 # no overlap between successive windows
-minpts = 16 # min pts per window</p>
-<p>pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)</p>
-<img alt="_images/pysesa_colour.jpg" src="_images/pysesa_colour.jpg" />
-</div></blockquote>
+minpts = 16 # min pts per window
+
+pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
+
+.. image:: _static/pysesa_colour.jpg
+</pre></div>
+</div>
 </div>
 
 

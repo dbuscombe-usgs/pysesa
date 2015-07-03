@@ -226,6 +226,7 @@ cdef class detrend:
 
          import sgolay       
          #from scipy.interpolate import griddata
+         from scipy.spatial import cKDTree as KDTree
 
          # do the gridding
          if ny>nx:

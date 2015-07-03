@@ -225,7 +225,7 @@ cdef class detrend:
       else:
 
          import sgolay       
-         from scipy.interpolate import griddata
+         #from scipy.interpolate import griddata
 
          # do the gridding
          if ny>nx:
@@ -235,8 +235,14 @@ cdef class detrend:
          else:
             grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )  
 
-         dat = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
-     
+         #dat = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
+         ## inverse distance weighting, using 10 nearest neighbours
+         tree = KDTree(zip(points[:,0], points[:,1]))
+         dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
+         w = 1.0 / dist**2
+         dat = np.sum(w * points[inds,2], axis=1) / np.sum(w, axis=1)
+         dat.shape = grid_x.shape     
+
          Zf = sgolay.sgolay( dat, 3, order=0).getdata() 
 
          Zf[Zf>(np.mean(Zf)+3*np.std(Zf))] = np.nan

@@ -52,8 +52,9 @@ from __future__ import division
 import numpy as np
 cimport numpy as np
 cimport cython
-from scipy.interpolate import griddata
+#from scipy.interpolate import griddata
 from scipy.integrate import trapz
+from scipy.spatial import cKDTree as KDTree
 
 # suppress divide and invalid warnings
 np.seterr(divide='ignore')
@@ -193,8 +194,13 @@ cdef class lengthscale:
       else:
          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )  
 
-
-      im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
+      #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
+      ## inverse distance weighting, using 10 nearest neighbours
+      tree = KDTree(zip(points[:,0], points[:,1]))
+      dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
+      w = 1.0 / dist**2
+      im = np.sum(w * points[inds,2], axis=1) / np.sum(w, axis=1)
+      im.shape = grid_x.shape
 
       im = im - np.mean(im)
       ny, nx= np.shape(im)

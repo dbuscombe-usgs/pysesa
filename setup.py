@@ -96,6 +96,7 @@ USE_CYTHON = True
 if USE_CYTHON:
    try:
       from Cython.Distutils import build_ext
+      from Cython.Build import cythonize
    except:
       msg = ("No module named Cython. "
            "Please install Cython first, it is needed before installing pysesa.")
@@ -110,6 +111,8 @@ exec(line, globals())
 
 ext_modules = [ ]
 cmdclass = { }
+
+#ext_modules += cythonize(Extension('_loadtxt',sources=['pysesa/loadtxt.pyx', 'pysesa/loadtxt.cpp'], language="c++"))
 
 if USE_CYTHON:
     ext_modules += [
@@ -132,7 +135,7 @@ if USE_CYTHON:
         Extension("pysesa.sgolay", [ "pysesa/_sgolay.pyx" ],
         include_dirs=[np.get_include()]),
         Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
-    ]
+        ]
     cmdclass.update({ 'build_ext': build_ext })
 else:
     ext_modules += [

@@ -118,7 +118,7 @@ cdef class lengthscale:
 
    '''
 
-   cdef object data, lengthscale
+   cdef object data, lengthscale, tree
 
    @cython.boundscheck(False)
    @cython.cdivision(True)
@@ -195,12 +195,10 @@ cdef class lengthscale:
          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )  
 
       #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
-      ## inverse distance weighting, using 10 nearest neighbours
+
       tree = KDTree(zip(points[:,0], points[:,1]))
-      dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
-      w = 1.0 / dist**2
-      im = np.sum(w * points[inds,2], axis=1) / np.sum(w, axis=1)
-      im.shape = grid_x.shape
+      _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
+      im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
 
       im = im - np.mean(im)
       ny, nx= np.shape(im)

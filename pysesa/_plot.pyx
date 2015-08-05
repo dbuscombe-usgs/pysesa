@@ -661,13 +661,13 @@ class plot:
    # =========================================================
 
    #==================================================        
-   def grd_vars_3d(self, res=0.1, thresdist = 0, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):
+   def grd_vars_3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):
       '''
       produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()
 
       Syntax
       ----------
-      [] = p.grd_vars_3d(res, thresdist, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)
+      [] = p.grd_vars_3d(res, thresdist, nn, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)
 
       Parameters
       ------------
@@ -683,7 +683,10 @@ class plot:
       thresdist : float, *optional* [default = 0]
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
-
+   	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	   
       cmap : str, *optional* [default = 'hot']
    	   colormap
            possible colormaps are documented here:
@@ -729,7 +732,7 @@ class plot:
          y = pcdict['y']
          z = pcdict['z_mean']
 
-         dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist)
+         dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
 
          for key in pcdict.keys():
             if key not in ['x','y','z_mean']:
@@ -758,13 +761,13 @@ class plot:
 
 
    #==================================================        
-   def grd_var_3d(self, var, res=0.1, thresdist = 0, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):
+   def grd_var_3d(self, var, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):
       '''
       produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()
 
       Syntax
       ----------
-      [] = p.grd_var_3d(var, res, thresdist, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)
+      [] = p.grd_var_3d(var, res, thresdist, nn, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)
 
       Parameters
       ------------
@@ -786,6 +789,9 @@ class plot:
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
    	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	      	   
       cmap : str, *optional* [default = 'hot']
    	   colormap
            possible colormaps are documented here:
@@ -831,7 +837,7 @@ class plot:
          y = pcdict['y']
          z = pcdict['z_mean']
 
-         dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist)
+         dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
 
          for key in pcdict.keys():
             if key in [var]:
@@ -860,14 +866,14 @@ class plot:
 
 
    #==================================================        
-   def grd_xyz3d(self, res=0.1, thresdist = 0, cmap='hot', pitch=10, azimuth=-200, distance=50, xsize=2000, ysize=1000):
+   def grd_xyz3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, xsize=2000, ysize=1000):
       '''
       produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,
       as returned by p.get_xyz()
 
       Syntax
       ----------
-      [] = p.grd_xyz3d(res, thresdist, cmap, pitch, azimuth, distance, xsize, ysize)
+      [] = p.grd_xyz3d(res, thresdist, nn, cmap, pitch, azimuth, distance, xsize, ysize)
 
       Parameters
       ------------
@@ -885,6 +891,9 @@ class plot:
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
    	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	      	   
       cmap : str, *optional* [default = 'hot']
    	   colormap
            possible colormaps are documented here:
@@ -919,7 +928,7 @@ class plot:
          y = pcdict['y']
          z = pcdict['z_mean']
 
-         dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist)
+         dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
 
          fig = self._get_3d_fig()
          surf = mlab.mesh(grid_x,grid_y,dat,scalars=dat,colormap=cmap) 
@@ -939,14 +948,14 @@ class plot:
    # =========================================================
 
    #==================================================        
-   def grd_var(self, var, res=0.1, thresdist = 0, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):
+   def grd_var(self, var, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):
       '''
       produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()
       e.g. p.grd_var('sigma')
 
       Syntax
       ----------
-      [] = p.grd_var(var, res, thresdist, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)
+      [] = p.grd_var(var, res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)
 
       Parameters
       ------------
@@ -968,6 +977,9 @@ class plot:
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
    	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	      	   
       azimuth : float, *optional* [default = 315]
            Lighting azimuthal angle (in degrees, 0-360)
            for hillshade calculation, see:
@@ -1017,7 +1029,7 @@ class plot:
       y = pcdict['y']
       z = pcdict['z_mean']
 
-      dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist)
+      dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
 
       h = self._hillshade(dat,res,res,azimuth,altitude,zf)
       del dat, z
@@ -1049,13 +1061,13 @@ class plot:
             self._plt.close()
 
    #==================================================        
-   def grd_vars(self, res=0.1, thresdist = 0, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):
+   def grd_vars(self, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):
       '''
       produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()
 
       Syntax
       ----------
-      [] = p.grd_vars(res, thresdist, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)
+      [] = p.grd_vars(res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)
 
       Parameters
       ------------
@@ -1072,6 +1084,9 @@ class plot:
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
    	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	      	   
       azimuth : float, *optional* [default = 315]
            Lighting azimuthal angle (in degrees, 0-360)
            for hillshade calculation, see:
@@ -1121,7 +1136,7 @@ class plot:
       y = pcdict['y']
       z = pcdict['z_mean']
 
-      dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist)
+      dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
 
       h = self._hillshade(dat,res,res,azimuth,altitude,zf)
       del dat, z
@@ -1154,14 +1169,14 @@ class plot:
 
 
    #==================================================        
-   def grd_xyz(self, res=0.1, thresdist = 0, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, alpha=0.5, ticksize=4, labelsize=6):
+   def grd_xyz(self, res=0.1, thresdist = 0, nn = 1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, alpha=0.5, ticksize=4, labelsize=6):
       '''
       produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,
       as returned by parse_pc_vars()
 
       Syntax
       ----------
-      [] = p.grd_xyz(res, thresdist, azimuth, altitude, zf, cmap, dpi, alpha, ticksize, labelsize)
+      [] = p.grd_xyz(res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, alpha, ticksize, labelsize)
 
       Parameters
       ------------
@@ -1178,6 +1193,9 @@ class plot:
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
    	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	      	   
       azimuth : float, *optional* [default = 315]
            Lighting azimuthal angle (in degrees, 0-360)
            for hillshade calculation, see:
@@ -1216,7 +1234,7 @@ class plot:
       y = pcdict['y']
       z = pcdict['z_mean']
 
-      dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist)
+      dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
 
       h = self._hillshade(dat,res,res,azimuth,altitude,zf)
 
@@ -1639,13 +1657,13 @@ class plot:
    # =========================================================
 
    #==================================================        
-   def _grid_var(self, x, y, z, grid_x, grid_y, res=0.1, thresdist=0):
+   def _grid_var(self, x, y, z, grid_x, grid_y, res=0.1, thresdist=0, nn=1):
       '''
       anonymous function to produce a gridded surface
 
       Syntax
       ----------
-      [] = p._grid_var(x, y, z, grid_x, grid_y, res, thresdist)
+      [] = p._grid_var(x, y, z, grid_x, grid_y, res, thresdist, nn)
 
       Parameters
       ------------
@@ -1676,12 +1694,16 @@ class plot:
       thresdist : float, *optional* [default = 0]
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
+   	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding    
+   	   	   
       '''
       #from scipy.interpolate import griddata
 
       #dat = griddata(np.c_[x,y], z, (grid_x, grid_y), method='nearest')
 
-      dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res)
+      dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res, nn)
       ## mask
       if thresdist == 0:
          thresdist = np.sqrt(1/res)     
@@ -1710,13 +1732,13 @@ class plot:
 
 
    #==================================================        
-   def _get_grid(self, x, y, z, res=0.1, thresdist = 0):
+   def _get_grid(self, x, y, z, res=0.1, thresdist = 0, nn=1):
       '''
       anonymous function to produce a gridded surface
 
       Syntax
       ----------
-      [] = p._get_grid(x, y, z, res)
+      [] = p._get_grid(x, y, z, res, nn)
 
       Parameters
       ------------
@@ -1741,6 +1763,10 @@ class plot:
       thresdist : float, *optional* [default = 0]
    	   maximum interpolation distance 
    	   if 0, thresdist calculated as sqrt(1/res)
+   	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
+   	   
       '''
       #from scipy.interpolate import griddata
       
@@ -1752,7 +1778,7 @@ class plot:
       # create grid
       #dat = griddata(np.c_[xyz[:,0],xyz[:,1]], xyz[:,2], (grid_x, grid_y), method='nearest')
       
-      dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res)
+      dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res, nn)
 
       ## mask
       if thresdist == 0:
@@ -1832,13 +1858,13 @@ class plot:
    # =========================================================
 
    #==================================================        
-   def _get_dist(self, x, y, z, grid_x, grid_y, res):
+   def _get_dist(self, x, y, z, grid_x, grid_y, res, nn):
       '''
       anonymous function to create a nearest neighbour distance matrix for dem masking
 
       Syntax
       ----------
-      [] = p._get_dist(x, y, z, grid_x, grid_y, res)
+      [] = p._get_dist(x, y, z, grid_x, grid_y, res, nn)
 
       Parameters
       ------------
@@ -1862,18 +1888,27 @@ class plot:
    	   mesh of [x,y].T 
    	   
       res : float
-   	   grid resolution   	   
+   	   grid resolution  
+   	   
+      nn : int, *optional* [default = 1]
+   	   number of nearest neighbours used in the gridding 
       '''
       from scipy.spatial import cKDTree as KDTree
 
       ## create mask for where the data is not
-      tree = KDTree(np.c_[x,y])
+      tree = KDTree(np.c_[x,y])         
             
       complete=0
       while complete==0:
          try:
-            dist, inds = tree.query(np.c_[grid_x.ravel(), grid_y.ravel()], k=1)
-            dat = z.flatten()[inds].reshape(np.shape(grid_x))    
+            dist, inds = tree.query(np.c_[grid_x.ravel(), grid_y.ravel()], k=nn)
+            
+            if nn==1:
+               dat = z.flatten()[inds].reshape(np.shape(grid_x))    
+            else:
+               w = 1.0 / dist**2
+               dat = np.sum(w * z.flatten()[inds,2], axis=1) / np.sum(w, axis=1)
+               dat.shape = grid_x.shape
             if 'dat' in locals(): 
                complete=1 
          except:  

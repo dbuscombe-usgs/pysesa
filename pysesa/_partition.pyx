@@ -55,6 +55,8 @@ cimport numpy as np
 cimport cython
 from scipy.spatial import cKDTree
 
+import dask.array as da
+
 # =========================================================
 cdef class partition:
 
@@ -151,7 +153,7 @@ cdef class partition:
 
       # pre-allocate arrays
       cdef list p
-      cdef list allpoints
+      cdef list allpoints 
       cdef float xmin = np.min(toproc[:,0])
       cdef float xmax = np.max(toproc[:,0])
       cdef float ymin = np.min(toproc[:,1])
@@ -180,6 +182,7 @@ cdef class partition:
 
       # format points for kd-tree
       allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
+      del toproc
         
       # find all points within 'out' metres of each centroid in p 
       xvec = np.arange(xmin-2*res,xmax+2*res)
@@ -200,7 +203,12 @@ cdef class partition:
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
  
       # get the tree for the entire point cloud
-      mytree = cKDTree(allpoints) 
+      #mytree = cKDTree(allpoints) 
+      
+      #dask implementation
+      dat = da.from_array(np.asarray(allpoints), chunks=1000)
+      del allpoints
+      mytree = cKDTree(dat) 
    
       # largest inscribed square has side length = sqrt(2)*radius
       dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
@@ -209,7 +217,8 @@ cdef class partition:
       dist = np.squeeze(dist[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
 
       # define null indices
-      indices[indices==len(allpoints)] = -999
+      #indices[indices==len(allpoints)] = -999
+      indices[indices==len(dat)] = -999  #dask implementation    
       indices_list = indices.tolist()
       del indices
 
@@ -219,9 +228,11 @@ cdef class partition:
          indices_list[k] = [x for x in indices_list[k] if x!=-999]
       
       # get the centroids
-      #for k in xrange(len(indices_list)):
-      for k from 0 <= k < len(indices_list):
-         w.append(np.mean(toproc[indices_list[k],:2],axis=0))
+      for k in xrange(len(indices_list)):
+      #for k from 0 <= k < len(indices_list):
+         #w.append(np.mean(toproc[indices_list[k],:2],axis=0))
+         #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+         w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
 
       cx,cy = zip(*w)
       del w
@@ -230,7 +241,11 @@ cdef class partition:
 
       # Use KDTree to answer the question: "which point of set (x,y) is the
       # nearest neighbors of those in (xp, yp)"
-      tree = cKDTree(allpoints)
+      #tree = cKDTree(allpoints)
+
+      tree = cKDTree(dat) #dask implementation
+      del dat
+      
       dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)

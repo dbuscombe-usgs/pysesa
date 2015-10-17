@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Getting started &mdash; pysesa 0.0.15 documentation</title>
+    <title>Getting started &mdash; pysesa 0.0.19 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.15',
+        VERSION:     '0.0.19',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pysesa 0.0.15 documentation" href="index.html" />
+    <link rel="top" title="pysesa 0.0.19 documentation" href="index.html" />
     <link rel="next" title="Modules" href="modules.html" />
     <link rel="prev" title="PySESA: Python program for Spatially Explicit Spectral Analysis" href="index.html" /> 
   </head>
@@ -40,7 +40,7 @@
         <li class="right" >
           <a href="index.html" title="PySESA: Python program for Spatially Explicit Spectral Analysis"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.15 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.19 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -58,7 +58,7 @@
 for spatially explicit statistical analyses of point clouds and other geospatial data,
 in the spatial and frequency domains, for use in the geosciences</p>
 <p>The program is detailed in:
-Buscombe, D. &#8220;Spatially explicit spectral analysis of point clouds and geospatial data&#8221;, forthcoming.</p>
+Buscombe, D. (2015) &#8220;Spatially explicit spectral analysis of point clouds and geospatial data&#8221;, 10.1016/j.cageo.2015.10.004, in press.</p>
 <p>For the source code visit <a class="reference external" href="https://github.com/dbuscombe-usgs/pysesa/">the project github site</a></p>
 </div>
 <div class="section" id="license">
@@ -106,6 +106,8 @@ pip install statsmodels
 pip install matplotlib
 pip install ift_nifty
 pip install pysesa
+pip install dask
+pip install toolz
 python -c &quot;import pysesa; pysesa.test()&quot;
 deactivate #(or source venv/bin/deactivate)
 </pre></div>
@@ -123,6 +125,8 @@ deactivate #(or source venv/bin/deactivate)
 <li><a class="reference external" href="http://cython.org/">cython</a></li>
 <li><a class="reference external" href="http://statsmodels.sourceforge.net/">statsmodels</a></li>
 <li><a class="reference external" href="https://pythonhosted.org/joblib/">joblib</a></li>
+<li><a class="reference external" href="http://dask.pydata.org/en/latest/">dask</a></li>
+<li><a class="reference external" href="https://pypi.python.org/pypi/toolz">toolz</a></li>
 </ol>
 <p>All of the above are available through <a class="reference external" href="https://pypi.python.org/pypi/pip">pip</a> and <a class="reference external" href="https://pythonhosted.org/setuptools/easy_install.html">easy_install</a></p>
 </div>
@@ -148,15 +152,15 @@ sudo yum install python27-numpy python27-Cython python27-scipy python27-matplotl
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># general settings</span>
 <span class="n">infile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">)</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">+</span><span class="s">&#39;pysesa_test&#39;</span><span class="o">+</span><span class="n">os</span><span class="o">.</span><span class="n">sep</span><span class="o">+</span><span class="s">&#39;example_100000pts.xyz&#39;</span>
 
-<span class="n">out</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#m output grid</span>
+<span class="n">out</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c">#m output grid</span>
 <span class="n">detrend</span> <span class="o">=</span> <span class="mi">4</span> <span class="c">#ODR plane</span>
-<span class="n">proctype</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#Processing spectral parameters (no smoothing)</span>
+<span class="n">proctype</span> <span class="o">=</span> <span class="mi">4</span> <span class="c">#Processing spatial and spectral parameters (no smoothing)</span>
 <span class="n">mxpts</span> <span class="o">=</span> <span class="mi">1024</span> <span class="c"># max pts per window</span>
 <span class="n">res</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="c">#cm internal grid resolution</span>
 <span class="n">nbin</span> <span class="o">=</span> <span class="mi">20</span> <span class="c">#number of bins for spectral binning</span>
 <span class="n">lentype</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#l less than 0.5</span>
 <span class="n">taper</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">#Hann taper</span>
-<span class="n">prc_overlap</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">#no overlap between successive windows</span>
+<span class="n">prc_overlap</span> <span class="o">=</span> <span class="mi">50</span> <span class="c">#50% overlap between successive windows</span>
 <span class="n">minpts</span> <span class="o">=</span> <span class="mi">64</span> <span class="c">#min pts per window</span>
 
 <span class="n">pysesa</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">out</span><span class="p">,</span> <span class="n">detrend</span><span class="p">,</span> <span class="n">proctype</span><span class="p">,</span> <span class="n">mxpts</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">nbin</span><span class="p">,</span> <span class="n">lentype</span><span class="p">,</span> <span class="n">minpts</span><span class="p">,</span> <span class="n">taper</span><span class="p">,</span> <span class="n">prc_overlap</span><span class="p">)</span>
@@ -247,7 +251,7 @@ sudo yum install python27-numpy python27-Cython python27-scipy python27-matplotl
         <li class="right" >
           <a href="index.html" title="PySESA: Python program for Spatially Explicit Spectral Analysis"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.15 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">pysesa 0.0.19 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

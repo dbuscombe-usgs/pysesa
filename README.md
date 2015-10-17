@@ -152,7 +152,7 @@ which carries out the following operations:
    # general settings   
    infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
 
-   out = 1 #m output grid
+   out = 0.5 #m output grid
    detrend = 4 #ODR plane
    proctype = 1 #Processing spectral parameters (no smoothing)
    mxpts = 1024 # max pts per window
@@ -160,7 +160,7 @@ which carries out the following operations:
    nbin = 20 #number of bins for spectral binning
    lentype = 1 # l<0.5
    taper = 1 # Hann taper
-   prc_overlap = 50 # no overlap between successive windows
+   prc_overlap = 100 # 100% overlap between successive windows
    minpts = 64 # min pts per window
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)

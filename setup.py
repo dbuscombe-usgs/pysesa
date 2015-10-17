@@ -33,7 +33,7 @@ for spatially explicit statistical analyses of point clouds and other geospatial
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
-Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+Buscombe, D. (2015) "Spatially explicit spectral analysis of point clouds and geospatial data", 10.1016/j.cageo.2015.10.004, in press.
 
 :Author:  
     Daniel Buscombe
@@ -160,13 +160,13 @@ else:
         Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
 install_requires = [
-    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty', 'joblib',
+    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty', 'joblib','dask', 'toolz'
 ]
 
 def setupPackage():
    setup(name='pysesa',
          version=__version__,
-         description='PySESA is an open-source project dedicated to provide a generic Python framework for spatially explicit statistical analyses of point clouds and other geospatial data, in the spatial and frequency domains, for use in the geosciences. The program is detailed in Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.',
+         description='PySESA is an open-source project dedicated to provide a generic Python framework for spatially explicit statistical analyses of point clouds and other geospatial data, in the spatial and frequency domains, for use in the geosciences. The program is detailed in Buscombe, D. (2015) "Spatially explicit spectral analysis of point clouds and geospatial data", 10.1016/j.cageo.2015.10.004, in press.',
          #long_description=long_description,
          classifiers=[
              'Intended Audience :: Science/Research',

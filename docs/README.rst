@@ -17,7 +17,7 @@ for spatially explicit statistical analyses of point clouds and other geospatial
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
-Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+Buscombe, D. (2015) "Spatially explicit spectral analysis of point clouds and geospatial data", 10.1016/j.cageo.2015.10.004, in press.
 
 For the source code visit `the project github site <https://github.com/dbuscombe-usgs/pysesa/>`_
 
@@ -87,6 +87,8 @@ You could try before you install, using a virtual environment::
   pip install matplotlib
   pip install ift_nifty
   pip install pysesa
+  pip install dask
+  pip install toolz
   python -c "import pysesa; pysesa.test()"
   deactivate #(or source venv/bin/deactivate)
 
@@ -107,6 +109,8 @@ Python libraries you need to have installed to use pysesa:
 5. `cython <http://cython.org/>`_
 6. `statsmodels <http://statsmodels.sourceforge.net/>`_
 7. `joblib <https://pythonhosted.org/joblib/>`_
+8. `dask <http://dask.pydata.org/en/latest/>`_
+9. `toolz <https://pypi.python.org/pypi/toolz>`_
 
 All of the above are available through `pip <https://pypi.python.org/pypi/pip>`_ and `easy_install <https://pythonhosted.org/setuptools/easy_install.html>`_
 

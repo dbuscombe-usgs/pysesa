@@ -27,7 +27,7 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
         | United States Geological Survey
         | Flagstaff, AZ 86001
         | dbuscombe@usgs.gov
-Version: 0.0.15    |  Revision: Apr, 2015
+Version: 0.0.19    |  Revision: Oct, 2015
 
 For latest code version please visit:
 
@@ -101,6 +101,8 @@ pip install statsmodels
 pip install matplotlib
 pip install ift_nifty
 pip install pysesa
+pip install dask
+pip install toolz
 python -c "import pysesa; pysesa.test()"
 deactivate (or source venv/bin/deactivate)
 ```

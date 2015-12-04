@@ -56,6 +56,7 @@ cimport cython
 from scipy.spatial import cKDTree
 
 import dask.array as da
+import dask.bag as db
 
 # =========================================================
 cdef class partition:
@@ -180,6 +181,9 @@ cdef class partition:
       xx, yy = np.meshgrid(x, y)
       p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
 
+      dbp = db.from_sequence(p, npartitions = 1000)
+      del p
+
       # format points for kd-tree
       allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
       del toproc
@@ -211,7 +215,10 @@ cdef class partition:
       mytree = cKDTree(dat) 
    
       # largest inscribed square has side length = sqrt(2)*radius
-      dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+      #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+
+      dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win) #dask implementation
+
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
       dist = np.squeeze(dist[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])

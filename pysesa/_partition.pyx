@@ -181,11 +181,11 @@ cdef class partition:
       xx, yy = np.meshgrid(x, y)
       p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
 
-      #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
+      dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
-      #del p
+      del p
 
       # format points for kd-tree
       allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
@@ -217,9 +217,9 @@ cdef class partition:
       mytree = cKDTree(dat) 
    
       # largest inscribed square has side length = sqrt(2)*radius
-      dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+      #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
 
-      #dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win) #dask implementation
+      dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win) #dask implementation
 
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])

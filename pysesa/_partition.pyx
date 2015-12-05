@@ -98,6 +98,8 @@ cdef class partition:
         to create M windows
 
    '''
+
+   STUFF = "Hi"
    
    cdef object data, mytree, tree, tree2
 

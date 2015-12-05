@@ -181,7 +181,10 @@ cdef class partition:
       xx, yy = np.meshgrid(x, y)
       p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
 
-      dbp = db.from_sequence(p, npartitions = 1000)
+      dbp = db.from_sequence(p, npartitions = 1000) #dask bag
+
+      cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
       del p
 
       # format points for kd-tree
@@ -199,12 +202,11 @@ cdef class partition:
       cdef list w = []
       cdef list indices2 = []
 
-      cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
+
       #cdef np.ndarray[np.float64_t, ndim=2] indices = np.empty((len(p),mxpts), dtype=np.int64)
       cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] dist2 = np.empty((len(xvec)*len(yvec),), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
  
       # get the tree for the entire point cloud
       #mytree = cKDTree(allpoints) 

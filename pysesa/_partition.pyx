@@ -58,6 +58,8 @@ from scipy.spatial import cKDTree
 import dask.array as da
 import dask.bag as db
 
+STUFF = "Hi"
+   
 # =========================================================
 cdef class partition:
 
@@ -98,8 +100,6 @@ cdef class partition:
         to create M windows
 
    '''
-
-   STUFF = "Hi"
    
    cdef object data, mytree, tree, tree2
 
@@ -108,7 +108,7 @@ cdef class partition:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    #==================================================
-   def __cinit__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):
+   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):
 
       '''
       Partition a Nx3 point cloud into M windows of nx3 points

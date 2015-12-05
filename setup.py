@@ -160,7 +160,7 @@ else:
         Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
 install_requires = [
-    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty', 'joblib','dask', 'toolz'
+    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty', 'joblib','dask', 'toolz', 'dill'
 ]
 
 def setupPackage():

@@ -106,7 +106,7 @@ cdef class partition:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    #==================================================
-   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):
+   def __cinit__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):
 
       '''
       Partition a Nx3 point cloud into M windows of nx3 points

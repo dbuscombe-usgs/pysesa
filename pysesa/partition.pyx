@@ -183,7 +183,7 @@ cdef class partition:
       xx, yy = np.meshgrid(x, y)
       p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
 
-      dbp = db.from_sequence(p, npartitions = 100) #dask bag
+      dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)

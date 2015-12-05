@@ -75,7 +75,7 @@ from pysesa.test import *
 
 import pysesa.read
 import pysesa.write
-#from pysesa.partition import partition
+from pysesa.partition import partition
 from pysesa.sgolay import sgolay
 from pysesa.spatial import spatial
 from pysesa.spectral import spectral

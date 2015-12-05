@@ -56,9 +56,7 @@ cimport cython
 from scipy.spatial import cKDTree
 
 import dask.array as da
-import dask.bag as db
-
-#STUFF = "Hi"
+#import dask.bag as db
    
 # =========================================================
 cdef class partition:
@@ -183,7 +181,9 @@ cdef class partition:
       xx, yy = np.meshgrid(x, y)
       p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
 
-      dbp = db.from_sequence(p, npartitions = 1000) #dask bag
+      #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
+
+      dbp = da.from_array(np.asarray(p), chunks=1000)
 
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
@@ -221,7 +221,10 @@ cdef class partition:
       # largest inscribed square has side length = sqrt(2)*radius
       #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
 
-      dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation
+      #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
+
+      dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win, n_jobs=-1)
+      del dbp
 
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
@@ -257,11 +260,11 @@ cdef class partition:
       tree = cKDTree(dat) #dask implementation
       del dat
       
-      dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)
+      dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
       tree2 = cKDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
-      dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
+      dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
       m2 = np.where(dist3 < out**2)[0]
 
       # do the pruning

@@ -3088,7 +3088,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *       #dask implementation
  *       dat = da.from_array(np.asarray(allpoints), chunks=1000)             # <<<<<<<<<<<<<<
  *       print "kd-tree 3"
- *       mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+ *       mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
  */
   __pyx_t_17 = __Pyx_GetModuleGlobalName(__pyx_n_s_da); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 238; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
@@ -3145,7 +3145,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *       #dask implementation
  *       dat = da.from_array(np.asarray(allpoints), chunks=1000)
  *       print "kd-tree 3"             # <<<<<<<<<<<<<<
- *       mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+ *       mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
  *       dbp = da.from_array(np.asarray(p), chunks=1000)
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_kd_tree_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3153,7 +3153,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   /* "pysesa/partition.pyx":240
  *       dat = da.from_array(np.asarray(allpoints), chunks=1000)
  *       print "kd-tree 3"
- *       mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably             # <<<<<<<<<<<<<<
+ *       mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably             # <<<<<<<<<<<<<<
  *       dbp = da.from_array(np.asarray(p), chunks=1000)
  *       #del p
  */
@@ -3167,7 +3167,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_10 = PyDict_New(); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
   __pyx_t_24 = PyObject_Length(__pyx_v_dat); if (unlikely(__pyx_t_24 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_1 = PyInt_FromSsize_t((__pyx_t_24 / 100)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyInt_FromSsize_t((__pyx_t_24 / 10)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_leafsize, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -3181,7 +3181,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
 
   /* "pysesa/partition.pyx":241
  *       print "kd-tree 3"
- *       mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+ *       mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
  *       dbp = da.from_array(np.asarray(p), chunks=1000)             # <<<<<<<<<<<<<<
  *       #del p
  *       dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
@@ -3929,7 +3929,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   /* "pysesa/partition.pyx":281
  *       #   tree = cKDTree(allpoints, leafsize=len(allpoints)/10)
  *       #except:
- *       tree = cKDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)             # <<<<<<<<<<<<<<
+ *       tree = cKDTree(dat, leafsize=len(dat)/10) #dask implementation 2 # leafsize=len(dat)             # <<<<<<<<<<<<<<
  *       del dat
  * 
  */
@@ -3943,7 +3943,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_26 = PyDict_New(); if (unlikely(!__pyx_t_26)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_26);
   __pyx_t_24 = PyObject_Length(__pyx_v_dat); if (unlikely(__pyx_t_24 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_10 = PyInt_FromSsize_t((__pyx_t_24 / 100)); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = PyInt_FromSsize_t((__pyx_t_24 / 10)); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
   if (PyDict_SetItem(__pyx_t_26, __pyx_n_s_leafsize, __pyx_t_10) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 281; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -3957,7 +3957,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
 
   /* "pysesa/partition.pyx":282
  *       #except:
- *       tree = cKDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
+ *       tree = cKDTree(dat, leafsize=len(dat)/10) #dask implementation 2 # leafsize=len(dat)
  *       del dat             # <<<<<<<<<<<<<<
  * 
  *       yp, xp = np.meshgrid(yvec, xvec)

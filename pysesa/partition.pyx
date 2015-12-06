@@ -191,11 +191,9 @@ cdef class partition:
 
       #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
-      dbp = da.from_array(np.asarray(p), chunks=1000)
-
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
-      del p #dask
+      #del p #dask
 
       # format points for kd-tree
       allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
@@ -212,7 +210,6 @@ cdef class partition:
       cdef list w = []
       cdef list indices2 = []
 
-
       #cdef np.ndarray[np.float64_t, ndim=2] indices = np.empty((len(p),mxpts), dtype=np.int64)
       cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
@@ -221,32 +218,39 @@ cdef class partition:
       # get the tree for the entire point cloud
       #mytree = cKDTree(allpoints) 
       
-      #dask implementation
-      dat = da.from_array(np.asarray(allpoints), chunks=1000)
-      del allpoints
-      #mytree = cKDTree(dat) 
-
-      print "kd-tree 1"
-      mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
-   
       # largest inscribed square has side length = sqrt(2)*radius
       #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
 
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
 
       try:
-         dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win, n_jobs=-1)
+         mytree = cKDTree(allpoints)
+         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
+         del p
       except:
+         mytree = cKDTree(allpoints)
+         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+         del p
+      finally:
+         #dask implementation
+         dat = da.from_array(np.asarray(allpoints), chunks=1000)
+         print "kd-tree 1"
+         mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
+         dbp = da.from_array(np.asarray(p), chunks=1000) 
+         del p  
          dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
-      del dbp
+         del dbp
 
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
       dist = np.squeeze(dist[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
 
       # define null indices
-      #indices[indices==len(allpoints)] = -999
-      indices[indices==len(dat)] = -999  #dask implementation    
+      try:
+         indices[indices==len(allpoints)] = -999
+      except:
+         indices[indices==len(dat)] = -999  #dask implementation    
+
       indices_list = indices.tolist()
       del indices
 
@@ -255,27 +259,31 @@ cdef class partition:
       for k from 0 <= k < len(indices_list):
          indices_list[k] = [x for x in indices_list[k] if x!=-999]
       
-      # get the centroids
-      for k in xrange(len(indices_list)):
-      #for k from 0 <= k < len(indices_list):
-         #w.append(np.mean(toproc[indices_list[k],:2],axis=0))
-         #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
-         w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
+      try:
+         # get the centroids
+         #for k in xrange(len(indices_list)):
+         for k from 0 <= k < len(indices_list):
+            w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+      except:
+         # get the centroids
+         #for k in xrange(len(indices_list)):
+         for k from 0 <= k < len(indices_list):
+            w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
 
       cx,cy = zip(*w)
       del w
+ 
+      try:
+         tree = cKDTree(allpoints)
+      except:
+         print "kd-tree 2"
+         tree = cKDTree(dat) #dask implementation 2 # leafsize=len(dat)
+         del dat
 
       yp, xp = np.meshgrid(yvec, xvec)
 
       # Use KDTree to answer the question: "which point of set (x,y) is the
       # nearest neighbors of those in (xp, yp)"
-      #tree = cKDTree(allpoints)
-
-      #tree = cKDTree(dat) #dask implementation
-
-      print "kd-tree 2"
-      tree = cKDTree(dat) #dask implementation 2 # leafsize=len(dat)
-      del dat
 
       try:      
          dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)

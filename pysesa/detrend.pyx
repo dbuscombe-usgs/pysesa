@@ -238,8 +238,14 @@ cdef class detrend:
 
          #dat = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
          ## inverse distance weighting, using 10 nearest neighbours
-         tree = KDTree(zip(points[:,0], points[:,1]))
-         dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
+         #tree = KDTree(zip(points[:,0], points[:,1]))
+         tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
+
+         try:
+            dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10, n_jobs=-1)
+         except:
+            dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
+
          w = 1.0 / dist**2
          dat = np.sum(w * points[inds,2], axis=1) / np.sum(w, axis=1)
          dat.shape = grid_x.shape     

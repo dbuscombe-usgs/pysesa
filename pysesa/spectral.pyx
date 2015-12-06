@@ -422,7 +422,7 @@ cdef class spectral:
       cdef np.ndarray[np.float64_t, ndim=1] k
      
       #cdef double[::1] s
-      cdef double[:, ::1] im = np.empty()
+      #cdef double[:, ::1] im = np.empty()
  
       r = pysesa.lengthscale(points, res, lentype, taper, method)
       im = r.getdata()

@@ -58,6 +58,11 @@ from scipy.spatial import cKDTree
 import dask.array as da
 #import dask.bag as db
    
+#data_type = np.float64
+#ctypedef np.float64_t data_type_f64t
+
+#ctypedef double (*metric_ptr)(double[:, ::1], np.intp_t, np.intp_t)
+
 # =========================================================
 cdef class partition:
 
@@ -166,8 +171,8 @@ cdef class partition:
       cdef int leny2 = leny/2   
       
       # no idea why this doesnt work
-      #cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
-      #cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
+      cdef np.ndarray[np.int64_t, ndim=1] x = np.empty(lenx, dtype=np.int64)
+      cdef np.ndarray[np.int64_t, ndim=1] y = np.empty(leny, dtype=np.int64)
 
       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
@@ -219,7 +224,8 @@ cdef class partition:
       #dask implementation
       dat = da.from_array(np.asarray(allpoints), chunks=1000)
       del allpoints
-      mytree = cKDTree(dat) 
+      #mytree = cKDTree(dat) 
+      mytree = cKDTree(dat, leafsize=len(dat)) # adding this leafsize option speeds up considerably
    
       # largest inscribed square has side length = sqrt(2)*radius
       #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
@@ -263,7 +269,8 @@ cdef class partition:
       # nearest neighbors of those in (xp, yp)"
       #tree = cKDTree(allpoints)
 
-      tree = cKDTree(dat) #dask implementation
+      #tree = cKDTree(dat) #dask implementation
+      tree = cKDTree(dat, leafsize=len(dat)) #dask implementation 2
       del dat
 
       try:      

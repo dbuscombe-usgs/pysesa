@@ -7,7 +7,7 @@ for spatially explicit statistical analyses of point clouds and other geospatial
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
-Buscombe, D. "Spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+   Buscombe, D. (2016) "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", 86, 92-108, 10.1016/j.cageo.2015.10.004.
 
 For more information visit http://dbuscombe-usgs.github.io/pysesa/
 

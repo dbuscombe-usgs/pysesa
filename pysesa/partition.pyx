@@ -224,20 +224,17 @@ cdef class partition:
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
 
       try:
-         print "kdtree 1"
          mytree = cKDTree(allpoints, leafsize=len(allpoints)/100)
          dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
          #del p
       except:
-         print "kdtree 2"
          mytree = cKDTree(allpoints, leafsize=len(allpoints)/100)
          dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
          #del p
       finally:
          #dask implementation
          dat = da.from_array(np.asarray(allpoints), chunks=1000)
-         print "kd-tree 3"
-         mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
+         mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
          dbp = da.from_array(np.asarray(p), chunks=1000) 
          #del p  
          dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)

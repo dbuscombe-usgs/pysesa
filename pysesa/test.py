@@ -70,7 +70,7 @@ def test():
    in the spatial and frequency domains, for use in the geosciences
 
    The program is detailed in:
-   Buscombe, D. "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", forthcoming.
+   Buscombe, D. (2016) "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", 86, 92-108, 10.1016/j.cageo.2015.10.004.
 
    :Author:  
        Daniel Buscombe

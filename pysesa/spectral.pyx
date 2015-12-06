@@ -416,11 +416,13 @@ cdef class spectral:
       cdef double slope, intercept, r_value, p_value, std_err, l, rms1, rms2, wmax, Z, E, sigma, T0_1, T0_2, sw1, sw2, d, wmean
       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)
 
-      cdef np.ndarray[np.float64_t, ndim=1] s 
+      #cdef np.ndarray[np.float64_t, ndim=1] s 
       cdef np.ndarray[np.float64_t, ndim=1] s_b 
       cdef np.ndarray[np.float64_t, ndim=1] k_back 
       cdef np.ndarray[np.float64_t, ndim=1] k
-      
+     
+      cdef double[::1] s
+ 
       r = pysesa.lengthscale(points, res, lentype, taper, method)
       im = r.getdata()
       l = r.getlengthscale()
@@ -594,7 +596,8 @@ cdef class spectral:
    @cython.cdivision(True)
    @cython.wraparound(False)
    @cython.nonecheck(False)
-   cpdef list _wav_rms(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s, np.ndarray[np.float64_t, ndim=1] s_b, double res):
+   cpdef list _wav_rms(self, np.ndarray[np.float64_t, ndim=1] k, double[::1] s, np.ndarray[np.float64_t, ndim=1] s_b, double res):
+      #np.ndarray[np.float64_t, ndim=1]
       '''
       Return max and mean wavelengths and rms amplitudes
 

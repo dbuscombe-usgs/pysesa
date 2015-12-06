@@ -225,12 +225,14 @@ cdef class partition:
 
       try:
          print "kdtree 1"
-         mytree = cKDTree(allpoints)
+         print p, mxpts, win
+         mytree = cKDTree(allpoints, leafsize=len(allpoints)/10)
          dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
          #del p
       except:
          print "kdtree 2"
-         mytree = cKDTree(allpoints)
+         print p, mxpts, win
+         mytree = cKDTree(allpoints, leafsize=len(allpoints)/10)
          dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
          #del p
       finally:
@@ -276,10 +278,9 @@ cdef class partition:
       del w
  
       try:
-         tree = cKDTree(allpoints)
+         tree = cKDTree(allpoints, leafsize=len(allpoints)/10)
       except:
-         print "kd-tree 2"
-         tree = cKDTree(dat) #dask implementation 2 # leafsize=len(dat)
+         tree = cKDTree(dat, leafsize=len(dat)/10) #dask implementation 2 # leafsize=len(dat)
          del dat
 
       yp, xp = np.meshgrid(yvec, xvec)

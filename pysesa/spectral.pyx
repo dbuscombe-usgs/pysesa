@@ -416,15 +416,13 @@ cdef class spectral:
       cdef double slope, intercept, r_value, p_value, std_err, l, rms1, rms2, wmax, Z, E, sigma, T0_1, T0_2, sw1, sw2, d, wmean
       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)
 
-      #cdef np.ndarray[np.float64_t, ndim=1] s 
-      #cdef np.ndarray[np.float64_t, ndim=1] s_b 
-      #cdef np.ndarray[np.float64_t, ndim=1] k_back 
-      #cdef np.ndarray[np.float64_t, ndim=1] k
+      cdef np.ndarray[np.float64_t, ndim=1] s 
+      cdef np.ndarray[np.float64_t, ndim=1] s_b 
+      cdef np.ndarray[np.float64_t, ndim=1] k_back 
+      cdef np.ndarray[np.float64_t, ndim=1] k
      
-      cdef double[::1] s
-      cdef double[::1] s_b
-      cdef double[::1] k_back
-      cdef double[::1] k
+      #cdef double[::1] s
+      cdef double[:, ::1] im = np.empty()
  
       r = pysesa.lengthscale(points, res, lentype, taper, method)
       im = r.getdata()
@@ -512,7 +510,7 @@ cdef class spectral:
    @cython.cdivision(True)
    @cython.wraparound(False)
    @cython.nonecheck(False)
-   cpdef list _moments(self, double[::1] k, double[::1] s_b, double res): #p.ndarray[np.float64_t, ndim=1]
+   cpdef list _moments(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s_b, double res):
       '''
       Return moments and moment parameters
 
@@ -564,8 +562,8 @@ cdef class spectral:
       # get moments of spectrum
       for i from 0 <= i < 5:
       #for i in xrange(0,5):
-         #moment[i] = np.abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
-         moment[i] = np.abs(trapz(np.pow(k,i),s_b)) #,np.median(np.gradient(k))))
+         moment[i] = np.abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
+         #moment[i] = abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
 
       # s is actually 10**length^4
       moment = np.sqrt((10**4)*moment)
@@ -599,8 +597,7 @@ cdef class spectral:
    @cython.cdivision(True)
    @cython.wraparound(False)
    @cython.nonecheck(False)
-   cpdef list _wav_rms(self, double[::1] k, double[::1] s, double[::1] s_b, double res):
-      #np.ndarray[np.float64_t, ndim=1]
+   cpdef list _wav_rms(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s, np.ndarray[np.float64_t, ndim=1] s_b, double res):
       '''
       Return max and mean wavelengths and rms amplitudes
 
@@ -636,12 +633,12 @@ cdef class spectral:
       cdef float pi = 3.14159265
       
       # get peak wavelength
-      #wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))] 
-      wmax = res*(2*np.pi)/k[np.argmax(np.abs(np.divide(s,s_b)))] 
+      wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))] 
+      #wmax = res*(2*pi)/k[np.argmax(abs(s/s_b))] 
 
       # mean wavelength
-      #wmean = res*(2*np.pi)/np.abs(trapz(s/s_b, k))
-      wmean = res*(2*np.pi)/np.abs(trapz(np.divide(s,s_b), k))
+      wmean = res*(2*np.pi)/np.abs(trapz(s/s_b, k))
+      #wmean = res*(2*pi)/abs(trapz(s/s_b, k))
 
       # get rms amplitudes
       rms1 = np.sqrt(np.abs(trapz(s, k)))/res
@@ -694,16 +691,10 @@ cdef class spectral:
       from nifty import rg_space, field, about
       about.warnings='OFF'
                   
-      #cdef np.ndarray[np.float64_t, ndim=1] s 
-      #cdef np.ndarray[np.float64_t, ndim=1] s_b 
-      #cdef np.ndarray[np.float64_t, ndim=1] k_back 
-      #cdef np.ndarray[np.float64_t, ndim=1] k
-
-      cdef double[::1] s
-      cdef double[::1] s_b
-      cdef double[::1] k_back
-      cdef double[::1] k
-
+      cdef np.ndarray[np.float64_t, ndim=1] s 
+      cdef np.ndarray[np.float64_t, ndim=1] s_b 
+      cdef np.ndarray[np.float64_t, ndim=1] k_back 
+      cdef np.ndarray[np.float64_t, ndim=1] k
       cdef object x_space, k_space
             
       # set up field
@@ -738,7 +729,7 @@ cdef class spectral:
    @cython.cdivision(True)
    @cython.wraparound(False)
    @cython.nonecheck(False)
-   cpdef list _psparams(self, double[::1] k_back, double[::1] s_b, double res): #np.ndarray[np.float64_t, ndim=1]
+   cpdef list _psparams(self, np.ndarray[np.float64_t, ndim=1] k_back, np.ndarray[np.float64_t, ndim=1] s_b, double res):
       '''
       Return slope, intercept, r_value, p_value, std_err, fractal dimension
 

@@ -186,6 +186,8 @@ cdef class lengthscale:
       cdef np.ndarray[np.float64_t, ndim=2] grid_x = np.empty((lenx,lenx), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] grid_y = np.empty((lenx,lenx), dtype=np.float64)
 
+      cdef np.ndarray[np.float64_t, ndim=2] im = np.empty((lenx,lenx), dtype=np.float64)
+
       # do the gridding
       if nny>nnx:
          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res*(nnx/nny)), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )      

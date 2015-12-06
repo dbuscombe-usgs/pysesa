@@ -56,7 +56,7 @@ from scipy.integrate import trapz
 from scipy.stats import linregress
 import statsmodels.api as smapi
 
-from libc.math cimport sqrt,abs
+#from libc.math cimport sqrt,abs
 
 # import PySESA libraries
 import pysesa.lengthscale
@@ -559,20 +559,20 @@ cdef class spectral:
       # get moments of spectrum
       for i from 0 <= i < 5:
       #for i in xrange(0,5):
-         #moment[i] = np.abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
-         moment[i] = abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
+         moment[i] = np.abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
+         #moment[i] = abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
 
       # s is actually 10**length^4
-      #moment = np.sqrt((10**4)*moment)
-      moment = sqrt((10**4)*moment)
+      moment = np.sqrt((10**4)*moment)
+      #moment = sqrt((10**4)*moment)
 
       # zero crossings per second
-      #Z = 2*np.sqrt(moment[2]/moment[0])
-      Z = 2*sqrt(moment[2]/moment[0])
+      Z = 2*np.sqrt(moment[2]/moment[0])
+      #Z = 2*sqrt(moment[2]/moment[0])
 
       # extrema per second										
-      #E = 2*np.sqrt(moment[4]/moment[2]) 
-      E = 2*sqrt(moment[4]/moment[2]) 
+      E = 2*np.sqrt(moment[4]/moment[2]) 
+      #E = 2*sqrt(moment[4]/moment[2]) 
 
       #rms
       sigma = (moment[2]/moment[0])
@@ -584,8 +584,8 @@ cdef class spectral:
       # spectral width parameter
       sw1 = (moment[0]*moment[2]/moment[1]**2-1)**0.5 
       # spectral width paramenter
-      #sw2 = np.abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5 
-      sw2 = abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5       
+      sw2 = np.abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5 
+      #sw2 = abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5       
 
       return [Z, E, sigma, T0_1, T0_2, sw1, sw2] + moment.tolist()               
       
@@ -630,18 +630,18 @@ cdef class spectral:
       cdef float pi = 3.14159265
       
       # get peak wavelength
-      #wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))] 
-      wmax = res*(2*pi)/k[np.argmax(abs(s/s_b))] 
+      wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))] 
+      #wmax = res*(2*pi)/k[np.argmax(abs(s/s_b))] 
 
       # mean wavelength
-      #wmean = res*(2*np.pi)/np.abs(trapz(s/s_b, k))
-      wmean = res*(2*pi)/abs(trapz(s/s_b, k))
+      wmean = res*(2*np.pi)/np.abs(trapz(s/s_b, k))
+      #wmean = res*(2*pi)/abs(trapz(s/s_b, k))
 
       # get rms amplitudes
-      #rms1 = np.sqrt(np.abs(trapz(s, k)))/res
-      #rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
-      rms1 = sqrt(abs(trapz(s, k)))/res
-      rms2 = sqrt(abs(trapz(s_b, k)))/res
+      rms1 = np.sqrt(np.abs(trapz(s, k)))/res
+      rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
+      #rms1 = sqrt(abs(trapz(s, k)))/res
+      #rms2 = sqrt(abs(trapz(s_b, k)))/res
          
       return [wmax, wmean, rms1, rms2]               
                      

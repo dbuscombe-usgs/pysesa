@@ -223,7 +223,10 @@ cdef class partition:
 
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
 
-      dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win, n_jobs=-1)
+      try:
+         dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win, n_jobs=-1)
+      except:
+         dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
       del dbp
 
       # remove any indices associated with 'inf' distance
@@ -259,12 +262,20 @@ cdef class partition:
 
       tree = cKDTree(dat) #dask implementation
       del dat
-      
-      dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
+
+      try:      
+         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
+      except:
+         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
       tree2 = cKDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
-      dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+      
+      try:
+         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+      except:
+         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win)      
+      
       m2 = np.where(dist3 < out**2)[0]
 
       # do the pruning

@@ -691,16 +691,16 @@ cdef class spectral:
       from nifty import rg_space, field, about
       about.warnings='OFF'
                   
-      #cdef np.ndarray[np.float64_t, ndim=1] s 
-      #cdef np.ndarray[np.float64_t, ndim=1] s_b 
-      #cdef np.ndarray[np.float64_t, ndim=1] k_back 
-      #cdef np.ndarray[np.float64_t, ndim=1] k
+      cdef np.ndarray[np.float64_t, ndim=1] s 
+      cdef np.ndarray[np.float64_t, ndim=1] s_b 
+      cdef np.ndarray[np.float64_t, ndim=1] k_back 
+      cdef np.ndarray[np.float64_t, ndim=1] k
       cdef object x_space, k_space
 
-      cdef double[::1] s
-      cdef double[::1] s_b
-      cdef double[::1] k_back
-      cdef double[::1] k
+      #cdef double[::1] s
+      #cdef double[::1] s_b
+      #cdef double[::1] k_back
+      #cdef double[::1] k
             
       # set up field
       if nx%2==0:

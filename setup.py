@@ -128,7 +128,7 @@ if USE_CYTHON:
         include_dirs=[np.get_include()]),        
         Extension("pysesa.partition", [ "pysesa/partition.pyx" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.spectral", [ "pysesa/_spectral.pyx" ],
+        Extension("pysesa.spectral", [ "pysesa/spectral.pyx" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.spatial", [ "pysesa/_spatial.pyx" ],
         include_dirs=[np.get_include()]),    

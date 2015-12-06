@@ -231,8 +231,8 @@ void __Pyx_call_destructor(T* x) {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__pysesa___spectral
-#define __PYX_HAVE_API__pysesa___spectral
+#define __PYX_HAVE__pysesa__spectral
+#define __PYX_HAVE_API__pysesa__spectral
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -442,7 +442,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "pysesa/_spectral.pyx",
+  "pysesa/spectral.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -692,7 +692,7 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_6pysesa_9_spectral_spectral;
+struct __pyx_obj_6pysesa_8spectral_spectral;
 
 /* "../../../../../usr/lib64/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":762
  * ctypedef npy_longdouble longdouble_t
@@ -730,16 +730,16 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 
-/* "pysesa/_spectral.pyx":73
+/* "pysesa/spectral.pyx":73
  * 
  * # =========================================================
  * cdef class spectral:             # <<<<<<<<<<<<<<
  *    '''
  *    Calculate spectral statistics of a Nx3 point cloud
  */
-struct __pyx_obj_6pysesa_9_spectral_spectral {
+struct __pyx_obj_6pysesa_8spectral_spectral {
   PyObject_HEAD
-  struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *__pyx_vtab;
+  struct __pyx_vtabstruct_6pysesa_8spectral_spectral *__pyx_vtab;
   PyObject *data;
   PyObject *x_space;
   PyObject *k_space;
@@ -752,19 +752,19 @@ struct __pyx_obj_6pysesa_9_spectral_spectral {
 
 
 
-struct __pyx_vtabstruct_6pysesa_9_spectral_spectral {
-  PyObject *(*_moments)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch);
-  PyObject *(*_wav_rms)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch);
-  PyObject *(*_psd)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, int, int, int, double, int, int __pyx_skip_dispatch);
-  PyObject *(*_psparams)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch);
-  PyObject *(*_do_linreg)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, int __pyx_skip_dispatch);
-  PyObject *(*getdata)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch);
-  PyObject *(*getmoments)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch);
-  double (*getlengthscale)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch);
-  PyObject *(*getlengths)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch);
-  PyObject *(*getpsdparams)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_6pysesa_8spectral_spectral {
+  PyObject *(*_moments)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch);
+  PyObject *(*_wav_rms)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch);
+  PyObject *(*_psd)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, int, int, int, double, int, int __pyx_skip_dispatch);
+  PyObject *(*_psparams)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch);
+  PyObject *(*_do_linreg)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, int __pyx_skip_dispatch);
+  PyObject *(*getdata)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch);
+  PyObject *(*getmoments)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch);
+  double (*getlengthscale)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch);
+  PyObject *(*getlengths)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch);
+  PyObject *(*getpsdparams)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *__pyx_vtabptr_6pysesa_9_spectral_spectral;
+static struct __pyx_vtabstruct_6pysesa_8spectral_spectral *__pyx_vtabptr_6pysesa_8spectral_spectral;
 #ifndef CYTHON_REFNANNY
   #define CYTHON_REFNANNY 0
 #endif
@@ -1122,16 +1122,16 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, CYTHON_UNUSED double __pyx_v_res, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__moments(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, CYTHON_UNUSED double __pyx_v_res, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__wav_rms(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__psd(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__psparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__do_linreg(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getdata(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getmoments(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_6pysesa_8spectral_8spectral_getlengthscale(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getlengths(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getpsdparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from 'cpython.buffer' */
 
@@ -1164,30 +1164,30 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'libc.math' */
 
-/* Module declarations from 'pysesa._spectral' */
-static PyTypeObject *__pyx_ptype_6pysesa_9_spectral_spectral = 0;
+/* Module declarations from 'pysesa.spectral' */
+static PyTypeObject *__pyx_ptype_6pysesa_8spectral_spectral = 0;
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "pysesa._spectral"
-int __pyx_module_is_main_pysesa___spectral = 0;
+#define __Pyx_MODULE_NAME "pysesa.spectral"
+int __pyx_module_is_main_pysesa__spectral = 0;
 
-/* Implementation of 'pysesa._spectral' */
+/* Implementation of 'pysesa.spectral' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_RuntimeError;
-static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_points, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_v_lentype, int __pyx_v_taper, PyObject *__pyx_v_method); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_2_moments(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, double __pyx_v_res); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_6_psd(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_12getdata(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_20getpsdparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self); /* proto */
+static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_points, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_v_lentype, int __pyx_v_taper, PyObject *__pyx_v_method); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_2_moments(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, double __pyx_v_res); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_4_wav_rms(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_6_psd(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_8_psparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_10_do_linreg(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_12getdata(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_14getmoments(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_16getlengthscale(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_18getlengths(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_20getpsdparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static PyObject *__pyx_tp_new_6pysesa_9_spectral_spectral(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_6pysesa_8spectral_spectral(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_B[] = "B";
 static char __pyx_k_H[] = "H";
 static char __pyx_k_I[] = "I";
@@ -1445,7 +1445,7 @@ static PyObject *__pyx_tuple__32;
 static PyObject *__pyx_tuple__33;
 static PyObject *__pyx_tuple__35;
 
-/* "pysesa/_spectral.pyx":246
+/* "pysesa/spectral.pyx":246
  *    @cython.nonecheck(False)
  *    # =========================================================
  *    def __init__(self, np.ndarray[np.float64_t, ndim=2] points, int nbin=20, double res=0.05, int proctype=1, int lentype=1, int taper=1, str method='nearest'):             # <<<<<<<<<<<<<<
@@ -1454,12 +1454,12 @@ static PyObject *__pyx_tuple__35;
  */
 
 /* Python wrapper */
-static int __pyx_pw_6pysesa_9_spectral_8spectral_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral___init__[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      data = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getdata()\n\n      lengths = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengths()\n\n      psdparams= pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getstats()\n\n      lengthscale = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengthscale()\n\n      moments = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getmoments()\n\n      Parameters\n      ------------\n      points : ndarray\n   \tNx3 point cloud\n\n      Other Parameters\n      ------------------\n      nbin : int, *optional* [default = 20]\n        number of bins for power spectral binning\n      res : float, *optional* [default = 0.05]\n        spatial grid resolution to create a grid\n      proctype : int, *optional* [default = 1, no spectral smoothing]\n   \tproctype type:\n        1, no spectral smoothing\n\n        2, spectrum smoothed with Gaussian\n\n      lentype : int, *optional* [default = 1, l<0.5]\n   \tlengthscale type:\n        1, l<0.5\n\n        2, l<1/e\n\n        3, l<0\n\n      taper : int, *optional* [default = Hanning]\n   \tflag for taper type:\n        1, Hanning (Hann)\n\n        2, Hamming\n\n        3, Blackman\n\n        4, Bartlett\n\n      method : str, *optional* [default = 'nearest']\n   \tgridding type\n\n      Returns [requested through .getdata()]\n      ---------------------------------------\n      self.data: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err"" = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n        l = integral lengthscale\n\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n        phi = effective slope (degrees)\n\n      Returns [requested through .getpsdparams()]\n      ---------------------------------------------\n      self.psdparams: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n\n      Returns [requested through .getlengths()]\n      -------------------------------------------\n      self.lengths: list\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n\n      Returns [requested through .getlengthscale()]\n      -----------------------------------------------\n     "" self.lengthscale: float\n        l = integral lengthscale\n\n      Returns [requested through .getmoments()]\n      -------------------------------------------\n      self.moments: list\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n      ";
+static int __pyx_pw_6pysesa_8spectral_8spectral_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral___init__[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      data = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getdata()\n\n      lengths = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengths()\n\n      psdparams= pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getstats()\n\n      lengthscale = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getlengthscale()\n\n      moments = pysesa.spectral(points, nbin, res, proctype, lentype, taper, method).getmoments()\n\n      Parameters\n      ------------\n      points : ndarray\n   \tNx3 point cloud\n\n      Other Parameters\n      ------------------\n      nbin : int, *optional* [default = 20]\n        number of bins for power spectral binning\n      res : float, *optional* [default = 0.05]\n        spatial grid resolution to create a grid\n      proctype : int, *optional* [default = 1, no spectral smoothing]\n   \tproctype type:\n        1, no spectral smoothing\n\n        2, spectrum smoothed with Gaussian\n\n      lentype : int, *optional* [default = 1, l<0.5]\n   \tlengthscale type:\n        1, l<0.5\n\n        2, l<1/e\n\n        3, l<0\n\n      taper : int, *optional* [default = Hanning]\n   \tflag for taper type:\n        1, Hanning (Hann)\n\n        2, Hamming\n\n        3, Blackman\n\n        4, Bartlett\n\n      method : str, *optional* [default = 'nearest']\n   \tgridding type\n\n      Returns [requested through .getdata()]\n      ---------------------------------------\n      self.data: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err"" = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n        l = integral lengthscale\n\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n        phi = effective slope (degrees)\n\n      Returns [requested through .getpsdparams()]\n      ---------------------------------------------\n      self.psdparams: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n\n      Returns [requested through .getlengths()]\n      -------------------------------------------\n      self.lengths: list\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n\n      Returns [requested through .getlengthscale()]\n      -----------------------------------------------\n     "" self.lengthscale: float\n        l = integral lengthscale\n\n      Returns [requested through .getmoments()]\n      -------------------------------------------\n      self.moments: list\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n      ";
 #if CYTHON_COMPILING_IN_CPYTHON
-struct wrapperbase __pyx_wrapperbase_6pysesa_9_spectral_8spectral___init__;
+struct wrapperbase __pyx_wrapperbase_6pysesa_8spectral_8spectral___init__;
 #endif
-static int __pyx_pw_6pysesa_9_spectral_8spectral_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_6pysesa_8spectral_8spectral_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_points = 0;
   int __pyx_v_nbin;
   double __pyx_v_res;
@@ -1575,13 +1575,13 @@ static int __pyx_pw_6pysesa_9_spectral_8spectral_1__init__(PyObject *__pyx_v_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 7, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_points), __pyx_ptype_5numpy_ndarray, 1, "points", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_method), (&PyString_Type), 1, "method", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral___init__(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self), __pyx_v_points, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, __pyx_v_lentype, __pyx_v_taper, __pyx_v_method);
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral___init__(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self), __pyx_v_points, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, __pyx_v_lentype, __pyx_v_taper, __pyx_v_method);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1592,7 +1592,7 @@ static int __pyx_pw_6pysesa_9_spectral_8spectral_1__init__(PyObject *__pyx_v_sel
   return __pyx_r;
 }
 
-static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_points, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_v_lentype, int __pyx_v_taper, PyObject *__pyx_v_method) {
+static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_points, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_v_lentype, int __pyx_v_taper, PyObject *__pyx_v_method) {
   float __pyx_v_pi;
   int __pyx_v_nx;
   int __pyx_v_ny;
@@ -1710,7 +1710,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   }
   __pyx_pybuffernd_points.diminfo[0].strides = __pyx_pybuffernd_points.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_points.diminfo[0].shape = __pyx_pybuffernd_points.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_points.diminfo[1].strides = __pyx_pybuffernd_points.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_points.diminfo[1].shape = __pyx_pybuffernd_points.rcbuffer->pybuffer.shape[1];
 
-  /* "pysesa/_spectral.pyx":413
+  /* "pysesa/spectral.pyx":413
  *       '''
  * 
  *       cdef float pi = 3.14159265             # <<<<<<<<<<<<<<
@@ -1719,7 +1719,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  */
   __pyx_v_pi = 3.14159265;
 
-  /* "pysesa/_spectral.pyx":417
+  /* "pysesa/spectral.pyx":417
  *       cdef int nx, ny
  *       cdef double slope, intercept, r_value, p_value, std_err, l, rms1, rms2, wmax, Z, E, sigma, T0_1, T0_2, sw1, sw2, d, wmean
  *       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -1758,7 +1758,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __pyx_v_moment = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pysesa/_spectral.pyx":424
+  /* "pysesa/spectral.pyx":424
  *       cdef np.ndarray[np.float64_t, ndim=1] k
  * 
  *       r = pysesa.lengthscale(points, res, lentype, taper, method)             # <<<<<<<<<<<<<<
@@ -1815,7 +1815,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __pyx_v_r = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pysesa/_spectral.pyx":425
+  /* "pysesa/spectral.pyx":425
  * 
  *       r = pysesa.lengthscale(points, res, lentype, taper, method)
  *       im = r.getdata()             # <<<<<<<<<<<<<<
@@ -1845,7 +1845,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __pyx_v_im = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pysesa/_spectral.pyx":426
+  /* "pysesa/spectral.pyx":426
  *       r = pysesa.lengthscale(points, res, lentype, taper, method)
  *       im = r.getdata()
  *       l = r.getlengthscale()             # <<<<<<<<<<<<<<
@@ -1876,7 +1876,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_l = __pyx_t_10;
 
-  /* "pysesa/_spectral.pyx":427
+  /* "pysesa/spectral.pyx":427
  *       im = r.getdata()
  *       l = r.getlengthscale()
  *       self.lengthscale = l             # <<<<<<<<<<<<<<
@@ -1891,7 +1891,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __pyx_v_self->lengthscale = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pysesa/_spectral.pyx":429
+  /* "pysesa/spectral.pyx":429
  *       self.lengthscale = l
  * 
  *       ny, nx= np.shape(im)             # <<<<<<<<<<<<<<
@@ -1985,7 +1985,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __pyx_v_ny = __pyx_t_12;
   __pyx_v_nx = __pyx_t_13;
 
-  /* "pysesa/_spectral.pyx":432
+  /* "pysesa/spectral.pyx":432
  * 
  *       # is all nans just return nans
  *       if np.sum(np.isnan(im)) == np.prod(np.shape(im)):             # <<<<<<<<<<<<<<
@@ -2121,7 +2121,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (__pyx_t_14) {
 
-    /* "pysesa/_spectral.pyx":434
+    /* "pysesa/spectral.pyx":434
  *       if np.sum(np.isnan(im)) == np.prod(np.shape(im)):
  * 
  *          self.data = [np.ones(24)*np.nan]             # <<<<<<<<<<<<<<
@@ -2156,7 +2156,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
     __pyx_v_self->data = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "pysesa/_spectral.pyx":435
+    /* "pysesa/spectral.pyx":435
  * 
  *          self.data = [np.ones(24)*np.nan]
  *          return             # <<<<<<<<<<<<<<
@@ -2168,7 +2168,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   }
   /*else*/ {
 
-    /* "pysesa/_spectral.pyx":472
+    /* "pysesa/spectral.pyx":472
  *             return
  * 
  *          elif proctype==2: # with spectral smoothing             # <<<<<<<<<<<<<<
@@ -2177,7 +2177,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  */
     switch (__pyx_v_proctype) {
 
-      /* "pysesa/_spectral.pyx":439
+      /* "pysesa/spectral.pyx":439
  *       else:
  * 
  *          if proctype==1: #no spectral smoothing             # <<<<<<<<<<<<<<
@@ -2186,7 +2186,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  */
       case 1:
 
-      /* "pysesa/_spectral.pyx":441
+      /* "pysesa/spectral.pyx":441
  *          if proctype==1: #no spectral smoothing
  * 
  *             try:             # <<<<<<<<<<<<<<
@@ -2200,7 +2200,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
         __Pyx_XGOTREF(__pyx_t_17);
         /*try:*/ {
 
-          /* "pysesa/_spectral.pyx":443
+          /* "pysesa/spectral.pyx":443
  *             try:
  * 
  *                s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)             # <<<<<<<<<<<<<<
@@ -2208,7 +2208,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  *                self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
  */
           if (!(likely(((__pyx_v_im) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_im, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
-          __pyx_t_4 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psd(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_4 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psd(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 443; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_4);
           if (likely(__pyx_t_4 != Py_None)) {
             PyObject* sequence = __pyx_t_4;
@@ -2331,14 +2331,14 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_k_back = ((PyArrayObject *)__pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "pysesa/_spectral.pyx":444
+          /* "pysesa/spectral.pyx":444
  * 
  *                s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
  *                slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)             # <<<<<<<<<<<<<<
  *                self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
  * 
  */
-          __pyx_t_4 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psparams(__pyx_v_self, ((PyArrayObject *)__pyx_v_k_back), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_4 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psparams(__pyx_v_self, ((PyArrayObject *)__pyx_v_k_back), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 444; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_4);
           if (likely(__pyx_t_4 != Py_None)) {
             PyObject* sequence = __pyx_t_4;
@@ -2399,7 +2399,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_std_err = __pyx_t_28;
           __pyx_v_d = __pyx_t_29;
 
-          /* "pysesa/_spectral.pyx":445
+          /* "pysesa/spectral.pyx":445
  *                s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
  *                slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)
  *                self.psdparams = [slope, intercept, r_value, p_value, std_err, d]             # <<<<<<<<<<<<<<
@@ -2444,7 +2444,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_self->psdparams = __pyx_t_1;
           __pyx_t_1 = 0;
 
-          /* "pysesa/_spectral.pyx":448
+          /* "pysesa/spectral.pyx":448
  * 
  *                # interpolate background spectrum onto wavenumber array
  *                s_b = np.interp(k,k_back,s_b)             # <<<<<<<<<<<<<<
@@ -2508,7 +2508,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_s_b, ((PyArrayObject *)__pyx_t_1));
           __pyx_t_1 = 0;
 
-          /* "pysesa/_spectral.pyx":450
+          /* "pysesa/spectral.pyx":450
  *                s_b = np.interp(k,k_back,s_b)
  * 
  *                k = k[2:] #Nyquist frequency up             # <<<<<<<<<<<<<<
@@ -2539,7 +2539,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_k, ((PyArrayObject *)__pyx_t_1));
           __pyx_t_1 = 0;
 
-          /* "pysesa/_spectral.pyx":451
+          /* "pysesa/spectral.pyx":451
  * 
  *                k = k[2:] #Nyquist frequency up
  *                s = s[2:]             # <<<<<<<<<<<<<<
@@ -2570,7 +2570,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_s, ((PyArrayObject *)__pyx_t_1));
           __pyx_t_1 = 0;
 
-          /* "pysesa/_spectral.pyx":452
+          /* "pysesa/spectral.pyx":452
  *                k = k[2:] #Nyquist frequency up
  *                s = s[2:]
  *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
@@ -2601,14 +2601,14 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_s_b, ((PyArrayObject *)__pyx_t_1));
           __pyx_t_1 = 0;
 
-          /* "pysesa/_spectral.pyx":455
+          /* "pysesa/spectral.pyx":455
  * 
  *                # wavelengths and rms amplitudes
  *                wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)             # <<<<<<<<<<<<<<
  *                self.lengths = [wmax, wmean, rms1, rms2]
  * 
  */
-          __pyx_t_1 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_wav_rms(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_1 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_wav_rms(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_1);
           if (likely(__pyx_t_1 != Py_None)) {
             PyObject* sequence = __pyx_t_1;
@@ -2659,7 +2659,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_rms1 = __pyx_t_27;
           __pyx_v_rms2 = __pyx_t_26;
 
-          /* "pysesa/_spectral.pyx":456
+          /* "pysesa/spectral.pyx":456
  *                # wavelengths and rms amplitudes
  *                wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
  *                self.lengths = [wmax, wmean, rms1, rms2]             # <<<<<<<<<<<<<<
@@ -2694,14 +2694,14 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_self->lengths = __pyx_t_6;
           __pyx_t_6 = 0;
 
-          /* "pysesa/_spectral.pyx":459
+          /* "pysesa/spectral.pyx":459
  * 
  *                # moments and moment parameters
  *                Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)             # <<<<<<<<<<<<<<
  *                self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
  * 
  */
-          __pyx_t_6 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_moments(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_6 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_moments(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 459; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_6);
           if (likely(__pyx_t_6 != Py_None)) {
             PyObject* sequence = __pyx_t_6;
@@ -2787,7 +2787,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_m4 = __pyx_t_35;
           __pyx_t_35 = 0;
 
-          /* "pysesa/_spectral.pyx":460
+          /* "pysesa/spectral.pyx":460
  *                # moments and moment parameters
  *                Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
  *                self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]             # <<<<<<<<<<<<<<
@@ -2852,7 +2852,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_self->moments = __pyx_t_4;
           __pyx_t_4 = 0;
 
-          /* "pysesa/_spectral.pyx":464
+          /* "pysesa/spectral.pyx":464
  *                # concetanate and add effective slope
  *                #self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
  *                self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]             # <<<<<<<<<<<<<<
@@ -2946,7 +2946,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
         __Pyx_XDECREF(__pyx_t_32); __pyx_t_32 = 0;
         __Pyx_XDECREF(__pyx_t_34); __pyx_t_34 = 0;
 
-        /* "pysesa/_spectral.pyx":466
+        /* "pysesa/spectral.pyx":466
  *                self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]
  * 
  *             except:             # <<<<<<<<<<<<<<
@@ -2954,13 +2954,13 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  *                self.data = [np.ones(24)*np.nan]
  */
         /*except:*/ {
-          __Pyx_AddTraceback("pysesa._spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("pysesa.spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_34, &__pyx_t_32, &__pyx_t_30) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 466; __pyx_clineno = __LINE__; goto __pyx_L8_except_error;}
           __Pyx_GOTREF(__pyx_t_34);
           __Pyx_GOTREF(__pyx_t_32);
           __Pyx_GOTREF(__pyx_t_30);
 
-          /* "pysesa/_spectral.pyx":468
+          /* "pysesa/spectral.pyx":468
  *             except:
  * 
  *                self.data = [np.ones(24)*np.nan]             # <<<<<<<<<<<<<<
@@ -3013,7 +3013,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
         __pyx_L13_try_end:;
       }
 
-      /* "pysesa/_spectral.pyx":470
+      /* "pysesa/spectral.pyx":470
  *                self.data = [np.ones(24)*np.nan]
  * 
  *             return             # <<<<<<<<<<<<<<
@@ -3024,7 +3024,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
       goto __pyx_L0;
       break;
 
-      /* "pysesa/_spectral.pyx":472
+      /* "pysesa/spectral.pyx":472
  *             return
  * 
  *          elif proctype==2: # with spectral smoothing             # <<<<<<<<<<<<<<
@@ -3033,7 +3033,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  */
       case 2:
 
-      /* "pysesa/_spectral.pyx":474
+      /* "pysesa/spectral.pyx":474
  *          elif proctype==2: # with spectral smoothing
  * 
  *             try:             # <<<<<<<<<<<<<<
@@ -3047,7 +3047,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
         __Pyx_XGOTREF(__pyx_t_15);
         /*try:*/ {
 
-          /* "pysesa/_spectral.pyx":476
+          /* "pysesa/spectral.pyx":476
  *             try:
  * 
  *                s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)             # <<<<<<<<<<<<<<
@@ -3055,7 +3055,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  *                self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
  */
           if (!(likely(((__pyx_v_im) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_im, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
-          __pyx_t_30 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psd(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, 0); if (unlikely(!__pyx_t_30)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_30 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psd(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, 0); if (unlikely(!__pyx_t_30)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 476; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_30);
           if (likely(__pyx_t_30 != Py_None)) {
             PyObject* sequence = __pyx_t_30;
@@ -3178,14 +3178,14 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_k_back = ((PyArrayObject *)__pyx_t_31);
           __pyx_t_31 = 0;
 
-          /* "pysesa/_spectral.pyx":477
+          /* "pysesa/spectral.pyx":477
  * 
  *                s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
  *                slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)             # <<<<<<<<<<<<<<
  *                self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
  * 
  */
-          __pyx_t_30 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psparams(__pyx_v_self, ((PyArrayObject *)__pyx_v_k_back), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_30)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 477; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_30 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_psparams(__pyx_v_self, ((PyArrayObject *)__pyx_v_k_back), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_30)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 477; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_30);
           if (likely(__pyx_t_30 != Py_None)) {
             PyObject* sequence = __pyx_t_30;
@@ -3246,7 +3246,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_std_err = __pyx_t_28;
           __pyx_v_d = __pyx_t_27;
 
-          /* "pysesa/_spectral.pyx":478
+          /* "pysesa/spectral.pyx":478
  *                s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
  *                slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)
  *                self.psdparams = [slope, intercept, r_value, p_value, std_err, d]             # <<<<<<<<<<<<<<
@@ -3291,7 +3291,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_self->psdparams = __pyx_t_31;
           __pyx_t_31 = 0;
 
-          /* "pysesa/_spectral.pyx":481
+          /* "pysesa/spectral.pyx":481
  * 
  *                # interpolate background spectrum onto wavenumber array
  *                s_b = np.interp(k,k_back,s_b)             # <<<<<<<<<<<<<<
@@ -3355,7 +3355,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_s_b, ((PyArrayObject *)__pyx_t_31));
           __pyx_t_31 = 0;
 
-          /* "pysesa/_spectral.pyx":483
+          /* "pysesa/spectral.pyx":483
  *                s_b = np.interp(k,k_back,s_b)
  * 
  *                k = k[2:]             # <<<<<<<<<<<<<<
@@ -3386,7 +3386,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_k, ((PyArrayObject *)__pyx_t_31));
           __pyx_t_31 = 0;
 
-          /* "pysesa/_spectral.pyx":484
+          /* "pysesa/spectral.pyx":484
  * 
  *                k = k[2:]
  *                s = s[2:]             # <<<<<<<<<<<<<<
@@ -3417,7 +3417,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_s, ((PyArrayObject *)__pyx_t_31));
           __pyx_t_31 = 0;
 
-          /* "pysesa/_spectral.pyx":485
+          /* "pysesa/spectral.pyx":485
  *                k = k[2:]
  *                s = s[2:]
  *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
@@ -3448,14 +3448,14 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __Pyx_DECREF_SET(__pyx_v_s_b, ((PyArrayObject *)__pyx_t_31));
           __pyx_t_31 = 0;
 
-          /* "pysesa/_spectral.pyx":488
+          /* "pysesa/spectral.pyx":488
  * 
  *                # wavelengths and rms amplitudes
  *                wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)             # <<<<<<<<<<<<<<
  *                self.lengths = [wmax, wmean, rms1, rms2]
  * 
  */
-          __pyx_t_31 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_wav_rms(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_31)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_31 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_wav_rms(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_31)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_31);
           if (likely(__pyx_t_31 != Py_None)) {
             PyObject* sequence = __pyx_t_31;
@@ -3506,7 +3506,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_rms1 = __pyx_t_29;
           __pyx_v_rms2 = __pyx_t_25;
 
-          /* "pysesa/_spectral.pyx":489
+          /* "pysesa/spectral.pyx":489
  *                # wavelengths and rms amplitudes
  *                wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
  *                self.lengths = [wmax, wmean, rms1, rms2]             # <<<<<<<<<<<<<<
@@ -3541,14 +3541,14 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_self->lengths = __pyx_t_34;
           __pyx_t_34 = 0;
 
-          /* "pysesa/_spectral.pyx":492
+          /* "pysesa/spectral.pyx":492
  * 
  *                # moments and moment parameters
  *                Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)             # <<<<<<<<<<<<<<
  *                self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
  * 
  */
-          __pyx_t_34 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_moments(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_34)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_34 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_moments(__pyx_v_self, ((PyArrayObject *)__pyx_v_k), ((PyArrayObject *)__pyx_v_s_b), __pyx_v_res, 0); if (unlikely(!__pyx_t_34)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 492; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_34);
           if (likely(__pyx_t_34 != Py_None)) {
             PyObject* sequence = __pyx_t_34;
@@ -3634,7 +3634,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_m4 = __pyx_t_9;
           __pyx_t_9 = 0;
 
-          /* "pysesa/_spectral.pyx":493
+          /* "pysesa/spectral.pyx":493
  *                # moments and moment parameters
  *                Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
  *                self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]             # <<<<<<<<<<<<<<
@@ -3699,7 +3699,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
           __pyx_v_self->moments = __pyx_t_30;
           __pyx_t_30 = 0;
 
-          /* "pysesa/_spectral.pyx":497
+          /* "pysesa/spectral.pyx":497
  *                # concetanate and add effective slope
  *                #self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
  *                self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]             # <<<<<<<<<<<<<<
@@ -3793,7 +3793,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-        /* "pysesa/_spectral.pyx":499
+        /* "pysesa/spectral.pyx":499
  *                self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]
  * 
  *             except:             # <<<<<<<<<<<<<<
@@ -3801,13 +3801,13 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  *                self.data = [np.ones(24)*np.nan]
  */
         /*except:*/ {
-          __Pyx_AddTraceback("pysesa._spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("pysesa.spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 499; __pyx_clineno = __LINE__; goto __pyx_L18_except_error;}
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_6);
 
-          /* "pysesa/_spectral.pyx":501
+          /* "pysesa/spectral.pyx":501
  *             except:
  * 
  *                self.data = [np.ones(24)*np.nan]             # <<<<<<<<<<<<<<
@@ -3860,7 +3860,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
         __pyx_L23_try_end:;
       }
 
-      /* "pysesa/_spectral.pyx":503
+      /* "pysesa/spectral.pyx":503
  *                self.data = [np.ones(24)*np.nan]
  * 
  *             return             # <<<<<<<<<<<<<<
@@ -3874,7 +3874,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
     }
   }
 
-  /* "pysesa/_spectral.pyx":246
+  /* "pysesa/spectral.pyx":246
  *    @cython.nonecheck(False)
  *    # =========================================================
  *    def __init__(self, np.ndarray[np.float64_t, ndim=2] points, int nbin=20, double res=0.05, int proctype=1, int lentype=1, int taper=1, str method='nearest'):             # <<<<<<<<<<<<<<
@@ -3908,7 +3908,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   goto __pyx_L2;
   __pyx_L0:;
@@ -3935,7 +3935,7 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":510
+/* "pysesa/spectral.pyx":510
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _moments(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s_b, double res):             # <<<<<<<<<<<<<<
@@ -3943,8 +3943,8 @@ static int __pyx_pf_6pysesa_9_spectral_8spectral___init__(struct __pyx_obj_6pyse
  *       Return moments and moment parameters
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_3_moments(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, CYTHON_UNUSED double __pyx_v_res, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_3_moments(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__moments(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, CYTHON_UNUSED double __pyx_v_res, int __pyx_skip_dispatch) {
   double __pyx_v_Z;
   double __pyx_v_E;
   double __pyx_v_sigma;
@@ -4025,7 +4025,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_moments); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_3_moments)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_3_moments)) {
       __Pyx_XDECREF(__pyx_r);
       __pyx_t_3 = PyFloat_FromDouble(__pyx_v_res); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
@@ -4069,7 +4069,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":556
+  /* "pysesa/spectral.pyx":556
  *       '''
  *       cdef double Z, E, sigma, T0_1, T0_2, sw1, sw2
  *       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4108,7 +4108,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_v_moment = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "pysesa/_spectral.pyx":560
+  /* "pysesa/spectral.pyx":560
  * 
  *       # get moments of spectrum
  *       for i from 0 <= i < 5:             # <<<<<<<<<<<<<<
@@ -4117,7 +4117,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
  */
   for (__pyx_v_i = 0; __pyx_v_i < 5; __pyx_v_i++) {
 
-    /* "pysesa/_spectral.pyx":563
+    /* "pysesa/spectral.pyx":563
  *       #for i in xrange(0,5):
  *          #moment[i] = np.abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))
  *          moment[i] = abs(trapz((k)**i,s_b)) #,np.median(np.gradient(k))))             # <<<<<<<<<<<<<<
@@ -4167,7 +4167,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
     *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_moment.diminfo[0].strides) = __pyx_t_9;
   }
 
-  /* "pysesa/_spectral.pyx":567
+  /* "pysesa/spectral.pyx":567
  *       # s is actually 10**length^4
  *       #moment = np.sqrt((10**4)*moment)
  *       moment = sqrt((10**4)*moment)             # <<<<<<<<<<<<<<
@@ -4202,7 +4202,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __Pyx_DECREF_SET(__pyx_v_moment, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_spectral.pyx":571
+  /* "pysesa/spectral.pyx":571
  *       # zero crossings per second
  *       #Z = 2*np.sqrt(moment[2]/moment[0])
  *       Z = 2*sqrt(moment[2]/moment[0])             # <<<<<<<<<<<<<<
@@ -4213,7 +4213,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_17 = 0;
   __pyx_v_Z = (2.0 * sqrt(((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_moment.diminfo[0].strides)) / (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_moment.diminfo[0].strides)))));
 
-  /* "pysesa/_spectral.pyx":575
+  /* "pysesa/spectral.pyx":575
  *       # extrema per second
  *       #E = 2*np.sqrt(moment[4]/moment[2])
  *       E = 2*sqrt(moment[4]/moment[2])             # <<<<<<<<<<<<<<
@@ -4224,7 +4224,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_19 = 2;
   __pyx_v_E = (2.0 * sqrt(((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_moment.diminfo[0].strides)) / (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_moment.diminfo[0].strides)))));
 
-  /* "pysesa/_spectral.pyx":578
+  /* "pysesa/spectral.pyx":578
  * 
  *       #rms
  *       sigma = (moment[2]/moment[0])             # <<<<<<<<<<<<<<
@@ -4235,7 +4235,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_21 = 0;
   __pyx_v_sigma = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_moment.diminfo[0].strides)) / (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_moment.diminfo[0].strides)));
 
-  /* "pysesa/_spectral.pyx":581
+  /* "pysesa/spectral.pyx":581
  * 
  *       # average period m0/m1
  *       T0_1 = (moment[0]/moment[1])             # <<<<<<<<<<<<<<
@@ -4246,7 +4246,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_23 = 1;
   __pyx_v_T0_1 = ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_22, __pyx_pybuffernd_moment.diminfo[0].strides)) / (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_moment.diminfo[0].strides)));
 
-  /* "pysesa/_spectral.pyx":583
+  /* "pysesa/spectral.pyx":583
  *       T0_1 = (moment[0]/moment[1])
  *       #average period (m0/m2)^0.5
  *       T0_2 = T0_1**0.5             # <<<<<<<<<<<<<<
@@ -4255,7 +4255,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
  */
   __pyx_v_T0_2 = pow(__pyx_v_T0_1, 0.5);
 
-  /* "pysesa/_spectral.pyx":585
+  /* "pysesa/spectral.pyx":585
  *       T0_2 = T0_1**0.5
  *       # spectral width parameter
  *       sw1 = (moment[0]*moment[2]/moment[1]**2-1)**0.5             # <<<<<<<<<<<<<<
@@ -4267,7 +4267,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_26 = 1;
   __pyx_v_sw1 = pow(((double)((((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_24, __pyx_pybuffernd_moment.diminfo[0].strides)) * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_25, __pyx_pybuffernd_moment.diminfo[0].strides))) / pow((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_26, __pyx_pybuffernd_moment.diminfo[0].strides)), 2.0)) - 1.0)), 0.5);
 
-  /* "pysesa/_spectral.pyx":588
+  /* "pysesa/spectral.pyx":588
  *       # spectral width paramenter
  *       #sw2 = np.abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5
  *       sw2 = abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5             # <<<<<<<<<<<<<<
@@ -4279,7 +4279,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_29 = 4;
   __pyx_v_sw2 = pow(fabs((1.0 - (pow((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_moment.diminfo[0].strides)), 2.0) / ((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_moment.diminfo[0].strides)) * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_moment.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_moment.diminfo[0].strides)))))), 0.5);
 
-  /* "pysesa/_spectral.pyx":590
+  /* "pysesa/spectral.pyx":590
  *       sw2 = abs(1 - moment[2]**2/(moment[0]*moment[4]))**0.5
  * 
  *       return [Z, E, sigma, T0_1, T0_2, sw1, sw2] + moment.tolist()             # <<<<<<<<<<<<<<
@@ -4353,7 +4353,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":510
+  /* "pysesa/spectral.pyx":510
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _moments(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s_b, double res):             # <<<<<<<<<<<<<<
@@ -4377,7 +4377,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_moment.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._moments", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._moments", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4392,9 +4392,9 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__moments(CYTHON_UNUSED str
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_3_moments(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_2_moments[] = "\n      Return moments and moment parameters\n\n      Syntax\n      ----------\n      Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = pysesa_spectral.spec._moments(k, s_b, res)\n\n      Parameters\n      ------------\n      k : ndarray\n   \t   N x 1 wavenumbers\n      s_b : ndarray\n   \t   N x 1 array of background power spectral density\n      res : double\n   \t   spatial resolution of grid\n\n      Returns\n      ----------\n      data: tuple of floats\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_3_moments(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_3_moments(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_2_moments[] = "\n      Return moments and moment parameters\n\n      Syntax\n      ----------\n      Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = pysesa_spectral.spec._moments(k, s_b, res)\n\n      Parameters\n      ------------\n      k : ndarray\n   \t   N x 1 wavenumbers\n      s_b : ndarray\n   \t   N x 1 array of background power spectral density\n      res : double\n   \t   spatial resolution of grid\n\n      Returns\n      ----------\n      data: tuple of floats\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_3_moments(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_k = 0;
   PyArrayObject *__pyx_v_s_b = 0;
   double __pyx_v_res;
@@ -4451,13 +4451,13 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_3_moments(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_moments", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._spectral.spectral._moments", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._moments", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_k), __pyx_ptype_5numpy_ndarray, 1, "k", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s_b), __pyx_ptype_5numpy_ndarray, 1, "s_b", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_2_moments(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self), __pyx_v_k, __pyx_v_s_b, __pyx_v_res);
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_2_moments(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self), __pyx_v_k, __pyx_v_s_b, __pyx_v_res);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4468,7 +4468,7 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_3_moments(PyObject *__pyx
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_2_moments(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, double __pyx_v_res) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_2_moments(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s_b, double __pyx_v_res) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_k;
   __Pyx_Buffer __pyx_pybuffer_k;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_s_b;
@@ -4499,7 +4499,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_2_moments(struct __pyx_ob
   }
   __pyx_pybuffernd_s_b.diminfo[0].strides = __pyx_pybuffernd_s_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_s_b.diminfo[0].shape = __pyx_pybuffernd_s_b.rcbuffer->pybuffer.shape[0];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral__moments(__pyx_v_self, __pyx_v_k, __pyx_v_s_b, __pyx_v_res, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral__moments(__pyx_v_self, __pyx_v_k, __pyx_v_s_b, __pyx_v_res, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 510; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4513,7 +4513,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_2_moments(struct __pyx_ob
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_k.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._moments", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._moments", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4525,7 +4525,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_2_moments(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":597
+/* "pysesa/spectral.pyx":597
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _wav_rms(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s, np.ndarray[np.float64_t, ndim=1] s_b, double res):             # <<<<<<<<<<<<<<
@@ -4533,8 +4533,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_2_moments(struct __pyx_ob
  *       Return max and mean wavelengths and rms amplitudes
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_5_wav_rms(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__wav_rms(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch) {
   double __pyx_v_wmax;
   double __pyx_v_wmean;
   double __pyx_v_rms1;
@@ -4593,7 +4593,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_wav_rms); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_5_wav_rms)) {
       __Pyx_XDECREF(__pyx_r);
       __pyx_t_3 = PyFloat_FromDouble(__pyx_v_res); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
@@ -4640,7 +4640,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":630
+  /* "pysesa/spectral.pyx":630
  *       cdef double wmax, wmean, rms1, rms2
  * 
  *       cdef float pi = 3.14159265             # <<<<<<<<<<<<<<
@@ -4649,7 +4649,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
  */
   __pyx_v_pi = 3.14159265;
 
-  /* "pysesa/_spectral.pyx":634
+  /* "pysesa/spectral.pyx":634
  *       # get peak wavelength
  *       #wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))]
  *       wmax = res*(2*pi)/k[np.argmax(abs(s/s_b))]             # <<<<<<<<<<<<<<
@@ -4705,7 +4705,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_wmax = __pyx_t_8;
 
-  /* "pysesa/_spectral.pyx":638
+  /* "pysesa/spectral.pyx":638
  *       # mean wavelength
  *       #wmean = res*(2*np.pi)/np.abs(trapz(s/s_b, k))
  *       wmean = res*(2*pi)/abs(trapz(s/s_b, k))             # <<<<<<<<<<<<<<
@@ -4756,7 +4756,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_wmean = __pyx_t_8;
 
-  /* "pysesa/_spectral.pyx":643
+  /* "pysesa/spectral.pyx":643
  *       #rms1 = np.sqrt(np.abs(trapz(s, k)))/res
  *       #rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
  *       rms1 = sqrt(abs(trapz(s, k)))/res             # <<<<<<<<<<<<<<
@@ -4799,7 +4799,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_rms1 = (sqrt(__pyx_t_8) / __pyx_v_res);
 
-  /* "pysesa/_spectral.pyx":644
+  /* "pysesa/spectral.pyx":644
  *       #rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
  *       rms1 = sqrt(abs(trapz(s, k)))/res
  *       rms2 = sqrt(abs(trapz(s_b, k)))/res             # <<<<<<<<<<<<<<
@@ -4842,7 +4842,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_v_rms2 = (sqrt(__pyx_t_8) / __pyx_v_res);
 
-  /* "pysesa/_spectral.pyx":646
+  /* "pysesa/spectral.pyx":646
  *       rms2 = sqrt(abs(trapz(s_b, k)))/res
  * 
  *       return [wmax, wmean, rms1, rms2]             # <<<<<<<<<<<<<<
@@ -4876,7 +4876,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":597
+  /* "pysesa/spectral.pyx":597
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _wav_rms(self, np.ndarray[np.float64_t, ndim=1] k, np.ndarray[np.float64_t, ndim=1] s, np.ndarray[np.float64_t, ndim=1] s_b, double res):             # <<<<<<<<<<<<<<
@@ -4898,7 +4898,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._wav_rms", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._wav_rms", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -4912,9 +4912,9 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__wav_rms(CYTHON_UNUSED str
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_4_wav_rms[] = "\n      Return max and mean wavelengths and rms amplitudes\n\n      Syntax\n      ----------\n      wmax, wmean, rms1, rms2 = pysesa_spectral.spec._wav_rms(k, s, s_b, res)\n\n      Parameters\n      ----------\n      k : ndarray\n   \t   N x 1 wavenumbers\n      s : ndarray\n   \t   N x 1 array of power spectral density\n      s_b : ndarray\n   \t   N x 1 array of background power spectral density\n      res : double\n   \t   spatial resolution of grid\n\n      Returns\n      ----------\n      data: tuple of floats\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_5_wav_rms(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_4_wav_rms[] = "\n      Return max and mean wavelengths and rms amplitudes\n\n      Syntax\n      ----------\n      wmax, wmean, rms1, rms2 = pysesa_spectral.spec._wav_rms(k, s, s_b, res)\n\n      Parameters\n      ----------\n      k : ndarray\n   \t   N x 1 wavenumbers\n      s : ndarray\n   \t   N x 1 array of power spectral density\n      s_b : ndarray\n   \t   N x 1 array of background power spectral density\n      res : double\n   \t   spatial resolution of grid\n\n      Returns\n      ----------\n      data: tuple of floats\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_5_wav_rms(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_k = 0;
   PyArrayObject *__pyx_v_s = 0;
   PyArrayObject *__pyx_v_s_b = 0;
@@ -4980,14 +4980,14 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_wav_rms", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._spectral.spectral._wav_rms", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._wav_rms", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_k), __pyx_ptype_5numpy_ndarray, 1, "k", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s), __pyx_ptype_5numpy_ndarray, 1, "s", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s_b), __pyx_ptype_5numpy_ndarray, 1, "s_b", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self), __pyx_v_k, __pyx_v_s, __pyx_v_s_b, __pyx_v_res);
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_4_wav_rms(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self), __pyx_v_k, __pyx_v_s, __pyx_v_s_b, __pyx_v_res);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4998,7 +4998,7 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms(PyObject *__pyx
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_4_wav_rms(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k, PyArrayObject *__pyx_v_s, PyArrayObject *__pyx_v_s_b, double __pyx_v_res) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_k;
   __Pyx_Buffer __pyx_pybuffer_k;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_s;
@@ -5040,7 +5040,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(struct __pyx_ob
   }
   __pyx_pybuffernd_s_b.diminfo[0].strides = __pyx_pybuffernd_s_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_s_b.diminfo[0].shape = __pyx_pybuffernd_s_b.rcbuffer->pybuffer.shape[0];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral__wav_rms(__pyx_v_self, __pyx_v_k, __pyx_v_s, __pyx_v_s_b, __pyx_v_res, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral__wav_rms(__pyx_v_self, __pyx_v_k, __pyx_v_s, __pyx_v_s_b, __pyx_v_res, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5055,7 +5055,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(struct __pyx_ob
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._wav_rms", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._wav_rms", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5068,7 +5068,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":653
+/* "pysesa/spectral.pyx":653
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _psd(self, np.ndarray[np.float64_t, ndim=2] im, int nx, int ny, int nbin, double res, int proctype):             # <<<<<<<<<<<<<<
@@ -5076,8 +5076,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_4_wav_rms(struct __pyx_ob
  *       Return spectrum, wavenumber index, and background spectrum
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_7_psd(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_7_psd(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__psd(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype, int __pyx_skip_dispatch) {
   PyObject *__pyx_v_rg_space = NULL;
   PyObject *__pyx_v_field = NULL;
   PyObject *__pyx_v_about = NULL;
@@ -5154,7 +5154,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_psd); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_7_psd)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_7_psd)) {
       __Pyx_XDECREF(__pyx_r);
       __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_nx); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
@@ -5215,7 +5215,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":688
+  /* "pysesa/spectral.pyx":688
  * 
  *       '''
  *       from nifty import rg_space, field, about             # <<<<<<<<<<<<<<
@@ -5253,7 +5253,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":689
+  /* "pysesa/spectral.pyx":689
  *       '''
  *       from nifty import rg_space, field, about
  *       about.warnings='OFF'             # <<<<<<<<<<<<<<
@@ -5262,7 +5262,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_about, __pyx_n_s_warnings, __pyx_n_s_OFF) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 689; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_spectral.pyx":698
+  /* "pysesa/spectral.pyx":698
  * 
  *       # set up field
  *       if nx%2==0:             # <<<<<<<<<<<<<<
@@ -5272,7 +5272,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_t_12 = (((__pyx_v_nx % 2) == 0) != 0);
   if (__pyx_t_12) {
 
-    /* "pysesa/_spectral.pyx":699
+    /* "pysesa/spectral.pyx":699
  *       # set up field
  *       if nx%2==0:
  *          x_space = rg_space((nx,ny), naxes=2)             # <<<<<<<<<<<<<<
@@ -5309,7 +5309,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   }
   /*else*/ {
 
-    /* "pysesa/_spectral.pyx":701
+    /* "pysesa/spectral.pyx":701
  *          x_space = rg_space((nx,ny), naxes=2)
  *       else:
  *          x_space = rg_space((nx-1,ny-1), naxes=2)             # <<<<<<<<<<<<<<
@@ -5345,7 +5345,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   }
   __pyx_L3:;
 
-  /* "pysesa/_spectral.pyx":702
+  /* "pysesa/spectral.pyx":702
  *       else:
  *          x_space = rg_space((nx-1,ny-1), naxes=2)
  *       k_space = x_space.get_codomain()             # <<<<<<<<<<<<<<
@@ -5375,7 +5375,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_v_k_space = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":704
+  /* "pysesa/spectral.pyx":704
  *       k_space = x_space.get_codomain()
  * 
  *       if proctype==2:             # <<<<<<<<<<<<<<
@@ -5385,7 +5385,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_t_12 = ((__pyx_v_proctype == 2) != 0);
   if (__pyx_t_12) {
 
-    /* "pysesa/_spectral.pyx":706
+    /* "pysesa/spectral.pyx":706
  *       if proctype==2:
  *          # and get the smoothed power spectrum
  *          if nx%2==0:             # <<<<<<<<<<<<<<
@@ -5395,7 +5395,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
     __pyx_t_12 = (((__pyx_v_nx % 2) == 0) != 0);
     if (__pyx_t_12) {
 
-      /* "pysesa/_spectral.pyx":707
+      /* "pysesa/spectral.pyx":707
  *          # and get the smoothed power spectrum
  *          if nx%2==0:
  *             s = field(x_space, target=k_space, val=im).power(smooth=1)             # <<<<<<<<<<<<<<
@@ -5450,7 +5450,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
     }
     /*else*/ {
 
-      /* "pysesa/_spectral.pyx":709
+      /* "pysesa/spectral.pyx":709
  *             s = field(x_space, target=k_space, val=im).power(smooth=1)
  *          else:
  *             s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=1)             # <<<<<<<<<<<<<<
@@ -5510,7 +5510,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   }
   /*else*/ {
 
-    /* "pysesa/_spectral.pyx":712
+    /* "pysesa/spectral.pyx":712
  *       else:
  *          # and get the power spectrum
  *          if nx%2==0:             # <<<<<<<<<<<<<<
@@ -5520,7 +5520,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
     __pyx_t_12 = (((__pyx_v_nx % 2) == 0) != 0);
     if (__pyx_t_12) {
 
-      /* "pysesa/_spectral.pyx":713
+      /* "pysesa/spectral.pyx":713
  *          # and get the power spectrum
  *          if nx%2==0:
  *             s = field(x_space, target=k_space, val=im).power(smooth=0)             # <<<<<<<<<<<<<<
@@ -5575,7 +5575,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
     }
     /*else*/ {
 
-      /* "pysesa/_spectral.pyx":715
+      /* "pysesa/spectral.pyx":715
  *             s = field(x_space, target=k_space, val=im).power(smooth=0)
  *          else:
  *             s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=0)             # <<<<<<<<<<<<<<
@@ -5634,7 +5634,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   }
   __pyx_L4:;
 
-  /* "pysesa/_spectral.pyx":717
+  /* "pysesa/spectral.pyx":717
  *             s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=0)
  * 
  *       k = k_space.power_indices["kindex"]*res             # <<<<<<<<<<<<<<
@@ -5674,7 +5674,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_v_k = ((PyArrayObject *)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "pysesa/_spectral.pyx":719
+  /* "pysesa/spectral.pyx":719
  *       k = k_space.power_indices["kindex"]*res
  *       # generate synthetic field and get binned power spectrum
  *       s_b = field(x_space, target=k_space, random="syn", spec=s).power(nbin=nbin)             # <<<<<<<<<<<<<<
@@ -5730,7 +5730,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_v_s_b = ((PyArrayObject *)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "pysesa/_spectral.pyx":720
+  /* "pysesa/spectral.pyx":720
  *       # generate synthetic field and get binned power spectrum
  *       s_b = field(x_space, target=k_space, random="syn", spec=s).power(nbin=nbin)
  *       k_back = k_space.power_indices["kindex"]*res             # <<<<<<<<<<<<<<
@@ -5770,7 +5770,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_v_k_back = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":722
+  /* "pysesa/spectral.pyx":722
  *       k_back = k_space.power_indices["kindex"]*res
  * 
  *       return [s, s_b, k, k_back]             # <<<<<<<<<<<<<<
@@ -5796,7 +5796,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":653
+  /* "pysesa/spectral.pyx":653
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _psd(self, np.ndarray[np.float64_t, ndim=2] im, int nx, int ny, int nbin, double res, int proctype):             # <<<<<<<<<<<<<<
@@ -5824,7 +5824,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._psd", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._psd", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5849,9 +5849,9 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psd(CYTHON_UNUSED struct 
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_7_psd(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_6_psd[] = "\n      Return spectrum, wavenumber index, and background spectrum\n\n      Syntax\n      ----------\n      s, s_b, k, k_back = pysesa_spectral.spec._psd(im, nx, ny, nbin, res, proctype)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D array\n      nx : int\n   \t   size of im in x dimension\n      ny : int\n   \t   size of im in y dimension\n      nbin : int\n   \t   number of bins for spectral binning\n      res : double\n   \t   spatial resolution of grid\n      proctype : int\n   \t   1 = no smoothing, 2 = smoothing\n\n      Returns\n      ----------\n      data: tuple of ndarrays\n   \ts = power spectral density\n\n        s_b = background power spectral density\n\n        k = wavenumber index of s \n\n        k_back = wavenumber index of s_b\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_7_psd(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_7_psd(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_6_psd[] = "\n      Return spectrum, wavenumber index, and background spectrum\n\n      Syntax\n      ----------\n      s, s_b, k, k_back = pysesa_spectral.spec._psd(im, nx, ny, nbin, res, proctype)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D array\n      nx : int\n   \t   size of im in x dimension\n      ny : int\n   \t   size of im in y dimension\n      nbin : int\n   \t   number of bins for spectral binning\n      res : double\n   \t   spatial resolution of grid\n      proctype : int\n   \t   1 = no smoothing, 2 = smoothing\n\n      Returns\n      ----------\n      data: tuple of ndarrays\n   \ts = power spectral density\n\n        s_b = background power spectral density\n\n        k = wavenumber index of s \n\n        k_back = wavenumber index of s_b\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_7_psd(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_im = 0;
   int __pyx_v_nx;
   int __pyx_v_ny;
@@ -5935,12 +5935,12 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_7_psd(PyObject *__pyx_v_s
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_psd", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._spectral.spectral._psd", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._psd", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_6_psd(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self), __pyx_v_im, __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype);
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_6_psd(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self), __pyx_v_im, __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5951,7 +5951,7 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_7_psd(PyObject *__pyx_v_s
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_6_psd(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_6_psd(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_nx, int __pyx_v_ny, int __pyx_v_nbin, double __pyx_v_res, int __pyx_v_proctype) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -5971,7 +5971,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_6_psd(struct __pyx_obj_6p
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral__psd(__pyx_v_self, __pyx_v_im, __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral__psd(__pyx_v_self, __pyx_v_im, __pyx_v_nx, __pyx_v_ny, __pyx_v_nbin, __pyx_v_res, __pyx_v_proctype, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5984,7 +5984,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_6_psd(struct __pyx_obj_6p
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._psd", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._psd", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5995,7 +5995,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_6_psd(struct __pyx_obj_6p
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":729
+/* "pysesa/spectral.pyx":729
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _psparams(self, np.ndarray[np.float64_t, ndim=1] k_back, np.ndarray[np.float64_t, ndim=1] s_b, double res):             # <<<<<<<<<<<<<<
@@ -6003,8 +6003,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_6_psd(struct __pyx_obj_6p
  *       Return slope, intercept, r_value, p_value, std_err, fractal dimension
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_9_psparams(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__psparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res, int __pyx_skip_dispatch) {
   double __pyx_v_slope;
   double __pyx_v_intercept;
   double __pyx_v_r_value;
@@ -6059,7 +6059,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_psparams); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_9_psparams)) {
       __Pyx_XDECREF(__pyx_r);
       __pyx_t_3 = PyFloat_FromDouble(__pyx_v_res); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
@@ -6103,7 +6103,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":764
+  /* "pysesa/spectral.pyx":764
  *       cdef double slope, intercept, r_value, p_value, std_err, d
  * 
  *       slope, intercept, r_value, p_value, std_err = self._do_linreg(np.c_[np.log10(k_back),np.log10(s_b)])             # <<<<<<<<<<<<<<
@@ -6188,7 +6188,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_4 = ((struct __pyx_vtabstruct_6pysesa_9_spectral_spectral *)__pyx_v_self->__pyx_vtab)->_do_linreg(__pyx_v_self, ((PyArrayObject *)__pyx_t_7), 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = ((struct __pyx_vtabstruct_6pysesa_8spectral_spectral *)__pyx_v_self->__pyx_vtab)->_do_linreg(__pyx_v_self, ((PyArrayObject *)__pyx_t_7), 0); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   if (likely(__pyx_t_4 != Py_None)) {
@@ -6245,7 +6245,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   __pyx_v_p_value = __pyx_t_11;
   __pyx_v_std_err = __pyx_t_12;
 
-  /* "pysesa/_spectral.pyx":765
+  /* "pysesa/spectral.pyx":765
  * 
  *       slope, intercept, r_value, p_value, std_err = self._do_linreg(np.c_[np.log10(k_back),np.log10(s_b)])
  *       std_err = std_err*res             # <<<<<<<<<<<<<<
@@ -6254,7 +6254,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
  */
   __pyx_v_std_err = (__pyx_v_std_err * __pyx_v_res);
 
-  /* "pysesa/_spectral.pyx":768
+  /* "pysesa/spectral.pyx":768
  * 
  *       ## give intercept square units
  *       intercept = (10**intercept)**(1/(2-slope))             # <<<<<<<<<<<<<<
@@ -6263,7 +6263,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
  */
   __pyx_v_intercept = pow(pow(10.0, __pyx_v_intercept), (1.0 / (2.0 - __pyx_v_slope)));
 
-  /* "pysesa/_spectral.pyx":770
+  /* "pysesa/spectral.pyx":770
  *       intercept = (10**intercept)**(1/(2-slope))
  * 
  *       if intercept>1:             # <<<<<<<<<<<<<<
@@ -6273,7 +6273,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   __pyx_t_13 = ((__pyx_v_intercept > 1.0) != 0);
   if (__pyx_t_13) {
 
-    /* "pysesa/_spectral.pyx":771
+    /* "pysesa/spectral.pyx":771
  * 
  *       if intercept>1:
  *          intercept=1             # <<<<<<<<<<<<<<
@@ -6282,7 +6282,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
  */
     __pyx_v_intercept = 1.0;
 
-    /* "pysesa/_spectral.pyx":772
+    /* "pysesa/spectral.pyx":772
  *       if intercept>1:
  *          intercept=1
  *          slope=0             # <<<<<<<<<<<<<<
@@ -6294,7 +6294,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   }
   __pyx_L3:;
 
-  /* "pysesa/_spectral.pyx":774
+  /* "pysesa/spectral.pyx":774
  *          slope=0
  * 
  *       if slope>0:             # <<<<<<<<<<<<<<
@@ -6304,7 +6304,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   __pyx_t_13 = ((__pyx_v_slope > 0.0) != 0);
   if (__pyx_t_13) {
 
-    /* "pysesa/_spectral.pyx":775
+    /* "pysesa/spectral.pyx":775
  * 
  *       if slope>0:
  *          slope=0             # <<<<<<<<<<<<<<
@@ -6316,7 +6316,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   }
   __pyx_L4:;
 
-  /* "pysesa/_spectral.pyx":778
+  /* "pysesa/spectral.pyx":778
  * 
  *       # fractal dimension
  *       d = (8+slope)/2             # <<<<<<<<<<<<<<
@@ -6325,7 +6325,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
  */
   __pyx_v_d = ((8.0 + __pyx_v_slope) / 2.0);
 
-  /* "pysesa/_spectral.pyx":780
+  /* "pysesa/spectral.pyx":780
  *       d = (8+slope)/2
  * 
  *       return [slope, intercept, r_value, p_value, std_err, d]             # <<<<<<<<<<<<<<
@@ -6369,7 +6369,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
   __pyx_t_14 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":729
+  /* "pysesa/spectral.pyx":729
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list _psparams(self, np.ndarray[np.float64_t, ndim=1] k_back, np.ndarray[np.float64_t, ndim=1] s_b, double res):             # <<<<<<<<<<<<<<
@@ -6391,7 +6391,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_k_back.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._psparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._psparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -6404,9 +6404,9 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__psparams(struct __pyx_obj
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_8_psparams[] = "\n      Return slope, intercept, r_value, p_value, std_err, fractal dimension\n\n      Syntax\n      ----------\n      slope, intercept, r_value, p_value, std_err, d = pysesa_spectral.spec._psdparams(k_back, s_b, res)\n\n      Parameters\n      ------------\n      k_back : ndarray\n   \t   N x 1 wavenumbers\n      s_b : ndarray\n   \t   N x 1 array of power spectral density\n      res : double\n   \t   spatial resolution of grid\n\n      Returns\n      ----------\n      data: tuple\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_9_psparams(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_8_psparams[] = "\n      Return slope, intercept, r_value, p_value, std_err, fractal dimension\n\n      Syntax\n      ----------\n      slope, intercept, r_value, p_value, std_err, d = pysesa_spectral.spec._psdparams(k_back, s_b, res)\n\n      Parameters\n      ------------\n      k_back : ndarray\n   \t   N x 1 wavenumbers\n      s_b : ndarray\n   \t   N x 1 array of power spectral density\n      res : double\n   \t   spatial resolution of grid\n\n      Returns\n      ----------\n      data: tuple\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_9_psparams(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_k_back = 0;
   PyArrayObject *__pyx_v_s_b = 0;
   double __pyx_v_res;
@@ -6463,13 +6463,13 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_psparams", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._spectral.spectral._psparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._psparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_k_back), __pyx_ptype_5numpy_ndarray, 1, "k_back", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_s_b), __pyx_ptype_5numpy_ndarray, 1, "s_b", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self), __pyx_v_k_back, __pyx_v_s_b, __pyx_v_res);
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_8_psparams(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self), __pyx_v_k_back, __pyx_v_s_b, __pyx_v_res);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6480,7 +6480,7 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams(PyObject *__py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_8_psparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_k_back, PyArrayObject *__pyx_v_s_b, double __pyx_v_res) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_k_back;
   __Pyx_Buffer __pyx_pybuffer_k_back;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_s_b;
@@ -6511,7 +6511,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(struct __pyx_o
   }
   __pyx_pybuffernd_s_b.diminfo[0].strides = __pyx_pybuffernd_s_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_s_b.diminfo[0].shape = __pyx_pybuffernd_s_b.rcbuffer->pybuffer.shape[0];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral__psparams(__pyx_v_self, __pyx_v_k_back, __pyx_v_s_b, __pyx_v_res, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral__psparams(__pyx_v_self, __pyx_v_k_back, __pyx_v_s_b, __pyx_v_res, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 729; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6525,7 +6525,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(struct __pyx_o
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_k_back.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_s_b.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._psparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._psparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -6537,7 +6537,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":787
+/* "pysesa/spectral.pyx":787
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef tuple _do_linreg(self, np.ndarray[np.float64_t, ndim=2] B):             # <<<<<<<<<<<<<<
@@ -6545,8 +6545,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_8_psparams(struct __pyx_o
  *       Do a robust linear regression
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg(PyObject *__pyx_v_self, PyObject *__pyx_v_B); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_11_do_linreg(PyObject *__pyx_v_self, PyObject *__pyx_v_B); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral__do_linreg(CYTHON_UNUSED struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B, int __pyx_skip_dispatch) {
   float __pyx_v_slope;
   float __pyx_v_intercept;
   float __pyx_v_r_value;
@@ -6598,7 +6598,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_do_linreg); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_11_do_linreg)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -6635,7 +6635,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":819
+  /* "pysesa/spectral.pyx":819
  * 
  *       # remove any rows with nans and infs
  *       B = B[np.where(np.logical_not(np.any(np.isinf(B),axis=1)))[0],:]             # <<<<<<<<<<<<<<
@@ -6788,7 +6788,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
   __Pyx_DECREF_SET(__pyx_v_B, ((PyArrayObject *)__pyx_t_3));
   __pyx_t_3 = 0;
 
-  /* "pysesa/_spectral.pyx":820
+  /* "pysesa/spectral.pyx":820
  *       # remove any rows with nans and infs
  *       B = B[np.where(np.logical_not(np.any(np.isinf(B),axis=1)))[0],:]
  *       B = B[np.where(np.logical_not(np.any(np.isnan(B),axis=1)))[0],:]             # <<<<<<<<<<<<<<
@@ -6941,7 +6941,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
   __Pyx_DECREF_SET(__pyx_v_B, ((PyArrayObject *)__pyx_t_8));
   __pyx_t_8 = 0;
 
-  /* "pysesa/_spectral.pyx":823
+  /* "pysesa/spectral.pyx":823
  * 
  *       # get OLS regression
  *       slope, intercept, r_value, p_value, std_err = linregress(B[:,0], B[:,1])             # <<<<<<<<<<<<<<
@@ -7063,7 +7063,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
   __pyx_v_p_value = __pyx_t_20;
   __pyx_v_std_err = __pyx_t_21;
 
-  /* "pysesa/_spectral.pyx":825
+  /* "pysesa/spectral.pyx":825
  *       slope, intercept, r_value, p_value, std_err = linregress(B[:,0], B[:,1])
  *       # try to RLM regression for slope and intercept
  *       try:             # <<<<<<<<<<<<<<
@@ -7077,7 +7077,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
     __Pyx_XGOTREF(__pyx_t_14);
     /*try:*/ {
 
-      /* "pysesa/_spectral.pyx":826
+      /* "pysesa/spectral.pyx":826
  *       # try to RLM regression for slope and intercept
  *       try:
  *          regression = smapi.RLM(B[:,1], smapi.add_constant(B[:,0], prepend=True) ).fit()             # <<<<<<<<<<<<<<
@@ -7162,7 +7162,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
       __pyx_v_regression = __pyx_t_8;
       __pyx_t_8 = 0;
 
-      /* "pysesa/_spectral.pyx":827
+      /* "pysesa/spectral.pyx":827
  *       try:
  *          regression = smapi.RLM(B[:,1], smapi.add_constant(B[:,0], prepend=True) ).fit()
  *          intercept = regression.params[0]             # <<<<<<<<<<<<<<
@@ -7178,7 +7178,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_intercept = __pyx_t_21;
 
-      /* "pysesa/_spectral.pyx":828
+      /* "pysesa/spectral.pyx":828
  *          regression = smapi.RLM(B[:,1], smapi.add_constant(B[:,0], prepend=True) ).fit()
  *          intercept = regression.params[0]
  *          slope = regression.params[1]             # <<<<<<<<<<<<<<
@@ -7209,7 +7209,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "pysesa/_spectral.pyx":829
+    /* "pysesa/spectral.pyx":829
  *          intercept = regression.params[0]
  *          slope = regression.params[1]
  *       except:             # <<<<<<<<<<<<<<
@@ -7228,7 +7228,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
     __pyx_L12_try_end:;
   }
 
-  /* "pysesa/_spectral.pyx":831
+  /* "pysesa/spectral.pyx":831
  *       except:
  *          pass
  *       return (slope, intercept, r_value, p_value, std_err)             # <<<<<<<<<<<<<<
@@ -7267,7 +7267,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":787
+  /* "pysesa/spectral.pyx":787
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef tuple _do_linreg(self, np.ndarray[np.float64_t, ndim=2] B):             # <<<<<<<<<<<<<<
@@ -7290,7 +7290,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_B.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._do_linreg", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._do_linreg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7304,9 +7304,9 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral__do_linreg(CYTHON_UNUSED s
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg(PyObject *__pyx_v_self, PyObject *__pyx_v_B); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_10_do_linreg[] = "\n      Do a robust linear regression\n\n      Syntax\n      ----------\n      slope, intercept, r_value, p_value, std_err = pysesa_spectral.spec._do_linreg(B)\n\n      Parameters\n      ------------\n      B : ndarray\n   \t   N x 2 array of wavenumber and power spectral density\n\n      Returns\n      ----------\n      data: tuple\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg(PyObject *__pyx_v_self, PyObject *__pyx_v_B) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_11_do_linreg(PyObject *__pyx_v_self, PyObject *__pyx_v_B); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_10_do_linreg[] = "\n      Do a robust linear regression\n\n      Syntax\n      ----------\n      slope, intercept, r_value, p_value, std_err = pysesa_spectral.spec._do_linreg(B)\n\n      Parameters\n      ------------\n      B : ndarray\n   \t   N x 2 array of wavenumber and power spectral density\n\n      Returns\n      ----------\n      data: tuple\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_11_do_linreg(PyObject *__pyx_v_self, PyObject *__pyx_v_B) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -7314,7 +7314,7 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg(PyObject *__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_do_linreg (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_B), __pyx_ptype_5numpy_ndarray, 1, "B", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self), ((PyArrayObject *)__pyx_v_B));
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_10_do_linreg(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self), ((PyArrayObject *)__pyx_v_B));
 
   /* function exit code */
   goto __pyx_L0;
@@ -7325,7 +7325,7 @@ static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg(PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_10_do_linreg(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, PyArrayObject *__pyx_v_B) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_B;
   __Pyx_Buffer __pyx_pybuffer_B;
   PyObject *__pyx_r = NULL;
@@ -7345,7 +7345,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(struct __pyx
   }
   __pyx_pybuffernd_B.diminfo[0].strides = __pyx_pybuffernd_B.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_B.diminfo[0].shape = __pyx_pybuffernd_B.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_B.diminfo[1].strides = __pyx_pybuffernd_B.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_B.diminfo[1].shape = __pyx_pybuffernd_B.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral__do_linreg(__pyx_v_self, __pyx_v_B, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral__do_linreg(__pyx_v_self, __pyx_v_B, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 787; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7358,7 +7358,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(struct __pyx
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_B.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._spectral.spectral._do_linreg", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral._do_linreg", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7369,7 +7369,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(struct __pyx
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":838
+/* "pysesa/spectral.pyx":838
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getdata(self):             # <<<<<<<<<<<<<<
@@ -7377,8 +7377,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_10_do_linreg(struct __pyx
  *       Calculate spectral statistics of a Nx3 point cloud
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_13getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_13getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getdata(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7395,7 +7395,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getdata); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_13getdata)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_13getdata)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -7425,7 +7425,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":902
+  /* "pysesa/spectral.pyx":902
  *         phi = effective slope (degrees)
  *       '''
  *       return self.data             # <<<<<<<<<<<<<<
@@ -7438,7 +7438,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6
   __pyx_r = ((PyObject*)__pyx_v_self->data);
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":838
+  /* "pysesa/spectral.pyx":838
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getdata(self):             # <<<<<<<<<<<<<<
@@ -7452,7 +7452,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7461,20 +7461,20 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getdata(struct __pyx_obj_6
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_13getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_12getdata[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      data = pysesa.spectral.getdata()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getdata()]\n      -----------------------------------------\n      self.data: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        l = integral lengthscale\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        d = fractal dimension\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n        phi = effective slope (degrees)\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_13getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_13getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_12getdata[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      data = pysesa.spectral.getdata()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getdata()]\n      -----------------------------------------\n      self.data: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        l = integral lengthscale\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        d = fractal dimension\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n        phi = effective slope (degrees)\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_13getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getdata (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_12getdata(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_12getdata(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_12getdata(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_12getdata(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7483,7 +7483,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_12getdata(struct __pyx_ob
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getdata", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral_getdata(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral_getdata(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 838; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7492,7 +7492,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_12getdata(struct __pyx_ob
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7500,7 +7500,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_12getdata(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":909
+/* "pysesa/spectral.pyx":909
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getmoments(self):             # <<<<<<<<<<<<<<
@@ -7508,8 +7508,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_12getdata(struct __pyx_ob
  *       Calculate spectral statistics of a Nx3 point cloud
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_15getmoments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_15getmoments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getmoments(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7526,7 +7526,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_ob
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getmoments); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 909; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_15getmoments)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_15getmoments)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -7556,7 +7556,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":950
+  /* "pysesa/spectral.pyx":950
  * 
  *       '''
  *       return self.moments             # <<<<<<<<<<<<<<
@@ -7569,7 +7569,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_ob
   __pyx_r = ((PyObject*)__pyx_v_self->moments);
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":909
+  /* "pysesa/spectral.pyx":909
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getmoments(self):             # <<<<<<<<<<<<<<
@@ -7583,7 +7583,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_ob
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getmoments", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getmoments", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7592,20 +7592,20 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getmoments(struct __pyx_ob
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_15getmoments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_14getmoments[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      moments = pysesa.spectral.getmoments()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getmoments()]\n      ------------------------------------------\n      self.moments: list\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_15getmoments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_15getmoments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_14getmoments[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      moments = pysesa.spectral.getmoments()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getmoments()]\n      ------------------------------------------\n      self.moments: list\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_15getmoments(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getmoments (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_14getmoments(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_14getmoments(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7614,7 +7614,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getmoments", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral_getmoments(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 909; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral_getmoments(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 909; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7623,7 +7623,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getmoments", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getmoments", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7631,7 +7631,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(struct __pyx
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":957
+/* "pysesa/spectral.pyx":957
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef double getlengthscale(self):             # <<<<<<<<<<<<<<
@@ -7639,8 +7639,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_14getmoments(struct __pyx
  *       Calculate spectral statistics of a Nx3 point cloud
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static double __pyx_f_6pysesa_8spectral_8spectral_getlengthscale(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7658,7 +7658,7 @@ static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_o
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getlengthscale); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_17getlengthscale)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_17getlengthscale)) {
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -7687,7 +7687,7 @@ static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_o
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":975
+  /* "pysesa/spectral.pyx":975
  *         l = integral lengthscale
  *       '''
  *       return self.lengthscale             # <<<<<<<<<<<<<<
@@ -7698,7 +7698,7 @@ static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_o
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":957
+  /* "pysesa/spectral.pyx":957
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef double getlengthscale(self):             # <<<<<<<<<<<<<<
@@ -7712,7 +7712,7 @@ static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_o
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pysesa._spectral.spectral.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
+  __Pyx_WriteUnraisable("pysesa.spectral.spectral.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -7720,20 +7720,20 @@ static double __pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(struct __pyx_o
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_16getlengthscale[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      lengthscale = pysesa.spectral.getlengthscale()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getlengthscale()]\n      -----------------------------------------------\n      self.lengthscale: float\n        l = integral lengthscale\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_16getlengthscale[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      lengthscale = pysesa.spectral.getlengthscale()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getlengthscale()]\n      -----------------------------------------------\n      self.lengthscale: float\n        l = integral lengthscale\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getlengthscale (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_16getlengthscale(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_16getlengthscale(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7742,7 +7742,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getlengthscale", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6pysesa_9_spectral_8spectral_getlengthscale(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6pysesa_8spectral_8spectral_getlengthscale(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 957; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7751,7 +7751,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(struct _
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7759,7 +7759,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(struct _
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":982
+/* "pysesa/spectral.pyx":982
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getlengths(self):             # <<<<<<<<<<<<<<
@@ -7767,8 +7767,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_16getlengthscale(struct _
  *       Calculate spectral statistics of a Nx3 point cloud
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_19getlengths(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_19getlengths(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getlengths(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7785,7 +7785,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_ob
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getlengths); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 982; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_19getlengths)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_19getlengths)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -7815,7 +7815,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_ob
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":1007
+  /* "pysesa/spectral.pyx":1007
  * 
  *       '''
  *       return self.lengths             # <<<<<<<<<<<<<<
@@ -7828,7 +7828,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_ob
   __pyx_r = ((PyObject*)__pyx_v_self->lengths);
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":982
+  /* "pysesa/spectral.pyx":982
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getlengths(self):             # <<<<<<<<<<<<<<
@@ -7842,7 +7842,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_ob
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getlengths", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getlengths", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7851,20 +7851,20 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getlengths(struct __pyx_ob
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_19getlengths(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_18getlengths[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      lengths = pysesa.spectral.getlengths()\n\n      Parameters\n      ----------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getlengths()]\n      ------------------------------------------\n      self.lengths: list\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_19getlengths(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_19getlengths(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_18getlengths[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      lengths = pysesa.spectral.getlengths()\n\n      Parameters\n      ----------\n      self : instance\n   \t   pysesa.spectral instance\n\n      Returns [requested through .getlengths()]\n      ------------------------------------------\n      self.lengths: list\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_19getlengths(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getlengths (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_18getlengths(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_18getlengths(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7873,7 +7873,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getlengths", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral_getlengths(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 982; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral_getlengths(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 982; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7882,7 +7882,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getlengths", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getlengths", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7890,7 +7890,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(struct __pyx
   return __pyx_r;
 }
 
-/* "pysesa/_spectral.pyx":1014
+/* "pysesa/spectral.pyx":1014
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getpsdparams(self):             # <<<<<<<<<<<<<<
@@ -7898,8 +7898,8 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_18getlengths(struct __pyx
  *       Calculate spectral statistics of a Nx3 point cloud
  */
 
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_21getpsdparams(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_21getpsdparams(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_f_6pysesa_8spectral_8spectral_getpsdparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self, int __pyx_skip_dispatch) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7916,7 +7916,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getpsdparams); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1014; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_21getpsdparams)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_21getpsdparams)) {
       __Pyx_XDECREF(__pyx_r);
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -7946,7 +7946,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_spectral.pyx":1043
+  /* "pysesa/spectral.pyx":1043
  * 
  *       '''
  *       return self.psdparams             # <<<<<<<<<<<<<<
@@ -7958,7 +7958,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_
   __pyx_r = ((PyObject*)__pyx_v_self->psdparams);
   goto __pyx_L0;
 
-  /* "pysesa/_spectral.pyx":1014
+  /* "pysesa/spectral.pyx":1014
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef list getpsdparams(self):             # <<<<<<<<<<<<<<
@@ -7972,7 +7972,7 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getpsdparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getpsdparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7981,20 +7981,20 @@ static PyObject *__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(struct __pyx_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_21getpsdparams(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_9_spectral_8spectral_20getpsdparams[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      psdparams= pysesa.spectral.getstats()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral.spec instance\n\n      Returns [requested through .getpsdparams()]\n      ---------------------------------------------\n      self.psdparams: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n      ";
-static PyObject *__pyx_pw_6pysesa_9_spectral_8spectral_21getpsdparams(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_21getpsdparams(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_8spectral_8spectral_20getpsdparams[] = "\n      Calculate spectral statistics of a Nx3 point cloud\n\n      Syntax\n      ----------\n      psdparams= pysesa.spectral.getstats()\n\n      Parameters\n      ------------\n      self : instance\n   \t   pysesa.spectral.spec instance\n\n      Returns [requested through .getpsdparams()]\n      ---------------------------------------------\n      self.psdparams: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n      ";
+static PyObject *__pyx_pw_6pysesa_8spectral_8spectral_21getpsdparams(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getpsdparams (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_9_spectral_8spectral_20getpsdparams(((struct __pyx_obj_6pysesa_9_spectral_spectral *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_8spectral_8spectral_20getpsdparams(((struct __pyx_obj_6pysesa_8spectral_spectral *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_20getpsdparams(struct __pyx_obj_6pysesa_9_spectral_spectral *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_8spectral_8spectral_20getpsdparams(struct __pyx_obj_6pysesa_8spectral_spectral *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8003,7 +8003,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_20getpsdparams(struct __p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getpsdparams", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_6pysesa_9_spectral_8spectral_getpsdparams(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1014; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __pyx_f_6pysesa_8spectral_8spectral_getpsdparams(__pyx_v_self, 1); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1014; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8012,7 +8012,7 @@ static PyObject *__pyx_pf_6pysesa_9_spectral_8spectral_20getpsdparams(struct __p
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._spectral.spectral.getpsdparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.spectral.spectral.getpsdparams", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10017,10 +10017,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_6pysesa_9_spectral_spectral __pyx_vtable_6pysesa_9_spectral_spectral;
+static struct __pyx_vtabstruct_6pysesa_8spectral_spectral __pyx_vtable_6pysesa_8spectral_spectral;
 
-static PyObject *__pyx_tp_new_6pysesa_9_spectral_spectral(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_6pysesa_9_spectral_spectral *p;
+static PyObject *__pyx_tp_new_6pysesa_8spectral_spectral(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_6pysesa_8spectral_spectral *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -10028,8 +10028,8 @@ static PyObject *__pyx_tp_new_6pysesa_9_spectral_spectral(PyTypeObject *t, CYTHO
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_6pysesa_9_spectral_spectral *)o);
-  p->__pyx_vtab = __pyx_vtabptr_6pysesa_9_spectral_spectral;
+  p = ((struct __pyx_obj_6pysesa_8spectral_spectral *)o);
+  p->__pyx_vtab = __pyx_vtabptr_6pysesa_8spectral_spectral;
   p->data = Py_None; Py_INCREF(Py_None);
   p->x_space = Py_None; Py_INCREF(Py_None);
   p->k_space = Py_None; Py_INCREF(Py_None);
@@ -10041,8 +10041,8 @@ static PyObject *__pyx_tp_new_6pysesa_9_spectral_spectral(PyTypeObject *t, CYTHO
   return o;
 }
 
-static void __pyx_tp_dealloc_6pysesa_9_spectral_spectral(PyObject *o) {
-  struct __pyx_obj_6pysesa_9_spectral_spectral *p = (struct __pyx_obj_6pysesa_9_spectral_spectral *)o;
+static void __pyx_tp_dealloc_6pysesa_8spectral_spectral(PyObject *o) {
+  struct __pyx_obj_6pysesa_8spectral_spectral *p = (struct __pyx_obj_6pysesa_8spectral_spectral *)o;
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -10060,9 +10060,9 @@ static void __pyx_tp_dealloc_6pysesa_9_spectral_spectral(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_6pysesa_9_spectral_spectral(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_6pysesa_8spectral_spectral(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_6pysesa_9_spectral_spectral *p = (struct __pyx_obj_6pysesa_9_spectral_spectral *)o;
+  struct __pyx_obj_6pysesa_8spectral_spectral *p = (struct __pyx_obj_6pysesa_8spectral_spectral *)o;
   if (p->data) {
     e = (*v)(p->data, a); if (e) return e;
   }
@@ -10090,9 +10090,9 @@ static int __pyx_tp_traverse_6pysesa_9_spectral_spectral(PyObject *o, visitproc 
   return 0;
 }
 
-static int __pyx_tp_clear_6pysesa_9_spectral_spectral(PyObject *o) {
+static int __pyx_tp_clear_6pysesa_8spectral_spectral(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_6pysesa_9_spectral_spectral *p = (struct __pyx_obj_6pysesa_9_spectral_spectral *)o;
+  struct __pyx_obj_6pysesa_8spectral_spectral *p = (struct __pyx_obj_6pysesa_8spectral_spectral *)o;
   tmp = ((PyObject*)p->data);
   p->data = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -10120,26 +10120,26 @@ static int __pyx_tp_clear_6pysesa_9_spectral_spectral(PyObject *o) {
   return 0;
 }
 
-static PyMethodDef __pyx_methods_6pysesa_9_spectral_spectral[] = {
-  {"_moments", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_3_moments, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_9_spectral_8spectral_2_moments},
-  {"_wav_rms", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_5_wav_rms, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_9_spectral_8spectral_4_wav_rms},
-  {"_psd", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_7_psd, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_9_spectral_8spectral_6_psd},
-  {"_psparams", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_9_psparams, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_9_spectral_8spectral_8_psparams},
-  {"_do_linreg", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_11_do_linreg, METH_O, __pyx_doc_6pysesa_9_spectral_8spectral_10_do_linreg},
-  {"getdata", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_13getdata, METH_NOARGS, __pyx_doc_6pysesa_9_spectral_8spectral_12getdata},
-  {"getmoments", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_15getmoments, METH_NOARGS, __pyx_doc_6pysesa_9_spectral_8spectral_14getmoments},
-  {"getlengthscale", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_17getlengthscale, METH_NOARGS, __pyx_doc_6pysesa_9_spectral_8spectral_16getlengthscale},
-  {"getlengths", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_19getlengths, METH_NOARGS, __pyx_doc_6pysesa_9_spectral_8spectral_18getlengths},
-  {"getpsdparams", (PyCFunction)__pyx_pw_6pysesa_9_spectral_8spectral_21getpsdparams, METH_NOARGS, __pyx_doc_6pysesa_9_spectral_8spectral_20getpsdparams},
+static PyMethodDef __pyx_methods_6pysesa_8spectral_spectral[] = {
+  {"_moments", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_3_moments, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_8spectral_8spectral_2_moments},
+  {"_wav_rms", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_5_wav_rms, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_8spectral_8spectral_4_wav_rms},
+  {"_psd", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_7_psd, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_8spectral_8spectral_6_psd},
+  {"_psparams", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_9_psparams, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_8spectral_8spectral_8_psparams},
+  {"_do_linreg", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_11_do_linreg, METH_O, __pyx_doc_6pysesa_8spectral_8spectral_10_do_linreg},
+  {"getdata", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_13getdata, METH_NOARGS, __pyx_doc_6pysesa_8spectral_8spectral_12getdata},
+  {"getmoments", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_15getmoments, METH_NOARGS, __pyx_doc_6pysesa_8spectral_8spectral_14getmoments},
+  {"getlengthscale", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_17getlengthscale, METH_NOARGS, __pyx_doc_6pysesa_8spectral_8spectral_16getlengthscale},
+  {"getlengths", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_19getlengths, METH_NOARGS, __pyx_doc_6pysesa_8spectral_8spectral_18getlengths},
+  {"getpsdparams", (PyCFunction)__pyx_pw_6pysesa_8spectral_8spectral_21getpsdparams, METH_NOARGS, __pyx_doc_6pysesa_8spectral_8spectral_20getpsdparams},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_6pysesa_9_spectral_spectral = {
+static PyTypeObject __pyx_type_6pysesa_8spectral_spectral = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pysesa._spectral.spectral", /*tp_name*/
-  sizeof(struct __pyx_obj_6pysesa_9_spectral_spectral), /*tp_basicsize*/
+  "pysesa.spectral.spectral", /*tp_name*/
+  sizeof(struct __pyx_obj_6pysesa_8spectral_spectral), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_6pysesa_9_spectral_spectral, /*tp_dealloc*/
+  __pyx_tp_dealloc_6pysesa_8spectral_spectral, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -10160,13 +10160,13 @@ static PyTypeObject __pyx_type_6pysesa_9_spectral_spectral = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   "\n   Calculate spectral statistics of a Nx3 point cloud\n\n   Syntax\n   ----------\n   data = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getdata()\n\n   lengths = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengths()\n\n   psdparams= pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getstats()\n\n   lengthscale = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getlengthscale()\n\n   moments = pysesa.spectral.spec(points, nbin, res, proctype, lentype, taper, method).getmoments()\n\n   Parameters\n   ------------\n   points : ndarray\n   \tNx3 point cloud\n\n   Other Parameters\n   -------------------\n   nbin : int, *optional* [default = 20]\n        number of bins for power spectral binning\n   res : float, *optional* [default = 0.05]\n        spatial grid resolution to create a grid\n   proctype : int, *optional* [default = 1, no spectral smoothing]\n   \tproctype type:\n        1, no spectral smoothing\n\n        2, spectrum smoothed with Gaussian\n\n   lentype : int, *optional* [default = 1, l<0.5]\n   \tlengthscale type:\n        1, l<0.5\n\n        2, l<1/e\n\n        3, l<0\n\n   taper : int, *optional* [default = Hanning]\n   \tflag for taper type:\n        1, Hanning (Hann)\n\n        2, Hamming\n\n        3, Blackman\n\n        4, Bartlett\n\n   method : str, *optional* [default = 'nearest']\n   \tgridding type\n\n   Returns [requested through .getdata()]\n   ----------------------------------------\n   self.data: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n        l = integral lengthscale\n\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n        phi = effective slope (degrees)\n\n   Returns [requested through .getpsdparams()]\n   --------------------------------------------\n   self.psdparams: list\n   \tslope = slope of regression line through log-log 1D power spectral density\n\n        intercept = intercept of regression line through log-log 1D power spectral density\n\n        r_value = correlation of regression through log-log 1D power spectral density\n\n        p_value = probability that slope of regression through log-log 1D power spectral density is not zero\n\n        std_err = standard error of regression through log-log 1D power spectral density\n\n        d = fractal dimension\n\n   Returns [requested through .getlengths()]\n   -------------------------------------------\n   self.lengths: list\n        wmax = peak wavelength\n\n        wmean = mean wavelength\n\n        rms1 = RMS amplitude from power spectral density\n\n        rms2 = RMS amplitude from bin averaged power spectral density\n\n\n   Returns [requested through .getlengthscale()]\n   ----------------------------------------------\n   self.lengthscale: float\n        l = integral lengthscale\n\n   Returns [requested through .getmoments()]\n   ------------------------------------------\n   self.moments: list\n        Z = zero-crossings per unit length\n\n        E = extreme per unit length\n        sigma = RMS amplitude\n\n        T0_1 = average spatial period (m_0/m_1)\n\n        T0_2 = average spatial period (m_0/m_2)^0.5\n\n        sw1 = spectral width \n\n        sw2 = spectral width (normalised radius of gyration)\n\n        m0 = zeroth moment of spectrum\n\n        m1 = first moment of spectrum\n\n        m2 = second moment of spectrum\n\n        m3 = third moment of spectrum\n\n        m4 = fourth moment of spectrum\n\n        phi = effective slope (degrees)\n\n   ", /*tp_doc*/
-  __pyx_tp_traverse_6pysesa_9_spectral_spectral, /*tp_traverse*/
-  __pyx_tp_clear_6pysesa_9_spectral_spectral, /*tp_clear*/
+  __pyx_tp_traverse_6pysesa_8spectral_spectral, /*tp_traverse*/
+  __pyx_tp_clear_6pysesa_8spectral_spectral, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_6pysesa_9_spectral_spectral, /*tp_methods*/
+  __pyx_methods_6pysesa_8spectral_spectral, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -10174,9 +10174,9 @@ static PyTypeObject __pyx_type_6pysesa_9_spectral_spectral = {
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_6pysesa_9_spectral_8spectral_1__init__, /*tp_init*/
+  __pyx_pw_6pysesa_8spectral_8spectral_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_6pysesa_9_spectral_spectral, /*tp_new*/
+  __pyx_tp_new_6pysesa_8spectral_spectral, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -10202,7 +10202,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "_spectral",
+    "spectral",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -10328,7 +10328,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pysesa/_spectral.pyx":417
+  /* "pysesa/spectral.pyx":417
  *       cdef int nx, ny
  *       cdef double slope, intercept, r_value, p_value, std_err, l, rms1, rms2, wmax, Z, E, sigma, T0_1, T0_2, sw1, sw2, d, wmean
  *       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -10339,7 +10339,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pysesa/_spectral.pyx":434
+  /* "pysesa/spectral.pyx":434
  *       if np.sum(np.isnan(im)) == np.prod(np.shape(im)):
  * 
  *          self.data = [np.ones(24)*np.nan]             # <<<<<<<<<<<<<<
@@ -10350,7 +10350,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "pysesa/_spectral.pyx":450
+  /* "pysesa/spectral.pyx":450
  *                s_b = np.interp(k,k_back,s_b)
  * 
  *                k = k[2:] #Nyquist frequency up             # <<<<<<<<<<<<<<
@@ -10361,7 +10361,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "pysesa/_spectral.pyx":451
+  /* "pysesa/spectral.pyx":451
  * 
  *                k = k[2:] #Nyquist frequency up
  *                s = s[2:]             # <<<<<<<<<<<<<<
@@ -10372,7 +10372,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
-  /* "pysesa/_spectral.pyx":452
+  /* "pysesa/spectral.pyx":452
  *                k = k[2:] #Nyquist frequency up
  *                s = s[2:]
  *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
@@ -10383,7 +10383,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "pysesa/_spectral.pyx":468
+  /* "pysesa/spectral.pyx":468
  *             except:
  * 
  *                self.data = [np.ones(24)*np.nan]             # <<<<<<<<<<<<<<
@@ -10394,7 +10394,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "pysesa/_spectral.pyx":483
+  /* "pysesa/spectral.pyx":483
  *                s_b = np.interp(k,k_back,s_b)
  * 
  *                k = k[2:]             # <<<<<<<<<<<<<<
@@ -10405,7 +10405,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
 
-  /* "pysesa/_spectral.pyx":484
+  /* "pysesa/spectral.pyx":484
  * 
  *                k = k[2:]
  *                s = s[2:]             # <<<<<<<<<<<<<<
@@ -10416,7 +10416,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
-  /* "pysesa/_spectral.pyx":485
+  /* "pysesa/spectral.pyx":485
  *                k = k[2:]
  *                s = s[2:]
  *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
@@ -10427,7 +10427,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
 
-  /* "pysesa/_spectral.pyx":501
+  /* "pysesa/spectral.pyx":501
  *             except:
  * 
  *                self.data = [np.ones(24)*np.nan]             # <<<<<<<<<<<<<<
@@ -10438,7 +10438,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "pysesa/_spectral.pyx":556
+  /* "pysesa/spectral.pyx":556
  *       '''
  *       cdef double Z, E, sigma, T0_1, T0_2, sw1, sw2
  *       cdef np.ndarray[np.float64_t, ndim=1] moment = np.empty(5,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -10449,7 +10449,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "pysesa/_spectral.pyx":709
+  /* "pysesa/spectral.pyx":709
  *             s = field(x_space, target=k_space, val=im).power(smooth=1)
  *          else:
  *             s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=1)             # <<<<<<<<<<<<<<
@@ -10466,7 +10466,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "pysesa/_spectral.pyx":715
+  /* "pysesa/spectral.pyx":715
  *             s = field(x_space, target=k_space, val=im).power(smooth=0)
  *          else:
  *             s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=0)             # <<<<<<<<<<<<<<
@@ -10483,7 +10483,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "pysesa/_spectral.pyx":819
+  /* "pysesa/spectral.pyx":819
  * 
  *       # remove any rows with nans and infs
  *       B = B[np.where(np.logical_not(np.any(np.isinf(B),axis=1)))[0],:]             # <<<<<<<<<<<<<<
@@ -10494,7 +10494,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__18);
   __Pyx_GIVEREF(__pyx_slice__18);
 
-  /* "pysesa/_spectral.pyx":820
+  /* "pysesa/spectral.pyx":820
  *       # remove any rows with nans and infs
  *       B = B[np.where(np.logical_not(np.any(np.isinf(B),axis=1)))[0],:]
  *       B = B[np.where(np.logical_not(np.any(np.isnan(B),axis=1)))[0],:]             # <<<<<<<<<<<<<<
@@ -10505,7 +10505,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__19);
   __Pyx_GIVEREF(__pyx_slice__19);
 
-  /* "pysesa/_spectral.pyx":823
+  /* "pysesa/spectral.pyx":823
  * 
  *       # get OLS regression
  *       slope, intercept, r_value, p_value, std_err = linregress(B[:,0], B[:,1])             # <<<<<<<<<<<<<<
@@ -10525,7 +10525,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
 
-  /* "pysesa/_spectral.pyx":826
+  /* "pysesa/spectral.pyx":826
  *       # try to RLM regression for slope and intercept
  *       try:
  *          regression = smapi.RLM(B[:,1], smapi.add_constant(B[:,0], prepend=True) ).fit()             # <<<<<<<<<<<<<<
@@ -10611,7 +10611,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
 
-  /* "pysesa/_spectral.pyx":70
+  /* "pysesa/spectral.pyx":70
  * np.seterr(under='ignore')
  * import warnings
  * warnings.filterwarnings("ignore")             # <<<<<<<<<<<<<<
@@ -10643,11 +10643,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC init_spectral(void); /*proto*/
-PyMODINIT_FUNC init_spectral(void)
+PyMODINIT_FUNC initspectral(void); /*proto*/
+PyMODINIT_FUNC initspectral(void)
 #else
-PyMODINIT_FUNC PyInit__spectral(void); /*proto*/
-PyMODINIT_FUNC PyInit__spectral(void)
+PyMODINIT_FUNC PyInit_spectral(void); /*proto*/
+PyMODINIT_FUNC PyInit_spectral(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -10666,7 +10666,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__spectral(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_spectral(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -10688,7 +10688,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_spectral", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("spectral", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -10705,14 +10705,14 @@ PyMODINIT_FUNC PyInit__spectral(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_pysesa___spectral) {
+  if (__pyx_module_is_main_pysesa__spectral) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "pysesa._spectral")) {
-      if (unlikely(PyDict_SetItemString(modules, "pysesa._spectral", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pysesa.spectral")) {
+      if (unlikely(PyDict_SetItemString(modules, "pysesa.spectral", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -10724,32 +10724,32 @@ PyMODINIT_FUNC PyInit__spectral(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  __pyx_vtabptr_6pysesa_9_spectral_spectral = &__pyx_vtable_6pysesa_9_spectral_spectral;
-  __pyx_vtable_6pysesa_9_spectral_spectral._moments = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral__moments;
-  __pyx_vtable_6pysesa_9_spectral_spectral._wav_rms = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral__wav_rms;
-  __pyx_vtable_6pysesa_9_spectral_spectral._psd = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, int, int, int, double, int, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral__psd;
-  __pyx_vtable_6pysesa_9_spectral_spectral._psparams = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral__psparams;
-  __pyx_vtable_6pysesa_9_spectral_spectral._do_linreg = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral__do_linreg;
-  __pyx_vtable_6pysesa_9_spectral_spectral.getdata = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral_getdata;
-  __pyx_vtable_6pysesa_9_spectral_spectral.getmoments = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral_getmoments;
-  __pyx_vtable_6pysesa_9_spectral_spectral.getlengthscale = (double (*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral_getlengthscale;
-  __pyx_vtable_6pysesa_9_spectral_spectral.getlengths = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral_getlengths;
-  __pyx_vtable_6pysesa_9_spectral_spectral.getpsdparams = (PyObject *(*)(struct __pyx_obj_6pysesa_9_spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_9_spectral_8spectral_getpsdparams;
-  if (PyType_Ready(&__pyx_type_6pysesa_9_spectral_spectral) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_6pysesa_9_spectral_spectral.tp_print = 0;
+  __pyx_vtabptr_6pysesa_8spectral_spectral = &__pyx_vtable_6pysesa_8spectral_spectral;
+  __pyx_vtable_6pysesa_8spectral_spectral._moments = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral__moments;
+  __pyx_vtable_6pysesa_8spectral_spectral._wav_rms = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral__wav_rms;
+  __pyx_vtable_6pysesa_8spectral_spectral._psd = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, int, int, int, double, int, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral__psd;
+  __pyx_vtable_6pysesa_8spectral_spectral._psparams = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, PyArrayObject *, double, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral__psparams;
+  __pyx_vtable_6pysesa_8spectral_spectral._do_linreg = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral__do_linreg;
+  __pyx_vtable_6pysesa_8spectral_spectral.getdata = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral_getdata;
+  __pyx_vtable_6pysesa_8spectral_spectral.getmoments = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral_getmoments;
+  __pyx_vtable_6pysesa_8spectral_spectral.getlengthscale = (double (*)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral_getlengthscale;
+  __pyx_vtable_6pysesa_8spectral_spectral.getlengths = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral_getlengths;
+  __pyx_vtable_6pysesa_8spectral_spectral.getpsdparams = (PyObject *(*)(struct __pyx_obj_6pysesa_8spectral_spectral *, int __pyx_skip_dispatch))__pyx_f_6pysesa_8spectral_8spectral_getpsdparams;
+  if (PyType_Ready(&__pyx_type_6pysesa_8spectral_spectral) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_6pysesa_8spectral_spectral.tp_print = 0;
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_6pysesa_9_spectral_spectral, "__init__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_6pysesa_8spectral_spectral, "__init__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
-      __pyx_wrapperbase_6pysesa_9_spectral_8spectral___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
-      __pyx_wrapperbase_6pysesa_9_spectral_8spectral___init__.doc = __pyx_doc_6pysesa_9_spectral_8spectral___init__;
-      ((PyWrapperDescrObject *)wrapper)->d_base = &__pyx_wrapperbase_6pysesa_9_spectral_8spectral___init__;
+      __pyx_wrapperbase_6pysesa_8spectral_8spectral___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
+      __pyx_wrapperbase_6pysesa_8spectral_8spectral___init__.doc = __pyx_doc_6pysesa_8spectral_8spectral___init__;
+      ((PyWrapperDescrObject *)wrapper)->d_base = &__pyx_wrapperbase_6pysesa_8spectral_8spectral___init__;
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_6pysesa_9_spectral_spectral.tp_dict, __pyx_vtabptr_6pysesa_9_spectral_spectral) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "spectral", (PyObject *)&__pyx_type_6pysesa_9_spectral_spectral) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_6pysesa_9_spectral_spectral = &__pyx_type_6pysesa_9_spectral_spectral;
+  if (__Pyx_SetVtable(__pyx_type_6pysesa_8spectral_spectral.tp_dict, __pyx_vtabptr_6pysesa_8spectral_spectral) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "spectral", (PyObject *)&__pyx_type_6pysesa_8spectral_spectral) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 73; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_6pysesa_8spectral_spectral = &__pyx_type_6pysesa_8spectral_spectral;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
   #if CYTHON_COMPILING_IN_PYPY
@@ -10767,7 +10767,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pysesa/_spectral.pyx":52
+  /* "pysesa/spectral.pyx":52
  * # import libraries
  * from __future__ import division
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -10779,7 +10779,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_spectral.pyx":55
+  /* "pysesa/spectral.pyx":55
  * cimport numpy as np
  * cimport cython
  * from scipy.integrate import trapz             # <<<<<<<<<<<<<<
@@ -10800,7 +10800,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":56
+  /* "pysesa/spectral.pyx":56
  * cimport cython
  * from scipy.integrate import trapz
  * from scipy.stats import linregress             # <<<<<<<<<<<<<<
@@ -10821,7 +10821,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_spectral.pyx":57
+  /* "pysesa/spectral.pyx":57
  * from scipy.integrate import trapz
  * from scipy.stats import linregress
  * import statsmodels.api as smapi             # <<<<<<<<<<<<<<
@@ -10839,7 +10839,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_smapi, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":62
+  /* "pysesa/spectral.pyx":62
  * 
  * # import PySESA libraries
  * import pysesa.lengthscale             # <<<<<<<<<<<<<<
@@ -10851,7 +10851,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pysesa, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 62; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":65
+  /* "pysesa/spectral.pyx":65
  * 
  * # suppress divide and invalid warnings
  * np.seterr(divide='ignore')             # <<<<<<<<<<<<<<
@@ -10872,7 +10872,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_spectral.pyx":66
+  /* "pysesa/spectral.pyx":66
  * # suppress divide and invalid warnings
  * np.seterr(divide='ignore')
  * np.seterr(invalid='ignore')             # <<<<<<<<<<<<<<
@@ -10893,7 +10893,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_spectral.pyx":67
+  /* "pysesa/spectral.pyx":67
  * np.seterr(divide='ignore')
  * np.seterr(invalid='ignore')
  * np.seterr(over='ignore')             # <<<<<<<<<<<<<<
@@ -10914,7 +10914,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_spectral.pyx":68
+  /* "pysesa/spectral.pyx":68
  * np.seterr(invalid='ignore')
  * np.seterr(over='ignore')
  * np.seterr(under='ignore')             # <<<<<<<<<<<<<<
@@ -10935,7 +10935,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_spectral.pyx":69
+  /* "pysesa/spectral.pyx":69
  * np.seterr(over='ignore')
  * np.seterr(under='ignore')
  * import warnings             # <<<<<<<<<<<<<<
@@ -10947,7 +10947,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_warnings, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_spectral.pyx":70
+  /* "pysesa/spectral.pyx":70
  * np.seterr(under='ignore')
  * import warnings
  * warnings.filterwarnings("ignore")             # <<<<<<<<<<<<<<
@@ -10964,7 +10964,7 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_spectral.pyx":1
+  /* "pysesa/spectral.pyx":1
  * ## PySESA (Python program for Spatially Explicit Spectral Analysis)             # <<<<<<<<<<<<<<
  * ## has been developed at the Grand Canyon Monitorinf & Research Center,
  * ## U.S. Geological Survey
@@ -10991,11 +10991,11 @@ PyMODINIT_FUNC PyInit__spectral(void)
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pysesa._spectral", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pysesa.spectral", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pysesa._spectral");
+    PyErr_SetString(PyExc_ImportError, "init pysesa.spectral");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

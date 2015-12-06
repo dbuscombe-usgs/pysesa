@@ -422,7 +422,7 @@ cdef class spectral:
       cdef np.ndarray[np.float64_t, ndim=1] k
      
       #cdef double[::1] s
-      #cdef double[:, ::1] im = np.empty()
+      cdef np.ndarray[np.float64_t, ndim=2] im 
  
       r = pysesa.lengthscale(points, res, lentype, taper, method)
       im = r.getdata()
@@ -570,11 +570,11 @@ cdef class spectral:
       #moment = sqrt((10**4)*moment)
 
       # zero crossings per second
-      Z = 2*np.sqrt(moment[2]/moment[0])
+      Z = 2*(moment[2]/moment[0])**0.5
       #Z = 2*sqrt(moment[2]/moment[0])
 
       # extrema per second										
-      E = 2*np.sqrt(moment[4]/moment[2]) 
+      E = 2*(moment[4]/moment[2])**0.5
       #E = 2*sqrt(moment[4]/moment[2]) 
 
       #rms
@@ -691,11 +691,16 @@ cdef class spectral:
       from nifty import rg_space, field, about
       about.warnings='OFF'
                   
-      cdef np.ndarray[np.float64_t, ndim=1] s 
-      cdef np.ndarray[np.float64_t, ndim=1] s_b 
-      cdef np.ndarray[np.float64_t, ndim=1] k_back 
-      cdef np.ndarray[np.float64_t, ndim=1] k
+      #cdef np.ndarray[np.float64_t, ndim=1] s 
+      #cdef np.ndarray[np.float64_t, ndim=1] s_b 
+      #cdef np.ndarray[np.float64_t, ndim=1] k_back 
+      #cdef np.ndarray[np.float64_t, ndim=1] k
       cdef object x_space, k_space
+
+      cdef double[::1] s
+      cdef double[::1] s_b
+      cdef double[::1] k_back
+      cdef double[::1] k
             
       # set up field
       if nx%2==0:

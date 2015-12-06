@@ -147,7 +147,7 @@ cdef class partition:
       '''
 
       #get size of window
-      cdef float win =  (out/2) * (1+(prc_overlap/100)) #np.multiply(out/2, 1+(prc_overlap/100))
+      cdef float win =  np.multiply(out/2, 1+(prc_overlap/100))
 
       #remove any rows containing NaNs
       toproc = toproc[~np.isnan(toproc).any(axis=1)]
@@ -172,11 +172,8 @@ cdef class partition:
       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
    
-      #cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
-      #cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
-
-      cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((leny,lenx), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((leny,lenx), dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
 
       # create output grid
       x = np.arange(xmin, xmax, out)

@@ -225,6 +225,8 @@ cdef class partition:
       dat = da.from_array(np.asarray(allpoints), chunks=1000)
       del allpoints
       #mytree = cKDTree(dat) 
+
+      print "kd-tree 1"
       mytree = cKDTree(dat, leafsize=len(dat)) # adding this leafsize option speeds up considerably
    
       # largest inscribed square has side length = sqrt(2)*radius
@@ -270,7 +272,9 @@ cdef class partition:
       #tree = cKDTree(allpoints)
 
       #tree = cKDTree(dat) #dask implementation
-      tree = cKDTree(dat, leafsize=len(dat)) #dask implementation 2
+
+      print "kd-tree 2"
+      tree = cKDTree(dat) #dask implementation 2 # leafsize=len(dat)
       del dat
 
       try:      

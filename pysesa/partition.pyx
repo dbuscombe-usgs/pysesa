@@ -227,7 +227,7 @@ cdef class partition:
       #mytree = cKDTree(dat) 
 
       print "kd-tree 1"
-      mytree = cKDTree(dat, leafsize=len(dat)) # adding this leafsize option speeds up considerably
+      mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
    
       # largest inscribed square has side length = sqrt(2)*radius
       #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)

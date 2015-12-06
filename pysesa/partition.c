@@ -3239,7 +3239,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *       #mytree = cKDTree(dat)
  * 
  *       print "kd-tree 1"             # <<<<<<<<<<<<<<
- *       mytree = cKDTree(dat, leafsize=len(dat)) # adding this leafsize option speeds up considerably
+ *       mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
  * 
  */
   if (__Pyx_PrintOne(0, __pyx_kp_s_kd_tree_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3247,7 +3247,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   /* "pysesa/partition.pyx":230
  * 
  *       print "kd-tree 1"
- *       mytree = cKDTree(dat, leafsize=len(dat)) # adding this leafsize option speeds up considerably             # <<<<<<<<<<<<<<
+ *       mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably             # <<<<<<<<<<<<<<
  * 
  *       # largest inscribed square has side length = sqrt(2)*radius
  */
@@ -3261,7 +3261,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_10 = PyDict_New(); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
   __pyx_t_24 = PyObject_Length(__pyx_v_dat); if (unlikely(__pyx_t_24 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_2 = PyInt_FromSsize_t(__pyx_t_24); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyInt_FromSsize_t((__pyx_t_24 / 10)); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_t_10, __pyx_n_s_leafsize, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;

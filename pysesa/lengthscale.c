@@ -231,8 +231,8 @@ void __Pyx_call_destructor(T* x) {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__pysesa___lengthscale
-#define __PYX_HAVE_API__pysesa___lengthscale
+#define __PYX_HAVE__pysesa__lengthscale
+#define __PYX_HAVE_API__pysesa__lengthscale
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -441,7 +441,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "pysesa/_lengthscale.pyx",
+  "pysesa/lengthscale.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -691,7 +691,7 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
 
 /*--- Type declarations ---*/
-struct __pyx_obj_6pysesa_12_lengthscale_lengthscale;
+struct __pyx_obj_6pysesa_11lengthscale_lengthscale;
 
 /* "../../../../../usr/lib64/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":762
  * ctypedef npy_longdouble longdouble_t
@@ -728,30 +728,30 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  * cdef inline object PyArray_MultiIterNew1(a):
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
-struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data;
+struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data;
 
-/* "pysesa/_lengthscale.pyx":222
+/* "pysesa/lengthscale.pyx":222
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray _radial_data(self, np.ndarray[np.float64_t, ndim=2] data, int annulus_width=1):             # <<<<<<<<<<<<<<
  *        '''
  *        Efficient radial average of matrix
  */
-struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data {
+struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data {
   int __pyx_n;
   int annulus_width;
 };
 
-/* "pysesa/_lengthscale.pyx":68
+/* "pysesa/lengthscale.pyx":68
  * 
  * # =========================================================
  * cdef class lengthscale:             # <<<<<<<<<<<<<<
  *    '''
  *    Calculates the integral lengthscale of a Nx3 point cloud
  */
-struct __pyx_obj_6pysesa_12_lengthscale_lengthscale {
+struct __pyx_obj_6pysesa_11lengthscale_lengthscale {
   PyObject_HEAD
-  struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *__pyx_vtab;
+  struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *__pyx_vtab;
   PyObject *data;
   PyObject *lengthscale;
   PyObject *tree;
@@ -759,18 +759,18 @@ struct __pyx_obj_6pysesa_12_lengthscale_lengthscale {
 
 
 
-struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale {
-  PyArrayObject *(*_radial_data)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data *__pyx_optional_args);
-  double (*_get_lengthscale)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int, double, int, int, int __pyx_skip_dispatch);
-  PyArrayObject *(*_Hanning2D)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
-  PyArrayObject *(*_Hamming2D)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
-  PyArrayObject *(*_Blackman2D)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
-  PyArrayObject *(*_Bartlett2D)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
-  PyArrayObject *(*_taper_im)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int, int __pyx_skip_dispatch);
-  double (*getlengthscale)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, int __pyx_skip_dispatch);
-  PyArrayObject *(*getdata)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, int __pyx_skip_dispatch);
+struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale {
+  PyArrayObject *(*_radial_data)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data *__pyx_optional_args);
+  double (*_get_lengthscale)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int, double, int, int, int __pyx_skip_dispatch);
+  PyArrayObject *(*_Hanning2D)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
+  PyArrayObject *(*_Hamming2D)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
+  PyArrayObject *(*_Blackman2D)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
+  PyArrayObject *(*_Bartlett2D)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch);
+  PyArrayObject *(*_taper_im)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int, int __pyx_skip_dispatch);
+  double (*getlengthscale)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, int __pyx_skip_dispatch);
+  PyArrayObject *(*getdata)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, int __pyx_skip_dispatch);
 };
-static struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *__pyx_vtabptr_6pysesa_12_lengthscale_lengthscale;
+static struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *__pyx_vtabptr_6pysesa_11lengthscale_lengthscale;
 #ifndef CYTHON_REFNANNY
   #define CYTHON_REFNANNY 0
 #endif
@@ -1114,15 +1114,15 @@ static PyTypeObject *__Pyx_ImportType(const char *module_name, const char *class
 
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data *__pyx_optional_args); /* proto*/
-static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny, int __pyx_skip_dispatch); /* proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper, int __pyx_skip_dispatch); /* proto*/
-static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__radial_data(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data *__pyx_optional_args); /* proto*/
+static double __pyx_f_6pysesa_11lengthscale_11lengthscale__get_lengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Hanning2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Hamming2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Blackman2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Bartlett2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__taper_im(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper, int __pyx_skip_dispatch); /* proto*/
+static double __pyx_f_6pysesa_11lengthscale_11lengthscale_getlengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale_getdata(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch); /* proto*/
 
 /* Module declarations from 'cpython.buffer' */
 
@@ -1153,31 +1153,31 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'pysesa._lengthscale' */
-static PyTypeObject *__pyx_ptype_6pysesa_12_lengthscale_lengthscale = 0;
+/* Module declarations from 'pysesa.lengthscale' */
+static PyTypeObject *__pyx_ptype_6pysesa_11lengthscale_lengthscale = 0;
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo___pyx_t_double_complex = { "double complex", NULL, sizeof(__pyx_t_double_complex), { 0 }, 0, 'C', 0, 0 };
-#define __Pyx_MODULE_NAME "pysesa._lengthscale"
-int __pyx_module_is_main_pysesa___lengthscale = 0;
+#define __Pyx_MODULE_NAME "pysesa.lengthscale"
+int __pyx_module_is_main_pysesa__lengthscale = 0;
 
-/* Implementation of 'pysesa._lengthscale' */
+/* Implementation of 'pysesa.lengthscale' */
 static PyObject *__pyx_builtin_zip;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_RuntimeError;
-static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_points, float __pyx_v_res, int __pyx_v_lentype, int __pyx_v_taper, CYTHON_UNUSED PyObject *__pyx_v_method); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_v_annulus_width); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_18getdata(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self); /* proto */
+static int __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_points, float __pyx_v_res, int __pyx_v_lentype, int __pyx_v_taper, CYTHON_UNUSED PyObject *__pyx_v_method); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_2_radial_data(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_v_annulus_width); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_4_get_lengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_6_Hanning2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_8_Hamming2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_10_Blackman2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_12_Bartlett2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_14_taper_im(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_16getlengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_18getdata(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static PyObject *__pyx_tp_new_6pysesa_12_lengthscale_lengthscale(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_6pysesa_11lengthscale_lengthscale(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static char __pyx_k_B[] = "B";
 static char __pyx_k_H[] = "H";
 static char __pyx_k_I[] = "I";
@@ -1403,7 +1403,7 @@ static PyObject *__pyx_tuple__24;
 static PyObject *__pyx_tuple__25;
 static PyObject *__pyx_tuple__26;
 
-/* "pysesa/_lengthscale.pyx":128
+/* "pysesa/lengthscale.pyx":128
  *    @cython.nonecheck(False)
  *    # =========================================================
  *    def __init__(self, np.ndarray[np.float64_t, ndim=2] points, float res=0.05, int lentype=1, int taper=1, str method='nearest'):             # <<<<<<<<<<<<<<
@@ -1412,12 +1412,12 @@ static PyObject *__pyx_tuple__26;
  */
 
 /* Python wrapper */
-static int __pyx_pw_6pysesa_12_lengthscale_11lengthscale_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale___init__[] = "\n      Calculates the integral lengthscale of a Nx3 point cloud\n      using 1 of 3 available methods\n      and also returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()\n      lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()\n\n      Parameters\n      ----------\n      points : ndarray\n   \t   Nx3 point cloud\n\n      Other Parameters\n      ----------\n      res : float, *optional* [default = 0.05]\n           spatial grid resolution to create a grid\n      lentype : int, *optional* [default = 1, l<0.5]\n   \t   lengthscale type:\n           1, l<0.5\n           2, l<1/e\n           3, l<0\n      taper : int, *optional* [default = Hanning]\n   \t   flag for taper type:\n           1, Hanning (Hann)\n           2, Hamming\n           3, Blackman\n           4, Bartlett\n      method : str, *optional* [default = 'nearest']\n   \t   gridding type\n\n      Returns [requested through .getdata()]\n      ----------\n      self.data: ndarray\n   \t   tapered 2D grid of 3D pointcloud\n\n      Returns [requested through .getlengthscale()]\n      ----------\n      self.lengthscale: float\n   \t   integral lengthscale\n\n      ";
+static int __pyx_pw_6pysesa_11lengthscale_11lengthscale_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale___init__[] = "\n      Calculates the integral lengthscale of a Nx3 point cloud\n      using 1 of 3 available methods\n      and also returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()\n      lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()\n\n      Parameters\n      ----------\n      points : ndarray\n   \t   Nx3 point cloud\n\n      Other Parameters\n      ----------\n      res : float, *optional* [default = 0.05]\n           spatial grid resolution to create a grid\n      lentype : int, *optional* [default = 1, l<0.5]\n   \t   lengthscale type:\n           1, l<0.5\n           2, l<1/e\n           3, l<0\n      taper : int, *optional* [default = Hanning]\n   \t   flag for taper type:\n           1, Hanning (Hann)\n           2, Hamming\n           3, Blackman\n           4, Bartlett\n      method : str, *optional* [default = 'nearest']\n   \t   gridding type\n\n      Returns [requested through .getdata()]\n      ----------\n      self.data: ndarray\n   \t   tapered 2D grid of 3D pointcloud\n\n      Returns [requested through .getlengthscale()]\n      ----------\n      self.lengthscale: float\n   \t   integral lengthscale\n\n      ";
 #if CYTHON_COMPILING_IN_CPYTHON
-struct wrapperbase __pyx_wrapperbase_6pysesa_12_lengthscale_11lengthscale___init__;
+struct wrapperbase __pyx_wrapperbase_6pysesa_11lengthscale_11lengthscale___init__;
 #endif
-static int __pyx_pw_6pysesa_12_lengthscale_11lengthscale_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_6pysesa_11lengthscale_11lengthscale_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_points = 0;
   float __pyx_v_res;
   int __pyx_v_lentype;
@@ -1507,13 +1507,13 @@ static int __pyx_pw_6pysesa_12_lengthscale_11lengthscale_1__init__(PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_points), __pyx_ptype_5numpy_ndarray, 1, "points", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_method), (&PyString_Type), 1, "method", 1))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), __pyx_v_points, __pyx_v_res, __pyx_v_lentype, __pyx_v_taper, __pyx_v_method);
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), __pyx_v_points, __pyx_v_res, __pyx_v_lentype, __pyx_v_taper, __pyx_v_method);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1524,7 +1524,7 @@ static int __pyx_pw_6pysesa_12_lengthscale_11lengthscale_1__init__(PyObject *__p
   return __pyx_r;
 }
 
-static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_points, float __pyx_v_res, int __pyx_v_lentype, int __pyx_v_taper, CYTHON_UNUSED PyObject *__pyx_v_method) {
+static int __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_points, float __pyx_v_res, int __pyx_v_lentype, int __pyx_v_taper, CYTHON_UNUSED PyObject *__pyx_v_method) {
   float __pyx_v_nnx;
   float __pyx_v_nny;
   float __pyx_v_lenx;
@@ -1595,7 +1595,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   }
   __pyx_pybuffernd_points.diminfo[0].strides = __pyx_pybuffernd_points.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_points.diminfo[0].shape = __pyx_pybuffernd_points.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_points.diminfo[1].strides = __pyx_pybuffernd_points.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_points.diminfo[1].shape = __pyx_pybuffernd_points.rcbuffer->pybuffer.shape[1];
 
-  /* "pysesa/_lengthscale.pyx":175
+  /* "pysesa/lengthscale.pyx":175
  * 
  *       # pre-allocate some more arrays and get the ranges of x and y
  *       cdef float nnx = np.max(points[:,0]) - np.min(points[:,0])             # <<<<<<<<<<<<<<
@@ -1676,7 +1676,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_nnx = __pyx_t_7;
 
-  /* "pysesa/_lengthscale.pyx":176
+  /* "pysesa/lengthscale.pyx":176
  *       # pre-allocate some more arrays and get the ranges of x and y
  *       cdef float nnx = np.max(points[:,0]) - np.min(points[:,0])
  *       cdef float nny = np.max(points[:,1]) - np.min(points[:,1])             # <<<<<<<<<<<<<<
@@ -1757,7 +1757,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_nny = __pyx_t_7;
 
-  /* "pysesa/_lengthscale.pyx":181
+  /* "pysesa/lengthscale.pyx":181
  * 
  *       # enfore square matrix in gridding
  *       if nny!=nnx:             # <<<<<<<<<<<<<<
@@ -1767,7 +1767,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_t_8 = ((__pyx_v_nny != __pyx_v_nnx) != 0);
   if (__pyx_t_8) {
 
-    /* "pysesa/_lengthscale.pyx":182
+    /* "pysesa/lengthscale.pyx":182
  *       # enfore square matrix in gridding
  *       if nny!=nnx:
  *          lenx = np.ceil(nnx/(res*(nnx/nny)))             # <<<<<<<<<<<<<<
@@ -1814,7 +1814,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   }
   /*else*/ {
 
-    /* "pysesa/_lengthscale.pyx":184
+    /* "pysesa/lengthscale.pyx":184
  *          lenx = np.ceil(nnx/(res*(nnx/nny)))
  *       else:
  *          lenx = np.ceil(nnx/res)             # <<<<<<<<<<<<<<
@@ -1860,7 +1860,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   }
   __pyx_L3:;
 
-  /* "pysesa/_lengthscale.pyx":186
+  /* "pysesa/lengthscale.pyx":186
  *          lenx = np.ceil(nnx/res)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] grid_x = np.empty((lenx,lenx), dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -1917,7 +1917,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_grid_x = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":187
+  /* "pysesa/lengthscale.pyx":187
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] grid_x = np.empty((lenx,lenx), dtype=np.float64)
  *       cdef np.ndarray[np.float64_t, ndim=2] grid_y = np.empty((lenx,lenx), dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -1974,7 +1974,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_grid_y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":189
+  /* "pysesa/lengthscale.pyx":189
  *       cdef np.ndarray[np.float64_t, ndim=2] grid_y = np.empty((lenx,lenx), dtype=np.float64)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] im = np.empty((lenx,lenx), dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -2031,7 +2031,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_im = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":192
+  /* "pysesa/lengthscale.pyx":192
  * 
  *       # do the gridding
  *       if nny>nnx:             # <<<<<<<<<<<<<<
@@ -2041,7 +2041,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_t_8 = ((__pyx_v_nny > __pyx_v_nnx) != 0);
   if (__pyx_t_8) {
 
-    /* "pysesa/_lengthscale.pyx":193
+    /* "pysesa/lengthscale.pyx":193
  *       # do the gridding
  *       if nny>nnx:
  *          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res*(nnx/nny)), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )             # <<<<<<<<<<<<<<
@@ -2333,7 +2333,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
     goto __pyx_L4;
   }
 
-  /* "pysesa/_lengthscale.pyx":194
+  /* "pysesa/lengthscale.pyx":194
  *       if nny>nnx:
  *          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res*(nnx/nny)), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )
  *       elif nny<nnx:             # <<<<<<<<<<<<<<
@@ -2343,7 +2343,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_t_8 = ((__pyx_v_nny < __pyx_v_nnx) != 0);
   if (__pyx_t_8) {
 
-    /* "pysesa/_lengthscale.pyx":195
+    /* "pysesa/lengthscale.pyx":195
  *          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res*(nnx/nny)), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )
  *       elif nny<nnx:
  *          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res*(nny/nnx)) )             # <<<<<<<<<<<<<<
@@ -2636,7 +2636,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   }
   /*else*/ {
 
-    /* "pysesa/_lengthscale.pyx":197
+    /* "pysesa/lengthscale.pyx":197
  *          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res*(nny/nnx)) )
  *       else:
  *          grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )             # <<<<<<<<<<<<<<
@@ -2928,7 +2928,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   }
   __pyx_L4:;
 
-  /* "pysesa/_lengthscale.pyx":201
+  /* "pysesa/lengthscale.pyx":201
  *       #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
  * 
  *       tree = KDTree(zip(points[:,0], points[:,1]))             # <<<<<<<<<<<<<<
@@ -2981,7 +2981,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_tree = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":202
+  /* "pysesa/lengthscale.pyx":202
  * 
  *       tree = KDTree(zip(points[:,0], points[:,1]))
  *       _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)             # <<<<<<<<<<<<<<
@@ -3109,7 +3109,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_inds = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "pysesa/_lengthscale.pyx":203
+  /* "pysesa/lengthscale.pyx":203
  *       tree = KDTree(zip(points[:,0], points[:,1]))
  *       _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
  *       im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))             # <<<<<<<<<<<<<<
@@ -3223,7 +3223,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __Pyx_DECREF_SET(__pyx_v_im, ((PyArrayObject *)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "pysesa/_lengthscale.pyx":205
+  /* "pysesa/lengthscale.pyx":205
  *       im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
  * 
  *       im = im - np.mean(im)             # <<<<<<<<<<<<<<
@@ -3285,7 +3285,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __Pyx_DECREF_SET(__pyx_v_im, ((PyArrayObject *)__pyx_t_16));
   __pyx_t_16 = 0;
 
-  /* "pysesa/_lengthscale.pyx":206
+  /* "pysesa/lengthscale.pyx":206
  * 
  *       im = im - np.mean(im)
  *       ny, nx= np.shape(im)             # <<<<<<<<<<<<<<
@@ -3379,14 +3379,14 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_ny = __pyx_t_18;
   __pyx_v_nx = __pyx_t_22;
 
-  /* "pysesa/_lengthscale.pyx":209
+  /* "pysesa/lengthscale.pyx":209
  * 
  *       #taper
  *       im = self._taper_im(im, taper)             # <<<<<<<<<<<<<<
  *       self.data = im
  * 
  */
-  __pyx_t_16 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_taper_im(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_taper, 0)); if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_16 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_taper_im(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_taper, 0)); if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 209; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_16);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -3407,7 +3407,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __Pyx_DECREF_SET(__pyx_v_im, ((PyArrayObject *)__pyx_t_16));
   __pyx_t_16 = 0;
 
-  /* "pysesa/_lengthscale.pyx":210
+  /* "pysesa/lengthscale.pyx":210
  *       #taper
  *       im = self._taper_im(im, taper)
  *       self.data = im             # <<<<<<<<<<<<<<
@@ -3420,16 +3420,16 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __Pyx_DECREF(__pyx_v_self->data);
   __pyx_v_self->data = ((PyObject *)__pyx_v_im);
 
-  /* "pysesa/_lengthscale.pyx":213
+  /* "pysesa/lengthscale.pyx":213
  * 
  *       #get integral lengthscale
  *       out = self._get_lengthscale(im, lentype, res, nx, ny)             # <<<<<<<<<<<<<<
  *       self.lengthscale = out
  * 
  */
-  __pyx_v_out = ((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_get_lengthscale(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_lentype, __pyx_v_res, __pyx_v_nx, __pyx_v_ny, 0);
+  __pyx_v_out = ((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_get_lengthscale(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), __pyx_v_lentype, __pyx_v_res, __pyx_v_nx, __pyx_v_ny, 0);
 
-  /* "pysesa/_lengthscale.pyx":214
+  /* "pysesa/lengthscale.pyx":214
  *       #get integral lengthscale
  *       out = self._get_lengthscale(im, lentype, res, nx, ny)
  *       self.lengthscale = out             # <<<<<<<<<<<<<<
@@ -3444,7 +3444,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   __pyx_v_self->lengthscale = __pyx_t_16;
   __pyx_t_16 = 0;
 
-  /* "pysesa/_lengthscale.pyx":128
+  /* "pysesa/lengthscale.pyx":128
  *    @cython.nonecheck(False)
  *    # =========================================================
  *    def __init__(self, np.ndarray[np.float64_t, ndim=2] points, float res=0.05, int lentype=1, int taper=1, str method='nearest'):             # <<<<<<<<<<<<<<
@@ -3473,7 +3473,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_points.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   goto __pyx_L2;
   __pyx_L0:;
@@ -3492,7 +3492,7 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":222
+/* "pysesa/lengthscale.pyx":222
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray _radial_data(self, np.ndarray[np.float64_t, ndim=2] data, int annulus_width=1):             # <<<<<<<<<<<<<<
@@ -3500,8 +3500,8 @@ static int __pyx_pf_6pysesa_12_lengthscale_11lengthscale___init__(struct __pyx_o
  *        Efficient radial average of matrix
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data *__pyx_optional_args) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_3_radial_data(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__radial_data(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data *__pyx_optional_args) {
   int __pyx_v_annulus_width = ((int)1);
   int __pyx_v_npix;
   int __pyx_v_npiy;
@@ -3638,7 +3638,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_radial_data); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_3_radial_data)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_annulus_width); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
@@ -3679,7 +3679,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":246
+  /* "pysesa/lengthscale.pyx":246
  *        cdef double rmax
  * 
  *        npix, npiy = np.shape(data)             # <<<<<<<<<<<<<<
@@ -3773,7 +3773,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_npix = __pyx_t_9;
   __pyx_v_npiy = __pyx_t_10;
 
-  /* "pysesa/_lengthscale.pyx":248
+  /* "pysesa/lengthscale.pyx":248
  *        npix, npiy = np.shape(data)
  * 
  *        cdef np.ndarray[np.float64_t, ndim=2] r = np.empty((npix, npiy),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -3830,7 +3830,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_r = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":249
+  /* "pysesa/lengthscale.pyx":249
  * 
  *        cdef np.ndarray[np.float64_t, ndim=2] r = np.empty((npix, npiy),dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=2] x = np.empty((npix, npiy),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -3887,7 +3887,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_x = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":250
+  /* "pysesa/lengthscale.pyx":250
  *        cdef np.ndarray[np.float64_t, ndim=2] r = np.empty((npix, npiy),dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=2] x = np.empty((npix, npiy),dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=2] y = np.empty((npix, npiy),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -3944,7 +3944,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_y = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":251
+  /* "pysesa/lengthscale.pyx":251
  *        cdef np.ndarray[np.float64_t, ndim=2] x = np.empty((npix, npiy),dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=2] y = np.empty((npix, npiy),dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] x1 = np.empty(npix,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -3991,7 +3991,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_x1 = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":252
+  /* "pysesa/lengthscale.pyx":252
  *        cdef np.ndarray[np.float64_t, ndim=2] y = np.empty((npix, npiy),dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] x1 = np.empty(npix,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] y1 = np.empty(npiy,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4038,7 +4038,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_y1 = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "pysesa/_lengthscale.pyx":254
+  /* "pysesa/lengthscale.pyx":254
  *        cdef np.ndarray[np.float64_t, ndim=1] y1 = np.empty(npiy,dtype=np.float64)
  * 
  *        cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4077,7 +4077,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_minrad = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":255
+  /* "pysesa/lengthscale.pyx":255
  * 
  *        cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] maxrad = np.empty(1,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4116,7 +4116,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_maxrad = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":256
+  /* "pysesa/lengthscale.pyx":256
  *        cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] maxrad = np.empty(1,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] dr = np.empty(1,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4155,7 +4155,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_dr = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":258
+  /* "pysesa/lengthscale.pyx":258
  *        cdef np.ndarray[np.float64_t, ndim=1] dr = np.empty(1,dtype=np.float64)
  * 
  *        x1 = np.arange(-np.float64(npix/2),np.float64(npix/2))             # <<<<<<<<<<<<<<
@@ -4285,7 +4285,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF_SET(__pyx_v_x1, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":259
+  /* "pysesa/lengthscale.pyx":259
  * 
  *        x1 = np.arange(-np.float64(npix/2),np.float64(npix/2))
  *        y1 = np.arange(-np.float64(npiy/2),np.float64(npiy/2))             # <<<<<<<<<<<<<<
@@ -4415,7 +4415,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF_SET(__pyx_v_y1, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":260
+  /* "pysesa/lengthscale.pyx":260
  *        x1 = np.arange(-np.float64(npix/2),np.float64(npix/2))
  *        y1 = np.arange(-np.float64(npiy/2),np.float64(npiy/2))
  *        x,y = np.meshgrid(y1,x1)             # <<<<<<<<<<<<<<
@@ -4547,7 +4547,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF_SET(__pyx_v_y, ((PyArrayObject *)__pyx_t_3));
   __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":261
+  /* "pysesa/lengthscale.pyx":261
  *        y1 = np.arange(-np.float64(npiy/2),np.float64(npiy/2))
  *        x,y = np.meshgrid(y1,x1)
  *        r = np.abs(x+1j*y)             # <<<<<<<<<<<<<<
@@ -4615,7 +4615,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF_SET(__pyx_v_r, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":263
+  /* "pysesa/lengthscale.pyx":263
  *        r = np.abs(x+1j*y)
  * 
  *        rmax = np.max(r)             # <<<<<<<<<<<<<<
@@ -4656,7 +4656,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_rmax = __pyx_t_24;
 
-  /* "pysesa/_lengthscale.pyx":264
+  /* "pysesa/lengthscale.pyx":264
  * 
  *        rmax = np.max(r)
  *        dr = np.abs([x[0,0] - x[0,1]]) * annulus_width             # <<<<<<<<<<<<<<
@@ -4733,7 +4733,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF_SET(__pyx_v_dr, ((PyArrayObject *)__pyx_t_20));
   __pyx_t_20 = 0;
 
-  /* "pysesa/_lengthscale.pyx":266
+  /* "pysesa/lengthscale.pyx":266
  *        dr = np.abs([x[0,0] - x[0,1]]) * annulus_width
  * 
  *        cdef int sizeout = np.ceil(rmax/dr)             # <<<<<<<<<<<<<<
@@ -4780,7 +4780,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
   __pyx_v_sizeout = __pyx_t_10;
 
-  /* "pysesa/_lengthscale.pyx":268
+  /* "pysesa/lengthscale.pyx":268
  *        cdef int sizeout = np.ceil(rmax/dr)
  * 
  *        cdef np.ndarray[np.float64_t, ndim=1] radial = np.empty(sizeout,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4827,7 +4827,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_radial = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":269
+  /* "pysesa/lengthscale.pyx":269
  * 
  *        cdef np.ndarray[np.float64_t, ndim=1] radial = np.empty(sizeout,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] radialdatamean = np.empty(sizeout,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -4874,7 +4874,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_v_radialdatamean = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "pysesa/_lengthscale.pyx":271
+  /* "pysesa/lengthscale.pyx":271
  *        cdef np.ndarray[np.float64_t, ndim=1] radialdatamean = np.empty(sizeout,dtype=np.float64)
  * 
  *        radial = np.arange(rmax/dr)*dr + np.float64(dr/2)             # <<<<<<<<<<<<<<
@@ -4979,7 +4979,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __Pyx_DECREF_SET(__pyx_v_radial, ((PyArrayObject *)__pyx_t_20));
   __pyx_t_20 = 0;
 
-  /* "pysesa/_lengthscale.pyx":272
+  /* "pysesa/lengthscale.pyx":272
  * 
  *        radial = np.arange(rmax/dr)*dr + np.float64(dr/2)
  *        nrad = len(radial)             # <<<<<<<<<<<<<<
@@ -4989,7 +4989,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_t_6 = PyObject_Length(((PyObject *)__pyx_v_radial)); if (unlikely(__pyx_t_6 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 272; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_v_nrad = __pyx_t_6;
 
-  /* "pysesa/_lengthscale.pyx":275
+  /* "pysesa/lengthscale.pyx":275
  * 
  *        # Loop through the bins
  *        for irad from 0 <= irad < nrad:             # <<<<<<<<<<<<<<
@@ -4999,7 +4999,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_t_10 = __pyx_v_nrad;
   for (__pyx_v_irad = 0; __pyx_v_irad < __pyx_t_10; __pyx_v_irad++) {
 
-    /* "pysesa/_lengthscale.pyx":276
+    /* "pysesa/lengthscale.pyx":276
  *        # Loop through the bins
  *        for irad from 0 <= irad < nrad:
  *          minrad = irad*dr             # <<<<<<<<<<<<<<
@@ -5033,7 +5033,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
     __Pyx_DECREF_SET(__pyx_v_minrad, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "pysesa/_lengthscale.pyx":277
+    /* "pysesa/lengthscale.pyx":277
  *        for irad from 0 <= irad < nrad:
  *          minrad = irad*dr
  *          maxrad = minrad + dr             # <<<<<<<<<<<<<<
@@ -5064,7 +5064,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
     __Pyx_DECREF_SET(__pyx_v_maxrad, ((PyArrayObject *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "pysesa/_lengthscale.pyx":278
+    /* "pysesa/lengthscale.pyx":278
  *          minrad = irad*dr
  *          maxrad = minrad + dr
  *          radialdatamean[irad] = data[(r>=minrad) * (r<maxrad)].mean()             # <<<<<<<<<<<<<<
@@ -5107,7 +5107,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
     *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_float64_t *, __pyx_pybuffernd_radialdatamean.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_radialdatamean.diminfo[0].strides) = __pyx_t_31;
   }
 
-  /* "pysesa/_lengthscale.pyx":280
+  /* "pysesa/lengthscale.pyx":280
  *          radialdatamean[irad] = data[(r>=minrad) * (r<maxrad)].mean()
  * 
  *        return radialdatamean             # <<<<<<<<<<<<<<
@@ -5119,7 +5119,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
   __pyx_r = ((PyArrayObject *)__pyx_v_radialdatamean);
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":222
+  /* "pysesa/lengthscale.pyx":222
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray _radial_data(self, np.ndarray[np.float64_t, ndim=2] data, int annulus_width=1):             # <<<<<<<<<<<<<<
@@ -5151,7 +5151,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_y.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_y1.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._radial_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._radial_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5183,9 +5183,9 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data(
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_2_radial_data[] = "\n       Efficient radial average of matrix\n\n       Syntax\n       ----------\n       h = pysesa.lengthscale._radial_data(data, annulus_width)\n\n       Parameters\n       ----------\n       data : ndarray\n   \t   2D grid\n       annulus_width : int [default = 1]\n           angular resolution of sector mean\n\n       Returns\n       ----------\n       radialdatamean: ndarray\n   \t   radial average 1D array\n\n       ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_3_radial_data(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_2_radial_data[] = "\n       Efficient radial average of matrix\n\n       Syntax\n       ----------\n       h = pysesa.lengthscale._radial_data(data, annulus_width)\n\n       Parameters\n       ----------\n       data : ndarray\n   \t   2D grid\n       annulus_width : int [default = 1]\n           angular resolution of sector mean\n\n       Returns\n       ----------\n       radialdatamean: ndarray\n   \t   radial average 1D array\n\n       ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_3_radial_data(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_data = 0;
   int __pyx_v_annulus_width;
   int __pyx_lineno = 0;
@@ -5239,12 +5239,12 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data(PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_radial_data", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._radial_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._radial_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), __pyx_ptype_5numpy_ndarray, 1, "data", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), __pyx_v_data, __pyx_v_annulus_width);
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_2_radial_data(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), __pyx_v_data, __pyx_v_annulus_width);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5255,13 +5255,13 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_v_annulus_width) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_2_radial_data(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_data, int __pyx_v_annulus_width) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_data;
   __Pyx_Buffer __pyx_pybuffer_data;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data __pyx_t_2;
+  struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data __pyx_t_2;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -5278,7 +5278,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(str
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.annulus_width = __pyx_v_annulus_width;
-  __pyx_t_1 = ((PyObject *)__pyx_vtabptr_6pysesa_12_lengthscale_lengthscale->_radial_data(__pyx_v_self, __pyx_v_data, 1, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_vtabptr_6pysesa_11lengthscale_lengthscale->_radial_data(__pyx_v_self, __pyx_v_data, 1, &__pyx_t_2)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5291,7 +5291,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(str
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_data.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._radial_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._radial_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5302,7 +5302,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(str
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":287
+/* "pysesa/lengthscale.pyx":287
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef double _get_lengthscale(self, np.ndarray[np.float64_t, ndim=2] im, int lentype, double res, int nx, int ny):             # <<<<<<<<<<<<<<
@@ -5310,8 +5310,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_2_radial_data(str
  *       Calculates the integral lengthscale of
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_5_get_lengthscale(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static double __pyx_f_6pysesa_11lengthscale_11lengthscale__get_lengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny, int __pyx_skip_dispatch) {
   double __pyx_v_ma;
   PyArrayObject *__pyx_v_ft1 = 0;
   PyArrayObject *__pyx_v_mag1 = 0;
@@ -5389,7 +5389,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_get_lengthscale); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_5_get_lengthscale)) {
       __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_lentype); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_4 = PyFloat_FromDouble(__pyx_v_res); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -5444,7 +5444,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":320
+  /* "pysesa/lengthscale.pyx":320
  *       '''
  *       cdef double ma
  *       cdef np.ndarray[np.complex128_t, ndim=2] ft1 = np.empty((nx,ny),dtype=np.complex128)             # <<<<<<<<<<<<<<
@@ -5501,7 +5501,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __pyx_v_ft1 = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pysesa/_lengthscale.pyx":321
+  /* "pysesa/lengthscale.pyx":321
  *       cdef double ma
  *       cdef np.ndarray[np.complex128_t, ndim=2] ft1 = np.empty((nx,ny),dtype=np.complex128)
  *       cdef np.ndarray[np.float64_t, ndim=2] mag1 = np.empty((nx,ny),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -5558,7 +5558,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __pyx_v_mag1 = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":322
+  /* "pysesa/lengthscale.pyx":322
  *       cdef np.ndarray[np.complex128_t, ndim=2] ft1 = np.empty((nx,ny),dtype=np.complex128)
  *       cdef np.ndarray[np.float64_t, ndim=2] mag1 = np.empty((nx,ny),dtype=np.float64)
  *       cdef np.ndarray[np.float64_t, ndim=2] auto = np.empty((nx,ny),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -5615,7 +5615,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __pyx_v_auto = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pysesa/_lengthscale.pyx":323
+  /* "pysesa/lengthscale.pyx":323
  *       cdef np.ndarray[np.float64_t, ndim=2] mag1 = np.empty((nx,ny),dtype=np.float64)
  *       cdef np.ndarray[np.float64_t, ndim=2] auto = np.empty((nx,ny),dtype=np.float64)
  *       cdef np.ndarray[np.float64_t, ndim=2] autoarray = np.empty((nx,ny),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -5672,7 +5672,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __pyx_v_autoarray = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":328
+  /* "pysesa/lengthscale.pyx":328
  *       # autocorrelation
  *       # 2D fourier transform of demeaned image
  *       if np.sum(np.isnan(im)) == np.prod(np.shape(im)):             # <<<<<<<<<<<<<<
@@ -5808,7 +5808,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_16) {
 
-    /* "pysesa/_lengthscale.pyx":329
+    /* "pysesa/lengthscale.pyx":329
  *       # 2D fourier transform of demeaned image
  *       if np.sum(np.isnan(im)) == np.prod(np.shape(im)):
  *          return np.nan             # <<<<<<<<<<<<<<
@@ -5826,7 +5826,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     goto __pyx_L0;
   }
 
-  /* "pysesa/_lengthscale.pyx":331
+  /* "pysesa/lengthscale.pyx":331
  *          return np.nan
  * 
  *       if np.prod(np.shape(im))<2:             # <<<<<<<<<<<<<<
@@ -5900,7 +5900,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_16) {
 
-    /* "pysesa/_lengthscale.pyx":332
+    /* "pysesa/lengthscale.pyx":332
  * 
  *       if np.prod(np.shape(im))<2:
  *          return np.nan             # <<<<<<<<<<<<<<
@@ -5918,7 +5918,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     goto __pyx_L0;
   }
 
-  /* "pysesa/_lengthscale.pyx":334
+  /* "pysesa/lengthscale.pyx":334
  *          return np.nan
  * 
  *       ft1 = np.fft.fft2(im)             # <<<<<<<<<<<<<<
@@ -5980,7 +5980,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF_SET(__pyx_v_ft1, ((PyArrayObject *)__pyx_t_7));
   __pyx_t_7 = 0;
 
-  /* "pysesa/_lengthscale.pyx":335
+  /* "pysesa/lengthscale.pyx":335
  * 
  *       ft1 = np.fft.fft2(im)
  *       mag1 = pow(abs(ft1),2) # power spectrum             # <<<<<<<<<<<<<<
@@ -6014,7 +6014,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF_SET(__pyx_v_mag1, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":337
+  /* "pysesa/lengthscale.pyx":337
  *       mag1 = pow(abs(ft1),2) # power spectrum
  *       # autocovariance as inverse fourier transform as zero-centred power spectrum
  *       auto = np.fft.fftshift(np.real(np.fft.ifft2(mag1)))             # <<<<<<<<<<<<<<
@@ -6141,7 +6141,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF_SET(__pyx_v_auto, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":338
+  /* "pysesa/lengthscale.pyx":338
  *       # autocovariance as inverse fourier transform as zero-centred power spectrum
  *       auto = np.fft.fftshift(np.real(np.fft.ifft2(mag1)))
  *       autoarray = np.asarray(auto) # make 1d to find max             # <<<<<<<<<<<<<<
@@ -6200,7 +6200,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF_SET(__pyx_v_autoarray, ((PyArrayObject *)__pyx_t_1));
   __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":339
+  /* "pysesa/lengthscale.pyx":339
  *       auto = np.fft.fftshift(np.real(np.fft.ifft2(mag1)))
  *       autoarray = np.asarray(auto) # make 1d to find max
  *       ma = autoarray.max() # find max             # <<<<<<<<<<<<<<
@@ -6231,7 +6231,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_ma = __pyx_t_11;
 
-  /* "pysesa/_lengthscale.pyx":341
+  /* "pysesa/lengthscale.pyx":341
  *       ma = autoarray.max() # find max
  *       # get integral lengthscale
  *       if ma>0:             # <<<<<<<<<<<<<<
@@ -6241,7 +6241,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   __pyx_t_16 = ((__pyx_v_ma > 0.0) != 0);
   if (__pyx_t_16) {
 
-    /* "pysesa/_lengthscale.pyx":342
+    /* "pysesa/lengthscale.pyx":342
  *       # get integral lengthscale
  *       if ma>0:
  *          auto = np.dot(auto,pow(ma,-1))             # <<<<<<<<<<<<<<
@@ -6307,7 +6307,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     __Pyx_DECREF_SET(__pyx_v_auto, ((PyArrayObject *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pysesa/_lengthscale.pyx":343
+    /* "pysesa/lengthscale.pyx":343
  *       if ma>0:
  *          auto = np.dot(auto,pow(ma,-1))
  *          h = self._radial_data(np.squeeze(auto))             # <<<<<<<<<<<<<<
@@ -6345,13 +6345,13 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __pyx_t_5 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_radial_data(__pyx_v_self, ((PyArrayObject *)__pyx_t_1), 0, NULL)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_radial_data(__pyx_v_self, ((PyArrayObject *)__pyx_t_1), 0, NULL)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 343; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_h = ((PyArrayObject *)__pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "pysesa/_lengthscale.pyx":345
+    /* "pysesa/lengthscale.pyx":345
  *          h = self._radial_data(np.squeeze(auto))
  * 
  *          try:             # <<<<<<<<<<<<<<
@@ -6365,7 +6365,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
       __Pyx_XGOTREF(__pyx_t_18);
       /*try:*/ {
 
-        /* "pysesa/_lengthscale.pyx":348
+        /* "pysesa/lengthscale.pyx":348
  *             if lentype==1: #l<0.5
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0.5)[0][0]+1], np.arange(np.where(h<0.5)[0][0]+1) ))
  *             elif lentype==2: #l<1/e             # <<<<<<<<<<<<<<
@@ -6374,7 +6374,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
  */
         switch (__pyx_v_lentype) {
 
-          /* "pysesa/_lengthscale.pyx":346
+          /* "pysesa/lengthscale.pyx":346
  * 
  *          try:
  *             if lentype==1: #l<0.5             # <<<<<<<<<<<<<<
@@ -6383,7 +6383,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
  */
           case 1:
 
-          /* "pysesa/_lengthscale.pyx":347
+          /* "pysesa/lengthscale.pyx":347
  *          try:
  *             if lentype==1: #l<0.5
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0.5)[0][0]+1], np.arange(np.where(h<0.5)[0][0]+1) ))             # <<<<<<<<<<<<<<
@@ -6590,7 +6590,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
           goto __pyx_L10_try_return;
           break;
 
-          /* "pysesa/_lengthscale.pyx":348
+          /* "pysesa/lengthscale.pyx":348
  *             if lentype==1: #l<0.5
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0.5)[0][0]+1], np.arange(np.where(h<0.5)[0][0]+1) ))
  *             elif lentype==2: #l<1/e             # <<<<<<<<<<<<<<
@@ -6599,7 +6599,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
  */
           case 2:
 
-          /* "pysesa/_lengthscale.pyx":349
+          /* "pysesa/lengthscale.pyx":349
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0.5)[0][0]+1], np.arange(np.where(h<0.5)[0][0]+1) ))
  *             elif lentype==2: #l<1/e
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<(1/np.exp(1)))[0][0]+1], np.arange(np.where(h<(1/np.exp(1)))[0][0]+1) ))             # <<<<<<<<<<<<<<
@@ -6831,7 +6831,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
           break;
           default:
 
-          /* "pysesa/_lengthscale.pyx":351
+          /* "pysesa/lengthscale.pyx":351
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<(1/np.exp(1)))[0][0]+1], np.arange(np.where(h<(1/np.exp(1)))[0][0]+1) ))
  *             else: #l<0
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0)[0][0]+1], np.arange(np.where(h<0)[0][0]+1) ))             # <<<<<<<<<<<<<<
@@ -7054,7 +7054,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_23); __pyx_t_23 = 0;
 
-      /* "pysesa/_lengthscale.pyx":352
+      /* "pysesa/lengthscale.pyx":352
  *             else: #l<0
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0)[0][0]+1], np.arange(np.where(h<0)[0][0]+1) ))
  *          except:             # <<<<<<<<<<<<<<
@@ -7062,13 +7062,13 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
  *       else:
  */
       /*except:*/ {
-        __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_23, &__pyx_t_1, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 352; __pyx_clineno = __LINE__; goto __pyx_L8_except_error;}
         __Pyx_GOTREF(__pyx_t_23);
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_7);
 
-        /* "pysesa/_lengthscale.pyx":353
+        /* "pysesa/lengthscale.pyx":353
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0)[0][0]+1], np.arange(np.where(h<0)[0][0]+1) ))
  *          except:
  *             return np.nan             # <<<<<<<<<<<<<<
@@ -7110,7 +7110,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
   }
   /*else*/ {
 
-    /* "pysesa/_lengthscale.pyx":355
+    /* "pysesa/lengthscale.pyx":355
  *             return np.nan
  *       else:
  *          return np.nan             # <<<<<<<<<<<<<<
@@ -7128,7 +7128,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     goto __pyx_L0;
   }
 
-  /* "pysesa/_lengthscale.pyx":287
+  /* "pysesa/lengthscale.pyx":287
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef double _get_lengthscale(self, np.ndarray[np.float64_t, ndim=2] im, int lentype, double res, int nx, int ny):             # <<<<<<<<<<<<<<
@@ -7159,7 +7159,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_mag1.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_WriteUnraisable("pysesa._lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
+  __Pyx_WriteUnraisable("pysesa.lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7179,9 +7179,9 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(stru
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale[] = "\n      Calculates the integral lengthscale of \n      a tapered 2D grid of a Nx3 point cloud\n      using 1 of 3 available methods\n\n      Syntax\n      ----------\n      lengthscale = pysesa.lengthscale._get_lengthscale(points, lentype, res, nx, ny)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   tapered 2D grid of Nx3 point cloud\n      res : float\n           spatial grid resolution to create a grid\n      lentype : int\n   \t   lengthscale type:\n           1, l<0.5\n           2, l<1/e\n           3, l<0\n      nx : int\n      \t   size of im in x direction\n      ny : int\n      \t   size of im in y direction\n\n      Returns\n      ----------\n      self.lengthscale: float\n   \t   integral lengthscale\n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_5_get_lengthscale(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_4_get_lengthscale[] = "\n      Calculates the integral lengthscale of \n      a tapered 2D grid of a Nx3 point cloud\n      using 1 of 3 available methods\n\n      Syntax\n      ----------\n      lengthscale = pysesa.lengthscale._get_lengthscale(points, lentype, res, nx, ny)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   tapered 2D grid of Nx3 point cloud\n      res : float\n           spatial grid resolution to create a grid\n      lentype : int\n   \t   lengthscale type:\n           1, l<0.5\n           2, l<1/e\n           3, l<0\n      nx : int\n      \t   size of im in x direction\n      ny : int\n      \t   size of im in y direction\n\n      Returns\n      ----------\n      self.lengthscale: float\n   \t   integral lengthscale\n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_5_get_lengthscale(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_im = 0;
   int __pyx_v_lentype;
   double __pyx_v_res;
@@ -7256,12 +7256,12 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_get_lengthscale", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), __pyx_v_im, __pyx_v_lentype, __pyx_v_res, __pyx_v_nx, __pyx_v_ny);
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_4_get_lengthscale(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), __pyx_v_im, __pyx_v_lentype, __pyx_v_res, __pyx_v_nx, __pyx_v_ny);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7272,7 +7272,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_4_get_lengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_lentype, double __pyx_v_res, int __pyx_v_nx, int __pyx_v_ny) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -7292,7 +7292,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale(__pyx_v_self, __pyx_v_im, __pyx_v_lentype, __pyx_v_res, __pyx_v_nx, __pyx_v_ny, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6pysesa_11lengthscale_11lengthscale__get_lengthscale(__pyx_v_self, __pyx_v_im, __pyx_v_lentype, __pyx_v_res, __pyx_v_nx, __pyx_v_ny, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 287; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7305,7 +7305,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._get_lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7316,7 +7316,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":374
+/* "pysesa/lengthscale.pyx":374
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Hanning2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -7324,8 +7324,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale
  *       Returns a 2D Hanning (a weighted cosine) tapered 2D data
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_7_Hanning2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Hanning2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
   int __pyx_v_nx;
   int __pyx_v_ny;
   PyArrayObject *__pyx_v_Wss = 0;
@@ -7376,7 +7376,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_Hanning2D); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 374; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_7_Hanning2D)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -7413,7 +7413,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":394
+  /* "pysesa/lengthscale.pyx":394
  *       '''
  *       cdef int nx, ny
  *       ny, nx= np.shape(im)             # <<<<<<<<<<<<<<
@@ -7507,7 +7507,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
   __pyx_v_ny = __pyx_t_7;
   __pyx_v_nx = __pyx_t_8;
 
-  /* "pysesa/_lengthscale.pyx":396
+  /* "pysesa/lengthscale.pyx":396
  *       ny, nx= np.shape(im)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -7564,7 +7564,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
   __pyx_v_Wss = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":398
+  /* "pysesa/lengthscale.pyx":398
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
  * 
  *       Wss = np.sqrt(np.outer(np.hanning(ny),np.hanning(nx)))             # <<<<<<<<<<<<<<
@@ -7722,7 +7722,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
   __Pyx_DECREF_SET(__pyx_v_Wss, ((PyArrayObject *)__pyx_t_4));
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":399
+  /* "pysesa/lengthscale.pyx":399
  * 
  *       Wss = np.sqrt(np.outer(np.hanning(ny),np.hanning(nx)))
  *       return im*Wss             # <<<<<<<<<<<<<<
@@ -7737,7 +7737,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":374
+  /* "pysesa/lengthscale.pyx":374
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Hanning2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -7762,7 +7762,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_Wss.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Hanning2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Hanning2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7776,9 +7776,9 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(CY
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D[] = "\n      Returns a 2D Hanning (a weighted cosine) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Hanning2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_7_Hanning2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_6_Hanning2D[] = "\n      Returns a 2D Hanning (a weighted cosine) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Hanning2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_7_Hanning2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -7786,7 +7786,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D(PyObj
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_Hanning2D (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 374; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_6_Hanning2D(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
 
   /* function exit code */
   goto __pyx_L0;
@@ -7797,7 +7797,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D(PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_6_Hanning2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -7817,7 +7817,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(struc
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 374; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_11lengthscale_11lengthscale__Hanning2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 374; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -7830,7 +7830,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(struc
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Hanning2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Hanning2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -7841,7 +7841,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(struc
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":406
+/* "pysesa/lengthscale.pyx":406
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Hamming2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -7849,8 +7849,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D(struc
  *       Returns a 2D Hamming (a weighted cosine) tapered 2D data
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_9_Hamming2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Hamming2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
   int __pyx_v_nx;
   int __pyx_v_ny;
   PyArrayObject *__pyx_v_Wss = 0;
@@ -7901,7 +7901,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_Hamming2D); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 406; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_9_Hamming2D)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -7938,7 +7938,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":426
+  /* "pysesa/lengthscale.pyx":426
  *       '''
  *       cdef int nx, ny
  *       ny, nx= np.shape(im)             # <<<<<<<<<<<<<<
@@ -8032,7 +8032,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
   __pyx_v_ny = __pyx_t_7;
   __pyx_v_nx = __pyx_t_8;
 
-  /* "pysesa/_lengthscale.pyx":428
+  /* "pysesa/lengthscale.pyx":428
  *       ny, nx= np.shape(im)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -8089,7 +8089,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
   __pyx_v_Wss = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":430
+  /* "pysesa/lengthscale.pyx":430
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
  * 
  *       Wss = np.sqrt(np.outer(np.hamming(ny),np.hamming(nx)))             # <<<<<<<<<<<<<<
@@ -8247,7 +8247,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
   __Pyx_DECREF_SET(__pyx_v_Wss, ((PyArrayObject *)__pyx_t_4));
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":431
+  /* "pysesa/lengthscale.pyx":431
  * 
  *       Wss = np.sqrt(np.outer(np.hamming(ny),np.hamming(nx)))
  *       return im*Wss             # <<<<<<<<<<<<<<
@@ -8262,7 +8262,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":406
+  /* "pysesa/lengthscale.pyx":406
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Hamming2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -8287,7 +8287,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_Wss.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Hamming2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Hamming2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8301,9 +8301,9 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(CY
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D[] = "\n      Returns a 2D Hamming (a weighted cosine) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Hamming2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_9_Hamming2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_8_Hamming2D[] = "\n      Returns a 2D Hamming (a weighted cosine) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Hamming2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_9_Hamming2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -8311,7 +8311,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D(PyObj
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_Hamming2D (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 406; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_8_Hamming2D(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
 
   /* function exit code */
   goto __pyx_L0;
@@ -8322,7 +8322,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D(PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_8_Hamming2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -8342,7 +8342,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(struc
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 406; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_11lengthscale_11lengthscale__Hamming2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 406; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8355,7 +8355,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(struc
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Hamming2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Hamming2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8366,7 +8366,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(struc
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":438
+/* "pysesa/lengthscale.pyx":438
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Blackman2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -8374,8 +8374,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D(struc
  *       Returns a 2D Blackman (a summation of cosines) tapered 2D data
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_11_Blackman2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Blackman2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
   int __pyx_v_nx;
   int __pyx_v_ny;
   PyArrayObject *__pyx_v_Wss = 0;
@@ -8426,7 +8426,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_Blackman2D); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 438; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_11_Blackman2D)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -8463,7 +8463,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":458
+  /* "pysesa/lengthscale.pyx":458
  *       '''
  *       cdef int nx, ny
  *       ny, nx= np.shape(im)             # <<<<<<<<<<<<<<
@@ -8557,7 +8557,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
   __pyx_v_ny = __pyx_t_7;
   __pyx_v_nx = __pyx_t_8;
 
-  /* "pysesa/_lengthscale.pyx":460
+  /* "pysesa/lengthscale.pyx":460
  *       ny, nx= np.shape(im)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -8614,7 +8614,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
   __pyx_v_Wss = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":462
+  /* "pysesa/lengthscale.pyx":462
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
  * 
  *       Wss = np.sqrt(np.outer(np.blackman(ny),np.blackman(nx)))             # <<<<<<<<<<<<<<
@@ -8772,7 +8772,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
   __Pyx_DECREF_SET(__pyx_v_Wss, ((PyArrayObject *)__pyx_t_4));
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":463
+  /* "pysesa/lengthscale.pyx":463
  * 
  *       Wss = np.sqrt(np.outer(np.blackman(ny),np.blackman(nx)))
  *       return im*Wss             # <<<<<<<<<<<<<<
@@ -8787,7 +8787,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":438
+  /* "pysesa/lengthscale.pyx":438
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Blackman2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -8812,7 +8812,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_Wss.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Blackman2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Blackman2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8826,9 +8826,9 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(C
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D[] = "\n      Returns a 2D Blackman (a summation of cosines) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Blackman2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_11_Blackman2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_10_Blackman2D[] = "\n      Returns a 2D Blackman (a summation of cosines) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Blackman2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_11_Blackman2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -8836,7 +8836,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D(PyO
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_Blackman2D (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 438; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_10_Blackman2D(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
 
   /* function exit code */
   goto __pyx_L0;
@@ -8847,7 +8847,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_10_Blackman2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -8867,7 +8867,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(str
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 438; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_11lengthscale_11lengthscale__Blackman2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 438; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -8880,7 +8880,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(str
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Blackman2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Blackman2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8891,7 +8891,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(str
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":470
+/* "pysesa/lengthscale.pyx":470
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Bartlett2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -8899,8 +8899,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D(str
  *       Returns a 2D Bartlett (a triangular) tapered 2D data
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_13_Bartlett2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__Bartlett2D(CYTHON_UNUSED struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_skip_dispatch) {
   int __pyx_v_nx;
   int __pyx_v_ny;
   PyArrayObject *__pyx_v_Wss = 0;
@@ -8951,7 +8951,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_Bartlett2D); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_13_Bartlett2D)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -8988,7 +8988,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":490
+  /* "pysesa/lengthscale.pyx":490
  *       '''
  *       cdef int nx, ny
  *       ny, nx= np.shape(im)             # <<<<<<<<<<<<<<
@@ -9082,7 +9082,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
   __pyx_v_ny = __pyx_t_7;
   __pyx_v_nx = __pyx_t_8;
 
-  /* "pysesa/_lengthscale.pyx":492
+  /* "pysesa/lengthscale.pyx":492
  *       ny, nx= np.shape(im)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -9139,7 +9139,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
   __pyx_v_Wss = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":494
+  /* "pysesa/lengthscale.pyx":494
  *       cdef np.ndarray[np.float64_t, ndim=2] Wss = np.empty((ny, nx),dtype=np.float64)
  * 
  *       Wss = np.sqrt(np.outer(np.bartlett(ny),np.bartlett(nx)))             # <<<<<<<<<<<<<<
@@ -9297,7 +9297,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
   __Pyx_DECREF_SET(__pyx_v_Wss, ((PyArrayObject *)__pyx_t_4));
   __pyx_t_4 = 0;
 
-  /* "pysesa/_lengthscale.pyx":495
+  /* "pysesa/lengthscale.pyx":495
  * 
  *       Wss = np.sqrt(np.outer(np.bartlett(ny),np.bartlett(nx)))
  *       return im*Wss             # <<<<<<<<<<<<<<
@@ -9312,7 +9312,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":470
+  /* "pysesa/lengthscale.pyx":470
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _Bartlett2D(self, np.ndarray[np.float64_t, ndim=2] im):             # <<<<<<<<<<<<<<
@@ -9337,7 +9337,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_Wss.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Bartlett2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Bartlett2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9351,9 +9351,9 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(C
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D[] = "\n      Returns a 2D Bartlett (a triangular) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Bartlett2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_13_Bartlett2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_12_Bartlett2D[] = "\n      Returns a 2D Bartlett (a triangular) tapered 2D data\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._Bartlett2D(im)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid \n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_13_Bartlett2D(PyObject *__pyx_v_self, PyObject *__pyx_v_im) {
   CYTHON_UNUSED int __pyx_lineno = 0;
   CYTHON_UNUSED const char *__pyx_filename = NULL;
   CYTHON_UNUSED int __pyx_clineno = 0;
@@ -9361,7 +9361,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D(PyO
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("_Bartlett2D (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_12_Bartlett2D(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), ((PyArrayObject *)__pyx_v_im));
 
   /* function exit code */
   goto __pyx_L0;
@@ -9372,7 +9372,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_12_Bartlett2D(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -9392,7 +9392,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(str
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_11lengthscale_11lengthscale__Bartlett2D(__pyx_v_self, __pyx_v_im, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 470; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -9405,7 +9405,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(str
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._Bartlett2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._Bartlett2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9416,7 +9416,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(str
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":502
+/* "pysesa/lengthscale.pyx":502
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _taper_im(self, np.ndarray[np.float64_t, ndim=2] im, int taper):             # <<<<<<<<<<<<<<
@@ -9424,8 +9424,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D(str
  *       Returns the tapered 2D grid of 3D pointcloud for spectral analysis
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_15_taper_im(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale__taper_im(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper, int __pyx_skip_dispatch) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyArrayObject *__pyx_r = NULL;
@@ -9461,7 +9461,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_taper_im); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_15_taper_im)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_taper); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_GOTREF(__pyx_t_3);
@@ -9502,7 +9502,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":527
+  /* "pysesa/lengthscale.pyx":527
  * 
  *       '''
  *       im[np.isnan(im)] = np.mean(im.flatten())             # <<<<<<<<<<<<<<
@@ -9594,7 +9594,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":528
+  /* "pysesa/lengthscale.pyx":528
  *       '''
  *       im[np.isnan(im)] = np.mean(im.flatten())
  *       im[np.isinf(im)] = np.mean(im.flatten())             # <<<<<<<<<<<<<<
@@ -9686,7 +9686,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":529
+  /* "pysesa/lengthscale.pyx":529
  *       im[np.isnan(im)] = np.mean(im.flatten())
  *       im[np.isinf(im)] = np.mean(im.flatten())
  *       im[im<=0] = np.mean(im.flatten())             # <<<<<<<<<<<<<<
@@ -9749,7 +9749,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":535
+  /* "pysesa/lengthscale.pyx":535
  *       elif taper==2:
  *          im = self._Hamming2D(im)
  *       elif taper==3:             # <<<<<<<<<<<<<<
@@ -9758,7 +9758,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
  */
   switch (__pyx_v_taper) {
 
-    /* "pysesa/_lengthscale.pyx":531
+    /* "pysesa/lengthscale.pyx":531
  *       im[im<=0] = np.mean(im.flatten())
  * 
  *       if taper==1:             # <<<<<<<<<<<<<<
@@ -9767,14 +9767,14 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
  */
     case 1:
 
-    /* "pysesa/_lengthscale.pyx":532
+    /* "pysesa/lengthscale.pyx":532
  * 
  *       if taper==1:
  *          im = self._Hanning2D(im)             # <<<<<<<<<<<<<<
  *       elif taper==2:
  *          im = self._Hamming2D(im)
  */
-    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Hanning2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Hanning2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 532; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -9796,7 +9796,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
     __pyx_t_1 = 0;
     break;
 
-    /* "pysesa/_lengthscale.pyx":533
+    /* "pysesa/lengthscale.pyx":533
  *       if taper==1:
  *          im = self._Hanning2D(im)
  *       elif taper==2:             # <<<<<<<<<<<<<<
@@ -9805,14 +9805,14 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
  */
     case 2:
 
-    /* "pysesa/_lengthscale.pyx":534
+    /* "pysesa/lengthscale.pyx":534
  *          im = self._Hanning2D(im)
  *       elif taper==2:
  *          im = self._Hamming2D(im)             # <<<<<<<<<<<<<<
  *       elif taper==3:
  *          im = self._Blackman2D(im)
  */
-    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Hamming2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Hamming2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 534; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -9834,7 +9834,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
     __pyx_t_1 = 0;
     break;
 
-    /* "pysesa/_lengthscale.pyx":535
+    /* "pysesa/lengthscale.pyx":535
  *       elif taper==2:
  *          im = self._Hamming2D(im)
  *       elif taper==3:             # <<<<<<<<<<<<<<
@@ -9843,14 +9843,14 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
  */
     case 3:
 
-    /* "pysesa/_lengthscale.pyx":536
+    /* "pysesa/lengthscale.pyx":536
  *          im = self._Hamming2D(im)
  *       elif taper==3:
  *          im = self._Blackman2D(im)             # <<<<<<<<<<<<<<
  *       else:
  *          im = self._Bartlett2D(im)
  */
-    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Blackman2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Blackman2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 536; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -9873,14 +9873,14 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
     break;
     default:
 
-    /* "pysesa/_lengthscale.pyx":538
+    /* "pysesa/lengthscale.pyx":538
  *          im = self._Blackman2D(im)
  *       else:
  *          im = self._Bartlett2D(im)             # <<<<<<<<<<<<<<
  *       return im
  * 
  */
-    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Bartlett2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_1 = ((PyObject *)((struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale *)__pyx_v_self->__pyx_vtab)->_Bartlett2D(__pyx_v_self, ((PyArrayObject *)__pyx_v_im), 0)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 538; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -9903,7 +9903,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
     break;
   }
 
-  /* "pysesa/_lengthscale.pyx":539
+  /* "pysesa/lengthscale.pyx":539
  *       else:
  *          im = self._Bartlett2D(im)
  *       return im             # <<<<<<<<<<<<<<
@@ -9915,7 +9915,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
   __pyx_r = ((PyArrayObject *)__pyx_v_im);
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":502
+  /* "pysesa/lengthscale.pyx":502
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] _taper_im(self, np.ndarray[np.float64_t, ndim=2] im, int taper):             # <<<<<<<<<<<<<<
@@ -9935,7 +9935,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._taper_im", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._taper_im", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -9948,9 +9948,9 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(str
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_14_taper_im[] = "\n      Returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._taper(im, taper)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n      taper : int\n   \t   flag for taper type:\n           1, Hanning (Hann)\n           2, Hamming\n           3, Blackman\n           4, Bartlett\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid of 3D pointcloud\n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_15_taper_im(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_14_taper_im[] = "\n      Returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale._taper(im, taper)\n\n      Parameters\n      ----------\n      im : ndarray\n   \t   2D grid of Nx3 point cloud\n      taper : int\n   \t   flag for taper type:\n           1, Hanning (Hann)\n           2, Hamming\n           3, Blackman\n           4, Bartlett\n\n      Returns\n      ----------\n      im: ndarray\n   \t   tapered 2D grid of 3D pointcloud\n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_15_taper_im(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_im = 0;
   int __pyx_v_taper;
   int __pyx_lineno = 0;
@@ -9998,12 +9998,12 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im(PyObj
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_taper_im", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._taper_im", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._taper_im", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_im), __pyx_ptype_5numpy_ndarray, 1, "im", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self), __pyx_v_im, __pyx_v_taper);
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_14_taper_im(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self), __pyx_v_im, __pyx_v_taper);
 
   /* function exit code */
   goto __pyx_L0;
@@ -10014,7 +10014,7 @@ static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im(PyObj
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_14_taper_im(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, PyArrayObject *__pyx_v_im, int __pyx_v_taper) {
   __Pyx_LocalBuf_ND __pyx_pybuffernd_im;
   __Pyx_Buffer __pyx_pybuffer_im;
   PyObject *__pyx_r = NULL;
@@ -10034,7 +10034,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(struc
   }
   __pyx_pybuffernd_im.diminfo[0].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_im.diminfo[0].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_im.diminfo[1].strides = __pyx_pybuffernd_im.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_im.diminfo[1].shape = __pyx_pybuffernd_im.rcbuffer->pybuffer.shape[1];
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im(__pyx_v_self, __pyx_v_im, __pyx_v_taper, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_11lengthscale_11lengthscale__taper_im(__pyx_v_self, __pyx_v_im, __pyx_v_taper, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 502; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10047,7 +10047,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(struc
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_im.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale._taper_im", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale._taper_im", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -10058,7 +10058,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(struc
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":546
+/* "pysesa/lengthscale.pyx":546
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef double getlengthscale(self):             # <<<<<<<<<<<<<<
@@ -10066,8 +10066,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_14_taper_im(struc
  *       Returns the integral lengthscale
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static double __pyx_f_6pysesa_11lengthscale_11lengthscale_getlengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch) {
   double __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10085,7 +10085,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getlengthscale); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_17getlengthscale)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_17getlengthscale)) {
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
       if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -10114,7 +10114,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":565
+  /* "pysesa/lengthscale.pyx":565
  * 
  *       '''
  *       return self.lengthscale             # <<<<<<<<<<<<<<
@@ -10125,7 +10125,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct
   __pyx_r = __pyx_t_5;
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":546
+  /* "pysesa/lengthscale.pyx":546
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef double getlengthscale(self):             # <<<<<<<<<<<<<<
@@ -10139,7 +10139,7 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_WriteUnraisable("pysesa._lengthscale.lengthscale.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
+  __Pyx_WriteUnraisable("pysesa.lengthscale.lengthscale.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -10147,20 +10147,20 @@ static double __pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(struct
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_16getlengthscale[] = "\n      Returns the integral lengthscale\n\n      Syntax\n      ----------\n      lengthscale = pysesa.lengthscale.getlengthscale()\n\n      Parameters\n      ----------\n      self : instance\n   \t   pysesa.lengthscale instance\n\n      Returns\n      ----------\n      self.lengthscale: float\n   \t   integral lengthscale\n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_16getlengthscale[] = "\n      Returns the integral lengthscale\n\n      Syntax\n      ----------\n      lengthscale = pysesa.lengthscale.getlengthscale()\n\n      Parameters\n      ----------\n      self : instance\n   \t   pysesa.lengthscale instance\n\n      Returns\n      ----------\n      self.lengthscale: float\n   \t   integral lengthscale\n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_17getlengthscale(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getlengthscale (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_16getlengthscale(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_16getlengthscale(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10169,7 +10169,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getlengthscale", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_f_6pysesa_11lengthscale_11lengthscale_getlengthscale(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 546; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10178,7 +10178,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale.getlengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10186,7 +10186,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(
   return __pyx_r;
 }
 
-/* "pysesa/_lengthscale.pyx":573
+/* "pysesa/lengthscale.pyx":573
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] getdata(self):             # <<<<<<<<<<<<<<
@@ -10194,8 +10194,8 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_16getlengthscale(
  *       Returns the tapered 2D grid of 3D pointcloud for spectral analysis
  */
 
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_19getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_19getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_11lengthscale_11lengthscale_getdata(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self, int __pyx_skip_dispatch) {
   PyArrayObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10212,7 +10212,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struc
   else if (unlikely(Py_TYPE(((PyObject *)__pyx_v_self))->tp_dictoffset != 0)) {
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getdata); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
-    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_19getdata)) {
+    if (!PyCFunction_Check(__pyx_t_1) || (PyCFunction_GET_FUNCTION(__pyx_t_1) != (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_19getdata)) {
       __Pyx_XDECREF(((PyObject *)__pyx_r));
       __Pyx_INCREF(__pyx_t_1);
       __pyx_t_3 = __pyx_t_1; __pyx_t_4 = NULL;
@@ -10242,7 +10242,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struc
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_lengthscale.pyx":592
+  /* "pysesa/lengthscale.pyx":592
  * 
  *       '''
  *       return self.data             # <<<<<<<<<<<<<<
@@ -10255,7 +10255,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struc
   __pyx_r = ((PyArrayObject *)__pyx_v_self->data);
   goto __pyx_L0;
 
-  /* "pysesa/_lengthscale.pyx":573
+  /* "pysesa/lengthscale.pyx":573
  *    @cython.wraparound(False)
  *    @cython.nonecheck(False)
  *    cpdef np.ndarray[np.float64_t, ndim=2] getdata(self):             # <<<<<<<<<<<<<<
@@ -10269,7 +10269,7 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struc
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF((PyObject *)__pyx_r);
@@ -10278,20 +10278,20 @@ static PyArrayObject *__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(struc
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_19getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_6pysesa_12_lengthscale_11lengthscale_18getdata[] = "\n      Returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale.getdata()\n\n      Parameters\n      ----------\n      self : instance\n   \t   pysesa.lengthscale instance\n\n      Returns \n      ----------\n      self.data: ndarray\n   \t   tapered 2D grid of 3D pointcloud\n\n      ";
-static PyObject *__pyx_pw_6pysesa_12_lengthscale_11lengthscale_19getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_19getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_6pysesa_11lengthscale_11lengthscale_18getdata[] = "\n      Returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n      Syntax\n      ----------\n      im = pysesa.lengthscale.getdata()\n\n      Parameters\n      ----------\n      self : instance\n   \t   pysesa.lengthscale instance\n\n      Returns \n      ----------\n      self.data: ndarray\n   \t   tapered 2D grid of 3D pointcloud\n\n      ";
+static PyObject *__pyx_pw_6pysesa_11lengthscale_11lengthscale_19getdata(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("getdata (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_12_lengthscale_11lengthscale_18getdata(((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_11lengthscale_11lengthscale_18getdata(((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_18getdata(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_11lengthscale_11lengthscale_18getdata(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10300,7 +10300,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_18getdata(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getdata", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_11lengthscale_11lengthscale_getdata(__pyx_v_self, 1)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 573; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -10309,7 +10309,7 @@ static PyObject *__pyx_pf_6pysesa_12_lengthscale_11lengthscale_18getdata(struct 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._lengthscale.lengthscale.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.lengthscale.lengthscale.getdata", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12314,10 +12314,10 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_6pysesa_12_lengthscale_lengthscale __pyx_vtable_6pysesa_12_lengthscale_lengthscale;
+static struct __pyx_vtabstruct_6pysesa_11lengthscale_lengthscale __pyx_vtable_6pysesa_11lengthscale_lengthscale;
 
-static PyObject *__pyx_tp_new_6pysesa_12_lengthscale_lengthscale(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *p;
+static PyObject *__pyx_tp_new_6pysesa_11lengthscale_lengthscale(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_6pysesa_11lengthscale_lengthscale *p;
   PyObject *o;
   if (likely((t->tp_flags & Py_TPFLAGS_IS_ABSTRACT) == 0)) {
     o = (*t->tp_alloc)(t, 0);
@@ -12325,16 +12325,16 @@ static PyObject *__pyx_tp_new_6pysesa_12_lengthscale_lengthscale(PyTypeObject *t
     o = (PyObject *) PyBaseObject_Type.tp_new(t, __pyx_empty_tuple, 0);
   }
   if (unlikely(!o)) return 0;
-  p = ((struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)o);
-  p->__pyx_vtab = __pyx_vtabptr_6pysesa_12_lengthscale_lengthscale;
+  p = ((struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)o);
+  p->__pyx_vtab = __pyx_vtabptr_6pysesa_11lengthscale_lengthscale;
   p->data = Py_None; Py_INCREF(Py_None);
   p->lengthscale = Py_None; Py_INCREF(Py_None);
   p->tree = Py_None; Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_6pysesa_12_lengthscale_lengthscale(PyObject *o) {
-  struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *p = (struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)o;
+static void __pyx_tp_dealloc_6pysesa_11lengthscale_lengthscale(PyObject *o) {
+  struct __pyx_obj_6pysesa_11lengthscale_lengthscale *p = (struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)o;
   #if PY_VERSION_HEX >= 0x030400a1
   if (unlikely(Py_TYPE(o)->tp_finalize) && !_PyGC_FINALIZED(o)) {
     if (PyObject_CallFinalizerFromDealloc(o)) return;
@@ -12347,9 +12347,9 @@ static void __pyx_tp_dealloc_6pysesa_12_lengthscale_lengthscale(PyObject *o) {
   (*Py_TYPE(o)->tp_free)(o);
 }
 
-static int __pyx_tp_traverse_6pysesa_12_lengthscale_lengthscale(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_6pysesa_11lengthscale_lengthscale(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *p = (struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)o;
+  struct __pyx_obj_6pysesa_11lengthscale_lengthscale *p = (struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)o;
   if (p->data) {
     e = (*v)(p->data, a); if (e) return e;
   }
@@ -12362,9 +12362,9 @@ static int __pyx_tp_traverse_6pysesa_12_lengthscale_lengthscale(PyObject *o, vis
   return 0;
 }
 
-static int __pyx_tp_clear_6pysesa_12_lengthscale_lengthscale(PyObject *o) {
+static int __pyx_tp_clear_6pysesa_11lengthscale_lengthscale(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *p = (struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *)o;
+  struct __pyx_obj_6pysesa_11lengthscale_lengthscale *p = (struct __pyx_obj_6pysesa_11lengthscale_lengthscale *)o;
   tmp = ((PyObject*)p->data);
   p->data = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -12377,25 +12377,25 @@ static int __pyx_tp_clear_6pysesa_12_lengthscale_lengthscale(PyObject *o) {
   return 0;
 }
 
-static PyMethodDef __pyx_methods_6pysesa_12_lengthscale_lengthscale[] = {
-  {"_radial_data", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_3_radial_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_2_radial_data},
-  {"_get_lengthscale", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_5_get_lengthscale, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_4_get_lengthscale},
-  {"_Hanning2D", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_7_Hanning2D, METH_O, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_6_Hanning2D},
-  {"_Hamming2D", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_9_Hamming2D, METH_O, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_8_Hamming2D},
-  {"_Blackman2D", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_11_Blackman2D, METH_O, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_10_Blackman2D},
-  {"_Bartlett2D", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_13_Bartlett2D, METH_O, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_12_Bartlett2D},
-  {"_taper_im", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_15_taper_im, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_14_taper_im},
-  {"getlengthscale", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_17getlengthscale, METH_NOARGS, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_16getlengthscale},
-  {"getdata", (PyCFunction)__pyx_pw_6pysesa_12_lengthscale_11lengthscale_19getdata, METH_NOARGS, __pyx_doc_6pysesa_12_lengthscale_11lengthscale_18getdata},
+static PyMethodDef __pyx_methods_6pysesa_11lengthscale_lengthscale[] = {
+  {"_radial_data", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_3_radial_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_11lengthscale_11lengthscale_2_radial_data},
+  {"_get_lengthscale", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_5_get_lengthscale, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_11lengthscale_11lengthscale_4_get_lengthscale},
+  {"_Hanning2D", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_7_Hanning2D, METH_O, __pyx_doc_6pysesa_11lengthscale_11lengthscale_6_Hanning2D},
+  {"_Hamming2D", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_9_Hamming2D, METH_O, __pyx_doc_6pysesa_11lengthscale_11lengthscale_8_Hamming2D},
+  {"_Blackman2D", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_11_Blackman2D, METH_O, __pyx_doc_6pysesa_11lengthscale_11lengthscale_10_Blackman2D},
+  {"_Bartlett2D", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_13_Bartlett2D, METH_O, __pyx_doc_6pysesa_11lengthscale_11lengthscale_12_Bartlett2D},
+  {"_taper_im", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_15_taper_im, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_11lengthscale_11lengthscale_14_taper_im},
+  {"getlengthscale", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_17getlengthscale, METH_NOARGS, __pyx_doc_6pysesa_11lengthscale_11lengthscale_16getlengthscale},
+  {"getdata", (PyCFunction)__pyx_pw_6pysesa_11lengthscale_11lengthscale_19getdata, METH_NOARGS, __pyx_doc_6pysesa_11lengthscale_11lengthscale_18getdata},
   {0, 0, 0, 0}
 };
 
-static PyTypeObject __pyx_type_6pysesa_12_lengthscale_lengthscale = {
+static PyTypeObject __pyx_type_6pysesa_11lengthscale_lengthscale = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pysesa._lengthscale.lengthscale", /*tp_name*/
-  sizeof(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale), /*tp_basicsize*/
+  "pysesa.lengthscale.lengthscale", /*tp_name*/
+  sizeof(struct __pyx_obj_6pysesa_11lengthscale_lengthscale), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_6pysesa_12_lengthscale_lengthscale, /*tp_dealloc*/
+  __pyx_tp_dealloc_6pysesa_11lengthscale_lengthscale, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -12416,13 +12416,13 @@ static PyTypeObject __pyx_type_6pysesa_12_lengthscale_lengthscale = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   "\n   Calculates the integral lengthscale of a Nx3 point cloud\n   using 1 of 3 available methods\n   and also returns the tapered 2D grid of 3D pointcloud for spectral analysis\n\n   Syntax\n   ----------\n   im = pysesa.lengthscale(points, res, lentype, taper, method).getdata()\n   lengthscale = pysesa.lengthscale(points, res, lentype, taper, method).getlengthscale()\n\n   Parameters\n   ------------\n   points : ndarray\n   \tNx3 point cloud\n\n   Other Parameters\n   ------------------\n   res : float, *optional* [default = 0.05]\n        spatial grid resolution to create a grid\n   lentype : int, *optional* [default = 0, l<0.5]\n   \tlengthscale type:\n        1, l<0.5\n\n        2, l<1/e\n\n        3, l<0\n\n   taper : int, *optional* [default = Hanning]\n   \tflag for taper type:\n        1, Hanning (Hann)\n\n        2, Hamming\n\n        3, Blackman\n\n        4, Bartlett\n\n   method : str, *optional* [default = 'nearest']\n   \tgridding type\n\n   Returns [requested through .getdata()]\n   -----------------------------------------\n   self.data: ndarray\n   \ttapered 2D grid of 3D pointcloud\n\n   Returns [requested through .getlengthscale()]\n   ----------------------------------------------\n   self.lengthscale: float\n   \tintegral lengthscale\n\n   ", /*tp_doc*/
-  __pyx_tp_traverse_6pysesa_12_lengthscale_lengthscale, /*tp_traverse*/
-  __pyx_tp_clear_6pysesa_12_lengthscale_lengthscale, /*tp_clear*/
+  __pyx_tp_traverse_6pysesa_11lengthscale_lengthscale, /*tp_traverse*/
+  __pyx_tp_clear_6pysesa_11lengthscale_lengthscale, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_6pysesa_12_lengthscale_lengthscale, /*tp_methods*/
+  __pyx_methods_6pysesa_11lengthscale_lengthscale, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -12430,9 +12430,9 @@ static PyTypeObject __pyx_type_6pysesa_12_lengthscale_lengthscale = {
   0, /*tp_descr_get*/
   0, /*tp_descr_set*/
   0, /*tp_dictoffset*/
-  __pyx_pw_6pysesa_12_lengthscale_11lengthscale_1__init__, /*tp_init*/
+  __pyx_pw_6pysesa_11lengthscale_11lengthscale_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_6pysesa_12_lengthscale_lengthscale, /*tp_new*/
+  __pyx_tp_new_6pysesa_11lengthscale_lengthscale, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -12458,7 +12458,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "_lengthscale",
+    "lengthscale",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -12574,7 +12574,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pysesa/_lengthscale.pyx":175
+  /* "pysesa/lengthscale.pyx":175
  * 
  *       # pre-allocate some more arrays and get the ranges of x and y
  *       cdef float nnx = np.max(points[:,0]) - np.min(points[:,0])             # <<<<<<<<<<<<<<
@@ -12594,7 +12594,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "pysesa/_lengthscale.pyx":176
+  /* "pysesa/lengthscale.pyx":176
  *       # pre-allocate some more arrays and get the ranges of x and y
  *       cdef float nnx = np.max(points[:,0]) - np.min(points[:,0])
  *       cdef float nny = np.max(points[:,1]) - np.min(points[:,1])             # <<<<<<<<<<<<<<
@@ -12614,7 +12614,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "pysesa/_lengthscale.pyx":201
+  /* "pysesa/lengthscale.pyx":201
  *       #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
  * 
  *       tree = KDTree(zip(points[:,0], points[:,1]))             # <<<<<<<<<<<<<<
@@ -12634,7 +12634,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "pysesa/_lengthscale.pyx":203
+  /* "pysesa/lengthscale.pyx":203
  *       tree = KDTree(zip(points[:,0], points[:,1]))
  *       _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
  *       im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))             # <<<<<<<<<<<<<<
@@ -12648,7 +12648,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "pysesa/_lengthscale.pyx":254
+  /* "pysesa/lengthscale.pyx":254
  *        cdef np.ndarray[np.float64_t, ndim=1] y1 = np.empty(npiy,dtype=np.float64)
  * 
  *        cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -12659,7 +12659,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "pysesa/_lengthscale.pyx":255
+  /* "pysesa/lengthscale.pyx":255
  * 
  *        cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] maxrad = np.empty(1,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -12670,7 +12670,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "pysesa/_lengthscale.pyx":256
+  /* "pysesa/lengthscale.pyx":256
  *        cdef np.ndarray[np.float64_t, ndim=1] minrad = np.empty(1,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] maxrad = np.empty(1,dtype=np.float64)
  *        cdef np.ndarray[np.float64_t, ndim=1] dr = np.empty(1,dtype=np.float64)             # <<<<<<<<<<<<<<
@@ -12681,7 +12681,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "pysesa/_lengthscale.pyx":349
+  /* "pysesa/lengthscale.pyx":349
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<0.5)[0][0]+1], np.arange(np.where(h<0.5)[0][0]+1) ))
  *             elif lentype==2: #l<1/e
  *                return res*(2*np.pi)*np.abs(trapz(h[:np.where(h<(1/np.exp(1)))[0][0]+1], np.arange(np.where(h<(1/np.exp(1)))[0][0]+1) ))             # <<<<<<<<<<<<<<
@@ -12761,7 +12761,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
 
-  /* "pysesa/_lengthscale.pyx":65
+  /* "pysesa/lengthscale.pyx":65
  * np.seterr(under='ignore')
  * import warnings
  * warnings.filterwarnings("ignore")             # <<<<<<<<<<<<<<
@@ -12791,11 +12791,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC init_lengthscale(void); /*proto*/
-PyMODINIT_FUNC init_lengthscale(void)
+PyMODINIT_FUNC initlengthscale(void); /*proto*/
+PyMODINIT_FUNC initlengthscale(void)
 #else
-PyMODINIT_FUNC PyInit__lengthscale(void); /*proto*/
-PyMODINIT_FUNC PyInit__lengthscale(void)
+PyMODINIT_FUNC PyInit_lengthscale(void); /*proto*/
+PyMODINIT_FUNC PyInit_lengthscale(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -12814,7 +12814,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__lengthscale(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_lengthscale(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -12836,7 +12836,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_lengthscale", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("lengthscale", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -12853,14 +12853,14 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_pysesa___lengthscale) {
+  if (__pyx_module_is_main_pysesa__lengthscale) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "pysesa._lengthscale")) {
-      if (unlikely(PyDict_SetItemString(modules, "pysesa._lengthscale", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pysesa.lengthscale")) {
+      if (unlikely(PyDict_SetItemString(modules, "pysesa.lengthscale", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -12872,31 +12872,31 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  __pyx_vtabptr_6pysesa_12_lengthscale_lengthscale = &__pyx_vtable_6pysesa_12_lengthscale_lengthscale;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._radial_data = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_12_lengthscale_11lengthscale__radial_data *__pyx_optional_args))__pyx_f_6pysesa_12_lengthscale_11lengthscale__radial_data;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._get_lengthscale = (double (*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int, double, int, int, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale__get_lengthscale;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._Hanning2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hanning2D;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._Hamming2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale__Hamming2D;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._Blackman2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale__Blackman2D;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._Bartlett2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale__Bartlett2D;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale._taper_im = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, PyArrayObject *, int, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale__taper_im;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale.getlengthscale = (double (*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale_getlengthscale;
-  __pyx_vtable_6pysesa_12_lengthscale_lengthscale.getdata = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_12_lengthscale_lengthscale *, int __pyx_skip_dispatch))__pyx_f_6pysesa_12_lengthscale_11lengthscale_getdata;
-  if (PyType_Ready(&__pyx_type_6pysesa_12_lengthscale_lengthscale) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_type_6pysesa_12_lengthscale_lengthscale.tp_print = 0;
+  __pyx_vtabptr_6pysesa_11lengthscale_lengthscale = &__pyx_vtable_6pysesa_11lengthscale_lengthscale;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._radial_data = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_6pysesa_11lengthscale_11lengthscale__radial_data *__pyx_optional_args))__pyx_f_6pysesa_11lengthscale_11lengthscale__radial_data;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._get_lengthscale = (double (*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int, double, int, int, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale__get_lengthscale;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._Hanning2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale__Hanning2D;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._Hamming2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale__Hamming2D;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._Blackman2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale__Blackman2D;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._Bartlett2D = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale__Bartlett2D;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale._taper_im = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, PyArrayObject *, int, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale__taper_im;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale.getlengthscale = (double (*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale_getlengthscale;
+  __pyx_vtable_6pysesa_11lengthscale_lengthscale.getdata = (PyArrayObject *(*)(struct __pyx_obj_6pysesa_11lengthscale_lengthscale *, int __pyx_skip_dispatch))__pyx_f_6pysesa_11lengthscale_11lengthscale_getdata;
+  if (PyType_Ready(&__pyx_type_6pysesa_11lengthscale_lengthscale) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_type_6pysesa_11lengthscale_lengthscale.tp_print = 0;
   #if CYTHON_COMPILING_IN_CPYTHON
   {
-    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_6pysesa_12_lengthscale_lengthscale, "__init__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    PyObject *wrapper = PyObject_GetAttrString((PyObject *)&__pyx_type_6pysesa_11lengthscale_lengthscale, "__init__"); if (unlikely(!wrapper)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (Py_TYPE(wrapper) == &PyWrapperDescr_Type) {
-      __pyx_wrapperbase_6pysesa_12_lengthscale_11lengthscale___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
-      __pyx_wrapperbase_6pysesa_12_lengthscale_11lengthscale___init__.doc = __pyx_doc_6pysesa_12_lengthscale_11lengthscale___init__;
-      ((PyWrapperDescrObject *)wrapper)->d_base = &__pyx_wrapperbase_6pysesa_12_lengthscale_11lengthscale___init__;
+      __pyx_wrapperbase_6pysesa_11lengthscale_11lengthscale___init__ = *((PyWrapperDescrObject *)wrapper)->d_base;
+      __pyx_wrapperbase_6pysesa_11lengthscale_11lengthscale___init__.doc = __pyx_doc_6pysesa_11lengthscale_11lengthscale___init__;
+      ((PyWrapperDescrObject *)wrapper)->d_base = &__pyx_wrapperbase_6pysesa_11lengthscale_11lengthscale___init__;
     }
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_type_6pysesa_12_lengthscale_lengthscale.tp_dict, __pyx_vtabptr_6pysesa_12_lengthscale_lengthscale) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (PyObject_SetAttrString(__pyx_m, "lengthscale", (PyObject *)&__pyx_type_6pysesa_12_lengthscale_lengthscale) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_ptype_6pysesa_12_lengthscale_lengthscale = &__pyx_type_6pysesa_12_lengthscale_lengthscale;
+  if (__Pyx_SetVtable(__pyx_type_6pysesa_11lengthscale_lengthscale.tp_dict, __pyx_vtabptr_6pysesa_11lengthscale_lengthscale) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyObject_SetAttrString(__pyx_m, "lengthscale", (PyObject *)&__pyx_type_6pysesa_11lengthscale_lengthscale) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 68; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_ptype_6pysesa_11lengthscale_lengthscale = &__pyx_type_6pysesa_11lengthscale_lengthscale;
   /*--- Type import code ---*/
   __pyx_ptype_7cpython_4type_type = __Pyx_ImportType(__Pyx_BUILTIN_MODULE_NAME, "type", 
   #if CYTHON_COMPILING_IN_PYPY
@@ -12914,7 +12914,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pysesa/_lengthscale.pyx":52
+  /* "pysesa/lengthscale.pyx":52
  * # import libraries
  * from __future__ import division
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -12926,7 +12926,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 52; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":56
+  /* "pysesa/lengthscale.pyx":56
  * cimport cython
  * #from scipy.interpolate import griddata
  * from scipy.integrate import trapz             # <<<<<<<<<<<<<<
@@ -12947,7 +12947,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_lengthscale.pyx":57
+  /* "pysesa/lengthscale.pyx":57
  * #from scipy.interpolate import griddata
  * from scipy.integrate import trapz
  * from scipy.spatial import cKDTree as KDTree             # <<<<<<<<<<<<<<
@@ -12968,7 +12968,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":60
+  /* "pysesa/lengthscale.pyx":60
  * 
  * # suppress divide and invalid warnings
  * np.seterr(divide='ignore')             # <<<<<<<<<<<<<<
@@ -12989,7 +12989,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":61
+  /* "pysesa/lengthscale.pyx":61
  * # suppress divide and invalid warnings
  * np.seterr(divide='ignore')
  * np.seterr(invalid='ignore')             # <<<<<<<<<<<<<<
@@ -13010,7 +13010,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_lengthscale.pyx":62
+  /* "pysesa/lengthscale.pyx":62
  * np.seterr(divide='ignore')
  * np.seterr(invalid='ignore')
  * np.seterr(over='ignore')             # <<<<<<<<<<<<<<
@@ -13031,7 +13031,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_lengthscale.pyx":63
+  /* "pysesa/lengthscale.pyx":63
  * np.seterr(invalid='ignore')
  * np.seterr(over='ignore')
  * np.seterr(under='ignore')             # <<<<<<<<<<<<<<
@@ -13052,7 +13052,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":64
+  /* "pysesa/lengthscale.pyx":64
  * np.seterr(over='ignore')
  * np.seterr(under='ignore')
  * import warnings             # <<<<<<<<<<<<<<
@@ -13064,7 +13064,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_warnings, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 64; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":65
+  /* "pysesa/lengthscale.pyx":65
  * np.seterr(under='ignore')
  * import warnings
  * warnings.filterwarnings("ignore")             # <<<<<<<<<<<<<<
@@ -13081,7 +13081,7 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_lengthscale.pyx":1
+  /* "pysesa/lengthscale.pyx":1
  * ## PySESA (Python program for Spatially Explicit Spectral Analysis)             # <<<<<<<<<<<<<<
  * ## has been developed at the Grand Canyon Monitorinf & Research Center,
  * ## U.S. Geological Survey
@@ -13108,11 +13108,11 @@ PyMODINIT_FUNC PyInit__lengthscale(void)
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pysesa._lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pysesa.lengthscale", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pysesa._lengthscale");
+    PyErr_SetString(PyExc_ImportError, "init pysesa.lengthscale");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

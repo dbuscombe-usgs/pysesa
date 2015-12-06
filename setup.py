@@ -151,7 +151,7 @@ else:
         include_dirs=[np.get_include()]), 
         Extension("pysesa.partition", [ "pysesa/partition.c" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.spectral", [ "pysesa/_spectral.c" ],
+        Extension("pysesa.spectral", [ "pysesa/spectral.c" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.spatial", [ "pysesa/_spatial.c" ],
         include_dirs=[np.get_include()]),    

@@ -223,36 +223,35 @@ cdef class partition:
 
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
 
-      try:
-         print "kdtree 1"
-         print type(allpoints)
-         mytree = cKDTree(allpoints, leafsize=len(allpoints)/10)
-         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
-         #del p
-      except:
-         print "kdtree 2"
-         mytree = cKDTree(allpoints, leafsize=len(allpoints)/10)
-         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
-         #del p
-      finally:
-         #dask implementation
-         dat = da.from_array(np.asarray(allpoints), chunks=1000)
-         print "kd-tree 3"
-         mytree = cKDTree(dat, leafsize=len(dat)/10) # adding this leafsize option speeds up considerably
-         dbp = da.from_array(np.asarray(p), chunks=1000) 
-         #del p  
-         dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
-         del dbp
+      #try:
+      #   print "kdtree 1"
+      #   mytree = cKDTree(allpoints, leafsize=len(allpoints)/10)
+      #   dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
+      #   #del p
+      #except:
+      #   print "kdtree 2"
+      #   mytree = cKDTree(allpoints, leafsize=len(allpoints)/10)
+      #   dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+      #   #del p
+      #finally:
+      #dask implementation
+      dat = da.from_array(np.asarray(allpoints), chunks=1000)
+      print "kd-tree 3"
+      mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+      dbp = da.from_array(np.asarray(p), chunks=1000) 
+      #del p  
+      dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
+      del dbp
 
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
       dist = np.squeeze(dist[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
 
       # define null indices
-      try:
-         indices[indices==len(allpoints)] = -999
-      except:
-         indices[indices==len(dat)] = -999  #dask implementation    
+      #try:
+      #   indices[indices==len(allpoints)] = -999
+      #except:
+      indices[indices==len(dat)] = -999  #dask implementation    
 
       indices_list = indices.tolist()
       del indices
@@ -262,44 +261,43 @@ cdef class partition:
       for k from 0 <= k < len(indices_list):
          indices_list[k] = [x for x in indices_list[k] if x!=-999]
       
-      try:
-         # get the centroids
-         #for k in xrange(len(indices_list)):
-         for k from 0 <= k < len(indices_list):
-            w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
-      except:
-         # get the centroids
-         #for k in xrange(len(indices_list)):
-         for k from 0 <= k < len(indices_list):
-            w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
+      #try:
+      #   # get the centroids
+      #   #for k in xrange(len(indices_list)):
+      #   for k from 0 <= k < len(indices_list):
+      #      w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+      #except:
+      # get the centroids
+      #for k in xrange(len(indices_list)):
+      for k from 0 <= k < len(indices_list):
+         w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
 
       cx,cy = zip(*w)
       del w
  
-      try:
-         print type(allpoints)
-         tree = cKDTree(allpoints, leafsize=len(allpoints)/10)
-      except:
-         tree = cKDTree(dat, leafsize=len(dat)/10) #dask implementation 2 # leafsize=len(dat)
-         del dat
+      #try:
+      #   tree = cKDTree(allpoints, leafsize=len(allpoints)/10)
+      #except:
+      tree = cKDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
+      del dat
 
       yp, xp = np.meshgrid(yvec, xvec)
 
       # Use KDTree to answer the question: "which point of set (x,y) is the
       # nearest neighbors of those in (xp, yp)"
 
-      try:      
-         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
-      except:
-         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
+      #try:      
+      #   dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
+      #except:
+      dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
       tree2 = cKDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
       
-      try:
-         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
-      except:
-         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win)      
+      #try:
+      #   dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+      #except:
+      dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win)      
       
       m2 = np.where(dist3 < out**2)[0]
 

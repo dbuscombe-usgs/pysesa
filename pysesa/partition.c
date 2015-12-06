@@ -1156,7 +1156,6 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 /* Module declarations from 'pysesa.partition' */
 static PyTypeObject *__pyx_ptype_6pysesa_9partition_partition = 0;
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float32_t = { "float32_t", NULL, sizeof(__pyx_t_5numpy_float32_t), { 0 }, 0, 'R', 0, 0 };
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t = { "int64_t", NULL, sizeof(__pyx_t_5numpy_int64_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int64_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int64_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t", NULL, sizeof(__pyx_t_5numpy_float64_t), { 0 }, 0, 'R', 0, 0 };
 #define __Pyx_MODULE_NAME "pysesa.partition"
 int __pyx_module_is_main_pysesa__partition = 0;
@@ -1209,7 +1208,6 @@ static char __pyx_k_test[] = "__test__";
 static char __pyx_k_dtype[] = "dtype";
 static char __pyx_k_empty[] = "empty";
 static char __pyx_k_hypot[] = "hypot";
-static char __pyx_k_int64[] = "int64";
 static char __pyx_k_isinf[] = "isinf";
 static char __pyx_k_isnan[] = "isnan";
 static char __pyx_k_mxpts[] = "mxpts";
@@ -1278,7 +1276,6 @@ static PyObject *__pyx_n_s_from_array;
 static PyObject *__pyx_n_s_getdata;
 static PyObject *__pyx_n_s_hypot;
 static PyObject *__pyx_n_s_import;
-static PyObject *__pyx_n_s_int64;
 static PyObject *__pyx_n_s_isinf;
 static PyObject *__pyx_n_s_isnan;
 static PyObject *__pyx_n_s_k;
@@ -2016,8 +2013,8 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   /* "pysesa/partition.pyx":174
  * 
  *       # no idea why this doesnt work
- *       cdef np.ndarray[np.int64_t, ndim=1] x = np.empty(lenx, dtype=np.int64)             # <<<<<<<<<<<<<<
- *       cdef np.ndarray[np.int64_t, ndim=1] y = np.empty(leny, dtype=np.int64)
+ *       cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)             # <<<<<<<<<<<<<<
+ *       cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
  * 
  */
   __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2036,7 +2033,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_int64); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2050,7 +2047,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_13 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_13, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_13, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_x = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_x.rcbuffer->pybuffer.buf = NULL;
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 174; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     } else {__pyx_pybuffernd_x.diminfo[0].strides = __pyx_pybuffernd_x.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_x.diminfo[0].shape = __pyx_pybuffernd_x.rcbuffer->pybuffer.shape[0];
@@ -2062,8 +2059,8 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
 
   /* "pysesa/partition.pyx":175
  *       # no idea why this doesnt work
- *       cdef np.ndarray[np.int64_t, ndim=1] x = np.empty(lenx, dtype=np.int64)
- *       cdef np.ndarray[np.int64_t, ndim=1] y = np.empty(leny, dtype=np.int64)             # <<<<<<<<<<<<<<
+ *       cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
+ *       cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)             # <<<<<<<<<<<<<<
  * 
  *       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
  */
@@ -2083,7 +2080,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_10 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_int64); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_float64); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2097,7 +2094,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_14 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_y = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_y.rcbuffer->pybuffer.buf = NULL;
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 175; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     } else {__pyx_pybuffernd_y.diminfo[0].strides = __pyx_pybuffernd_y.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_y.diminfo[0].shape = __pyx_pybuffernd_y.rcbuffer->pybuffer.shape[0];
@@ -2108,7 +2105,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_3 = 0;
 
   /* "pysesa/partition.pyx":177
- *       cdef np.ndarray[np.int64_t, ndim=1] y = np.empty(leny, dtype=np.int64)
+ *       cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
  * 
  *       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)             # <<<<<<<<<<<<<<
  *       cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)
@@ -2378,10 +2375,10 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
-    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_13, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_13, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
     if (unlikely(__pyx_t_6 < 0)) {
       PyErr_Fetch(&__pyx_t_9, &__pyx_t_8, &__pyx_t_7);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_x, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_x, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -2448,10 +2445,10 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_y.rcbuffer->pybuffer);
-    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+    __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_y.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
     if (unlikely(__pyx_t_6 < 0)) {
       PyErr_Fetch(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_y, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_y.rcbuffer->pybuffer, (PyObject*)__pyx_v_y, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_9);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -4083,10 +4080,10 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
         __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_x.rcbuffer->pybuffer);
-        __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_13, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
+        __pyx_t_6 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_t_13, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack);
         if (unlikely(__pyx_t_6 < 0)) {
           PyErr_Fetch(&__pyx_t_9, &__pyx_t_8, &__pyx_t_7);
-          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_x, &__Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
+          if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_x.rcbuffer->pybuffer, (PyObject*)__pyx_v_x, &__Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) {
             Py_XDECREF(__pyx_t_9); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
             __Pyx_RaiseBufferFallbackError();
           } else {
@@ -7793,7 +7790,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_getdata, __pyx_k_getdata, sizeof(__pyx_k_getdata), 0, 0, 1, 1},
   {&__pyx_n_s_hypot, __pyx_k_hypot, sizeof(__pyx_k_hypot), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
-  {&__pyx_n_s_int64, __pyx_k_int64, sizeof(__pyx_k_int64), 0, 0, 1, 1},
   {&__pyx_n_s_isinf, __pyx_k_isinf, sizeof(__pyx_k_isinf), 0, 0, 1, 1},
   {&__pyx_n_s_isnan, __pyx_k_isnan, sizeof(__pyx_k_isnan), 0, 0, 1, 1},
   {&__pyx_n_s_k, __pyx_k_k, sizeof(__pyx_k_k), 0, 0, 1, 1},

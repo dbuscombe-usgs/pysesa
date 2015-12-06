@@ -171,8 +171,8 @@ cdef class partition:
       cdef int leny2 = leny/2   
       
       # no idea why this doesnt work
-      cdef np.ndarray[np.int64_t, ndim=1] x = np.empty(lenx, dtype=np.int64)
-      cdef np.ndarray[np.int64_t, ndim=1] y = np.empty(leny, dtype=np.int64)
+      cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
+      cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
 
       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   

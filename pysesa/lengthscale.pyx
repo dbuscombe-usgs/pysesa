@@ -56,6 +56,8 @@ cimport cython
 from scipy.integrate import trapz
 from scipy.spatial import cKDTree as KDTree
 
+import RunningStats
+
 # suppress divide and invalid warnings
 np.seterr(divide='ignore')
 np.seterr(invalid='ignore')
@@ -118,7 +120,7 @@ cdef class lengthscale:
 
    '''
 
-   cdef object data, lengthscale, tree
+   cdef object data, lengthscale, tree, rs1
 
    @cython.boundscheck(False)
    @cython.cdivision(True)
@@ -201,13 +203,14 @@ cdef class lengthscale:
       #tree = KDTree(zip(points[:,0], points[:,1]))
       tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
  
-      try:
-         _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1, n_jobs=-1)
-      except:
-         _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
+      _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
       im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
 
-      im = im - np.mean(im)
+      rs1 = RunningStats.RunningStats()
+      for k in im.flatten():
+         rs1.Push(k)
+
+      im = im - rs1.Mean() #np.mean(im)
       ny, nx= np.shape(im)
 
       #taper
@@ -529,9 +532,14 @@ cdef class lengthscale:
    	   tapered 2D grid of 3D pointcloud
 
       '''
-      im[np.isnan(im)] = np.mean(im.flatten())
-      im[np.isinf(im)] = np.mean(im.flatten())
-      im[im<=0] = np.mean(im.flatten())
+
+      rs1 = RunningStats.RunningStats()
+      for k in im.flatten():
+         rs1.Push(k)
+
+      im[np.isnan(im)] = rs1.Mean() #np.mean(im.flatten())
+      im[np.isinf(im)] = rs1.Mean() #np.mean(im.flatten())
+      im[im<=0] = rs1.Mean() #np.mean(im.flatten())
 
       if taper==1:
          im = self._Hanning2D(im)

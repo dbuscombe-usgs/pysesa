@@ -53,6 +53,8 @@ import numpy as np
 cimport numpy as np
 cimport cython
 
+import RunningStats
+
 # suppress divide and invalid warnings
 import warnings
 warnings.filterwarnings("ignore")
@@ -104,7 +106,7 @@ cdef class detrend:
 
    '''
 
-   cdef object data, est, myOdr, myModel
+   cdef object data, est, myOdr, myModel, rs1
 
    @cython.boundscheck(False)
    @cython.cdivision(True)
@@ -241,10 +243,7 @@ cdef class detrend:
          #tree = KDTree(zip(points[:,0], points[:,1]))
          tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
 
-         try:
-            dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10, n_jobs=-1)
-         except:
-            dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
+         dist, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 10)
 
          w = 1.0 / dist**2
          dat = np.sum(w * points[inds,2], axis=1) / np.sum(w, axis=1)
@@ -252,10 +251,17 @@ cdef class detrend:
 
          Zf = sgolay.sgolay( dat, 3, order=0).getdata() 
 
-         Zf[Zf>(np.mean(Zf)+3*np.std(Zf))] = np.nan
-         Zf[Zf<(np.mean(Zf)-3*np.std(Zf))] = np.nan
+         rs1 = RunningStats.RunningStats()
+         for k in Zf.flatten():
+            rs1.Push(k)
 
-         Zf[np.isnan(Zf)] = np.mean(Zf)
+         #Zf[Zf>(np.mean(Zf)+3*np.std(Zf))] = np.nan
+         #Zf[Zf<(np.mean(Zf)-3*np.std(Zf))] = np.nan
+
+         Zf[Zf>(rs1.Mean()+3*rs1.StandardDeviation())] = np.nan
+         Zf[Zf<(rs1.Mean()-3*rs1.StandardDeviation())] = np.nan
+
+         Zf[np.isnan(Zf)] = rs1.Mean() #np.mean(Zf)
 
          Zf = (dat-Zf)
          dt = np.random.choice(Zf.flatten(),len(points)).astype('float64')   

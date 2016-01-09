@@ -71,7 +71,7 @@ from __future__ import division
 import numpy as np
 from joblib import Parallel, delayed, cpu_count
 from time import clock, time
-import os, sys, getopt
+import os #, sys, getopt
 
 # suppress divide and invalid warnings
 np.seterr(divide='ignore')

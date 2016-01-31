@@ -62,8 +62,7 @@ except:
    print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
    from scipy.spatial import cKDTree as KDTree
    pykdtree=0   
-
-import dask.array as da
+   import dask.array as da
 #import dask.bag as db
    
 #data_type = np.float64
@@ -236,16 +235,7 @@ cdef class partition:
 
       mytree = KDTree(toproc[:,:2]) #, leafsize=len(toproc)/100)
       if pykdtree==1:
-         try:
-            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
-         except:
-            #dask implementation
-            dat = da.from_array(toproc, chunks=1000)
-            mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
-            dbp = da.from_array(np.asarray(p), chunks=1000) 
-            #del p  
-            dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
-            del dbp
+         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
       else:
          try:
             dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)

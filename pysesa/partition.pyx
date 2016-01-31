@@ -314,12 +314,12 @@ cdef class partition:
       tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
 
       if pykdtree==1:     
-         dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
+         dist3, _ = tree2.query(np.c_[cx,cy].astype('float32'), distance_upper_bound=win) #distance_upper_bound=out)
       else: 
          try:
-            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+            dist3, _ = tree2.query(np.c_[cx,cy].astype('float32'), distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
          except:
-            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
+            dist3, _ = tree2.query(np.c_[cx,cy].astype('float32'), distance_upper_bound=win)      
       
       m2 = np.where(dist3 < out**2)[0]
 

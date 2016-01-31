@@ -209,7 +209,8 @@ cdef class lengthscale:
       #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
 
       #tree = KDTree(zip(points[:,0], points[:,1]))
-      tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
+      #tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
+      tree = KDTree(points[:,:1])
  
       _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
       im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))

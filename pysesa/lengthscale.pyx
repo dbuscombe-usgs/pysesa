@@ -213,7 +213,7 @@ cdef class lengthscale:
       tree = KDTree(points[:,:1])
 
       if pykdtree==1:
-         _, inds = tree.query(np.vstack([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)
+         _, inds = tree.query(np.c_([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)
       else:
          _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
 

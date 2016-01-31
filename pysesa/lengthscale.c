@@ -1194,6 +1194,7 @@ static char __pyx_k_L[] = "L";
 static char __pyx_k_O[] = "O";
 static char __pyx_k_Q[] = "Q";
 static char __pyx_k_b[] = "b";
+static char __pyx_k_c[] = "c_";
 static char __pyx_k_d[] = "d";
 static char __pyx_k_f[] = "f";
 static char __pyx_k_g[] = "g";
@@ -1259,7 +1260,6 @@ static char __pyx_k_import[] = "__import__";
 static char __pyx_k_method[] = "method";
 static char __pyx_k_points[] = "points";
 static char __pyx_k_seterr[] = "seterr";
-static char __pyx_k_vstack[] = "vstack";
 static char __pyx_k_asarray[] = "asarray";
 static char __pyx_k_cKDTree[] = "cKDTree";
 static char __pyx_k_flatten[] = "flatten";
@@ -1325,6 +1325,7 @@ static PyObject *__pyx_n_s_astype;
 static PyObject *__pyx_n_s_axis;
 static PyObject *__pyx_n_s_bartlett;
 static PyObject *__pyx_n_s_blackman;
+static PyObject *__pyx_n_s_c;
 static PyObject *__pyx_n_s_cKDTree;
 static PyObject *__pyx_n_s_ceil;
 static PyObject *__pyx_n_s_complex128;
@@ -1400,7 +1401,6 @@ static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_trapz;
 static PyObject *__pyx_n_s_under;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
-static PyObject *__pyx_n_s_vstack;
 static PyObject *__pyx_n_s_warnings;
 static PyObject *__pyx_n_s_where;
 static PyObject *__pyx_n_s_zip;
@@ -3008,7 +3008,7 @@ static int __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(struct __pyx_ob
  *       tree = KDTree(points[:,:1])
  * 
  *       if pykdtree==1:             # <<<<<<<<<<<<<<
- *          _, inds = tree.query(np.vstack([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)
+ *          _, inds = tree.query(np.c_([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)
  *       else:
  */
   __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_pykdtree); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 215; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3022,7 +3022,7 @@ static int __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(struct __pyx_ob
     /* "pysesa/lengthscale.pyx":216
  * 
  *       if pykdtree==1:
- *          _, inds = tree.query(np.vstack([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)             # <<<<<<<<<<<<<<
+ *          _, inds = tree.query(np.c_([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)             # <<<<<<<<<<<<<<
  *       else:
  *          _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
  */
@@ -3030,7 +3030,7 @@ static int __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(struct __pyx_ob
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_vstack); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_c); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_5 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_grid_x), __pyx_n_s_flatten); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 216; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -3185,7 +3185,7 @@ static int __pyx_pf_6pysesa_11lengthscale_11lengthscale___init__(struct __pyx_ob
   /*else*/ {
 
     /* "pysesa/lengthscale.pyx":218
- *          _, inds = tree.query(np.vstack([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)
+ *          _, inds = tree.query(np.c_([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)
  *       else:
  *          _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)             # <<<<<<<<<<<<<<
  * 
@@ -12902,6 +12902,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_axis, __pyx_k_axis, sizeof(__pyx_k_axis), 0, 0, 1, 1},
   {&__pyx_n_s_bartlett, __pyx_k_bartlett, sizeof(__pyx_k_bartlett), 0, 0, 1, 1},
   {&__pyx_n_s_blackman, __pyx_k_blackman, sizeof(__pyx_k_blackman), 0, 0, 1, 1},
+  {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
   {&__pyx_n_s_cKDTree, __pyx_k_cKDTree, sizeof(__pyx_k_cKDTree), 0, 0, 1, 1},
   {&__pyx_n_s_ceil, __pyx_k_ceil, sizeof(__pyx_k_ceil), 0, 0, 1, 1},
   {&__pyx_n_s_complex128, __pyx_k_complex128, sizeof(__pyx_k_complex128), 0, 0, 1, 1},
@@ -12977,7 +12978,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_trapz, __pyx_k_trapz, sizeof(__pyx_k_trapz), 0, 0, 1, 1},
   {&__pyx_n_s_under, __pyx_k_under, sizeof(__pyx_k_under), 0, 0, 1, 1},
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
-  {&__pyx_n_s_vstack, __pyx_k_vstack, sizeof(__pyx_k_vstack), 0, 0, 1, 1},
   {&__pyx_n_s_warnings, __pyx_k_warnings, sizeof(__pyx_k_warnings), 0, 0, 1, 1},
   {&__pyx_n_s_where, __pyx_k_where, sizeof(__pyx_k_where), 0, 0, 1, 1},
   {&__pyx_n_s_zip, __pyx_k_zip, sizeof(__pyx_k_zip), 0, 0, 1, 1},
@@ -13057,7 +13057,7 @@ static int __Pyx_InitCachedConstants(void) {
   /* "pysesa/lengthscale.pyx":216
  * 
  *       if pykdtree==1:
- *          _, inds = tree.query(np.vstack([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)             # <<<<<<<<<<<<<<
+ *          _, inds = tree.query(np.c_([grid_x.flatten(),grid_y.flatten()]).astype('float32'), k = 1)             # <<<<<<<<<<<<<<
  *       else:
  *          _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
  */

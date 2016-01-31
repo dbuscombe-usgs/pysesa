@@ -1893,7 +1893,14 @@ class plot:
       nn : int, *optional* [default = 1]
    	   number of nearest neighbours used in the gridding 
       '''
-      from scipy.spatial import cKDTree as KDTree
+      #from scipy.spatial import cKDTree as KDTree
+      try:
+         from pykdtree.kdtree import KDTree
+         pykdtree=1   
+      except:
+         print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
+         from scipy.spatial import cKDTree as KDTree
+         pykdtree=0   
 
       ## create mask for where the data is not
       tree = KDTree(np.c_[x,y])         

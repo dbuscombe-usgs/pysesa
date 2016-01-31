@@ -54,7 +54,15 @@ cimport numpy as np
 cimport cython
 #from scipy.interpolate import griddata
 from scipy.integrate import trapz
-from scipy.spatial import cKDTree as KDTree
+#from scipy.spatial import cKDTree as KDTree
+
+try:
+   from pykdtree.kdtree import KDTree
+   pykdtree=1   
+except:
+   print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
+   from scipy.spatial import cKDTree as KDTree
+   pykdtree=0   
 
 import RunningStats
 

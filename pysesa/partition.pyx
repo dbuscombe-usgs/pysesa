@@ -53,7 +53,15 @@ from __future__ import division
 import numpy as np
 cimport numpy as np
 cimport cython
-from scipy.spatial import cKDTree
+#from scipy.spatial import cKDTree
+
+try:
+   from pykdtree.kdtree import KDTree
+   pykdtree=1   
+except:
+   print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
+   from scipy.spatial import cKDTree as KDTree
+   pykdtree=0   
 
 import dask.array as da
 #import dask.bag as db
@@ -223,22 +231,33 @@ cdef class partition:
 
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
 
-      try:
-         mytree = cKDTree(allpoints, leafsize=len(allpoints)/100)
-         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
-         #del p
-      except:
-         mytree = cKDTree(allpoints, leafsize=len(allpoints)/100)
-         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
-         #del p
-      finally:
-         #dask implementation
-         dat = da.from_array(np.asarray(allpoints), chunks=1000)
-         mytree = cKDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
-         dbp = da.from_array(np.asarray(p), chunks=1000) 
-         #del p  
-         dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
-         del dbp
+      mytree = KDTree(allpoints, leafsize=len(allpoints)/100)
+      if pykdtree==1:
+         try:
+            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+         except:
+            #dask implementation
+            dat = da.from_array(np.asarray(allpoints), chunks=1000)
+            mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+            dbp = da.from_array(np.asarray(p), chunks=1000) 
+            #del p  
+            dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
+            del dbp
+      else:
+         try:
+            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
+            #del p
+         except:
+            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+            #del p
+         finally:
+            #dask implementation
+            dat = da.from_array(np.asarray(allpoints), chunks=1000)
+            mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+            dbp = da.from_array(np.asarray(p), chunks=1000) 
+            #del p  
+            dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win)
+            del dbp
 
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
@@ -273,9 +292,9 @@ cdef class partition:
       del w
  
       try:
-         tree = cKDTree(allpoints, leafsize=len(allpoints)/100)
+         tree = KDTree(allpoints, leafsize=len(allpoints)/100)
       except:
-         tree = cKDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
+         tree = KDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
          del dat
 
       yp, xp = np.meshgrid(yvec, xvec)
@@ -283,18 +302,24 @@ cdef class partition:
       # Use KDTree to answer the question: "which point of set (x,y) is the
       # nearest neighbors of those in (xp, yp)"
 
-      try:      
-         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
-      except:
-         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
+      if pykdtree==1:
+         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)
+      else:
+         try:      
+            dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
+         except:
+            dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
-      tree2 = cKDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
-      
-      try:
-         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
-      except:
-         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win)      
+      tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
+
+      if pykdtree==1:     
+         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
+      else: 
+         try:
+            dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+         except:
+            dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win)      
       
       m2 = np.where(dist3 < out**2)[0]
 

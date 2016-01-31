@@ -201,8 +201,8 @@ cdef class partition:
 
       #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
-      cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
+      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
+      cdef np.ndarray[np.float32_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float32)
       #del p #dask
 
       # format points for kd-tree
@@ -223,7 +223,7 @@ cdef class partition:
       #cdef np.ndarray[np.float64_t, ndim=2] indices = np.empty((len(p),mxpts), dtype=np.int64)
       cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=1] dist2 = np.empty((len(xvec)*len(yvec),), dtype=np.float64)
+      cdef np.ndarray[np.float32_t, ndim=1] dist2 = np.empty((len(xvec)*len(yvec),), dtype=np.float32)
  
       # get the tree for the entire point cloud
       #mytree = cKDTree(allpoints) 
@@ -306,9 +306,9 @@ cdef class partition:
          dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)
       else:
          try:      
-            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
+            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1, n_jobs=-1)
          except:
-            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
+            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)      
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
       tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])

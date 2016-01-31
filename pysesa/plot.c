@@ -231,8 +231,8 @@ void __Pyx_call_destructor(T* x) {
 #define _USE_MATH_DEFINES
 #endif
 #include <math.h>
-#define __PYX_HAVE__pysesa___plot
-#define __PYX_HAVE_API__pysesa___plot
+#define __PYX_HAVE__pysesa__plot
+#define __PYX_HAVE_API__pysesa__plot
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -415,7 +415,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "pysesa/_plot.pyx",
+  "pysesa/plot.pyx",
 };
 
 /*--- Type declarations ---*/
@@ -740,40 +740,40 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'pysesa._plot' */
-#define __Pyx_MODULE_NAME "pysesa._plot"
-int __pyx_module_is_main_pysesa___plot = 0;
+/* Module declarations from 'pysesa.plot' */
+#define __Pyx_MODULE_NAME "pysesa.plot"
+int __pyx_module_is_main_pysesa__plot = 0;
 
-/* Implementation of 'pysesa._plot' */
+/* Implementation of 'pysesa.plot' */
 static PyObject *__pyx_builtin_open;
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pysesa_file); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim, PyObject *__pyx_v_markersize, PyObject *__pyx_v_dpi, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_infile); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_minX, PyObject *__pyx_v_maxX, PyObject *__pyx_v_minY, PyObject *__pyx_v_maxY, PyObject *__pyx_v_res); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_dem, PyObject *__pyx_v_dx, CYTHON_UNUSED PyObject *__pyx_v_dy, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_nn); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rot); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_im, PyObject *__pyx_v_label, PyObject *__pyx_v_size); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_mag); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pysesa_file); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_8grd_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_10grd_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim, PyObject *__pyx_v_markersize, PyObject *__pyx_v_dpi, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_20get_pc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_22get_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_24_txtread(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_infile); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_28_grid_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_30_getmesh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_minX, PyObject *__pyx_v_maxX, PyObject *__pyx_v_minY, PyObject *__pyx_v_maxY, PyObject *__pyx_v_res); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_32_get_grid(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_34_hillshade(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_dem, PyObject *__pyx_v_dx, CYTHON_UNUSED PyObject *__pyx_v_dy, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_36_get_dist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_nn); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_38_cart2pol(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_40_dolabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rot); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_42_set_tick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_44_set_ztick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_46_rmticks(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_48_make_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_50_make_xy_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_52_divide_colorbar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_im, PyObject *__pyx_v_label, PyObject *__pyx_v_size); /* proto */
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_mag); /* proto */
 static char __pyx_k_5[] = "5%";
 static char __pyx_k_E[] = "E";
 static char __pyx_k_Z[] = "Z";
@@ -1040,11 +1040,11 @@ static char __pyx_k_plot___init[] = "plot.__init__";
 static char __pyx_k_plot_get_pc[] = "plot.get_pc";
 static char __pyx_k_plt_xy_vars[] = "plt_xy_vars";
 static char __pyx_k_pysesa_file[] = "pysesa_file";
+static char __pyx_k_pysesa_plot[] = "pysesa.plot";
 static char __pyx_k_plot_get_xyz[] = "plot.get_xyz";
 static char __pyx_k_plot_grd_var[] = "plot.grd_var";
 static char __pyx_k_plot_grd_xyz[] = "plot.grd_xyz";
 static char __pyx_k_plot_plt_xyz[] = "plot.plt_xyz";
-static char __pyx_k_pysesa__plot[] = "pysesa._plot";
 static char __pyx_k_set_fontsize[] = "set_fontsize";
 static char __pyx_k_tkFileDialog[] = "tkFileDialog";
 static char __pyx_k_grd_pc_3d_png[] = "grd_pc_3d.png";
@@ -1095,7 +1095,7 @@ static char __pyx_k_plot__make_xy_axislabels[] = "plot._make_xy_axislabels";
 static char __pyx_k_Horizontal_distance_length[] = "Horizontal distance (length)";
 static char __pyx_k_Initialise_the_pysesa_plot_clas[] = "\n   Initialise the pysesa plot class\n   Takes a file output from pysesa.process and allows a number\n   of different 2d or 3d plots of the outputs\n\n   Syntax\n   ----------\n   p = pysesa.plot()\n   p = pysesa.plot('/home/my_pysesa_output_file.xyz')\n\n   Parameters\n   -----------\n   pysesa_file : str\n   \tpysesa::process output file\n\n   If no arguments given, it prompts you to choose a pysesa::process output file\n\n   Returns\n   ----------\n   self : instance\n      pysesa.plot instance\n\n   DATA functions\n   ---------------\n   pc = p.get_pc() : ndarray\n      NxM contents of pysesa_file\n  \n   xyz = p.get_xyz() : ndarray        \n      Nx3 contents of raw point cloud (the file processed by pysesa::process)\n\n   vars = p.parse_pc_vars() : dict\n      NxM contents of pysesa_file parsed into dict object\n      1 key per variable in p.get_pc()\n      vars.keys() returns list of variables in dict\n\n   2D plotting functions (mayavi not required)\n   --------------------------------------------\n\n   p.grd_xyz()\n   ------------- \n      produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,\n      as returned by parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_xyz(res, azimuth, altitude, zf, cmap, dpi, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calcul""ation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n   p.grd_var()\n   ------------      \n      produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n      e.g. p.grd_var('sigma')\n\n      Syntax\n      ----------\n      [] = p.grd_var(var, res, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var('sigma')\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calcula""tion, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n\n   p.grd_vars()\n   -------------\n      produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_vars(res, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edn""doc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n\n   3D plotting functions (mayavi not required)\n   --------------------------------------------\n\n   p.plt_xyz()\n   ------------ \n      produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()\n\n      Syntax\n      ----------\n      [] = p.plt_xyz(elev, azim, markersize, dpi, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters""\n      --------------------\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      markersize : float, *optional* [default = 0.01]\n           marker size in x and y axes units\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels       \n\n\n   p.plt_xy_var()  \n   --------------- \n      produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')\n\n      Syntax\n      ----------\n      [] = p.plt_xy_var(var, log_scale, dpi, markersize, ticksize, labelsize, elev, azim)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var('sigma')\n\n      Optional Parameters\n      --------------------\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      markersize : float, *optional* [default = 5]\n           marker size in points^2\n           http://matplotlib.org/mpl_toolkits/mplot3d/api.html#mpl_toolkits.mplot3d.axes3d.Axes3D.scatter\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane          \n""\n\n   p.plt_xy_vars()\n   ----------------\n      produces a 3d plot of each output variable in p.parse_pc_vars() \n\n      Syntax\n      ----------\n      [] = p.plt_xy_vars(log_scale, dpi, markersize, ticksize, labelsize, elev, azim)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      markersize : float, *optional* [default = 5]\n           marker size in points^2\n           http://matplotlib.org/mpl_toolkits/mplot3d/api.html#mpl_toolkits.mplot3d.axes3d.Axes3D.scatter\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane        \n   \n\n   3D plotting functions (requires mayavi) \n   ----------------------------------------\n\n   p.grd_xyz3d() \n   -------------  \n      produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,\n      as returned by p.get_xyz()\n\n      Syntax\n      ----------\n      [] = p.grd_xyz3d(res, cmap, pitch, azimuth, distance, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are docume""nted here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n   \n   p.grd_var_3d()  \n   ---------------\n      produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_var_3d(var, res, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var_3d('sigma')\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_chang""ing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n          \n   p.grd_vars_3d() \n   ----------------\n      produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_vars_3d(res, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]""\n   \t   grid resolution\n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n\n   ";
 static char __pyx_k_error_mayavi_is_required_for_3d[] = "error: mayavi is required for 3d plots";
-static char __pyx_k_home_dbuscombe_github_clones_py[] = "/home/dbuscombe/github_clones/pysesa/pysesa/_plot.pyx";
+static char __pyx_k_home_dbuscombe_github_clones_py[] = "/home/dbuscombe/github_clones/pysesa/pysesa/plot.pyx";
 static char __pyx_k_install_pykdtree_for_faster_kd_t[] = "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree";
 static char __pyx_k_memory_error_trying_grid_resolut[] = "memory error: trying grid resolution of %s";
 static PyObject *__pyx_kp_s_3d;
@@ -1330,8 +1330,8 @@ static PyObject *__pyx_n_s_proctype_2;
 static PyObject *__pyx_n_s_projection;
 static PyObject *__pyx_n_s_pykdtree;
 static PyObject *__pyx_n_s_pykdtree_kdtree;
-static PyObject *__pyx_n_s_pysesa__plot;
 static PyObject *__pyx_n_s_pysesa_file;
+static PyObject *__pyx_n_s_pysesa_plot;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_query;
 static PyObject *__pyx_n_s_r_value;
@@ -1751,7 +1751,7 @@ static PyObject *__pyx_codeobj__272;
 static PyObject *__pyx_codeobj__275;
 static PyObject *__pyx_codeobj__278;
 
-/* "pysesa/_plot.pyx":566
+/* "pysesa/plot.pyx":566
  *    '''
  * 
  *    def __init__(self, pysesa_file=None):             # <<<<<<<<<<<<<<
@@ -1760,10 +1760,10 @@ static PyObject *__pyx_codeobj__278;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot___init__[] = "\n      Initialise the pysesa plot class\n      Takes a file output from pysesa.process and allows a number\n      of different 2d or 3d plots of the outputs\n\n      Syntax\n      ----------\n      p = pysesa.plot()\n      p = pysesa.plot('/home/my_pysesa_output_file.xyz')\n\n      Parameters\n      -----------\n      pysesa_file : str\n   \t   pysesa::process output file\n\n      If no arguments given, it prompts you to choose a pysesa::process output file\n\n      Returns\n      ----------\n      self : instance\n   \t   pysesa.plot instance\n\n\n      DATA functions\n      ---------------\n      pc = p.get_pc() : ndarray\n   \t   NxM contents of pysesa_file\n  \n      xyz = p.get_xyz() : ndarray        \n   \t   Nx3 contents of raw point cloud (the file processed by pysesa::process)\n\n      vars = p.parse_pc_vars() : dict\n   \t   NxM contents of pysesa_file parsed into dict object\n           1 key per variable in p.get_pc()\n           vars.keys() returns list of variables in dict\n\n\n      2D plotting functions (mayavi not required)\n      --------------------------------------------     \n      p.grd_xyz() \n      \t   produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,\n           as returned by parse_pc_vars()\n               \n      p.grd_var()   \n   \t   produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n           e.g. p.grd_var('sigma')\n   \n      p.grd_vars()\n   \t   produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n\n      3D plotting functions (mayavi not required)\n      --------------------------------------------\n      p.plt_xyz() \n   \t   produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()\n       \n      p.plt_xy_var()   \n   \t   produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')\n         \n      p.plt_xy_vars()\n   \t   produces a 3d plot of each output variable"" in p.parse_pc_vars()      \n          \n\n      3D plotting functions (requires mayavi) \n      ----------------------------------------\n      p.grd_xyz3d()   \n   \t   produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,\n           as returned by p.get_xyz()\n   \n      p.grd_var_3d()  \n   \t   produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n           e.g. p.grd_var('sigma')\n          \n      p.grd_vars_3d() \n   \t   produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_1__init__ = {"__init__", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_1__init__, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot___init__};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot___init__[] = "\n      Initialise the pysesa plot class\n      Takes a file output from pysesa.process and allows a number\n      of different 2d or 3d plots of the outputs\n\n      Syntax\n      ----------\n      p = pysesa.plot()\n      p = pysesa.plot('/home/my_pysesa_output_file.xyz')\n\n      Parameters\n      -----------\n      pysesa_file : str\n   \t   pysesa::process output file\n\n      If no arguments given, it prompts you to choose a pysesa::process output file\n\n      Returns\n      ----------\n      self : instance\n   \t   pysesa.plot instance\n\n\n      DATA functions\n      ---------------\n      pc = p.get_pc() : ndarray\n   \t   NxM contents of pysesa_file\n  \n      xyz = p.get_xyz() : ndarray        \n   \t   Nx3 contents of raw point cloud (the file processed by pysesa::process)\n\n      vars = p.parse_pc_vars() : dict\n   \t   NxM contents of pysesa_file parsed into dict object\n           1 key per variable in p.get_pc()\n           vars.keys() returns list of variables in dict\n\n\n      2D plotting functions (mayavi not required)\n      --------------------------------------------     \n      p.grd_xyz() \n      \t   produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,\n           as returned by parse_pc_vars()\n               \n      p.grd_var()   \n   \t   produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n           e.g. p.grd_var('sigma')\n   \n      p.grd_vars()\n   \t   produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n\n      3D plotting functions (mayavi not required)\n      --------------------------------------------\n      p.plt_xyz() \n   \t   produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()\n       \n      p.plt_xy_var()   \n   \t   produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')\n         \n      p.plt_xy_vars()\n   \t   produces a 3d plot of each output variable"" in p.parse_pc_vars()      \n          \n\n      3D plotting functions (requires mayavi) \n      ----------------------------------------\n      p.grd_xyz3d()   \n   \t   produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,\n           as returned by p.get_xyz()\n   \n      p.grd_var_3d()  \n   \t   produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n           e.g. p.grd_var('sigma')\n          \n      p.grd_vars_3d() \n   \t   produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_1__init__ = {"__init__", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_1__init__, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot___init__};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_pysesa_file = 0;
   int __pyx_lineno = 0;
@@ -1814,18 +1814,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_1__init__(PyObject *__pyx_self, P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot___init__(__pyx_self, __pyx_v_self, __pyx_v_pysesa_file);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot___init__(__pyx_self, __pyx_v_self, __pyx_v_pysesa_file);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pysesa_file) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pysesa_file) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -1840,7 +1840,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_pysesa_file);
 
-  /* "pysesa/_plot.pyx":646
+  /* "pysesa/plot.pyx":646
  *       '''
  * 
  *       if pysesa_file is None:             # <<<<<<<<<<<<<<
@@ -1851,7 +1851,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "pysesa/_plot.pyx":647
+    /* "pysesa/plot.pyx":647
  * 
  *       if pysesa_file is None:
  *          Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing             # <<<<<<<<<<<<<<
@@ -1901,7 +1901,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pysesa/_plot.pyx":648
+    /* "pysesa/plot.pyx":648
  *       if pysesa_file is None:
  *          Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
  *          pysesa_file = askopenfilename(filetypes=[("Pysesa output file","*.xyz")], multiple=True)             # <<<<<<<<<<<<<<
@@ -1930,7 +1930,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   }
   __pyx_L3:;
 
-  /* "pysesa/_plot.pyx":650
+  /* "pysesa/plot.pyx":650
  *          pysesa_file = askopenfilename(filetypes=[("Pysesa output file","*.xyz")], multiple=True)
  * 
  *       if type(pysesa_file) is str:             # <<<<<<<<<<<<<<
@@ -1941,7 +1941,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "pysesa/_plot.pyx":651
+    /* "pysesa/plot.pyx":651
  * 
  *       if type(pysesa_file) is str:
  *          pysesa_file = (pysesa_file,)             # <<<<<<<<<<<<<<
@@ -1959,7 +1959,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   }
   __pyx_L4:;
 
-  /* "pysesa/_plot.pyx":653
+  /* "pysesa/plot.pyx":653
  *          pysesa_file = (pysesa_file,)
  * 
  *       self._outfiles = pysesa_file             # <<<<<<<<<<<<<<
@@ -1968,7 +1968,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_outfiles, __pyx_v_pysesa_file) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 653; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":655
+  /* "pysesa/plot.pyx":655
  *       self._outfiles = pysesa_file
  * 
  *       self._proctype = int(pysesa_file[0].split('proctype')[1].split('_')[0])             # <<<<<<<<<<<<<<
@@ -2001,7 +2001,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_proctype_2, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 655; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pysesa/_plot.pyx":657
+  /* "pysesa/plot.pyx":657
  *       self._proctype = int(pysesa_file[0].split('proctype')[1].split('_')[0])
  * 
  *       self._plt = plt             # <<<<<<<<<<<<<<
@@ -2013,7 +2013,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_plt_2, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 657; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pysesa/_plot.pyx":566
+  /* "pysesa/plot.pyx":566
  *    '''
  * 
  *    def __init__(self, pysesa_file=None):             # <<<<<<<<<<<<<<
@@ -2029,7 +2029,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pysesa._plot.plot.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pysesa_file);
@@ -2038,7 +2038,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":664
+/* "pysesa/plot.pyx":664
  * 
  *    #==================================================
  *    def grd_vars_3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -2047,10 +2047,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot___init__(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_3grd_vars_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_2grd_vars_3d[] = "\n      produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_vars_3d(res, thresdist, nn, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n   \t   \n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t   \n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True,"" will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_3grd_vars_3d = {"grd_vars_3d", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_3grd_vars_3d, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_2grd_vars_3d};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_3grd_vars_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_3grd_vars_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_2grd_vars_3d[] = "\n      produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_vars_3d(res, thresdist, nn, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n   \t   \n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t   \n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True,"" will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_3grd_vars_3d = {"grd_vars_3d", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_3grd_vars_3d, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_2grd_vars_3d};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_3grd_vars_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_res = 0;
   PyObject *__pyx_v_thresdist = 0;
@@ -2211,18 +2211,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_3grd_vars_3d(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("grd_vars_3d", 0, 1, 13, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 664; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_vars_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_vars_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_cmap, __pyx_v_pitch, __pyx_v_azimuth, __pyx_v_distance, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_xsize, __pyx_v_ysize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_2grd_vars_3d(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_cmap, __pyx_v_pitch, __pyx_v_azimuth, __pyx_v_distance, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_xsize, __pyx_v_ysize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize) {
   PyObject *__pyx_v_mlab = NULL;
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -2260,7 +2260,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("grd_vars_3d", 0);
 
-  /* "pysesa/_plot.pyx":726
+  /* "pysesa/plot.pyx":726
  *       '''
  * 
  *       try:             # <<<<<<<<<<<<<<
@@ -2274,7 +2274,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pysesa/_plot.pyx":727
+      /* "pysesa/plot.pyx":727
  * 
  *       try:
  *          from mayavi import mlab             # <<<<<<<<<<<<<<
@@ -2296,7 +2296,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":729
+      /* "pysesa/plot.pyx":729
  *          from mayavi import mlab
  * 
  *          pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -2326,7 +2326,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
       __pyx_v_pcdict = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":731
+      /* "pysesa/plot.pyx":731
  *          pcdict = self.parse_pc_vars()
  * 
  *          x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -2338,7 +2338,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
       __pyx_v_x = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":732
+      /* "pysesa/plot.pyx":732
  * 
  *          x = pcdict['x']
  *          y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -2350,7 +2350,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
       __pyx_v_y = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":733
+      /* "pysesa/plot.pyx":733
  *          x = pcdict['x']
  *          y = pcdict['y']
  *          z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -2362,7 +2362,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
       __pyx_v_z = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":735
+      /* "pysesa/plot.pyx":735
  *          z = pcdict['z_mean']
  * 
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)             # <<<<<<<<<<<<<<
@@ -2474,7 +2474,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
       __pyx_v_grid_y = __pyx_t_6;
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":737
+      /* "pysesa/plot.pyx":737
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *          for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -2542,7 +2542,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
         __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "pysesa/_plot.pyx":738
+        /* "pysesa/plot.pyx":738
  * 
  *          for key in pcdict.keys():
  *             if key not in ['x','y','z_mean']:             # <<<<<<<<<<<<<<
@@ -2570,7 +2570,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
         __pyx_t_13 = (__pyx_t_12 != 0);
         if (__pyx_t_13) {
 
-          /* "pysesa/_plot.pyx":739
+          /* "pysesa/plot.pyx":739
  *          for key in pcdict.keys():
  *             if key not in ['x','y','z_mean']:
  *                print "printing %s" % (key)             # <<<<<<<<<<<<<<
@@ -2582,7 +2582,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           if (__Pyx_PrintOne(0, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 739; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":741
+          /* "pysesa/plot.pyx":741
  *                print "printing %s" % (key)
  * 
  *                if log_scale is True:             # <<<<<<<<<<<<<<
@@ -2593,7 +2593,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __pyx_t_12 = (__pyx_t_13 != 0);
           if (__pyx_t_12) {
 
-            /* "pysesa/_plot.pyx":742
+            /* "pysesa/plot.pyx":742
  * 
  *                if log_scale is True:
  *                   datz = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res)             # <<<<<<<<<<<<<<
@@ -2680,7 +2680,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           }
           /*else*/ {
 
-            /* "pysesa/_plot.pyx":744
+            /* "pysesa/plot.pyx":744
  *                   datz = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res)
  *                else:
  *                   datz = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res)             # <<<<<<<<<<<<<<
@@ -2735,7 +2735,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           }
           __pyx_L19:;
 
-          /* "pysesa/_plot.pyx":746
+          /* "pysesa/plot.pyx":746
  *                   datz = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res)
  * 
  *                if smooth is True:             # <<<<<<<<<<<<<<
@@ -2746,7 +2746,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __pyx_t_13 = (__pyx_t_12 != 0);
           if (__pyx_t_13) {
 
-            /* "pysesa/_plot.pyx":747
+            /* "pysesa/plot.pyx":747
  * 
  *                if smooth is True:
  *                   from scipy.ndimage.filters import median_filter             # <<<<<<<<<<<<<<
@@ -2768,7 +2768,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-            /* "pysesa/_plot.pyx":748
+            /* "pysesa/plot.pyx":748
  *                if smooth is True:
  *                   from scipy.ndimage.filters import median_filter
  *                   datz = median_filter(datz,(filtsz,filtsz))             # <<<<<<<<<<<<<<
@@ -2817,7 +2817,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           }
           __pyx_L20:;
 
-          /* "pysesa/_plot.pyx":750
+          /* "pysesa/plot.pyx":750
  *                   datz = median_filter(datz,(filtsz,filtsz))
  * 
  *                fig = self._get_3d_fig()             # <<<<<<<<<<<<<<
@@ -2847,7 +2847,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __pyx_v_fig = __pyx_t_8;
           __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":751
+          /* "pysesa/plot.pyx":751
  * 
  *                fig = self._get_3d_fig()
  *                surf = mlab.mesh(grid_x,grid_y,dat,scalars=datz,colormap=cmap)             # <<<<<<<<<<<<<<
@@ -2879,7 +2879,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __Pyx_XDECREF_SET(__pyx_v_surf, __pyx_t_5);
           __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":752
+          /* "pysesa/plot.pyx":752
  *                fig = self._get_3d_fig()
  *                surf = mlab.mesh(grid_x,grid_y,dat,scalars=datz,colormap=cmap)
  *                mlab.pitch(pitch)             # <<<<<<<<<<<<<<
@@ -2915,7 +2915,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":753
+          /* "pysesa/plot.pyx":753
  *                surf = mlab.mesh(grid_x,grid_y,dat,scalars=datz,colormap=cmap)
  *                mlab.pitch(pitch)
  *                mlab.view(azimuth=azimuth)             # <<<<<<<<<<<<<<
@@ -2933,7 +2933,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":754
+          /* "pysesa/plot.pyx":754
  *                mlab.pitch(pitch)
  *                mlab.view(azimuth=azimuth)
  *                mlab.view(distance=distance)             # <<<<<<<<<<<<<<
@@ -2951,7 +2951,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":756
+          /* "pysesa/plot.pyx":756
  *                mlab.view(distance=distance)
  * 
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))             # <<<<<<<<<<<<<<
@@ -3017,7 +3017,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":757
+          /* "pysesa/plot.pyx":757
  * 
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))
  *                mlab.close()             # <<<<<<<<<<<<<<
@@ -3046,7 +3046,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":758
+          /* "pysesa/plot.pyx":758
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))
  *                mlab.close()
  *                del fig             # <<<<<<<<<<<<<<
@@ -3059,7 +3059,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
         }
         __pyx_L15:;
 
-        /* "pysesa/_plot.pyx":737
+        /* "pysesa/plot.pyx":737
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *          for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -3083,7 +3083,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pysesa/_plot.pyx":759
+    /* "pysesa/plot.pyx":759
  *                mlab.close()
  *                del fig
  *       except:             # <<<<<<<<<<<<<<
@@ -3091,13 +3091,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
  * 
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pysesa._plot.plot.grd_vars_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pysesa.plot.plot.grd_vars_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_8, &__pyx_t_14) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 759; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GOTREF(__pyx_t_14);
 
-      /* "pysesa/_plot.pyx":760
+      /* "pysesa/plot.pyx":760
  *                del fig
  *       except:
  *          print "error: mayavi is required for 3d plots"             # <<<<<<<<<<<<<<
@@ -3124,7 +3124,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
     __pyx_L10_try_end:;
   }
 
-  /* "pysesa/_plot.pyx":664
+  /* "pysesa/plot.pyx":664
  * 
  *    #==================================================
  *    def grd_vars_3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -3144,7 +3144,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_vars_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_vars_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mlab);
@@ -3165,7 +3165,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":764
+/* "pysesa/plot.pyx":764
  * 
  *    #==================================================
  *    def grd_var_3d(self, var, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -3174,10 +3174,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_2grd_vars_3d(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_5grd_var_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_4grd_var_3d[] = "\n      produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_var_3d(var, res, thresdist, nn, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var_3d('sigma')\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      log_scale : bool, *optional* [default = False]""\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_5grd_var_3d = {"grd_var_3d", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_5grd_var_3d, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_4grd_var_3d};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_5grd_var_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_5grd_var_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_4grd_var_3d[] = "\n      produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_var_3d(var, res, thresdist, nn, cmap, pitch, azimuth, distance, log_scale, smooth, filtsz, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var_3d('sigma')\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      log_scale : bool, *optional* [default = False]""\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number of pixels) of output image in y dimension\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_5grd_var_3d = {"grd_var_3d", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_5grd_var_3d, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_4grd_var_3d};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_5grd_var_3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_var = 0;
   PyObject *__pyx_v_res = 0;
@@ -3347,18 +3347,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_5grd_var_3d(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("grd_var_3d", 0, 2, 14, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_var_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_var_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(__pyx_self, __pyx_v_self, __pyx_v_var, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_cmap, __pyx_v_pitch, __pyx_v_azimuth, __pyx_v_distance, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_xsize, __pyx_v_ysize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_4grd_var_3d(__pyx_self, __pyx_v_self, __pyx_v_var, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_cmap, __pyx_v_pitch, __pyx_v_azimuth, __pyx_v_distance, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_xsize, __pyx_v_ysize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize) {
   PyObject *__pyx_v_mlab = NULL;
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -3396,7 +3396,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("grd_var_3d", 0);
 
-  /* "pysesa/_plot.pyx":831
+  /* "pysesa/plot.pyx":831
  *       '''
  * 
  *       try:             # <<<<<<<<<<<<<<
@@ -3410,7 +3410,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pysesa/_plot.pyx":832
+      /* "pysesa/plot.pyx":832
  * 
  *       try:
  *          from mayavi import mlab             # <<<<<<<<<<<<<<
@@ -3432,7 +3432,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":834
+      /* "pysesa/plot.pyx":834
  *          from mayavi import mlab
  * 
  *          pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -3462,7 +3462,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
       __pyx_v_pcdict = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":836
+      /* "pysesa/plot.pyx":836
  *          pcdict = self.parse_pc_vars()
  * 
  *          x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -3474,7 +3474,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
       __pyx_v_x = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":837
+      /* "pysesa/plot.pyx":837
  * 
  *          x = pcdict['x']
  *          y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -3486,7 +3486,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
       __pyx_v_y = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":838
+      /* "pysesa/plot.pyx":838
  *          x = pcdict['x']
  *          y = pcdict['y']
  *          z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -3498,7 +3498,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
       __pyx_v_z = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":840
+      /* "pysesa/plot.pyx":840
  *          z = pcdict['z_mean']
  * 
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)             # <<<<<<<<<<<<<<
@@ -3610,7 +3610,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
       __pyx_v_grid_y = __pyx_t_6;
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":842
+      /* "pysesa/plot.pyx":842
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *          for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -3678,7 +3678,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
         __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "pysesa/_plot.pyx":843
+        /* "pysesa/plot.pyx":843
  * 
  *          for key in pcdict.keys():
  *             if key in [var]:             # <<<<<<<<<<<<<<
@@ -3694,7 +3694,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
         __pyx_t_13 = (__pyx_t_12 != 0);
         if (__pyx_t_13) {
 
-          /* "pysesa/_plot.pyx":844
+          /* "pysesa/plot.pyx":844
  *          for key in pcdict.keys():
  *             if key in [var]:
  *                print "printing %s" % (key)             # <<<<<<<<<<<<<<
@@ -3706,7 +3706,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           if (__Pyx_PrintOne(0, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 844; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":846
+          /* "pysesa/plot.pyx":846
  *                print "printing %s" % (key)
  * 
  *                if log_scale is True:             # <<<<<<<<<<<<<<
@@ -3717,7 +3717,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __pyx_t_12 = (__pyx_t_13 != 0);
           if (__pyx_t_12) {
 
-            /* "pysesa/_plot.pyx":847
+            /* "pysesa/plot.pyx":847
  * 
  *                if log_scale is True:
  *                   datz = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res)             # <<<<<<<<<<<<<<
@@ -3804,7 +3804,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           }
           /*else*/ {
 
-            /* "pysesa/_plot.pyx":849
+            /* "pysesa/plot.pyx":849
  *                   datz = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res)
  *                else:
  *                   datz = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res)             # <<<<<<<<<<<<<<
@@ -3859,7 +3859,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           }
           __pyx_L16:;
 
-          /* "pysesa/_plot.pyx":851
+          /* "pysesa/plot.pyx":851
  *                   datz = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res)
  * 
  *                if smooth is True:             # <<<<<<<<<<<<<<
@@ -3870,7 +3870,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __pyx_t_13 = (__pyx_t_12 != 0);
           if (__pyx_t_13) {
 
-            /* "pysesa/_plot.pyx":852
+            /* "pysesa/plot.pyx":852
  * 
  *                if smooth is True:
  *                   from scipy.ndimage.filters import median_filter             # <<<<<<<<<<<<<<
@@ -3892,7 +3892,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-            /* "pysesa/_plot.pyx":853
+            /* "pysesa/plot.pyx":853
  *                if smooth is True:
  *                   from scipy.ndimage.filters import median_filter
  *                   datz = median_filter(datz,(filtsz,filtsz))             # <<<<<<<<<<<<<<
@@ -3941,7 +3941,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           }
           __pyx_L17:;
 
-          /* "pysesa/_plot.pyx":855
+          /* "pysesa/plot.pyx":855
  *                   datz = median_filter(datz,(filtsz,filtsz))
  * 
  *                fig = self._get_3d_fig()             # <<<<<<<<<<<<<<
@@ -3971,7 +3971,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __pyx_v_fig = __pyx_t_8;
           __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":856
+          /* "pysesa/plot.pyx":856
  * 
  *                fig = self._get_3d_fig()
  *                surf = mlab.mesh(grid_x,grid_y,dat,scalars=datz,colormap=cmap)             # <<<<<<<<<<<<<<
@@ -4003,7 +4003,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __Pyx_XDECREF_SET(__pyx_v_surf, __pyx_t_5);
           __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":857
+          /* "pysesa/plot.pyx":857
  *                fig = self._get_3d_fig()
  *                surf = mlab.mesh(grid_x,grid_y,dat,scalars=datz,colormap=cmap)
  *                mlab.pitch(pitch)             # <<<<<<<<<<<<<<
@@ -4039,7 +4039,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":858
+          /* "pysesa/plot.pyx":858
  *                surf = mlab.mesh(grid_x,grid_y,dat,scalars=datz,colormap=cmap)
  *                mlab.pitch(pitch)
  *                mlab.view(azimuth=azimuth)             # <<<<<<<<<<<<<<
@@ -4057,7 +4057,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":859
+          /* "pysesa/plot.pyx":859
  *                mlab.pitch(pitch)
  *                mlab.view(azimuth=azimuth)
  *                mlab.view(distance=distance)             # <<<<<<<<<<<<<<
@@ -4075,7 +4075,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":861
+          /* "pysesa/plot.pyx":861
  *                mlab.view(distance=distance)
  * 
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))             # <<<<<<<<<<<<<<
@@ -4141,7 +4141,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":862
+          /* "pysesa/plot.pyx":862
  * 
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))
  *                mlab.close()             # <<<<<<<<<<<<<<
@@ -4170,7 +4170,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-          /* "pysesa/_plot.pyx":863
+          /* "pysesa/plot.pyx":863
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))
  *                mlab.close()
  *                del fig             # <<<<<<<<<<<<<<
@@ -4183,7 +4183,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
         }
         __pyx_L15:;
 
-        /* "pysesa/_plot.pyx":842
+        /* "pysesa/plot.pyx":842
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *          for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -4207,7 +4207,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pysesa/_plot.pyx":864
+    /* "pysesa/plot.pyx":864
  *                mlab.close()
  *                del fig
  *       except:             # <<<<<<<<<<<<<<
@@ -4215,13 +4215,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
  * 
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pysesa._plot.plot.grd_var_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pysesa.plot.plot.grd_var_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_8, &__pyx_t_14) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 864; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GOTREF(__pyx_t_14);
 
-      /* "pysesa/_plot.pyx":865
+      /* "pysesa/plot.pyx":865
  *                del fig
  *       except:
  *          print "error: mayavi is required for 3d plots"             # <<<<<<<<<<<<<<
@@ -4248,7 +4248,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
     __pyx_L10_try_end:;
   }
 
-  /* "pysesa/_plot.pyx":764
+  /* "pysesa/plot.pyx":764
  * 
  *    #==================================================
  *    def grd_var_3d(self, var, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -4268,7 +4268,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_var_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_var_3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mlab);
@@ -4289,7 +4289,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":869
+/* "pysesa/plot.pyx":869
  * 
  *    #==================================================
  *    def grd_xyz3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -4298,10 +4298,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_4grd_var_3d(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_7grd_xyz3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_6grd_xyz3d[] = "\n      produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,\n      as returned by p.get_xyz()\n\n      Syntax\n      ----------\n      [] = p.grd_xyz3d(res, thresdist, nn, cmap, pitch, azimuth, distance, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number"" of pixels) of output image in y dimension\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_7grd_xyz3d = {"grd_xyz3d", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_7grd_xyz3d, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_6grd_xyz3d};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_7grd_xyz3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_7grd_xyz3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_6grd_xyz3d[] = "\n      produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,\n      as returned by p.get_xyz()\n\n      Syntax\n      ----------\n      [] = p.grd_xyz3d(res, thresdist, nn, cmap, pitch, azimuth, distance, xsize, ysize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://docs.enthought.com/mayavi/mayavi/mlab_changing_object_looks.html\n\n      pitch : float, *optional* [default = 10]\n   \t   rotates the camera. see:\n           http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=pitch#mayavi.mlab.pitch\n\n      azimuth : float, *optional* [default = -200]\n           The azimuthal angle (in degrees, 0-360)\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      distance : float or 'auto', *optional* [default = 50]\n           A positive floating point number representing the distance from the focal point to place the camera.\n           if \342\200\230auto\342\200\231 is passed, the distance is computed to have a best fit of objects in the frame.\n   \t   http://docs.enthought.com/mayavi/mayavi/auto/mlab_camera.html?highlight=view#mayavi.mlab.view\n\n      xsize : int, *optional* [default = 2000]\n   \t   size (number of pixels) of output image in x dimension\n\n      ysize : int, *optional* [default = 1000]\n   \t   size (number"" of pixels) of output image in y dimension\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_7grd_xyz3d = {"grd_xyz3d", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_7grd_xyz3d, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_6grd_xyz3d};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_7grd_xyz3d(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_res = 0;
   PyObject *__pyx_v_thresdist = 0;
@@ -4432,18 +4432,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_7grd_xyz3d(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("grd_xyz3d", 0, 1, 10, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 869; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_xyz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_xyz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_cmap, __pyx_v_pitch, __pyx_v_azimuth, __pyx_v_distance, __pyx_v_xsize, __pyx_v_ysize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_6grd_xyz3d(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_cmap, __pyx_v_pitch, __pyx_v_azimuth, __pyx_v_distance, __pyx_v_xsize, __pyx_v_ysize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_cmap, PyObject *__pyx_v_pitch, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_distance, PyObject *__pyx_v_xsize, PyObject *__pyx_v_ysize) {
   PyObject *__pyx_v_mlab = NULL;
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -4471,7 +4471,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("grd_xyz3d", 0);
 
-  /* "pysesa/_plot.pyx":923
+  /* "pysesa/plot.pyx":923
  *       '''
  * 
  *       try:             # <<<<<<<<<<<<<<
@@ -4485,7 +4485,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pysesa/_plot.pyx":924
+      /* "pysesa/plot.pyx":924
  * 
  *       try:
  *          from mayavi import mlab             # <<<<<<<<<<<<<<
@@ -4507,7 +4507,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":925
+      /* "pysesa/plot.pyx":925
  *       try:
  *          from mayavi import mlab
  *          pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -4537,7 +4537,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_pcdict = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":927
+      /* "pysesa/plot.pyx":927
  *          pcdict = self.parse_pc_vars()
  * 
  *          x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -4549,7 +4549,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_x = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":928
+      /* "pysesa/plot.pyx":928
  * 
  *          x = pcdict['x']
  *          y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -4561,7 +4561,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_y = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":929
+      /* "pysesa/plot.pyx":929
  *          x = pcdict['x']
  *          y = pcdict['y']
  *          z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -4573,7 +4573,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_z = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":931
+      /* "pysesa/plot.pyx":931
  *          z = pcdict['z_mean']
  * 
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)             # <<<<<<<<<<<<<<
@@ -4685,7 +4685,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_grid_y = __pyx_t_6;
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":933
+      /* "pysesa/plot.pyx":933
  *          dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *          fig = self._get_3d_fig()             # <<<<<<<<<<<<<<
@@ -4715,7 +4715,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_fig = __pyx_t_5;
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":934
+      /* "pysesa/plot.pyx":934
  * 
  *          fig = self._get_3d_fig()
  *          surf = mlab.mesh(grid_x,grid_y,dat,scalars=dat,colormap=cmap)             # <<<<<<<<<<<<<<
@@ -4747,7 +4747,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __pyx_v_surf = __pyx_t_4;
       __pyx_t_4 = 0;
 
-      /* "pysesa/_plot.pyx":935
+      /* "pysesa/plot.pyx":935
  *          fig = self._get_3d_fig()
  *          surf = mlab.mesh(grid_x,grid_y,dat,scalars=dat,colormap=cmap)
  *          mlab.pitch(pitch)             # <<<<<<<<<<<<<<
@@ -4783,7 +4783,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pysesa/_plot.pyx":936
+      /* "pysesa/plot.pyx":936
  *          surf = mlab.mesh(grid_x,grid_y,dat,scalars=dat,colormap=cmap)
  *          mlab.pitch(pitch)
  *          mlab.view(azimuth=azimuth)             # <<<<<<<<<<<<<<
@@ -4801,7 +4801,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":937
+      /* "pysesa/plot.pyx":937
  *          mlab.pitch(pitch)
  *          mlab.view(azimuth=azimuth)
  *          mlab.view(distance=distance)             # <<<<<<<<<<<<<<
@@ -4819,7 +4819,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "pysesa/_plot.pyx":939
+      /* "pysesa/plot.pyx":939
  *          mlab.view(distance=distance)
  * 
  *          mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_3d.png',figure=fig,size=(xsize,ysize))             # <<<<<<<<<<<<<<
@@ -4870,7 +4870,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":940
+      /* "pysesa/plot.pyx":940
  * 
  *          mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_3d.png',figure=fig,size=(xsize,ysize))
  *          mlab.close()             # <<<<<<<<<<<<<<
@@ -4899,7 +4899,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":941
+      /* "pysesa/plot.pyx":941
  *          mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_3d.png',figure=fig,size=(xsize,ysize))
  *          mlab.close()
  *          del fig             # <<<<<<<<<<<<<<
@@ -4920,7 +4920,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "pysesa/_plot.pyx":942
+    /* "pysesa/plot.pyx":942
  *          mlab.close()
  *          del fig
  *       except:             # <<<<<<<<<<<<<<
@@ -4928,13 +4928,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
  * 
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pysesa._plot.plot.grd_xyz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pysesa.plot.plot.grd_xyz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_5, &__pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 942; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "pysesa/_plot.pyx":943
+      /* "pysesa/plot.pyx":943
  *          del fig
  *       except:
  *          print "error: mayavi is required for 3d plots"             # <<<<<<<<<<<<<<
@@ -4961,7 +4961,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
     __pyx_L10_try_end:;
   }
 
-  /* "pysesa/_plot.pyx":869
+  /* "pysesa/plot.pyx":869
  * 
  *    #==================================================
  *    def grd_xyz3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -4978,7 +4978,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_xyz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_xyz3d", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mlab);
@@ -4996,7 +4996,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":951
+/* "pysesa/plot.pyx":951
  * 
  *    #==================================================
  *    def grd_var(self, var, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -5005,10 +5005,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_6grd_xyz3d(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_9grd_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_8grd_var[] = "\n      produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n      e.g. p.grd_var('sigma')\n\n      Syntax\n      ----------\n      [] = p.grd_var(var, res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var('sigma')\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      log_scale : bool, *optiona""l* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_9grd_var = {"grd_var", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_9grd_var, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_8grd_var};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_9grd_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_9grd_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_8grd_var[] = "\n      produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()\n      e.g. p.grd_var('sigma')\n\n      Syntax\n      ----------\n      [] = p.grd_var(var, res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var('sigma')\n\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      log_scale : bool, *optiona""l* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_9grd_var = {"grd_var", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_9grd_var, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_8grd_var};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_9grd_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_var = 0;
   PyObject *__pyx_v_res = 0;
@@ -5198,18 +5198,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_9grd_var(PyObject *__pyx_self, Py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("grd_var", 0, 2, 16, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 951; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_8grd_var(__pyx_self, __pyx_v_self, __pyx_v_var, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf, __pyx_v_cmap, __pyx_v_dpi, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_alpha, __pyx_v_ticksize, __pyx_v_labelsize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_8grd_var(__pyx_self, __pyx_v_self, __pyx_v_var, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf, __pyx_v_cmap, __pyx_v_dpi, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_alpha, __pyx_v_ticksize, __pyx_v_labelsize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_8grd_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_y = NULL;
@@ -5244,7 +5244,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("grd_var", 0);
 
-  /* "pysesa/_plot.pyx":1026
+  /* "pysesa/plot.pyx":1026
  *       '''
  * 
  *       pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -5274,7 +5274,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __pyx_v_pcdict = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1028
+  /* "pysesa/plot.pyx":1028
  *       pcdict = self.parse_pc_vars()
  * 
  *       x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -5286,7 +5286,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1029
+  /* "pysesa/plot.pyx":1029
  * 
  *       x = pcdict['x']
  *       y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -5298,7 +5298,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __pyx_v_y = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1030
+  /* "pysesa/plot.pyx":1030
  *       x = pcdict['x']
  *       y = pcdict['y']
  *       z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -5310,7 +5310,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __pyx_v_z = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1032
+  /* "pysesa/plot.pyx":1032
  *       z = pcdict['z_mean']
  * 
  *       dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)             # <<<<<<<<<<<<<<
@@ -5422,7 +5422,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __pyx_v_grid_y = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1034
+  /* "pysesa/plot.pyx":1034
  *       dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *       h = self._hillshade(dat,res,res,azimuth,altitude,zf)             # <<<<<<<<<<<<<<
@@ -5473,7 +5473,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __pyx_v_h = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1035
+  /* "pysesa/plot.pyx":1035
  * 
  *       h = self._hillshade(dat,res,res,azimuth,altitude,zf)
  *       del dat, z             # <<<<<<<<<<<<<<
@@ -5485,7 +5485,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __Pyx_DECREF(__pyx_v_z);
   __pyx_v_z = NULL;
 
-  /* "pysesa/_plot.pyx":1037
+  /* "pysesa/plot.pyx":1037
  *       del dat, z
  * 
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -5553,7 +5553,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1038
+    /* "pysesa/plot.pyx":1038
  * 
  *       for key in pcdict.keys():
  *          if key in [var]:             # <<<<<<<<<<<<<<
@@ -5569,7 +5569,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
     __pyx_t_10 = (__pyx_t_9 != 0);
     if (__pyx_t_10) {
 
-      /* "pysesa/_plot.pyx":1039
+      /* "pysesa/plot.pyx":1039
  *       for key in pcdict.keys():
  *          if key in [var]:
  *             print "printing %s" % (key)             # <<<<<<<<<<<<<<
@@ -5581,7 +5581,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       if (__Pyx_PrintOne(0, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1039; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pysesa/_plot.pyx":1040
+      /* "pysesa/plot.pyx":1040
  *          if key in [var]:
  *             print "printing %s" % (key)
  *             if log_scale is True:             # <<<<<<<<<<<<<<
@@ -5592,7 +5592,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __pyx_t_9 = (__pyx_t_10 != 0);
       if (__pyx_t_9) {
 
-        /* "pysesa/_plot.pyx":1041
+        /* "pysesa/plot.pyx":1041
  *             print "printing %s" % (key)
  *             if log_scale is True:
  *                dat = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res)             # <<<<<<<<<<<<<<
@@ -5679,7 +5679,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       }
       /*else*/ {
 
-        /* "pysesa/_plot.pyx":1043
+        /* "pysesa/plot.pyx":1043
  *                dat = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res)
  *             else:
  *                dat = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res)             # <<<<<<<<<<<<<<
@@ -5734,7 +5734,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       }
       __pyx_L8:;
 
-      /* "pysesa/_plot.pyx":1045
+      /* "pysesa/plot.pyx":1045
  *                dat = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res)
  * 
  *             if smooth is True:             # <<<<<<<<<<<<<<
@@ -5745,7 +5745,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __pyx_t_10 = (__pyx_t_9 != 0);
       if (__pyx_t_10) {
 
-        /* "pysesa/_plot.pyx":1046
+        /* "pysesa/plot.pyx":1046
  * 
  *             if smooth is True:
  *                from scipy.ndimage.filters import median_filter             # <<<<<<<<<<<<<<
@@ -5767,7 +5767,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "pysesa/_plot.pyx":1047
+        /* "pysesa/plot.pyx":1047
  *             if smooth is True:
  *                from scipy.ndimage.filters import median_filter
  *                dat = median_filter(dat,(filtsz,filtsz))             # <<<<<<<<<<<<<<
@@ -5816,7 +5816,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       }
       __pyx_L9:;
 
-      /* "pysesa/_plot.pyx":1049
+      /* "pysesa/plot.pyx":1049
  *                dat = median_filter(dat,(filtsz,filtsz))
  * 
  *             fig = self._plt.figure()             # <<<<<<<<<<<<<<
@@ -5849,7 +5849,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __pyx_v_fig = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1050
+      /* "pysesa/plot.pyx":1050
  * 
  *             fig = self._plt.figure()
  *             ax = fig.add_subplot(2,2,1)             # <<<<<<<<<<<<<<
@@ -5864,7 +5864,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_XDECREF_SET(__pyx_v_ax, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":1051
+      /* "pysesa/plot.pyx":1051
  *             fig = self._plt.figure()
  *             ax = fig.add_subplot(2,2,1)
  *             self._plt.pcolor(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(h), cmap='gray');             # <<<<<<<<<<<<<<
@@ -5996,7 +5996,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "pysesa/_plot.pyx":1052
+      /* "pysesa/plot.pyx":1052
  *             ax = fig.add_subplot(2,2,1)
  *             self._plt.pcolor(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(h), cmap='gray');
  *             im=self._plt.pcolormesh(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(dat), cmap=cmap, alpha=alpha);             # <<<<<<<<<<<<<<
@@ -6130,7 +6130,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_XDECREF_SET(__pyx_v_im, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1054
+      /* "pysesa/plot.pyx":1054
  *             im=self._plt.pcolormesh(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(dat), cmap=cmap, alpha=alpha);
  * 
  *             ax = self._set_tick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -6169,7 +6169,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1055
+      /* "pysesa/plot.pyx":1055
  * 
  *             ax = self._set_tick_size(ax, ticksize)
  *             ax = self._make_xy_axislabels(ax, labelsize)             # <<<<<<<<<<<<<<
@@ -6208,7 +6208,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1057
+      /* "pysesa/plot.pyx":1057
  *             ax = self._make_xy_axislabels(ax, labelsize)
  * 
  *             self._divide_colorbar(ax, im, str(key))             # <<<<<<<<<<<<<<
@@ -6257,7 +6257,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1059
+      /* "pysesa/plot.pyx":1059
  *             self._divide_colorbar(ax, im, str(key))
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -6305,7 +6305,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":1060
+      /* "pysesa/plot.pyx":1060
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig             # <<<<<<<<<<<<<<
@@ -6315,7 +6315,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
       __Pyx_DECREF(__pyx_v_fig);
       __pyx_v_fig = NULL;
 
-      /* "pysesa/_plot.pyx":1061
+      /* "pysesa/plot.pyx":1061
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig
  *             self._plt.close()             # <<<<<<<<<<<<<<
@@ -6350,7 +6350,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
     }
     __pyx_L7:;
 
-    /* "pysesa/_plot.pyx":1037
+    /* "pysesa/plot.pyx":1037
  *       del dat, z
  * 
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -6360,7 +6360,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":951
+  /* "pysesa/plot.pyx":951
  * 
  *    #==================================================
  *    def grd_var(self, var, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -6380,7 +6380,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pcdict);
@@ -6401,7 +6401,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1064
+/* "pysesa/plot.pyx":1064
  * 
  *    #==================================================
  *    def grd_vars(self, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -6410,10 +6410,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_8grd_var(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_11grd_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_10grd_vars[] = "\n      produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_vars(res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will"" smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_11grd_vars = {"grd_vars", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_11grd_vars, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_10grd_vars};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_11grd_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_11grd_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_10grd_vars[] = "\n      produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_vars(res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, log_scale, smooth, filtsz, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      smooth : bool, *optional* [default = True]\n   \t   if True, will"" smooth plotted dependent variable\n           with a median filter and window size specified by filtsz (below)\n\n      filtsz : int, *optional* [default = 3]\n   \t   size of filter (pixels) if smooth==1\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_11grd_vars = {"grd_vars", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_11grd_vars, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_10grd_vars};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_11grd_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_res = 0;
   PyObject *__pyx_v_thresdist = 0;
@@ -6594,18 +6594,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_11grd_vars(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("grd_vars", 0, 1, 15, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1064; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_10grd_vars(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf, __pyx_v_cmap, __pyx_v_dpi, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_alpha, __pyx_v_ticksize, __pyx_v_labelsize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_10grd_vars(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf, __pyx_v_cmap, __pyx_v_dpi, __pyx_v_log_scale, __pyx_v_smooth, __pyx_v_filtsz, __pyx_v_alpha, __pyx_v_ticksize, __pyx_v_labelsize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_10grd_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_smooth, PyObject *__pyx_v_filtsz, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_y = NULL;
@@ -6640,7 +6640,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("grd_vars", 0);
 
-  /* "pysesa/_plot.pyx":1133
+  /* "pysesa/plot.pyx":1133
  *       '''
  * 
  *       pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -6670,7 +6670,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __pyx_v_pcdict = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1135
+  /* "pysesa/plot.pyx":1135
  *       pcdict = self.parse_pc_vars()
  * 
  *       x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -6682,7 +6682,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1136
+  /* "pysesa/plot.pyx":1136
  * 
  *       x = pcdict['x']
  *       y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -6694,7 +6694,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __pyx_v_y = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1137
+  /* "pysesa/plot.pyx":1137
  *       x = pcdict['x']
  *       y = pcdict['y']
  *       z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -6706,7 +6706,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __pyx_v_z = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1139
+  /* "pysesa/plot.pyx":1139
  *       z = pcdict['z_mean']
  * 
  *       dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)             # <<<<<<<<<<<<<<
@@ -6818,7 +6818,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __pyx_v_grid_y = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1141
+  /* "pysesa/plot.pyx":1141
  *       dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *       h = self._hillshade(dat,res,res,azimuth,altitude,zf)             # <<<<<<<<<<<<<<
@@ -6869,7 +6869,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __pyx_v_h = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1142
+  /* "pysesa/plot.pyx":1142
  * 
  *       h = self._hillshade(dat,res,res,azimuth,altitude,zf)
  *       del dat, z             # <<<<<<<<<<<<<<
@@ -6881,7 +6881,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_v_z);
   __pyx_v_z = NULL;
 
-  /* "pysesa/_plot.pyx":1144
+  /* "pysesa/plot.pyx":1144
  *       del dat, z
  * 
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -6949,7 +6949,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1145
+    /* "pysesa/plot.pyx":1145
  * 
  *       for key in pcdict.keys():
  *          if key not in ['x','y','z_mean']:             # <<<<<<<<<<<<<<
@@ -6977,7 +6977,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
     __pyx_t_10 = (__pyx_t_9 != 0);
     if (__pyx_t_10) {
 
-      /* "pysesa/_plot.pyx":1146
+      /* "pysesa/plot.pyx":1146
  *       for key in pcdict.keys():
  *          if key not in ['x','y','z_mean']:
  *             print "printing %s" % (key)             # <<<<<<<<<<<<<<
@@ -6989,7 +6989,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       if (__Pyx_PrintOne(0, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1146; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pysesa/_plot.pyx":1147
+      /* "pysesa/plot.pyx":1147
  *          if key not in ['x','y','z_mean']:
  *             print "printing %s" % (key)
  *             if log_scale is True:             # <<<<<<<<<<<<<<
@@ -7000,7 +7000,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __pyx_t_9 = (__pyx_t_10 != 0);
       if (__pyx_t_9) {
 
-        /* "pysesa/_plot.pyx":1148
+        /* "pysesa/plot.pyx":1148
  *             print "printing %s" % (key)
  *             if log_scale is True:
  *                dat = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res, thresdist)             # <<<<<<<<<<<<<<
@@ -7090,7 +7090,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       }
       /*else*/ {
 
-        /* "pysesa/_plot.pyx":1150
+        /* "pysesa/plot.pyx":1150
  *                dat = self._grid_var(x, y, np.log(pcdict[key]), grid_x, grid_y, res, thresdist)
  *             else:
  *                dat = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res, thresdist)             # <<<<<<<<<<<<<<
@@ -7148,7 +7148,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       }
       __pyx_L11:;
 
-      /* "pysesa/_plot.pyx":1152
+      /* "pysesa/plot.pyx":1152
  *                dat = self._grid_var(x, y, pcdict[key], grid_x, grid_y, res, thresdist)
  * 
  *             if smooth is True:             # <<<<<<<<<<<<<<
@@ -7159,7 +7159,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __pyx_t_10 = (__pyx_t_9 != 0);
       if (__pyx_t_10) {
 
-        /* "pysesa/_plot.pyx":1153
+        /* "pysesa/plot.pyx":1153
  * 
  *             if smooth is True:
  *                from scipy.ndimage.filters import median_filter             # <<<<<<<<<<<<<<
@@ -7181,7 +7181,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "pysesa/_plot.pyx":1154
+        /* "pysesa/plot.pyx":1154
  *             if smooth is True:
  *                from scipy.ndimage.filters import median_filter
  *                dat = median_filter(dat,(filtsz,filtsz))             # <<<<<<<<<<<<<<
@@ -7230,7 +7230,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       }
       __pyx_L12:;
 
-      /* "pysesa/_plot.pyx":1156
+      /* "pysesa/plot.pyx":1156
  *                dat = median_filter(dat,(filtsz,filtsz))
  * 
  *             fig = self._plt.figure()             # <<<<<<<<<<<<<<
@@ -7263,7 +7263,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __pyx_v_fig = __pyx_t_2;
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1157
+      /* "pysesa/plot.pyx":1157
  * 
  *             fig = self._plt.figure()
  *             ax = fig.add_subplot(2,2,1)             # <<<<<<<<<<<<<<
@@ -7278,7 +7278,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_XDECREF_SET(__pyx_v_ax, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":1158
+      /* "pysesa/plot.pyx":1158
  *             fig = self._plt.figure()
  *             ax = fig.add_subplot(2,2,1)
  *             self._plt.pcolor(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(h), cmap='gray');             # <<<<<<<<<<<<<<
@@ -7410,7 +7410,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "pysesa/_plot.pyx":1159
+      /* "pysesa/plot.pyx":1159
  *             ax = fig.add_subplot(2,2,1)
  *             self._plt.pcolor(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(h), cmap='gray');
  *             im=self._plt.pcolormesh(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(dat), cmap=cmap, alpha=alpha);             # <<<<<<<<<<<<<<
@@ -7544,7 +7544,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_XDECREF_SET(__pyx_v_im, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1161
+      /* "pysesa/plot.pyx":1161
  *             im=self._plt.pcolormesh(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(dat), cmap=cmap, alpha=alpha);
  * 
  *             ax = self._set_tick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -7583,7 +7583,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1162
+      /* "pysesa/plot.pyx":1162
  * 
  *             ax = self._set_tick_size(ax, ticksize)
  *             ax = self._make_xy_axislabels(ax, labelsize)             # <<<<<<<<<<<<<<
@@ -7622,7 +7622,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1164
+      /* "pysesa/plot.pyx":1164
  *             ax = self._make_xy_axislabels(ax, labelsize)
  * 
  *             self._divide_colorbar(ax, im, str(key))             # <<<<<<<<<<<<<<
@@ -7671,7 +7671,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "pysesa/_plot.pyx":1166
+      /* "pysesa/plot.pyx":1166
  *             self._divide_colorbar(ax, im, str(key))
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -7719,7 +7719,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":1167
+      /* "pysesa/plot.pyx":1167
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig             # <<<<<<<<<<<<<<
@@ -7729,7 +7729,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
       __Pyx_DECREF(__pyx_v_fig);
       __pyx_v_fig = NULL;
 
-      /* "pysesa/_plot.pyx":1168
+      /* "pysesa/plot.pyx":1168
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig
  *             self._plt.close()             # <<<<<<<<<<<<<<
@@ -7764,7 +7764,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
     }
     __pyx_L7:;
 
-    /* "pysesa/_plot.pyx":1144
+    /* "pysesa/plot.pyx":1144
  *       del dat, z
  * 
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -7774,7 +7774,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1064
+  /* "pysesa/plot.pyx":1064
  * 
  *    #==================================================
  *    def grd_vars(self, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -7794,7 +7794,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pcdict);
@@ -7815,7 +7815,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1172
+/* "pysesa/plot.pyx":1172
  * 
  *    #==================================================
  *    def grd_xyz(self, res=0.1, thresdist = 0, nn = 1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -7824,10 +7824,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_10grd_vars(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_13grd_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_12grd_xyz[] = "\n      produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,\n      as returned by parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_xyz(res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels""\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_13grd_xyz = {"grd_xyz", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_13grd_xyz, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_12grd_xyz};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_13grd_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_13grd_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_12grd_xyz[] = "\n      produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,\n      as returned by parse_pc_vars()\n\n      Syntax\n      ----------\n      [] = p.grd_xyz(res, thresdist, nn, azimuth, altitude, zf, cmap, dpi, alpha, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t      \t   \n      azimuth : float, *optional* [default = 315]\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float, *optional* [default = 45]\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float, *optional* [default = 1]\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      cmap : str, *optional* [default = 'hot']\n   \t   colormap\n           possible colormaps are documented here:\n           http://matplotlib.org/examples/color/colormaps_reference.html\n   \t   \n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      alpha : float, *optional* [default = 0.5]\n           transparency, between 0.0 and 1.0\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels""\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_13grd_xyz = {"grd_xyz", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_13grd_xyz, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_12grd_xyz};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_13grd_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_res = 0;
   PyObject *__pyx_v_thresdist = 0;
@@ -7978,18 +7978,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_13grd_xyz(PyObject *__pyx_self, P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("grd_xyz", 0, 1, 12, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1172; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf, __pyx_v_cmap, __pyx_v_dpi, __pyx_v_alpha, __pyx_v_ticksize, __pyx_v_labelsize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_12grd_xyz(__pyx_self, __pyx_v_self, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf, __pyx_v_cmap, __pyx_v_dpi, __pyx_v_alpha, __pyx_v_ticksize, __pyx_v_labelsize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf, PyObject *__pyx_v_cmap, PyObject *__pyx_v_dpi, PyObject *__pyx_v_alpha, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
   PyObject *__pyx_v_y = NULL;
@@ -8017,7 +8017,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("grd_xyz", 0);
 
-  /* "pysesa/_plot.pyx":1231
+  /* "pysesa/plot.pyx":1231
  * 
  *       '''
  *       pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -8047,7 +8047,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_pcdict = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1233
+  /* "pysesa/plot.pyx":1233
  *       pcdict = self.parse_pc_vars()
  * 
  *       x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -8059,7 +8059,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_x = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1234
+  /* "pysesa/plot.pyx":1234
  * 
  *       x = pcdict['x']
  *       y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -8071,7 +8071,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_y = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1235
+  /* "pysesa/plot.pyx":1235
  *       x = pcdict['x']
  *       y = pcdict['y']
  *       z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -8083,7 +8083,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_z = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1237
+  /* "pysesa/plot.pyx":1237
  *       z = pcdict['z_mean']
  * 
  *       dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)             # <<<<<<<<<<<<<<
@@ -8195,7 +8195,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_grid_y = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1239
+  /* "pysesa/plot.pyx":1239
  *       dat, grid_x, grid_y = self._get_grid(x,y,z,res,thresdist,nn)
  * 
  *       h = self._hillshade(dat,res,res,azimuth,altitude,zf)             # <<<<<<<<<<<<<<
@@ -8246,7 +8246,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_h = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1241
+  /* "pysesa/plot.pyx":1241
  *       h = self._hillshade(dat,res,res,azimuth,altitude,zf)
  * 
  *       fig = self._plt.figure()             # <<<<<<<<<<<<<<
@@ -8279,7 +8279,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_fig = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1242
+  /* "pysesa/plot.pyx":1242
  * 
  *       fig = self._plt.figure()
  *       ax = fig.add_subplot(2,2,1)             # <<<<<<<<<<<<<<
@@ -8294,7 +8294,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_ax = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1243
+  /* "pysesa/plot.pyx":1243
  *       fig = self._plt.figure()
  *       ax = fig.add_subplot(2,2,1)
  *       self._plt.pcolor(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(h), cmap='gray');             # <<<<<<<<<<<<<<
@@ -8426,7 +8426,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1244
+  /* "pysesa/plot.pyx":1244
  *       ax = fig.add_subplot(2,2,1)
  *       self._plt.pcolor(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(h), cmap='gray');
  *       im=self._plt.contourf(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(dat), cmap=cmap, alpha=alpha);             # <<<<<<<<<<<<<<
@@ -8560,7 +8560,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_im = __pyx_t_8;
   __pyx_t_8 = 0;
 
-  /* "pysesa/_plot.pyx":1246
+  /* "pysesa/plot.pyx":1246
  *       im=self._plt.contourf(grid_x-np.min(grid_x), grid_y-np.min(grid_y), np.ma.masked_invalid(dat), cmap=cmap, alpha=alpha);
  * 
  *       ax = self._set_tick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -8599,7 +8599,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "pysesa/_plot.pyx":1247
+  /* "pysesa/plot.pyx":1247
  * 
  *       ax = self._set_tick_size(ax, ticksize)
  *       ax = self._make_xy_axislabels(ax, labelsize)             # <<<<<<<<<<<<<<
@@ -8638,7 +8638,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "pysesa/_plot.pyx":1249
+  /* "pysesa/plot.pyx":1249
  *       ax = self._make_xy_axislabels(ax, labelsize)
  * 
  *       self._divide_colorbar(ax, im, r"Amplitude")             # <<<<<<<<<<<<<<
@@ -8679,7 +8679,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "pysesa/_plot.pyx":1251
+  /* "pysesa/plot.pyx":1251
  *       self._divide_colorbar(ax, im, r"Amplitude")
  * 
  *       plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc',bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -8724,7 +8724,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "pysesa/_plot.pyx":1252
+  /* "pysesa/plot.pyx":1252
  * 
  *       plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc',bbox_inches='tight',dpi=dpi)
  *       del fig             # <<<<<<<<<<<<<<
@@ -8734,7 +8734,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_v_fig);
   __pyx_v_fig = NULL;
 
-  /* "pysesa/_plot.pyx":1253
+  /* "pysesa/plot.pyx":1253
  *       plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc',bbox_inches='tight',dpi=dpi)
  *       del fig
  *       self._plt.close()             # <<<<<<<<<<<<<<
@@ -8766,7 +8766,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "pysesa/_plot.pyx":1172
+  /* "pysesa/plot.pyx":1172
  * 
  *    #==================================================
  *    def grd_xyz(self, res=0.1, thresdist = 0, nn = 1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -8785,7 +8785,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pysesa._plot.plot.grd_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.grd_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pcdict);
@@ -8804,7 +8804,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1256
+/* "pysesa/plot.pyx":1256
  * 
  *    #==================================================
  *    def plt_xyz(self,elev=65, azim=-115, markersize=.01, dpi=300, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -8813,10 +8813,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_12grd_xyz(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_15plt_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_14plt_xyz[] = "\n      produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()\n\n      Syntax\n      ----------\n      [] = p.plt_xyz(elev, azim, markersize, dpi, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      markersize : float, *optional* [default = 0.01]\n           marker size in x and y axes units\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_15plt_xyz = {"plt_xyz", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_15plt_xyz, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_14plt_xyz};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_15plt_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_15plt_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_14plt_xyz[] = "\n      produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()\n\n      Syntax\n      ----------\n      [] = p.plt_xyz(elev, azim, markersize, dpi, ticksize, labelsize)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      markersize : float, *optional* [default = 0.01]\n           marker size in x and y axes units\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_15plt_xyz = {"plt_xyz", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_15plt_xyz, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_14plt_xyz};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_15plt_xyz(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_elev = 0;
   PyObject *__pyx_v_azim = 0;
@@ -8917,18 +8917,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_15plt_xyz(PyObject *__pyx_self, P
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("plt_xyz", 0, 1, 7, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1256; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.plt_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.plt_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(__pyx_self, __pyx_v_self, __pyx_v_elev, __pyx_v_azim, __pyx_v_markersize, __pyx_v_dpi, __pyx_v_ticksize, __pyx_v_labelsize);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_14plt_xyz(__pyx_self, __pyx_v_self, __pyx_v_elev, __pyx_v_azim, __pyx_v_markersize, __pyx_v_dpi, __pyx_v_ticksize, __pyx_v_labelsize);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim, PyObject *__pyx_v_markersize, PyObject *__pyx_v_dpi, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim, PyObject *__pyx_v_markersize, PyObject *__pyx_v_dpi, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize) {
   CYTHON_UNUSED PyObject *__pyx_v_Axes3D = NULL;
   PyObject *__pyx_v_xyz = NULL;
   PyObject *__pyx_v_fig = NULL;
@@ -8950,7 +8950,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("plt_xyz", 0);
 
-  /* "pysesa/_plot.pyx":1291
+  /* "pysesa/plot.pyx":1291
  * 
  *       '''
  *       from mpl_toolkits.mplot3d import Axes3D             # <<<<<<<<<<<<<<
@@ -8972,7 +8972,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1293
+  /* "pysesa/plot.pyx":1293
  *       from mpl_toolkits.mplot3d import Axes3D
  * 
  *       xyz = self.get_xyz()             # <<<<<<<<<<<<<<
@@ -9002,7 +9002,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_xyz = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1295
+  /* "pysesa/plot.pyx":1295
  *       xyz = self.get_xyz()
  * 
  *       fig = self._plt.figure(dpi=dpi)             # <<<<<<<<<<<<<<
@@ -9024,7 +9024,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_fig = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1296
+  /* "pysesa/plot.pyx":1296
  * 
  *       fig = self._plt.figure(dpi=dpi)
  *       fig.subplots_adjust(wspace = -0.15, hspace=-0.15)             # <<<<<<<<<<<<<<
@@ -9043,7 +9043,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1297
+  /* "pysesa/plot.pyx":1297
  *       fig = self._plt.figure(dpi=dpi)
  *       fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *       ax = fig.add_subplot(221, projection='3d', axisbg='white')             # <<<<<<<<<<<<<<
@@ -9063,7 +9063,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_ax = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1298
+  /* "pysesa/plot.pyx":1298
  *       fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *       ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *       ax.view_init(elev=elev, azim=azim)             # <<<<<<<<<<<<<<
@@ -9082,7 +9082,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1299
+  /* "pysesa/plot.pyx":1299
  *       ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *       ax.view_init(elev=elev, azim=azim)
  *       ax.plot(xyz[:,0]-np.min(xyz[:,0]),xyz[:,1]-np.min(xyz[:,1]),xyz[:,2]-np.min(xyz[:,2]), linestyle="None", color='k',  marker=".", markersize=markersize)             # <<<<<<<<<<<<<<
@@ -9232,7 +9232,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pysesa/_plot.pyx":1300
+  /* "pysesa/plot.pyx":1300
  *       ax.view_init(elev=elev, azim=azim)
  *       ax.plot(xyz[:,0]-np.min(xyz[:,0]),xyz[:,1]-np.min(xyz[:,1]),xyz[:,2]-np.min(xyz[:,2]), linestyle="None", color='k',  marker=".", markersize=markersize)
  *       ax.grid(False)             # <<<<<<<<<<<<<<
@@ -9246,7 +9246,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1301
+  /* "pysesa/plot.pyx":1301
  *       ax.plot(xyz[:,0]-np.min(xyz[:,0]),xyz[:,1]-np.min(xyz[:,1]),xyz[:,2]-np.min(xyz[:,2]), linestyle="None", color='k',  marker=".", markersize=markersize)
  *       ax.grid(False)
  *       self._plt.axis('tight')             # <<<<<<<<<<<<<<
@@ -9263,7 +9263,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1303
+  /* "pysesa/plot.pyx":1303
  *       self._plt.axis('tight')
  * 
  *       ax = self._set_tick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -9302,7 +9302,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1304
+  /* "pysesa/plot.pyx":1304
  * 
  *       ax = self._set_tick_size(ax, ticksize)
  *       ax = self._set_ztick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -9341,7 +9341,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1305
+  /* "pysesa/plot.pyx":1305
  *       ax = self._set_tick_size(ax, ticksize)
  *       ax = self._set_ztick_size(ax, ticksize)
  *       ax = self._make_axislabels(ax, labelsize)             # <<<<<<<<<<<<<<
@@ -9380,7 +9380,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1307
+  /* "pysesa/plot.pyx":1307
  *       ax = self._make_axislabels(ax, labelsize)
  * 
  *       self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_pc',bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -9425,7 +9425,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1308
+  /* "pysesa/plot.pyx":1308
  * 
  *       self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_pc',bbox_inches='tight',dpi=dpi)
  *       del fig             # <<<<<<<<<<<<<<
@@ -9435,7 +9435,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_v_fig);
   __pyx_v_fig = NULL;
 
-  /* "pysesa/_plot.pyx":1309
+  /* "pysesa/plot.pyx":1309
  *       self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_pc',bbox_inches='tight',dpi=dpi)
  *       del fig
  *       self._plt.close()             # <<<<<<<<<<<<<<
@@ -9467,7 +9467,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1256
+  /* "pysesa/plot.pyx":1256
  * 
  *    #==================================================
  *    def plt_xyz(self,elev=65, azim=-115, markersize=.01, dpi=300, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -9488,7 +9488,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pysesa._plot.plot.plt_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.plt_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Axes3D);
@@ -9500,7 +9500,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1312
+/* "pysesa/plot.pyx":1312
  * 
  *    #==================================================
  *    def plt_xy_var(self, var, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
@@ -9509,10 +9509,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_14plt_xyz(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_17plt_xy_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_16plt_xy_var[] = "\n      produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')\n\n      Syntax\n      ----------\n      [] = p.plt_xy_var(var, log_scale, dpi, markersize, ticksize, labelsize, elev, azim)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var('sigma')\n\n      Optional Parameters\n      --------------------\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      markersize : float, *optional* [default = 5]\n           marker size in points^2\n           http://matplotlib.org/mpl_toolkits/mplot3d/api.html#mpl_toolkits.mplot3d.axes3d.Axes3D.scatter\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_17plt_xy_var = {"plt_xy_var", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_17plt_xy_var, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_16plt_xy_var};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_17plt_xy_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_17plt_xy_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_16plt_xy_var[] = "\n      produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')\n\n      Syntax\n      ----------\n      [] = p.plt_xy_var(var, log_scale, dpi, markersize, ticksize, labelsize, elev, azim)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      var : str\n   \t   name of variable in p.parse_pc_vars() that will be plotted\n           e.g. p.grd_var('sigma')\n\n      Optional Parameters\n      --------------------\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      markersize : float, *optional* [default = 5]\n           marker size in points^2\n           http://matplotlib.org/mpl_toolkits/mplot3d/api.html#mpl_toolkits.mplot3d.axes3d.Axes3D.scatter\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_17plt_xy_var = {"plt_xy_var", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_17plt_xy_var, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_16plt_xy_var};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_17plt_xy_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_var = 0;
   PyObject *__pyx_v_log_scale = 0;
@@ -9632,18 +9632,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_17plt_xy_var(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("plt_xy_var", 0, 2, 9, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1312; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.plt_xy_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.plt_xy_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(__pyx_self, __pyx_v_self, __pyx_v_var, __pyx_v_log_scale, __pyx_v_dpi, __pyx_v_markersize, __pyx_v_ticksize, __pyx_v_labelsize, __pyx_v_elev, __pyx_v_azim);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_16plt_xy_var(__pyx_self, __pyx_v_self, __pyx_v_var, __pyx_v_log_scale, __pyx_v_dpi, __pyx_v_markersize, __pyx_v_ticksize, __pyx_v_labelsize, __pyx_v_elev, __pyx_v_azim);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_var, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim) {
   CYTHON_UNUSED PyObject *__pyx_v_Axes3D = NULL;
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -9674,7 +9674,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("plt_xy_var", 0);
 
-  /* "pysesa/_plot.pyx":1355
+  /* "pysesa/plot.pyx":1355
  * 
  *       '''
  *       from mpl_toolkits.mplot3d import Axes3D             # <<<<<<<<<<<<<<
@@ -9696,7 +9696,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1357
+  /* "pysesa/plot.pyx":1357
  *       from mpl_toolkits.mplot3d import Axes3D
  * 
  *       pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -9726,7 +9726,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   __pyx_v_pcdict = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1359
+  /* "pysesa/plot.pyx":1359
  *       pcdict = self.parse_pc_vars()
  * 
  *       x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -9738,7 +9738,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1360
+  /* "pysesa/plot.pyx":1360
  * 
  *       x = pcdict['x']
  *       y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -9750,7 +9750,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   __pyx_v_y = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1361
+  /* "pysesa/plot.pyx":1361
  *       x = pcdict['x']
  *       y = pcdict['y']
  *       z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -9762,7 +9762,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   __pyx_v_z = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1362
+  /* "pysesa/plot.pyx":1362
  *       y = pcdict['y']
  *       z = pcdict['z_mean']
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -9830,7 +9830,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1363
+    /* "pysesa/plot.pyx":1363
  *       z = pcdict['z_mean']
  *       for key in pcdict.keys():
  *          if key in [var]:             # <<<<<<<<<<<<<<
@@ -9846,7 +9846,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
     __pyx_t_7 = (__pyx_t_6 != 0);
     if (__pyx_t_7) {
 
-      /* "pysesa/_plot.pyx":1364
+      /* "pysesa/plot.pyx":1364
  *       for key in pcdict.keys():
  *          if key in [var]:
  *             print "printing %s" % (key)             # <<<<<<<<<<<<<<
@@ -9858,7 +9858,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       if (__Pyx_PrintOne(0, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1365
+      /* "pysesa/plot.pyx":1365
  *          if key in [var]:
  *             print "printing %s" % (key)
  *             fig = self._plt.figure(dpi=dpi)             # <<<<<<<<<<<<<<
@@ -9880,7 +9880,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __pyx_v_fig = __pyx_t_8;
       __pyx_t_8 = 0;
 
-      /* "pysesa/_plot.pyx":1366
+      /* "pysesa/plot.pyx":1366
  *             print "printing %s" % (key)
  *             fig = self._plt.figure(dpi=dpi)
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)             # <<<<<<<<<<<<<<
@@ -9899,7 +9899,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pysesa/_plot.pyx":1367
+      /* "pysesa/plot.pyx":1367
  *             fig = self._plt.figure(dpi=dpi)
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')             # <<<<<<<<<<<<<<
@@ -9919,7 +9919,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_XDECREF_SET(__pyx_v_ax, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pysesa/_plot.pyx":1368
+      /* "pysesa/plot.pyx":1368
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *             ax.view_init(elev=elev, azim=azim)             # <<<<<<<<<<<<<<
@@ -9938,7 +9938,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pysesa/_plot.pyx":1369
+      /* "pysesa/plot.pyx":1369
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *             ax.view_init(elev=elev, azim=azim)
  *             if log_scale is True:             # <<<<<<<<<<<<<<
@@ -9949,7 +9949,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __pyx_t_6 = (__pyx_t_7 != 0);
       if (__pyx_t_6) {
 
-        /* "pysesa/_plot.pyx":1370
+        /* "pysesa/plot.pyx":1370
  *             ax.view_init(elev=elev, azim=azim)
  *             if log_scale is True:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=pcdict[key], linewidth=0)             # <<<<<<<<<<<<<<
@@ -10054,7 +10054,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       }
       /*else*/ {
 
-        /* "pysesa/_plot.pyx":1372
+        /* "pysesa/plot.pyx":1372
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=pcdict[key], linewidth=0)
  *             else:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)             # <<<<<<<<<<<<<<
@@ -10189,7 +10189,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       }
       __pyx_L6:;
 
-      /* "pysesa/_plot.pyx":1373
+      /* "pysesa/plot.pyx":1373
  *             else:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)             # <<<<<<<<<<<<<<
@@ -10203,7 +10203,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1374
+      /* "pysesa/plot.pyx":1374
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)
  *             self._plt.axis('tight')             # <<<<<<<<<<<<<<
@@ -10220,7 +10220,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1375
+      /* "pysesa/plot.pyx":1375
  *             ax.grid(False)
  *             self._plt.axis('tight')
  *             self._plt.colorbar(im)             # <<<<<<<<<<<<<<
@@ -10259,7 +10259,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1377
+      /* "pysesa/plot.pyx":1377
  *             self._plt.colorbar(im)
  * 
  *             ax = self._set_tick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -10298,7 +10298,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1378
+      /* "pysesa/plot.pyx":1378
  * 
  *             ax = self._set_tick_size(ax, ticksize)
  *             ax = self._set_ztick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -10337,7 +10337,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1379
+      /* "pysesa/plot.pyx":1379
  *             ax = self._set_tick_size(ax, ticksize)
  *             ax = self._set_ztick_size(ax, ticksize)
  *             ax = self._make_axislabels(ax, labelsize)             # <<<<<<<<<<<<<<
@@ -10376,7 +10376,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1381
+      /* "pysesa/plot.pyx":1381
  *             ax = self._make_axislabels(ax, labelsize)
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -10424,7 +10424,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pysesa/_plot.pyx":1382
+      /* "pysesa/plot.pyx":1382
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig             # <<<<<<<<<<<<<<
@@ -10434,7 +10434,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
       __Pyx_DECREF(__pyx_v_fig);
       __pyx_v_fig = NULL;
 
-      /* "pysesa/_plot.pyx":1383
+      /* "pysesa/plot.pyx":1383
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig
  *             self._plt.close()             # <<<<<<<<<<<<<<
@@ -10469,7 +10469,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
     }
     __pyx_L5:;
 
-    /* "pysesa/_plot.pyx":1362
+    /* "pysesa/plot.pyx":1362
  *       y = pcdict['y']
  *       z = pcdict['z_mean']
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -10479,7 +10479,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1312
+  /* "pysesa/plot.pyx":1312
  * 
  *    #==================================================
  *    def plt_xy_var(self, var, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
@@ -10500,7 +10500,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("pysesa._plot.plot.plt_xy_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.plt_xy_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Axes3D);
@@ -10517,7 +10517,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1387
+/* "pysesa/plot.pyx":1387
  * 
  *    #==================================================
  *    def plt_xy_vars(self, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
@@ -10526,10 +10526,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_16plt_xy_var(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_19plt_xy_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_18plt_xy_vars[] = "\n      produces a 3d plot of each output variable in p.parse_pc_vars() \n\n      Syntax\n      ----------\n      [] = p.plt_xy_vars(log_scale, dpi, markersize, ticksize, labelsize, elev, azim)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      markersize : float, *optional* [default = 5]\n           marker size in points^2\n           http://matplotlib.org/mpl_toolkits/mplot3d/api.html#mpl_toolkits.mplot3d.axes3d.Axes3D.scatter\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_19plt_xy_vars = {"plt_xy_vars", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_19plt_xy_vars, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_18plt_xy_vars};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_19plt_xy_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_19plt_xy_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_18plt_xy_vars[] = "\n      produces a 3d plot of each output variable in p.parse_pc_vars() \n\n      Syntax\n      ----------\n      [] = p.plt_xy_vars(log_scale, dpi, markersize, ticksize, labelsize, elev, azim)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      log_scale : bool, *optional* [default = False]\n   \t   if True, will log scale plotted dependent variable\n\n      dpi : int, *optional* [default = 300]\n           figure resolution in dots per inch\n\n      markersize : float, *optional* [default = 5]\n           marker size in points^2\n           http://matplotlib.org/mpl_toolkits/mplot3d/api.html#mpl_toolkits.mplot3d.axes3d.Axes3D.scatter\n\n      ticksize : int, *optional* [default = 4]\n           size of x, y, and z tick labels\n\n      labelsize : int, *optional* [default = 6]\n           size of x and y axes labels\n\n      elev : float, *optional* [default = 65]\n           the elevation angle in the z plane\n\n      azimuth : float, *optional* [default = -115]\n           azimuth angle in the x,y plane \n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_19plt_xy_vars = {"plt_xy_vars", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_19plt_xy_vars, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_18plt_xy_vars};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_19plt_xy_vars(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_log_scale = 0;
   PyObject *__pyx_v_dpi = 0;
@@ -10640,18 +10640,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_19plt_xy_vars(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("plt_xy_vars", 0, 1, 8, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1387; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot.plt_xy_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.plt_xy_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(__pyx_self, __pyx_v_self, __pyx_v_log_scale, __pyx_v_dpi, __pyx_v_markersize, __pyx_v_ticksize, __pyx_v_labelsize, __pyx_v_elev, __pyx_v_azim);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_18plt_xy_vars(__pyx_self, __pyx_v_self, __pyx_v_log_scale, __pyx_v_dpi, __pyx_v_markersize, __pyx_v_ticksize, __pyx_v_labelsize, __pyx_v_elev, __pyx_v_azim);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_log_scale, PyObject *__pyx_v_dpi, PyObject *__pyx_v_markersize, PyObject *__pyx_v_ticksize, PyObject *__pyx_v_labelsize, PyObject *__pyx_v_elev, PyObject *__pyx_v_azim) {
   CYTHON_UNUSED PyObject *__pyx_v_Axes3D = NULL;
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -10682,7 +10682,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("plt_xy_vars", 0);
 
-  /* "pysesa/_plot.pyx":1426
+  /* "pysesa/plot.pyx":1426
  * 
  *       '''
  *       from mpl_toolkits.mplot3d import Axes3D             # <<<<<<<<<<<<<<
@@ -10704,7 +10704,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1428
+  /* "pysesa/plot.pyx":1428
  *       from mpl_toolkits.mplot3d import Axes3D
  * 
  *       pcdict = self.parse_pc_vars()             # <<<<<<<<<<<<<<
@@ -10734,7 +10734,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   __pyx_v_pcdict = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1430
+  /* "pysesa/plot.pyx":1430
  *       pcdict = self.parse_pc_vars()
  * 
  *       x = pcdict['x']             # <<<<<<<<<<<<<<
@@ -10746,7 +10746,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1431
+  /* "pysesa/plot.pyx":1431
  * 
  *       x = pcdict['x']
  *       y = pcdict['y']             # <<<<<<<<<<<<<<
@@ -10758,7 +10758,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   __pyx_v_y = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1432
+  /* "pysesa/plot.pyx":1432
  *       x = pcdict['x']
  *       y = pcdict['y']
  *       z = pcdict['z_mean']             # <<<<<<<<<<<<<<
@@ -10770,7 +10770,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   __pyx_v_z = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1433
+  /* "pysesa/plot.pyx":1433
  *       y = pcdict['y']
  *       z = pcdict['z_mean']
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -10838,7 +10838,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1434
+    /* "pysesa/plot.pyx":1434
  *       z = pcdict['z_mean']
  *       for key in pcdict.keys():
  *          if key not in ['x','y','z_mean']:             # <<<<<<<<<<<<<<
@@ -10866,7 +10866,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
     __pyx_t_7 = (__pyx_t_6 != 0);
     if (__pyx_t_7) {
 
-      /* "pysesa/_plot.pyx":1435
+      /* "pysesa/plot.pyx":1435
  *       for key in pcdict.keys():
  *          if key not in ['x','y','z_mean']:
  *             print "printing %s" % (key)             # <<<<<<<<<<<<<<
@@ -10878,7 +10878,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       if (__Pyx_PrintOne(0, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1435; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1436
+      /* "pysesa/plot.pyx":1436
  *          if key not in ['x','y','z_mean']:
  *             print "printing %s" % (key)
  *             fig = self._plt.figure(dpi=dpi)             # <<<<<<<<<<<<<<
@@ -10900,7 +10900,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __pyx_v_fig = __pyx_t_8;
       __pyx_t_8 = 0;
 
-      /* "pysesa/_plot.pyx":1437
+      /* "pysesa/plot.pyx":1437
  *             print "printing %s" % (key)
  *             fig = self._plt.figure(dpi=dpi)
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)             # <<<<<<<<<<<<<<
@@ -10919,7 +10919,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pysesa/_plot.pyx":1438
+      /* "pysesa/plot.pyx":1438
  *             fig = self._plt.figure(dpi=dpi)
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')             # <<<<<<<<<<<<<<
@@ -10939,7 +10939,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_XDECREF_SET(__pyx_v_ax, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "pysesa/_plot.pyx":1439
+      /* "pysesa/plot.pyx":1439
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *             ax.view_init(elev=elev, azim=azim)             # <<<<<<<<<<<<<<
@@ -10958,7 +10958,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pysesa/_plot.pyx":1440
+      /* "pysesa/plot.pyx":1440
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *             ax.view_init(elev=elev, azim=azim)
  *             if log_scale is True:             # <<<<<<<<<<<<<<
@@ -10969,7 +10969,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __pyx_t_6 = (__pyx_t_7 != 0);
       if (__pyx_t_6) {
 
-        /* "pysesa/_plot.pyx":1441
+        /* "pysesa/plot.pyx":1441
  *             ax.view_init(elev=elev, azim=azim)
  *             if log_scale is True:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=pcdict[key], linewidth=0)             # <<<<<<<<<<<<<<
@@ -11074,7 +11074,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       }
       /*else*/ {
 
-        /* "pysesa/_plot.pyx":1443
+        /* "pysesa/plot.pyx":1443
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=pcdict[key], linewidth=0)
  *             else:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)             # <<<<<<<<<<<<<<
@@ -11209,7 +11209,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       }
       __pyx_L9:;
 
-      /* "pysesa/_plot.pyx":1444
+      /* "pysesa/plot.pyx":1444
  *             else:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)             # <<<<<<<<<<<<<<
@@ -11223,7 +11223,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1445
+      /* "pysesa/plot.pyx":1445
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)
  *             self._plt.axis('tight')             # <<<<<<<<<<<<<<
@@ -11240,7 +11240,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1446
+      /* "pysesa/plot.pyx":1446
  *             ax.grid(False)
  *             self._plt.axis('tight')
  *             self._plt.colorbar(im)             # <<<<<<<<<<<<<<
@@ -11279,7 +11279,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1448
+      /* "pysesa/plot.pyx":1448
  *             self._plt.colorbar(im)
  * 
  *             ax = self._set_tick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -11318,7 +11318,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1449
+      /* "pysesa/plot.pyx":1449
  * 
  *             ax = self._set_tick_size(ax, ticksize)
  *             ax = self._set_ztick_size(ax, ticksize)             # <<<<<<<<<<<<<<
@@ -11357,7 +11357,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1450
+      /* "pysesa/plot.pyx":1450
  *             ax = self._set_tick_size(ax, ticksize)
  *             ax = self._set_ztick_size(ax, ticksize)
  *             ax = self._make_axislabels(ax, labelsize)             # <<<<<<<<<<<<<<
@@ -11396,7 +11396,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF_SET(__pyx_v_ax, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "pysesa/_plot.pyx":1452
+      /* "pysesa/plot.pyx":1452
  *             ax = self._make_axislabels(ax, labelsize)
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -11444,7 +11444,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "pysesa/_plot.pyx":1453
+      /* "pysesa/plot.pyx":1453
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig             # <<<<<<<<<<<<<<
@@ -11454,7 +11454,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
       __Pyx_DECREF(__pyx_v_fig);
       __pyx_v_fig = NULL;
 
-      /* "pysesa/_plot.pyx":1454
+      /* "pysesa/plot.pyx":1454
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)
  *             del fig
  *             self._plt.close()             # <<<<<<<<<<<<<<
@@ -11489,7 +11489,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
     }
     __pyx_L5:;
 
-    /* "pysesa/_plot.pyx":1433
+    /* "pysesa/plot.pyx":1433
  *       y = pcdict['y']
  *       z = pcdict['z_mean']
  *       for key in pcdict.keys():             # <<<<<<<<<<<<<<
@@ -11499,7 +11499,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1387
+  /* "pysesa/plot.pyx":1387
  * 
  *    #==================================================
  *    def plt_xy_vars(self, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
@@ -11520,7 +11520,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("pysesa._plot.plot.plt_xy_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.plt_xy_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Axes3D);
@@ -11537,7 +11537,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1462
+/* "pysesa/plot.pyx":1462
  * 
  *    #==================================================
  *    def get_pc(self):             # <<<<<<<<<<<<<<
@@ -11546,21 +11546,21 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_18plt_xy_vars(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_21get_pc(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_20get_pc[] = "\n      parse an NxM contents of pysesa_file\n\n      Syntax\n      ----------\n      pc = p.get_pc()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      pc : ndarray\n   \t   list of M ndarrays, each containing a column\n           output from the pysesa_file\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_21get_pc = {"get_pc", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_21get_pc, METH_O, __pyx_doc_6pysesa_5_plot_4plot_20get_pc};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_21get_pc(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_21get_pc(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_20get_pc[] = "\n      parse an NxM contents of pysesa_file\n\n      Syntax\n      ----------\n      pc = p.get_pc()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      pc : ndarray\n   \t   list of M ndarrays, each containing a column\n           output from the pysesa_file\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_21get_pc = {"get_pc", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_21get_pc, METH_O, __pyx_doc_6pysesa_4plot_4plot_20get_pc};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_21get_pc(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_pc (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_20get_pc(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_20get_pc(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_20get_pc(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_pc = NULL;
   PyObject *__pyx_v_outfile = NULL;
   PyObject *__pyx_r = NULL;
@@ -11578,7 +11578,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_pc", 0);
 
-  /* "pysesa/_plot.pyx":1482
+  /* "pysesa/plot.pyx":1482
  *            output from the pysesa_file
  *       '''
  *       pc = []             # <<<<<<<<<<<<<<
@@ -11590,7 +11590,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   __pyx_v_pc = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1483
+  /* "pysesa/plot.pyx":1483
  *       '''
  *       pc = []
  *       for outfile in self._outfiles:             # <<<<<<<<<<<<<<
@@ -11640,7 +11640,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
     __Pyx_XDECREF_SET(__pyx_v_outfile, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1484
+    /* "pysesa/plot.pyx":1484
  *       pc = []
  *       for outfile in self._outfiles:
  *          pc.append(np.genfromtxt(outfile, delimiter=','))             # <<<<<<<<<<<<<<
@@ -11668,7 +11668,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
     __pyx_t_8 = __Pyx_PyObject_Append(__pyx_v_pc, __pyx_t_7); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1484; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "pysesa/_plot.pyx":1483
+    /* "pysesa/plot.pyx":1483
  *       '''
  *       pc = []
  *       for outfile in self._outfiles:             # <<<<<<<<<<<<<<
@@ -11678,7 +11678,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1486
+  /* "pysesa/plot.pyx":1486
  *          pc.append(np.genfromtxt(outfile, delimiter=','))
  * 
  *       pc = np.vstack(pc).astype('float32')             # <<<<<<<<<<<<<<
@@ -11724,7 +11724,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   __Pyx_DECREF_SET(__pyx_v_pc, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1487
+  /* "pysesa/plot.pyx":1487
  * 
  *       pc = np.vstack(pc).astype('float32')
  *       return pc             # <<<<<<<<<<<<<<
@@ -11736,7 +11736,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   __pyx_r = __pyx_v_pc;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1462
+  /* "pysesa/plot.pyx":1462
  * 
  *    #==================================================
  *    def get_pc(self):             # <<<<<<<<<<<<<<
@@ -11751,7 +11751,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("pysesa._plot.plot.get_pc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.get_pc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pc);
@@ -11761,7 +11761,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1490
+/* "pysesa/plot.pyx":1490
  * 
  *    #==================================================
  *    def get_xyz(self):             # <<<<<<<<<<<<<<
@@ -11770,21 +11770,21 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_20get_pc(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_23get_xyz(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_22get_xyz[] = "\n      parse the Nx3 contents of raw point cloud (the file processed by pysesa::process)\n\n      Syntax\n      ----------\n      xyz = p.get_xyz()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      xyz : ndarray\n   \t   Nx3 array point cloud input\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_23get_xyz = {"get_xyz", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_23get_xyz, METH_O, __pyx_doc_6pysesa_5_plot_4plot_22get_xyz};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_23get_xyz(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_23get_xyz(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_22get_xyz[] = "\n      parse the Nx3 contents of raw point cloud (the file processed by pysesa::process)\n\n      Syntax\n      ----------\n      xyz = p.get_xyz()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      xyz : ndarray\n   \t   Nx3 array point cloud input\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_23get_xyz = {"get_xyz", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_23get_xyz, METH_O, __pyx_doc_6pysesa_4plot_4plot_22get_xyz};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_23get_xyz(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("get_xyz (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_22get_xyz(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_22get_xyz(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_22get_xyz(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_xyz = NULL;
   PyObject *__pyx_v_outfile = NULL;
   PyObject *__pyx_v_infile = NULL;
@@ -11803,7 +11803,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_xyz", 0);
 
-  /* "pysesa/_plot.pyx":1509
+  /* "pysesa/plot.pyx":1509
  *    	   Nx3 array point cloud input
  *       '''
  *       xyz = []             # <<<<<<<<<<<<<<
@@ -11815,7 +11815,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   __pyx_v_xyz = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1510
+  /* "pysesa/plot.pyx":1510
  *       '''
  *       xyz = []
  *       for outfile in self._outfiles:             # <<<<<<<<<<<<<<
@@ -11865,7 +11865,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
     __Pyx_XDECREF_SET(__pyx_v_outfile, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1511
+    /* "pysesa/plot.pyx":1511
  *       xyz = []
  *       for outfile in self._outfiles:
  *          infile = outfile.split('_zstat')[0]             # <<<<<<<<<<<<<<
@@ -11883,7 +11883,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
     __Pyx_XDECREF_SET(__pyx_v_infile, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1512
+    /* "pysesa/plot.pyx":1512
  *       for outfile in self._outfiles:
  *          infile = outfile.split('_zstat')[0]
  *          xyz.append(self._txtread(infile))             # <<<<<<<<<<<<<<
@@ -11920,7 +11920,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
     __pyx_t_8 = __Pyx_PyObject_Append(__pyx_v_xyz, __pyx_t_1); if (unlikely(__pyx_t_8 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1512; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1510
+    /* "pysesa/plot.pyx":1510
  *       '''
  *       xyz = []
  *       for outfile in self._outfiles:             # <<<<<<<<<<<<<<
@@ -11930,7 +11930,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1514
+  /* "pysesa/plot.pyx":1514
  *          xyz.append(self._txtread(infile))
  * 
  *       xyz = np.vstack(xyz).astype('float32')             # <<<<<<<<<<<<<<
@@ -11976,7 +11976,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   __Pyx_DECREF_SET(__pyx_v_xyz, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1515
+  /* "pysesa/plot.pyx":1515
  * 
  *       xyz = np.vstack(xyz).astype('float32')
  *       return xyz             # <<<<<<<<<<<<<<
@@ -11988,7 +11988,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   __pyx_r = __pyx_v_xyz;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1490
+  /* "pysesa/plot.pyx":1490
  * 
  *    #==================================================
  *    def get_xyz(self):             # <<<<<<<<<<<<<<
@@ -12003,7 +12003,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("pysesa._plot.plot.get_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.get_xyz", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_xyz);
@@ -12014,7 +12014,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1518
+/* "pysesa/plot.pyx":1518
  * 
  *    #==================================================
  *    def _txtread(self,infile):             # <<<<<<<<<<<<<<
@@ -12023,10 +12023,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_22get_xyz(CYTHON_UNUSED PyObject 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_25_txtread(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_24_txtread[] = "\n      anonymous fast(er than numpy's genfromtxt) function to read a Nx3 txt file to numpy array\n\n      Syntax\n      ----------\n      xyz = p._txtread()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      xyz : ndarray\n   \t   Nx3 array point cloud input\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_25_txtread = {"_txtread", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_25_txtread, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_24_txtread};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_25_txtread(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_25_txtread(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_24_txtread[] = "\n      anonymous fast(er than numpy's genfromtxt) function to read a Nx3 txt file to numpy array\n\n      Syntax\n      ----------\n      xyz = p._txtread()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      xyz : ndarray\n   \t   Nx3 array point cloud input\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_25_txtread = {"_txtread", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_25_txtread, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_24_txtread};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_25_txtread(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_infile = 0;
   int __pyx_lineno = 0;
@@ -12074,18 +12074,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_25_txtread(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_txtread", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1518; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_24_txtread(__pyx_self, __pyx_v_self, __pyx_v_infile);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_24_txtread(__pyx_self, __pyx_v_self, __pyx_v_infile);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_infile) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_24_txtread(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_infile) {
   PyObject *__pyx_v_f = NULL;
   PyObject *__pyx_v_data = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -12110,7 +12110,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_txtread", 0);
 
-  /* "pysesa/_plot.pyx":1537
+  /* "pysesa/plot.pyx":1537
  *    	   Nx3 array point cloud input
  *       '''
  *       f = open(infile, 'rb'); data = f.read(); f.close()             # <<<<<<<<<<<<<<
@@ -12174,7 +12174,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1538
+  /* "pysesa/plot.pyx":1538
  *       '''
  *       f = open(infile, 'rb'); data = f.read(); f.close()
  *       data = data.splitlines()             # <<<<<<<<<<<<<<
@@ -12204,7 +12204,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1539
+  /* "pysesa/plot.pyx":1539
  *       f = open(infile, 'rb'); data = f.read(); f.close()
  *       data = data.splitlines()
  *       if len(data[0].split(','))>1: # the file is comma delimited             # <<<<<<<<<<<<<<
@@ -12224,7 +12224,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   __pyx_t_5 = ((__pyx_t_4 > 1) != 0);
   if (__pyx_t_5) {
 
-    /* "pysesa/_plot.pyx":1540
+    /* "pysesa/plot.pyx":1540
  *       data = data.splitlines()
  *       if len(data[0].split(','))>1: # the file is comma delimited
  *         return np.array([x.split(',',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -12309,7 +12309,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   }
   /*else*/ {
 
-    /* "pysesa/_plot.pyx":1542
+    /* "pysesa/plot.pyx":1542
  *         return np.array([x.split(',',2)[0:3] for x in data], dtype='float32')
  *       else:
  *          try: # space delimited             # <<<<<<<<<<<<<<
@@ -12323,7 +12323,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
       __Pyx_XGOTREF(__pyx_t_11);
       /*try:*/ {
 
-        /* "pysesa/_plot.pyx":1543
+        /* "pysesa/plot.pyx":1543
  *       else:
  *          try: # space delimited
  *             return np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -12413,7 +12413,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "pysesa/_plot.pyx":1544
+      /* "pysesa/plot.pyx":1544
  *          try: # space delimited
  *             return np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')
  *          except: #tab delimited             # <<<<<<<<<<<<<<
@@ -12421,13 +12421,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
  * 
  */
       /*except:*/ {
-        __Pyx_AddTraceback("pysesa._plot.plot._txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("pysesa.plot.plot._txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_7, &__pyx_t_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1544; __pyx_clineno = __LINE__; goto __pyx_L8_except_error;}
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_GOTREF(__pyx_t_3);
 
-        /* "pysesa/_plot.pyx":1545
+        /* "pysesa/plot.pyx":1545
  *             return np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')
  *          except: #tab delimited
  *             return np.array([x.split('\t',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -12534,7 +12534,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
     }
   }
 
-  /* "pysesa/_plot.pyx":1518
+  /* "pysesa/plot.pyx":1518
  * 
  *    #==================================================
  *    def _txtread(self,infile):             # <<<<<<<<<<<<<<
@@ -12552,7 +12552,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("pysesa._plot.plot._txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_f);
@@ -12563,7 +12563,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1548
+/* "pysesa/plot.pyx":1548
  * 
  *    #==================================================
  *    def parse_pc_vars(self):             # <<<<<<<<<<<<<<
@@ -12572,21 +12572,21 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_24_txtread(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_27parse_pc_vars(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_26parse_pc_vars[] = "\n      NxM contents of pysesa_file parsed into dict object\n      1 key per variable in p.get_pc()\n      vars.keys() returns list of variables in dict\n\n      Syntax\n      ----------\n      [] = p.parse_pc_vars()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      pcdict : dict\n   \t   dict object of M, Nx1 arrays point cloud outputs\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_27parse_pc_vars = {"parse_pc_vars", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_27parse_pc_vars, METH_O, __pyx_doc_6pysesa_5_plot_4plot_26parse_pc_vars};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_27parse_pc_vars(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_27parse_pc_vars(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_26parse_pc_vars[] = "\n      NxM contents of pysesa_file parsed into dict object\n      1 key per variable in p.get_pc()\n      vars.keys() returns list of variables in dict\n\n      Syntax\n      ----------\n      [] = p.parse_pc_vars()\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Returns\n      ----------\n      pcdict : dict\n   \t   dict object of M, Nx1 arrays point cloud outputs\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_27parse_pc_vars = {"parse_pc_vars", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_27parse_pc_vars, METH_O, __pyx_doc_6pysesa_4plot_4plot_26parse_pc_vars};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_27parse_pc_vars(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("parse_pc_vars (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_26parse_pc_vars(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_pc = NULL;
   PyObject *__pyx_v_pcdict = NULL;
   PyObject *__pyx_r = NULL;
@@ -12601,7 +12601,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("parse_pc_vars", 0);
 
-  /* "pysesa/_plot.pyx":1569
+  /* "pysesa/plot.pyx":1569
  *    	   dict object of M, Nx1 arrays point cloud outputs
  *       '''
  *       pc = self.get_pc()             # <<<<<<<<<<<<<<
@@ -12631,7 +12631,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __pyx_v_pc = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1570
+  /* "pysesa/plot.pyx":1570
  *       '''
  *       pc = self.get_pc()
  *       pcdict = {}             # <<<<<<<<<<<<<<
@@ -12643,7 +12643,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __pyx_v_pcdict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1573
+  /* "pysesa/plot.pyx":1573
  * 
  *       ## proctype = 1 or 2
  *       if (self._proctype==1) or (self._proctype==2):             # <<<<<<<<<<<<<<
@@ -12671,7 +12671,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_4) {
 
-    /* "pysesa/_plot.pyx":1574
+    /* "pysesa/plot.pyx":1574
  *       ## proctype = 1 or 2
  *       if (self._proctype==1) or (self._proctype==2):
  *          pcdict['x'] = pc[:,0]             # <<<<<<<<<<<<<<
@@ -12683,7 +12683,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_x, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1574; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1575
+    /* "pysesa/plot.pyx":1575
  *       if (self._proctype==1) or (self._proctype==2):
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]             # <<<<<<<<<<<<<<
@@ -12695,7 +12695,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_y, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1575; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1576
+    /* "pysesa/plot.pyx":1576
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]             # <<<<<<<<<<<<<<
@@ -12707,7 +12707,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_mean, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1576; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1577
+    /* "pysesa/plot.pyx":1577
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['slope'] = pc[:,3]             # <<<<<<<<<<<<<<
@@ -12719,7 +12719,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_slope, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1577; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1578
+    /* "pysesa/plot.pyx":1578
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['slope'] = pc[:,3]
  *          pcdict['intercept'] = pc[:,4]             # <<<<<<<<<<<<<<
@@ -12731,7 +12731,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_intercept, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1578; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1579
+    /* "pysesa/plot.pyx":1579
  *          pcdict['slope'] = pc[:,3]
  *          pcdict['intercept'] = pc[:,4]
  *          pcdict['r_value'] = pc[:,5]             # <<<<<<<<<<<<<<
@@ -12743,7 +12743,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_r_value, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1579; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1580
+    /* "pysesa/plot.pyx":1580
  *          pcdict['intercept'] = pc[:,4]
  *          pcdict['r_value'] = pc[:,5]
  *          pcdict['p_value'] = pc[:,6]             # <<<<<<<<<<<<<<
@@ -12755,7 +12755,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_p_value, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1580; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1581
+    /* "pysesa/plot.pyx":1581
  *          pcdict['r_value'] = pc[:,5]
  *          pcdict['p_value'] = pc[:,6]
  *          pcdict['std_err'] = pc[:,7]             # <<<<<<<<<<<<<<
@@ -12767,7 +12767,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_std_err, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1581; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1582
+    /* "pysesa/plot.pyx":1582
  *          pcdict['p_value'] = pc[:,6]
  *          pcdict['std_err'] = pc[:,7]
  *          pcdict['d'] = pc[:,8]             # <<<<<<<<<<<<<<
@@ -12779,7 +12779,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_d, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1582; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1583
+    /* "pysesa/plot.pyx":1583
  *          pcdict['std_err'] = pc[:,7]
  *          pcdict['d'] = pc[:,8]
  *          pcdict['l'] = pc[:,9]             # <<<<<<<<<<<<<<
@@ -12791,7 +12791,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_l, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1583; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1584
+    /* "pysesa/plot.pyx":1584
  *          pcdict['d'] = pc[:,8]
  *          pcdict['l'] = pc[:,9]
  *          pcdict['wmax'] = pc[:,10]             # <<<<<<<<<<<<<<
@@ -12803,7 +12803,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_wmax, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1584; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1585
+    /* "pysesa/plot.pyx":1585
  *          pcdict['l'] = pc[:,9]
  *          pcdict['wmax'] = pc[:,10]
  *          pcdict['wmean'] = pc[:,11]             # <<<<<<<<<<<<<<
@@ -12815,7 +12815,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_wmean, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1585; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1586
+    /* "pysesa/plot.pyx":1586
  *          pcdict['wmax'] = pc[:,10]
  *          pcdict['wmean'] = pc[:,11]
  *          pcdict['rms1'] = pc[:,12]             # <<<<<<<<<<<<<<
@@ -12827,7 +12827,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_rms1, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1586; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1587
+    /* "pysesa/plot.pyx":1587
  *          pcdict['wmean'] = pc[:,11]
  *          pcdict['rms1'] = pc[:,12]
  *          pcdict['rms2'] = pc[:,13]             # <<<<<<<<<<<<<<
@@ -12839,7 +12839,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_rms2, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1587; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1588
+    /* "pysesa/plot.pyx":1588
  *          pcdict['rms1'] = pc[:,12]
  *          pcdict['rms2'] = pc[:,13]
  *          pcdict['Z'] = pc[:,14]             # <<<<<<<<<<<<<<
@@ -12851,7 +12851,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_Z, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1588; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1589
+    /* "pysesa/plot.pyx":1589
  *          pcdict['rms2'] = pc[:,13]
  *          pcdict['Z'] = pc[:,14]
  *          pcdict['E'] = pc[:,15]             # <<<<<<<<<<<<<<
@@ -12863,7 +12863,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_E, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1589; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1590
+    /* "pysesa/plot.pyx":1590
  *          pcdict['Z'] = pc[:,14]
  *          pcdict['E'] = pc[:,15]
  *          pcdict['sigma'] = pc[:,16]             # <<<<<<<<<<<<<<
@@ -12875,7 +12875,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sigma, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1590; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1591
+    /* "pysesa/plot.pyx":1591
  *          pcdict['E'] = pc[:,15]
  *          pcdict['sigma'] = pc[:,16]
  *          pcdict['T0_1'] = pc[:,17]             # <<<<<<<<<<<<<<
@@ -12887,7 +12887,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_T0_1, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1591; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1592
+    /* "pysesa/plot.pyx":1592
  *          pcdict['sigma'] = pc[:,16]
  *          pcdict['T0_1'] = pc[:,17]
  *          pcdict['T0_2'] = pc[:,18]             # <<<<<<<<<<<<<<
@@ -12899,7 +12899,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_T0_2, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1592; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1593
+    /* "pysesa/plot.pyx":1593
  *          pcdict['T0_1'] = pc[:,17]
  *          pcdict['T0_2'] = pc[:,18]
  *          pcdict['sw1'] = pc[:,19]             # <<<<<<<<<<<<<<
@@ -12911,7 +12911,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sw1, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1593; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1594
+    /* "pysesa/plot.pyx":1594
  *          pcdict['T0_2'] = pc[:,18]
  *          pcdict['sw1'] = pc[:,19]
  *          pcdict['sw2'] = pc[:,20]             # <<<<<<<<<<<<<<
@@ -12923,7 +12923,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sw2, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1594; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1595
+    /* "pysesa/plot.pyx":1595
  *          pcdict['sw1'] = pc[:,19]
  *          pcdict['sw2'] = pc[:,20]
  *          pcdict['m0'] = pc[:,21]             # <<<<<<<<<<<<<<
@@ -12935,7 +12935,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m0, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1595; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1596
+    /* "pysesa/plot.pyx":1596
  *          pcdict['sw2'] = pc[:,20]
  *          pcdict['m0'] = pc[:,21]
  *          pcdict['m1'] = pc[:,22]             # <<<<<<<<<<<<<<
@@ -12947,7 +12947,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m1, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1596; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1597
+    /* "pysesa/plot.pyx":1597
  *          pcdict['m0'] = pc[:,21]
  *          pcdict['m1'] = pc[:,22]
  *          pcdict['m2'] = pc[:,23]             # <<<<<<<<<<<<<<
@@ -12959,7 +12959,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m2, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1597; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1598
+    /* "pysesa/plot.pyx":1598
  *          pcdict['m1'] = pc[:,22]
  *          pcdict['m2'] = pc[:,23]
  *          pcdict['m3'] = pc[:,24]             # <<<<<<<<<<<<<<
@@ -12971,7 +12971,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m3, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1598; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1599
+    /* "pysesa/plot.pyx":1599
  *          pcdict['m2'] = pc[:,23]
  *          pcdict['m3'] = pc[:,24]
  *          pcdict['m4'] = pc[:,25]             # <<<<<<<<<<<<<<
@@ -12983,7 +12983,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m4, __pyx_t_1) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1599; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":1600
+    /* "pysesa/plot.pyx":1600
  *          pcdict['m3'] = pc[:,24]
  *          pcdict['m4'] = pc[:,25]
  *          pcdict['phi'] = pc[:,26]             # <<<<<<<<<<<<<<
@@ -12998,7 +12998,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   }
   __pyx_L3:;
 
-  /* "pysesa/_plot.pyx":1603
+  /* "pysesa/plot.pyx":1603
  * 
  *       # proctype = 3
  *       if (self._proctype==3):             # <<<<<<<<<<<<<<
@@ -13013,7 +13013,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "pysesa/_plot.pyx":1604
+    /* "pysesa/plot.pyx":1604
  *       # proctype = 3
  *       if (self._proctype==3):
  *          pcdict['x'] = pc[:,0]             # <<<<<<<<<<<<<<
@@ -13025,7 +13025,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_x, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1604; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1605
+    /* "pysesa/plot.pyx":1605
  *       if (self._proctype==3):
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]             # <<<<<<<<<<<<<<
@@ -13037,7 +13037,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_y, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1605; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1606
+    /* "pysesa/plot.pyx":1606
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]             # <<<<<<<<<<<<<<
@@ -13049,7 +13049,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_mean, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1606; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1607
+    /* "pysesa/plot.pyx":1607
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]             # <<<<<<<<<<<<<<
@@ -13061,7 +13061,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_max, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1607; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1608
+    /* "pysesa/plot.pyx":1608
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]             # <<<<<<<<<<<<<<
@@ -13073,7 +13073,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_min, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1608; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1609
+    /* "pysesa/plot.pyx":1609
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]             # <<<<<<<<<<<<<<
@@ -13085,7 +13085,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_range, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1609; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1610
+    /* "pysesa/plot.pyx":1610
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]             # <<<<<<<<<<<<<<
@@ -13097,7 +13097,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sigma, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1610; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1611
+    /* "pysesa/plot.pyx":1611
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]             # <<<<<<<<<<<<<<
@@ -13109,7 +13109,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_skewness, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1611; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1612
+    /* "pysesa/plot.pyx":1612
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]             # <<<<<<<<<<<<<<
@@ -13121,7 +13121,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_kurtosis, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1612; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1613
+    /* "pysesa/plot.pyx":1613
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]
  *          pcdict['n'] = pc[:,9]             # <<<<<<<<<<<<<<
@@ -13136,7 +13136,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   }
   __pyx_L6:;
 
-  /* "pysesa/_plot.pyx":1616
+  /* "pysesa/plot.pyx":1616
  * 
  *       # proctype = 4 or 5
  *       if (self._proctype==4) or (self._proctype==5):             # <<<<<<<<<<<<<<
@@ -13164,7 +13164,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __pyx_L8_bool_binop_done:;
   if (__pyx_t_4) {
 
-    /* "pysesa/_plot.pyx":1617
+    /* "pysesa/plot.pyx":1617
  *       # proctype = 4 or 5
  *       if (self._proctype==4) or (self._proctype==5):
  *          pcdict['x'] = pc[:,0]             # <<<<<<<<<<<<<<
@@ -13176,7 +13176,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_x, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1617; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1618
+    /* "pysesa/plot.pyx":1618
  *       if (self._proctype==4) or (self._proctype==5):
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]             # <<<<<<<<<<<<<<
@@ -13188,7 +13188,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_y, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1618; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1619
+    /* "pysesa/plot.pyx":1619
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]             # <<<<<<<<<<<<<<
@@ -13200,7 +13200,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_mean, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1619; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1620
+    /* "pysesa/plot.pyx":1620
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]             # <<<<<<<<<<<<<<
@@ -13212,7 +13212,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_max, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1620; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1621
+    /* "pysesa/plot.pyx":1621
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]             # <<<<<<<<<<<<<<
@@ -13224,7 +13224,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_min, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1621; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1622
+    /* "pysesa/plot.pyx":1622
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]             # <<<<<<<<<<<<<<
@@ -13236,7 +13236,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_z_range, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1622; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1623
+    /* "pysesa/plot.pyx":1623
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]             # <<<<<<<<<<<<<<
@@ -13248,7 +13248,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sigma, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1623; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1624
+    /* "pysesa/plot.pyx":1624
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]             # <<<<<<<<<<<<<<
@@ -13260,7 +13260,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_skewness, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1624; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1625
+    /* "pysesa/plot.pyx":1625
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]             # <<<<<<<<<<<<<<
@@ -13272,7 +13272,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_kurtosis, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1625; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1626
+    /* "pysesa/plot.pyx":1626
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]
  *          pcdict['n'] =pc[:,9]             # <<<<<<<<<<<<<<
@@ -13284,7 +13284,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_n, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1626; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1627
+    /* "pysesa/plot.pyx":1627
  *          pcdict['kurtosis'] = pc[:,8]
  *          pcdict['n'] =pc[:,9]
  *          pcdict['slope'] = pc[:,10]             # <<<<<<<<<<<<<<
@@ -13296,7 +13296,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_slope, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1627; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1628
+    /* "pysesa/plot.pyx":1628
  *          pcdict['n'] =pc[:,9]
  *          pcdict['slope'] = pc[:,10]
  *          pcdict['intercept'] = pc[:,11]             # <<<<<<<<<<<<<<
@@ -13308,7 +13308,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_intercept, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1628; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1629
+    /* "pysesa/plot.pyx":1629
  *          pcdict['slope'] = pc[:,10]
  *          pcdict['intercept'] = pc[:,11]
  *          pcdict['r_value'] = pc[:,12]             # <<<<<<<<<<<<<<
@@ -13320,7 +13320,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_r_value, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1629; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1630
+    /* "pysesa/plot.pyx":1630
  *          pcdict['intercept'] = pc[:,11]
  *          pcdict['r_value'] = pc[:,12]
  *          pcdict['p_value'] = pc[:,13]             # <<<<<<<<<<<<<<
@@ -13332,7 +13332,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_p_value, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1630; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1631
+    /* "pysesa/plot.pyx":1631
  *          pcdict['r_value'] = pc[:,12]
  *          pcdict['p_value'] = pc[:,13]
  *          pcdict['std_err'] = pc[:,14]             # <<<<<<<<<<<<<<
@@ -13344,7 +13344,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_std_err, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1631; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1632
+    /* "pysesa/plot.pyx":1632
  *          pcdict['p_value'] = pc[:,13]
  *          pcdict['std_err'] = pc[:,14]
  *          pcdict['d'] = pc[:,15]             # <<<<<<<<<<<<<<
@@ -13356,7 +13356,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_d, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1632; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1633
+    /* "pysesa/plot.pyx":1633
  *          pcdict['std_err'] = pc[:,14]
  *          pcdict['d'] = pc[:,15]
  *          pcdict['l'] = pc[:,16]             # <<<<<<<<<<<<<<
@@ -13368,7 +13368,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_l, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1633; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1634
+    /* "pysesa/plot.pyx":1634
  *          pcdict['d'] = pc[:,15]
  *          pcdict['l'] = pc[:,16]
  *          pcdict['wmax'] = pc[:,17]             # <<<<<<<<<<<<<<
@@ -13380,7 +13380,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_wmax, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1634; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1635
+    /* "pysesa/plot.pyx":1635
  *          pcdict['l'] = pc[:,16]
  *          pcdict['wmax'] = pc[:,17]
  *          pcdict['wmean'] = pc[:,18]             # <<<<<<<<<<<<<<
@@ -13392,7 +13392,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_wmean, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1635; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1636
+    /* "pysesa/plot.pyx":1636
  *          pcdict['wmax'] = pc[:,17]
  *          pcdict['wmean'] = pc[:,18]
  *          pcdict['rms1'] = pc[:,19]             # <<<<<<<<<<<<<<
@@ -13404,7 +13404,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_rms1, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1636; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1637
+    /* "pysesa/plot.pyx":1637
  *          pcdict['wmean'] = pc[:,18]
  *          pcdict['rms1'] = pc[:,19]
  *          pcdict['rms2'] = pc[:,20]             # <<<<<<<<<<<<<<
@@ -13416,7 +13416,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_rms2, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1637; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1638
+    /* "pysesa/plot.pyx":1638
  *          pcdict['rms1'] = pc[:,19]
  *          pcdict['rms2'] = pc[:,20]
  *          pcdict['Z'] = pc[:,21]             # <<<<<<<<<<<<<<
@@ -13428,7 +13428,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_Z, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1638; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1639
+    /* "pysesa/plot.pyx":1639
  *          pcdict['rms2'] = pc[:,20]
  *          pcdict['Z'] = pc[:,21]
  *          pcdict['E'] = pc[:,22]             # <<<<<<<<<<<<<<
@@ -13440,7 +13440,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_E, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1639; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1640
+    /* "pysesa/plot.pyx":1640
  *          pcdict['Z'] = pc[:,21]
  *          pcdict['E'] = pc[:,22]
  *          pcdict['sigma'] = pc[:,23]             # <<<<<<<<<<<<<<
@@ -13452,7 +13452,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sigma, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1640; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1641
+    /* "pysesa/plot.pyx":1641
  *          pcdict['E'] = pc[:,22]
  *          pcdict['sigma'] = pc[:,23]
  *          pcdict['T0_1'] = pc[:,24]             # <<<<<<<<<<<<<<
@@ -13464,7 +13464,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_T0_1, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1641; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1642
+    /* "pysesa/plot.pyx":1642
  *          pcdict['sigma'] = pc[:,23]
  *          pcdict['T0_1'] = pc[:,24]
  *          pcdict['T0_2'] = pc[:,25]             # <<<<<<<<<<<<<<
@@ -13476,7 +13476,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_T0_2, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1642; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1643
+    /* "pysesa/plot.pyx":1643
  *          pcdict['T0_1'] = pc[:,24]
  *          pcdict['T0_2'] = pc[:,25]
  *          pcdict['sw1'] = pc[:,26]             # <<<<<<<<<<<<<<
@@ -13488,7 +13488,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sw1, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1643; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1644
+    /* "pysesa/plot.pyx":1644
  *          pcdict['T0_2'] = pc[:,25]
  *          pcdict['sw1'] = pc[:,26]
  *          pcdict['sw2'] = pc[:,27]             # <<<<<<<<<<<<<<
@@ -13500,7 +13500,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_sw2, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1644; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1645
+    /* "pysesa/plot.pyx":1645
  *          pcdict['sw1'] = pc[:,26]
  *          pcdict['sw2'] = pc[:,27]
  *          pcdict['m0'] = pc[:,28]             # <<<<<<<<<<<<<<
@@ -13512,7 +13512,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m0, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1645; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1646
+    /* "pysesa/plot.pyx":1646
  *          pcdict['sw2'] = pc[:,27]
  *          pcdict['m0'] = pc[:,28]
  *          pcdict['m1'] = pc[:,29]             # <<<<<<<<<<<<<<
@@ -13524,7 +13524,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m1, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1646; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1647
+    /* "pysesa/plot.pyx":1647
  *          pcdict['m0'] = pc[:,28]
  *          pcdict['m1'] = pc[:,29]
  *          pcdict['m2'] = pc[:,30]             # <<<<<<<<<<<<<<
@@ -13536,7 +13536,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m2, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1647; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1648
+    /* "pysesa/plot.pyx":1648
  *          pcdict['m1'] = pc[:,29]
  *          pcdict['m2'] = pc[:,30]
  *          pcdict['m3'] = pc[:,31]             # <<<<<<<<<<<<<<
@@ -13548,7 +13548,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m3, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1648; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1649
+    /* "pysesa/plot.pyx":1649
  *          pcdict['m2'] = pc[:,30]
  *          pcdict['m3'] = pc[:,31]
  *          pcdict['m4'] = pc[:,32]             # <<<<<<<<<<<<<<
@@ -13560,7 +13560,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
     if (unlikely(PyDict_SetItem(__pyx_v_pcdict, __pyx_n_s_m4, __pyx_t_2) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1649; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "pysesa/_plot.pyx":1650
+    /* "pysesa/plot.pyx":1650
  *          pcdict['m3'] = pc[:,31]
  *          pcdict['m4'] = pc[:,32]
  *          pcdict['phi'] = pc[:,33]             # <<<<<<<<<<<<<<
@@ -13575,7 +13575,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   }
   __pyx_L7:;
 
-  /* "pysesa/_plot.pyx":1652
+  /* "pysesa/plot.pyx":1652
  *          pcdict['phi'] = pc[:,33]
  * 
  *       return pcdict             # <<<<<<<<<<<<<<
@@ -13587,7 +13587,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __pyx_r = __pyx_v_pcdict;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1548
+  /* "pysesa/plot.pyx":1548
  * 
  *    #==================================================
  *    def parse_pc_vars(self):             # <<<<<<<<<<<<<<
@@ -13600,7 +13600,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pysesa._plot.plot.parse_pc_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot.parse_pc_vars", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_pc);
@@ -13610,7 +13610,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1660
+/* "pysesa/plot.pyx":1660
  * 
  *    #==================================================
  *    def _grid_var(self, x, y, z, grid_x, grid_y, res=0.1, thresdist=0, nn=1):             # <<<<<<<<<<<<<<
@@ -13619,10 +13619,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_26parse_pc_vars(CYTHON_UNUSED PyO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_29_grid_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_28_grid_var[] = "\n      anonymous function to produce a gridded surface\n\n      Syntax\n      ----------\n      [] = p._grid_var(x, y, z, grid_x, grid_y, res, thresdist, nn)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n\n      z : ndarray\n   \t   array of amplitude values\n\n      grid_x : ndarray\n   \t   mesh of [x,y]\n\n      grid_y : ndarray\n   \t   mesh of [x,y].T\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding    \n   \t   \t   \n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_29_grid_var = {"_grid_var", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_29_grid_var, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_28_grid_var};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_29_grid_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_29_grid_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_28_grid_var[] = "\n      anonymous function to produce a gridded surface\n\n      Syntax\n      ----------\n      [] = p._grid_var(x, y, z, grid_x, grid_y, res, thresdist, nn)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n\n      z : ndarray\n   \t   array of amplitude values\n\n      grid_x : ndarray\n   \t   mesh of [x,y]\n\n      grid_y : ndarray\n   \t   mesh of [x,y].T\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding    \n   \t   \t   \n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_29_grid_var = {"_grid_var", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_29_grid_var, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_28_grid_var};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_29_grid_var(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_y = 0;
@@ -13738,18 +13738,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_29_grid_var(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_grid_var", 0, 6, 9, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1660; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._grid_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._grid_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_28_grid_var(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y, __pyx_v_z, __pyx_v_grid_x, __pyx_v_grid_y, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_28_grid_var(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y, __pyx_v_z, __pyx_v_grid_x, __pyx_v_grid_y, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_28_grid_var(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn) {
   PyObject *__pyx_v_dat = NULL;
   PyObject *__pyx_v_dist = NULL;
   PyObject *__pyx_r = NULL;
@@ -13769,7 +13769,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __Pyx_INCREF(__pyx_v_res);
   __Pyx_INCREF(__pyx_v_thresdist);
 
-  /* "pysesa/_plot.pyx":1706
+  /* "pysesa/plot.pyx":1706
  *       #dat = griddata(np.c_[x,y], z, (grid_x, grid_y), method='nearest')
  * 
  *       dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res, nn)             # <<<<<<<<<<<<<<
@@ -13884,7 +13884,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_res, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1708
+  /* "pysesa/plot.pyx":1708
  *       dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res, nn)
  *       ## mask
  *       if thresdist == 0:             # <<<<<<<<<<<<<<
@@ -13896,7 +13896,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_8) {
 
-    /* "pysesa/_plot.pyx":1709
+    /* "pysesa/plot.pyx":1709
  *       ## mask
  *       if thresdist == 0:
  *          thresdist = np.sqrt(1/res)             # <<<<<<<<<<<<<<
@@ -13942,7 +13942,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   }
   __pyx_L5:;
 
-  /* "pysesa/_plot.pyx":1711
+  /* "pysesa/plot.pyx":1711
  *          thresdist = np.sqrt(1/res)
  * 
  *       dat[dist>thresdist] = np.nan             # <<<<<<<<<<<<<<
@@ -13959,7 +13959,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "pysesa/_plot.pyx":1713
+  /* "pysesa/plot.pyx":1713
  *       dat[dist>thresdist] = np.nan
  *       #dat[dist>(np.sqrt(1/res)) ] = np.nan
  *       dat[dat<np.min(z)] = np.nan             # <<<<<<<<<<<<<<
@@ -14007,7 +14007,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1715
+  /* "pysesa/plot.pyx":1715
  *       dat[dat<np.min(z)] = np.nan
  * 
  *       return dat             # <<<<<<<<<<<<<<
@@ -14019,7 +14019,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_dat;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1660
+  /* "pysesa/plot.pyx":1660
  * 
  *    #==================================================
  *    def _grid_var(self, x, y, z, grid_x, grid_y, res=0.1, thresdist=0, nn=1):             # <<<<<<<<<<<<<<
@@ -14034,7 +14034,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pysesa._plot.plot._grid_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._grid_var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_dat);
@@ -14046,7 +14046,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1719
+/* "pysesa/plot.pyx":1719
  * 
  *    # =========================================================
  *    def _getmesh(self, minX, maxX, minY, maxY, res):             # <<<<<<<<<<<<<<
@@ -14055,9 +14055,9 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_28_grid_var(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_31_getmesh(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_31_getmesh = {"_getmesh", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_31_getmesh, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_31_getmesh(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_31_getmesh(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_31_getmesh = {"_getmesh", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_31_getmesh, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_31_getmesh(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_minX = 0;
   PyObject *__pyx_v_maxX = 0;
@@ -14141,18 +14141,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_31_getmesh(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_getmesh", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1719; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._getmesh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._getmesh", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_30_getmesh(__pyx_self, __pyx_v_self, __pyx_v_minX, __pyx_v_maxX, __pyx_v_minY, __pyx_v_maxY, __pyx_v_res);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_30_getmesh(__pyx_self, __pyx_v_self, __pyx_v_minX, __pyx_v_maxX, __pyx_v_minY, __pyx_v_maxY, __pyx_v_res);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_minX, PyObject *__pyx_v_maxX, PyObject *__pyx_v_minY, PyObject *__pyx_v_maxY, PyObject *__pyx_v_res) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_30_getmesh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_minX, PyObject *__pyx_v_maxX, PyObject *__pyx_v_minY, PyObject *__pyx_v_maxY, PyObject *__pyx_v_res) {
   long __pyx_v_complete;
   PyObject *__pyx_v_grid_x = NULL;
   PyObject *__pyx_v_grid_y = NULL;
@@ -14178,7 +14178,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
   __Pyx_RefNannySetupContext("_getmesh", 0);
   __Pyx_INCREF(__pyx_v_res);
 
-  /* "pysesa/_plot.pyx":1721
+  /* "pysesa/plot.pyx":1721
  *    def _getmesh(self, minX, maxX, minY, maxY, res):
  * 
  *       complete=0             # <<<<<<<<<<<<<<
@@ -14187,7 +14187,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
  */
   __pyx_v_complete = 0;
 
-  /* "pysesa/_plot.pyx":1722
+  /* "pysesa/plot.pyx":1722
  * 
  *       complete=0
  *       while complete==0:             # <<<<<<<<<<<<<<
@@ -14198,7 +14198,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
     __pyx_t_1 = ((__pyx_v_complete == 0) != 0);
     if (!__pyx_t_1) break;
 
-    /* "pysesa/_plot.pyx":1723
+    /* "pysesa/plot.pyx":1723
  *       complete=0
  *       while complete==0:
  *          try:             # <<<<<<<<<<<<<<
@@ -14212,7 +14212,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
       __Pyx_XGOTREF(__pyx_t_4);
       /*try:*/ {
 
-        /* "pysesa/_plot.pyx":1724
+        /* "pysesa/plot.pyx":1724
  *       while complete==0:
  *          try:
  *             grid_x, grid_y = np.meshgrid( np.arange(minX, maxX, res), np.arange(minY, maxY, res) )             # <<<<<<<<<<<<<<
@@ -14376,7 +14376,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
         __Pyx_XDECREF_SET(__pyx_v_grid_y, __pyx_t_12);
         __pyx_t_12 = 0;
 
-        /* "pysesa/_plot.pyx":1725
+        /* "pysesa/plot.pyx":1725
  *          try:
  *             grid_x, grid_y = np.meshgrid( np.arange(minX, maxX, res), np.arange(minY, maxY, res) )
  *             if 'grid_x' in locals():             # <<<<<<<<<<<<<<
@@ -14420,7 +14420,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
         __pyx_t_14 = (__pyx_t_1 != 0);
         if (__pyx_t_14) {
 
-          /* "pysesa/_plot.pyx":1726
+          /* "pysesa/plot.pyx":1726
  *             grid_x, grid_y = np.meshgrid( np.arange(minX, maxX, res), np.arange(minY, maxY, res) )
  *             if 'grid_x' in locals():
  *                complete=1             # <<<<<<<<<<<<<<
@@ -14445,7 +14445,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
       __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":1727
+      /* "pysesa/plot.pyx":1727
  *             if 'grid_x' in locals():
  *                complete=1
  *          except:             # <<<<<<<<<<<<<<
@@ -14453,13 +14453,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
  *             res = res*2
  */
       /*except:*/ {
-        __Pyx_AddTraceback("pysesa._plot.plot._getmesh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("pysesa.plot.plot._getmesh", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_12, &__pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1727; __pyx_clineno = __LINE__; goto __pyx_L7_except_error;}
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_GOTREF(__pyx_t_7);
 
-        /* "pysesa/_plot.pyx":1728
+        /* "pysesa/plot.pyx":1728
  *                complete=1
  *          except:
  *             print "memory error: trying grid resolution of %s" % (str(res*2))             # <<<<<<<<<<<<<<
@@ -14482,7 +14482,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
         if (__Pyx_PrintOne(0, __pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1728; __pyx_clineno = __LINE__; goto __pyx_L7_except_error;}
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "pysesa/_plot.pyx":1729
+        /* "pysesa/plot.pyx":1729
  *          except:
  *             print "memory error: trying grid resolution of %s" % (str(res*2))
  *             res = res*2             # <<<<<<<<<<<<<<
@@ -14513,7 +14513,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
     }
   }
 
-  /* "pysesa/_plot.pyx":1731
+  /* "pysesa/plot.pyx":1731
  *             res = res*2
  * 
  *       return grid_x, grid_y, res             # <<<<<<<<<<<<<<
@@ -14538,7 +14538,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1719
+  /* "pysesa/plot.pyx":1719
  * 
  *    # =========================================================
  *    def _getmesh(self, minX, maxX, minY, maxY, res):             # <<<<<<<<<<<<<<
@@ -14555,7 +14555,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("pysesa._plot.plot._getmesh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._getmesh", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_grid_x);
@@ -14566,7 +14566,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1735
+/* "pysesa/plot.pyx":1735
  * 
  *    #==================================================
  *    def _get_grid(self, x, y, z, res=0.1, thresdist = 0, nn=1):             # <<<<<<<<<<<<<<
@@ -14575,10 +14575,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_30_getmesh(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_33_get_grid(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_32_get_grid[] = "\n      anonymous function to produce a gridded surface\n\n      Syntax\n      ----------\n      [] = p._get_grid(x, y, z, res, nn)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n\n      z : ndarray\n   \t   array of amplitude values\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t   \n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_33_get_grid = {"_get_grid", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_33_get_grid, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_32_get_grid};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_33_get_grid(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_33_get_grid(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_32_get_grid[] = "\n      anonymous function to produce a gridded surface\n\n      Syntax\n      ----------\n      [] = p._get_grid(x, y, z, res, nn)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n\n      z : ndarray\n   \t   array of amplitude values\n\n      Optional Parameters\n      --------------------\n      res : float, *optional* [default = 0.1]\n   \t   grid resolution\n\n      thresdist : float, *optional* [default = 0]\n   \t   maximum interpolation distance \n   \t   if 0, thresdist calculated as sqrt(1/res)\n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n   \t   \n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_33_get_grid = {"_get_grid", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_33_get_grid, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_32_get_grid};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_33_get_grid(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_y = 0;
@@ -14676,18 +14676,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_33_get_grid(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_get_grid", 0, 4, 7, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1735; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._get_grid", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._get_grid", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_32_get_grid(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y, __pyx_v_z, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_32_get_grid(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y, __pyx_v_z, __pyx_v_res, __pyx_v_thresdist, __pyx_v_nn);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_32_get_grid(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_res, PyObject *__pyx_v_thresdist, PyObject *__pyx_v_nn) {
   PyObject *__pyx_v_grid_x = NULL;
   PyObject *__pyx_v_grid_y = NULL;
   PyObject *__pyx_v_dat = NULL;
@@ -14713,7 +14713,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __Pyx_INCREF(__pyx_v_res);
   __Pyx_INCREF(__pyx_v_thresdist);
 
-  /* "pysesa/_plot.pyx":1775
+  /* "pysesa/plot.pyx":1775
  *       # create grid for gridding
  *       #grid_x, grid_y = np.meshgrid( np.arange(np.min(x), np.max(x), res), np.arange(np.min(y), np.max(y), res) )
  *       grid_x, grid_y, res = self._getmesh(np.min(x), np.max(x), np.min(y), np.max(y), res)             # <<<<<<<<<<<<<<
@@ -14942,7 +14942,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_res, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pysesa/_plot.pyx":1781
+  /* "pysesa/plot.pyx":1781
  *       #dat = griddata(np.c_[xyz[:,0],xyz[:,1]], xyz[:,2], (grid_x, grid_y), method='nearest')
  * 
  *       dat, dist, res = self._get_dist(x, y, z, grid_x, grid_y, res, nn)             # <<<<<<<<<<<<<<
@@ -15057,7 +15057,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_res, __pyx_t_9);
   __pyx_t_9 = 0;
 
-  /* "pysesa/_plot.pyx":1784
+  /* "pysesa/plot.pyx":1784
  * 
  *       ## mask
  *       if thresdist == 0:             # <<<<<<<<<<<<<<
@@ -15069,7 +15069,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_12) {
 
-    /* "pysesa/_plot.pyx":1785
+    /* "pysesa/plot.pyx":1785
  *       ## mask
  *       if thresdist == 0:
  *          thresdist = np.sqrt(1/res)             # <<<<<<<<<<<<<<
@@ -15115,7 +15115,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   }
   __pyx_L7:;
 
-  /* "pysesa/_plot.pyx":1787
+  /* "pysesa/plot.pyx":1787
  *          thresdist = np.sqrt(1/res)
  * 
  *       dat[dist>thresdist] = np.nan             # <<<<<<<<<<<<<<
@@ -15132,7 +15132,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1790
+  /* "pysesa/plot.pyx":1790
  *       #dat[dist>(np.sqrt(1/res)) ] = np.nan
  *       #dat[dat<np.min(xyz[:,2])] = np.nan
  *       return dat, grid_x, grid_y             # <<<<<<<<<<<<<<
@@ -15155,7 +15155,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1735
+  /* "pysesa/plot.pyx":1735
  * 
  *    #==================================================
  *    def _get_grid(self, x, y, z, res=0.1, thresdist = 0, nn=1):             # <<<<<<<<<<<<<<
@@ -15174,7 +15174,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pysesa._plot.plot._get_grid", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._get_grid", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_grid_x);
@@ -15188,7 +15188,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1793
+/* "pysesa/plot.pyx":1793
  * 
  *    # =========================================================
  *    def _hillshade(self, dem, dx, dy, azimuth, altitude, zf):             # <<<<<<<<<<<<<<
@@ -15197,10 +15197,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_32_get_grid(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_35_hillshade(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_34_hillshade[] = "\n      anonymous function to produce a shaded relief of a gridded surface\n      using the ESRI algorithm\n\n      Syntax\n      ----------\n      [] = p._hillshade(dem, dx, dy, azimuth, altitude, zf)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      dem : ndarray\n   \t   2d array of gridded surface values\n\n      dx : float\n   \t   difference in x dimension\n\n      dy : float\n   \t   difference in y dimension\n\n      azimuth : float\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_35_hillshade = {"_hillshade", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_35_hillshade, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_34_hillshade};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_35_hillshade(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_35_hillshade(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_34_hillshade[] = "\n      anonymous function to produce a shaded relief of a gridded surface\n      using the ESRI algorithm\n\n      Syntax\n      ----------\n      [] = p._hillshade(dem, dx, dy, azimuth, altitude, zf)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      dem : ndarray\n   \t   2d array of gridded surface values\n\n      dx : float\n   \t   difference in x dimension\n\n      dy : float\n   \t   difference in y dimension\n\n      azimuth : float\n           Lighting azimuthal angle (in degrees, 0-360)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      altitude : float\n           Lighting zenith angle (in degrees, 0-90)\n           for hillshade calculation, see:\n           http://edndoc.esri.com/arcobjects/9.2/net/shared/geoprocessing/spatial_analyst_tools/how_hillshade_works.htm\n\n      zf : float\n           Vertical exaggeration factor\n           1=no exaggeration, <1 minimizes, >1 exaggerates \n\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_35_hillshade = {"_hillshade", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_35_hillshade, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_34_hillshade};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_35_hillshade(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_dem = 0;
   PyObject *__pyx_v_dx = 0;
@@ -15293,18 +15293,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_35_hillshade(PyObject *__pyx_self
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_hillshade", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1793; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._hillshade", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._hillshade", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_34_hillshade(__pyx_self, __pyx_v_self, __pyx_v_dem, __pyx_v_dx, __pyx_v_dy, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_34_hillshade(__pyx_self, __pyx_v_self, __pyx_v_dem, __pyx_v_dx, __pyx_v_dy, __pyx_v_azimuth, __pyx_v_altitude, __pyx_v_zf);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_dem, PyObject *__pyx_v_dx, CYTHON_UNUSED PyObject *__pyx_v_dy, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_34_hillshade(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_dem, PyObject *__pyx_v_dx, CYTHON_UNUSED PyObject *__pyx_v_dy, PyObject *__pyx_v_azimuth, PyObject *__pyx_v_altitude, PyObject *__pyx_v_zf) {
   PyObject *__pyx_v_fx = NULL;
   PyObject *__pyx_v_fy = NULL;
   PyObject *__pyx_v_asp = NULL;
@@ -15330,7 +15330,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_INCREF(__pyx_v_azimuth);
   __Pyx_INCREF(__pyx_v_altitude);
 
-  /* "pysesa/_plot.pyx":1833
+  /* "pysesa/plot.pyx":1833
  *       '''
  *       # lighting azimuth
  *       azimuth = 360.0-azimuth+90 #convert to mathematic unit             # <<<<<<<<<<<<<<
@@ -15345,7 +15345,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_DECREF_SET(__pyx_v_azimuth, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1834
+  /* "pysesa/plot.pyx":1834
  *       # lighting azimuth
  *       azimuth = 360.0-azimuth+90 #convert to mathematic unit
  *       if azimuth>360 or azimuth==360:             # <<<<<<<<<<<<<<
@@ -15367,7 +15367,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "pysesa/_plot.pyx":1835
+    /* "pysesa/plot.pyx":1835
  *       azimuth = 360.0-azimuth+90 #convert to mathematic unit
  *       if azimuth>360 or azimuth==360:
  *          azimuth = azimuth-360             # <<<<<<<<<<<<<<
@@ -15382,7 +15382,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   }
   __pyx_L3:;
 
-  /* "pysesa/_plot.pyx":1836
+  /* "pysesa/plot.pyx":1836
  *       if azimuth>360 or azimuth==360:
  *          azimuth = azimuth-360
  *       azimuth = azimuth * (np.pi/180) #  convert to radians             # <<<<<<<<<<<<<<
@@ -15403,7 +15403,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_DECREF_SET(__pyx_v_azimuth, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1839
+  /* "pysesa/plot.pyx":1839
  * 
  *       # lighting altitude
  *       altitude = (90-altitude) * (np.pi/180) # convert to zenith angle in radians             # <<<<<<<<<<<<<<
@@ -15427,7 +15427,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_DECREF_SET(__pyx_v_altitude, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "pysesa/_plot.pyx":1842
+  /* "pysesa/plot.pyx":1842
  * 
  *       # calc slope and aspect (radians)
  *       fx,fy = np.gradient(dem,dx) # uses simple, unweighted gradient of immediate $             # <<<<<<<<<<<<<<
@@ -15521,7 +15521,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __pyx_v_fy = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1843
+  /* "pysesa/plot.pyx":1843
  *       # calc slope and aspect (radians)
  *       fx,fy = np.gradient(dem,dx) # uses simple, unweighted gradient of immediate $
  *       [asp,grad] = self._cart2pol(fy,fx) # % convert to carthesian coordinates             # <<<<<<<<<<<<<<
@@ -15612,7 +15612,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __pyx_v_grad = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1845
+  /* "pysesa/plot.pyx":1845
  *       [asp,grad] = self._cart2pol(fy,fx) # % convert to carthesian coordinates
  * 
  *       grad = np.arctan(zf*grad) #steepest slope             # <<<<<<<<<<<<<<
@@ -15655,7 +15655,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_DECREF_SET(__pyx_v_grad, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "pysesa/_plot.pyx":1847
+  /* "pysesa/plot.pyx":1847
  *       grad = np.arctan(zf*grad) #steepest slope
  *       # convert asp
  *       asp[asp<np.pi] = asp[asp<np.pi]+(np.pi/2)             # <<<<<<<<<<<<<<
@@ -15695,7 +15695,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "pysesa/_plot.pyx":1848
+  /* "pysesa/plot.pyx":1848
  *       # convert asp
  *       asp[asp<np.pi] = asp[asp<np.pi]+(np.pi/2)
  *       asp[asp<0] = asp[asp<0]+(2*np.pi)             # <<<<<<<<<<<<<<
@@ -15723,7 +15723,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "pysesa/_plot.pyx":1851
+  /* "pysesa/plot.pyx":1851
  * 
  *       ## hillshade calculation
  *       h = 255.0*( (np.cos(altitude)*np.cos(grad) ) + ( np.sin(altitude)*np.sin(grad)*np.cos(azimuth - asp) ))             # <<<<<<<<<<<<<<
@@ -15905,7 +15905,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __pyx_v_h = __pyx_t_10;
   __pyx_t_10 = 0;
 
-  /* "pysesa/_plot.pyx":1852
+  /* "pysesa/plot.pyx":1852
  *       ## hillshade calculation
  *       h = 255.0*( (np.cos(altitude)*np.cos(grad) ) + ( np.sin(altitude)*np.sin(grad)*np.cos(azimuth - asp) ))
  *       h[h<0]=0 # % set hillshade values to min of 0.             # <<<<<<<<<<<<<<
@@ -15916,7 +15916,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   if (unlikely(PyObject_SetItem(__pyx_v_h, __pyx_t_10, __pyx_int_0) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1852; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "pysesa/_plot.pyx":1854
+  /* "pysesa/plot.pyx":1854
  *       h[h<0]=0 # % set hillshade values to min of 0.
  * 
  *       return h             # <<<<<<<<<<<<<<
@@ -15928,7 +15928,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __pyx_r = __pyx_v_h;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1793
+  /* "pysesa/plot.pyx":1793
  * 
  *    # =========================================================
  *    def _hillshade(self, dem, dx, dy, azimuth, altitude, zf):             # <<<<<<<<<<<<<<
@@ -15945,7 +15945,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
-  __Pyx_AddTraceback("pysesa._plot.plot._hillshade", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._hillshade", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_fx);
@@ -15960,7 +15960,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1861
+/* "pysesa/plot.pyx":1861
  * 
  *    #==================================================
  *    def _get_dist(self, x, y, z, grid_x, grid_y, res, nn):             # <<<<<<<<<<<<<<
@@ -15969,10 +15969,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_34_hillshade(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_37_get_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_36_get_dist[] = "\n      anonymous function to create a nearest neighbour distance matrix for dem masking\n\n      Syntax\n      ----------\n      [] = p._get_dist(x, y, z, grid_x, grid_y, res, nn)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n\n      z : ndarray\n   \t   array of z value\n   \t   \n      grid_x : ndarray\n   \t   mesh of [x,y]\n\n      grid_y : ndarray\n   \t   mesh of [x,y].T \n   \t   \n      res : float\n   \t   grid resolution  \n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_37_get_dist = {"_get_dist", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_37_get_dist, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_36_get_dist};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_37_get_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_37_get_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_36_get_dist[] = "\n      anonymous function to create a nearest neighbour distance matrix for dem masking\n\n      Syntax\n      ----------\n      [] = p._get_dist(x, y, z, grid_x, grid_y, res, nn)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n\n      z : ndarray\n   \t   array of z value\n   \t   \n      grid_x : ndarray\n   \t   mesh of [x,y]\n\n      grid_y : ndarray\n   \t   mesh of [x,y].T \n   \t   \n      res : float\n   \t   grid resolution  \n   \t   \n      nn : int, *optional* [default = 1]\n   \t   number of nearest neighbours used in the gridding \n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_37_get_dist = {"_get_dist", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_37_get_dist, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_36_get_dist};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_37_get_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_y = 0;
@@ -16074,18 +16074,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_37_get_dist(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_get_dist", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1861; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_36_get_dist(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y, __pyx_v_z, __pyx_v_grid_x, __pyx_v_grid_y, __pyx_v_res, __pyx_v_nn);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_36_get_dist(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y, __pyx_v_z, __pyx_v_grid_x, __pyx_v_grid_y, __pyx_v_res, __pyx_v_nn);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_nn) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_36_get_dist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y, PyObject *__pyx_v_z, PyObject *__pyx_v_grid_x, PyObject *__pyx_v_grid_y, PyObject *__pyx_v_res, PyObject *__pyx_v_nn) {
   PyObject *__pyx_v_KDTree = NULL;
   long __pyx_v_pykdtree;
   PyObject *__pyx_v_tree = NULL;
@@ -16123,7 +16123,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
   __Pyx_INCREF(__pyx_v_grid_y);
   __Pyx_INCREF(__pyx_v_res);
 
-  /* "pysesa/_plot.pyx":1897
+  /* "pysesa/plot.pyx":1897
  *       '''
  *       #from scipy.spatial import cKDTree as KDTree
  *       try:             # <<<<<<<<<<<<<<
@@ -16137,7 +16137,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "pysesa/_plot.pyx":1898
+      /* "pysesa/plot.pyx":1898
  *       #from scipy.spatial import cKDTree as KDTree
  *       try:
  *          from pykdtree.kdtree import KDTree             # <<<<<<<<<<<<<<
@@ -16159,7 +16159,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "pysesa/_plot.pyx":1899
+      /* "pysesa/plot.pyx":1899
  *       try:
  *          from pykdtree.kdtree import KDTree
  *          pykdtree=1             # <<<<<<<<<<<<<<
@@ -16176,7 +16176,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "pysesa/_plot.pyx":1900
+    /* "pysesa/plot.pyx":1900
  *          from pykdtree.kdtree import KDTree
  *          pykdtree=1
  *       except:             # <<<<<<<<<<<<<<
@@ -16184,13 +16184,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
  *          from scipy.spatial import cKDTree as KDTree
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pysesa._plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pysesa.plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_6) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1900; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
 
-      /* "pysesa/_plot.pyx":1901
+      /* "pysesa/plot.pyx":1901
  *          pykdtree=1
  *       except:
  *          print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"             # <<<<<<<<<<<<<<
@@ -16199,7 +16199,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
  */
       if (__Pyx_PrintOne(0, __pyx_kp_s_install_pykdtree_for_faster_kd_t) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1901; __pyx_clineno = __LINE__; goto __pyx_L5_except_error;}
 
-      /* "pysesa/_plot.pyx":1902
+      /* "pysesa/plot.pyx":1902
  *       except:
  *          print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
  *          from scipy.spatial import cKDTree as KDTree             # <<<<<<<<<<<<<<
@@ -16221,7 +16221,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "pysesa/_plot.pyx":1903
+      /* "pysesa/plot.pyx":1903
  *          print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
  *          from scipy.spatial import cKDTree as KDTree
  *          pykdtree=0             # <<<<<<<<<<<<<<
@@ -16248,7 +16248,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
     __pyx_L10_try_end:;
   }
 
-  /* "pysesa/_plot.pyx":1906
+  /* "pysesa/plot.pyx":1906
  * 
  *       ## create mask for where the data is not
  *       tree = KDTree(np.c_[x,y])             # <<<<<<<<<<<<<<
@@ -16302,7 +16302,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
   __pyx_v_tree = __pyx_t_6;
   __pyx_t_6 = 0;
 
-  /* "pysesa/_plot.pyx":1908
+  /* "pysesa/plot.pyx":1908
  *       tree = KDTree(np.c_[x,y])
  * 
  *       complete=0             # <<<<<<<<<<<<<<
@@ -16311,7 +16311,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
  */
   __pyx_v_complete = 0;
 
-  /* "pysesa/_plot.pyx":1909
+  /* "pysesa/plot.pyx":1909
  * 
  *       complete=0
  *       while complete==0:             # <<<<<<<<<<<<<<
@@ -16322,7 +16322,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
     __pyx_t_9 = ((__pyx_v_complete == 0) != 0);
     if (!__pyx_t_9) break;
 
-    /* "pysesa/_plot.pyx":1910
+    /* "pysesa/plot.pyx":1910
  *       complete=0
  *       while complete==0:
  *          try:             # <<<<<<<<<<<<<<
@@ -16336,7 +16336,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
       __Pyx_XGOTREF(__pyx_t_1);
       /*try:*/ {
 
-        /* "pysesa/_plot.pyx":1911
+        /* "pysesa/plot.pyx":1911
  *       while complete==0:
  *          try:
  *             dist, inds = tree.query(np.c_[grid_x.ravel(), grid_y.ravel()], k=nn)             # <<<<<<<<<<<<<<
@@ -16470,7 +16470,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
         __Pyx_XDECREF_SET(__pyx_v_inds, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "pysesa/_plot.pyx":1913
+        /* "pysesa/plot.pyx":1913
  *             dist, inds = tree.query(np.c_[grid_x.ravel(), grid_y.ravel()], k=nn)
  * 
  *             if nn==1:             # <<<<<<<<<<<<<<
@@ -16482,7 +16482,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (__pyx_t_9) {
 
-          /* "pysesa/_plot.pyx":1914
+          /* "pysesa/plot.pyx":1914
  * 
  *             if nn==1:
  *                dat = z.flatten()[inds].reshape(np.shape(grid_x))             # <<<<<<<<<<<<<<
@@ -16577,7 +16577,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
         }
         /*else*/ {
 
-          /* "pysesa/_plot.pyx":1916
+          /* "pysesa/plot.pyx":1916
  *                dat = z.flatten()[inds].reshape(np.shape(grid_x))
  *             else:
  *                w = 1.0 / dist**2             # <<<<<<<<<<<<<<
@@ -16592,7 +16592,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
           __Pyx_XDECREF_SET(__pyx_v_w, __pyx_t_5);
           __pyx_t_5 = 0;
 
-          /* "pysesa/_plot.pyx":1917
+          /* "pysesa/plot.pyx":1917
  *             else:
  *                w = 1.0 / dist**2
  *                dat = np.sum(w * z.flatten()[inds,2], axis=1) / np.sum(w, axis=1)             # <<<<<<<<<<<<<<
@@ -16677,7 +16677,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
           __Pyx_XDECREF_SET(__pyx_v_dat, __pyx_t_7);
           __pyx_t_7 = 0;
 
-          /* "pysesa/_plot.pyx":1918
+          /* "pysesa/plot.pyx":1918
  *                w = 1.0 / dist**2
  *                dat = np.sum(w * z.flatten()[inds,2], axis=1) / np.sum(w, axis=1)
  *                dat.shape = grid_x.shape             # <<<<<<<<<<<<<<
@@ -16691,7 +16691,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
         }
         __pyx_L25:;
 
-        /* "pysesa/_plot.pyx":1919
+        /* "pysesa/plot.pyx":1919
  *                dat = np.sum(w * z.flatten()[inds,2], axis=1) / np.sum(w, axis=1)
  *                dat.shape = grid_x.shape
  *             if 'dat' in locals():             # <<<<<<<<<<<<<<
@@ -16759,7 +16759,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
         __pyx_t_12 = (__pyx_t_9 != 0);
         if (__pyx_t_12) {
 
-          /* "pysesa/_plot.pyx":1920
+          /* "pysesa/plot.pyx":1920
  *                dat.shape = grid_x.shape
  *             if 'dat' in locals():
  *                complete=1             # <<<<<<<<<<<<<<
@@ -16783,7 +16783,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "pysesa/_plot.pyx":1921
+      /* "pysesa/plot.pyx":1921
  *             if 'dat' in locals():
  *                complete=1
  *          except:             # <<<<<<<<<<<<<<
@@ -16791,13 +16791,13 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
  * 
  */
       /*except:*/ {
-        __Pyx_AddTraceback("pysesa._plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("pysesa.plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_4, &__pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1921; __pyx_clineno = __LINE__; goto __pyx_L17_except_error;}
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_5);
 
-        /* "pysesa/_plot.pyx":1922
+        /* "pysesa/plot.pyx":1922
  *                complete=1
  *          except:
  *             grid_x, grid_y, res = self._getmesh(np.min(x), np.max(x), np.min(y), np.max(y), res*2)             # <<<<<<<<<<<<<<
@@ -17047,7 +17047,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
     }
   }
 
-  /* "pysesa/_plot.pyx":1924
+  /* "pysesa/plot.pyx":1924
  *             grid_x, grid_y, res = self._getmesh(np.min(x), np.max(x), np.min(y), np.max(y), res*2)
  * 
  *       return dat, dist.reshape(grid_x.shape), res             # <<<<<<<<<<<<<<
@@ -17102,7 +17102,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1861
+  /* "pysesa/plot.pyx":1861
  * 
  *    #==================================================
  *    def _get_dist(self, x, y, z, grid_x, grid_y, res, nn):             # <<<<<<<<<<<<<<
@@ -17124,7 +17124,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_18);
-  __Pyx_AddTraceback("pysesa._plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._get_dist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_KDTree);
@@ -17141,7 +17141,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1927
+/* "pysesa/plot.pyx":1927
  * 
  *    # =========================================================
  *    def _cart2pol(self, x, y):             # <<<<<<<<<<<<<<
@@ -17150,10 +17150,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_36_get_dist(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_39_cart2pol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_38_cart2pol[] = "\n      anonymous function to convert cartesian to polar coordinates\n\n      Syntax\n      ----------\n      [] = p._cart2pol(x, y)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_39_cart2pol = {"_cart2pol", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_39_cart2pol, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_38_cart2pol};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_39_cart2pol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_39_cart2pol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_38_cart2pol[] = "\n      anonymous function to convert cartesian to polar coordinates\n\n      Syntax\n      ----------\n      [] = p._cart2pol(x, y)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      x : ndarray\n   \t   array of x values\n\n      y : ndarray\n   \t   array of y values\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_39_cart2pol = {"_cart2pol", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_39_cart2pol, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_38_cart2pol};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_39_cart2pol(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_x = 0;
   PyObject *__pyx_v_y = 0;
@@ -17210,18 +17210,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_39_cart2pol(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_cart2pol", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1927; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._cart2pol", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._cart2pol", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_38_cart2pol(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_y);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_38_cart2pol(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_y) {
   PyObject *__pyx_v_theta = NULL;
   PyObject *__pyx_v_rho = NULL;
   PyObject *__pyx_r = NULL;
@@ -17237,7 +17237,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_cart2pol", 0);
 
-  /* "pysesa/_plot.pyx":1947
+  /* "pysesa/plot.pyx":1947
  *    	   array of y values
  *       '''
  *       theta = np.arctan2(y, x)             # <<<<<<<<<<<<<<
@@ -17279,7 +17279,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
   __pyx_v_theta = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1948
+  /* "pysesa/plot.pyx":1948
  *       '''
  *       theta = np.arctan2(y, x)
  *       rho = np.sqrt(x**2 + y**2)             # <<<<<<<<<<<<<<
@@ -17328,7 +17328,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
   __pyx_v_rho = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1949
+  /* "pysesa/plot.pyx":1949
  *       theta = np.arctan2(y, x)
  *       rho = np.sqrt(x**2 + y**2)
  *       return (theta, rho)             # <<<<<<<<<<<<<<
@@ -17348,7 +17348,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1927
+  /* "pysesa/plot.pyx":1927
  * 
  *    # =========================================================
  *    def _cart2pol(self, x, y):             # <<<<<<<<<<<<<<
@@ -17363,7 +17363,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pysesa._plot.plot._cart2pol", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._cart2pol", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_theta);
@@ -17373,7 +17373,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1956
+/* "pysesa/plot.pyx":1956
  * 
  *    # =========================================================
  *    def _dolabels(self, rot=30):             # <<<<<<<<<<<<<<
@@ -17382,10 +17382,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_38_cart2pol(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_41_dolabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_40_dolabels[] = "\n      anonymous function to create x and y labels with less density than default and rotate them\n\n      Syntax\n      ----------\n      [] = p._dolabels(rot)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      rot : float, *optional* [default = 30]\n   \t   angle of rotation\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_41_dolabels = {"_dolabels", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_41_dolabels, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_40_dolabels};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_41_dolabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_41_dolabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_40_dolabels[] = "\n      anonymous function to create x and y labels with less density than default and rotate them\n\n      Syntax\n      ----------\n      [] = p._dolabels(rot)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      rot : float, *optional* [default = 30]\n   \t   angle of rotation\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_41_dolabels = {"_dolabels", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_41_dolabels, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_40_dolabels};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_41_dolabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_rot = 0;
   int __pyx_lineno = 0;
@@ -17436,18 +17436,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_41_dolabels(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_dolabels", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1956; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._dolabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._dolabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_40_dolabels(__pyx_self, __pyx_v_self, __pyx_v_rot);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_40_dolabels(__pyx_self, __pyx_v_self, __pyx_v_rot);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rot) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_40_dolabels(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_rot) {
   PyObject *__pyx_v_locs = NULL;
   PyObject *__pyx_v_labels = NULL;
   PyObject *__pyx_r = NULL;
@@ -17463,7 +17463,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_dolabels", 0);
 
-  /* "pysesa/_plot.pyx":1975
+  /* "pysesa/plot.pyx":1975
  *    	   angle of rotation
  *       '''
  *       locs, labels = self._plt.xticks()             # <<<<<<<<<<<<<<
@@ -17548,7 +17548,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __pyx_v_labels = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1976
+  /* "pysesa/plot.pyx":1976
  *       '''
  *       locs, labels = self._plt.xticks()
  *       self._plt.xticks(locs[::3])             # <<<<<<<<<<<<<<
@@ -17590,7 +17590,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1977
+  /* "pysesa/plot.pyx":1977
  *       locs, labels = self._plt.xticks()
  *       self._plt.xticks(locs[::3])
  *       locs, labels = self._plt.xticks()             # <<<<<<<<<<<<<<
@@ -17675,7 +17675,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_labels, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":1978
+  /* "pysesa/plot.pyx":1978
  *       self._plt.xticks(locs[::3])
  *       locs, labels = self._plt.xticks()
  *       self._plt.setp(labels, rotation=rot)             # <<<<<<<<<<<<<<
@@ -17702,7 +17702,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1980
+  /* "pysesa/plot.pyx":1980
  *       self._plt.setp(labels, rotation=rot)
  * 
  *       locs, labels = self._plt.yticks()             # <<<<<<<<<<<<<<
@@ -17787,7 +17787,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_labels, __pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pysesa/_plot.pyx":1981
+  /* "pysesa/plot.pyx":1981
  * 
  *       locs, labels = self._plt.yticks()
  *       self._plt.yticks(locs[::3])             # <<<<<<<<<<<<<<
@@ -17829,7 +17829,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1982
+  /* "pysesa/plot.pyx":1982
  *       locs, labels = self._plt.yticks()
  *       self._plt.yticks(locs[::3])
  *       locs, labels = self._plt.yticks()             # <<<<<<<<<<<<<<
@@ -17914,7 +17914,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF_SET(__pyx_v_labels, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1983
+  /* "pysesa/plot.pyx":1983
  *       self._plt.yticks(locs[::3])
  *       locs, labels = self._plt.yticks()
  *       self._plt.setp(labels, rotation=rot)             # <<<<<<<<<<<<<<
@@ -17941,7 +17941,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "pysesa/_plot.pyx":1956
+  /* "pysesa/plot.pyx":1956
  * 
  *    # =========================================================
  *    def _dolabels(self, rot=30):             # <<<<<<<<<<<<<<
@@ -17958,7 +17958,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pysesa._plot.plot._dolabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._dolabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_locs);
@@ -17968,7 +17968,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":1986
+/* "pysesa/plot.pyx":1986
  * 
  *    # =========================================================
  *    def _set_tick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
@@ -17977,10 +17977,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_40_dolabels(CYTHON_UNUSED PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_43_set_tick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_42_set_tick_size[] = "\n      anonymous function to set tick size of x and y ticks\n\n      Syntax\n      ----------\n      [] = p._set_tick_size(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 4]\n   \t   font size (points)\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_43_set_tick_size = {"_set_tick_size", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_43_set_tick_size, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_42_set_tick_size};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_43_set_tick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_43_set_tick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_42_set_tick_size[] = "\n      anonymous function to set tick size of x and y ticks\n\n      Syntax\n      ----------\n      [] = p._set_tick_size(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 4]\n   \t   font size (points)\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_43_set_tick_size = {"_set_tick_size", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_43_set_tick_size, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_42_set_tick_size};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_43_set_tick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ax = 0;
   PyObject *__pyx_v_size = 0;
@@ -18040,18 +18040,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_43_set_tick_size(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_set_tick_size", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1986; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._set_tick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._set_tick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_42_set_tick_size(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_42_set_tick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
   PyObject *__pyx_v_tick = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -18067,7 +18067,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_set_tick_size", 0);
 
-  /* "pysesa/_plot.pyx":2008
+  /* "pysesa/plot.pyx":2008
  *    	   font size (points)
  *       '''
  *       for tick in ax.xaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18138,7 +18138,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
     __Pyx_XDECREF_SET(__pyx_v_tick, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":2009
+    /* "pysesa/plot.pyx":2009
  *       '''
  *       for tick in ax.xaxis.get_major_ticks():
  *          tick.label.set_fontsize(size)             # <<<<<<<<<<<<<<
@@ -18177,7 +18177,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":2008
+    /* "pysesa/plot.pyx":2008
  *    	   font size (points)
  *       '''
  *       for tick in ax.xaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18187,7 +18187,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2010
+  /* "pysesa/plot.pyx":2010
  *       for tick in ax.xaxis.get_major_ticks():
  *          tick.label.set_fontsize(size)
  *       for tick in ax.yaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18258,7 +18258,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
     __Pyx_XDECREF_SET(__pyx_v_tick, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pysesa/_plot.pyx":2011
+    /* "pysesa/plot.pyx":2011
  *          tick.label.set_fontsize(size)
  *       for tick in ax.yaxis.get_major_ticks():
  *          tick.label.set_fontsize(size)             # <<<<<<<<<<<<<<
@@ -18297,7 +18297,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "pysesa/_plot.pyx":2010
+    /* "pysesa/plot.pyx":2010
  *       for tick in ax.xaxis.get_major_ticks():
  *          tick.label.set_fontsize(size)
  *       for tick in ax.yaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18307,7 +18307,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "pysesa/_plot.pyx":2012
+  /* "pysesa/plot.pyx":2012
  *       for tick in ax.yaxis.get_major_ticks():
  *          tick.label.set_fontsize(size)
  *       return ax             # <<<<<<<<<<<<<<
@@ -18319,7 +18319,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
   __pyx_r = __pyx_v_ax;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":1986
+  /* "pysesa/plot.pyx":1986
  * 
  *    # =========================================================
  *    def _set_tick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
@@ -18334,7 +18334,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("pysesa._plot.plot._set_tick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._set_tick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_tick);
@@ -18343,7 +18343,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":2015
+/* "pysesa/plot.pyx":2015
  * 
  *    # =========================================================
  *    def _set_ztick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
@@ -18352,10 +18352,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_42_set_tick_size(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_45_set_ztick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_44_set_ztick_size[] = "\n      anonymous function to set tick size of z ticks\n\n      Syntax\n      ----------\n      [] = p._set_ztick_size(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 4]\n   \t   font size (points)\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_45_set_ztick_size = {"_set_ztick_size", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_45_set_ztick_size, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_44_set_ztick_size};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_45_set_ztick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_45_set_ztick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_44_set_ztick_size[] = "\n      anonymous function to set tick size of z ticks\n\n      Syntax\n      ----------\n      [] = p._set_ztick_size(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 4]\n   \t   font size (points)\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_45_set_ztick_size = {"_set_ztick_size", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_45_set_ztick_size, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_44_set_ztick_size};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_45_set_ztick_size(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ax = 0;
   PyObject *__pyx_v_size = 0;
@@ -18415,18 +18415,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_45_set_ztick_size(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_set_ztick_size", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2015; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._set_ztick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._set_ztick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_44_set_ztick_size(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_44_set_ztick_size(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
   PyObject *__pyx_v_tick = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -18442,7 +18442,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_set_ztick_size", 0);
 
-  /* "pysesa/_plot.pyx":2037
+  /* "pysesa/plot.pyx":2037
  *    	   font size (points)
  *       '''
  *       for tick in ax.zaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18513,7 +18513,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_tick, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":2038
+    /* "pysesa/plot.pyx":2038
  *       '''
  *       for tick in ax.zaxis.get_major_ticks():
  *           tick.label.set_fontsize(size)             # <<<<<<<<<<<<<<
@@ -18552,7 +18552,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":2037
+    /* "pysesa/plot.pyx":2037
  *    	   font size (points)
  *       '''
  *       for tick in ax.zaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18562,7 +18562,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2039
+  /* "pysesa/plot.pyx":2039
  *       for tick in ax.zaxis.get_major_ticks():
  *           tick.label.set_fontsize(size)
  *       return ax             # <<<<<<<<<<<<<<
@@ -18574,7 +18574,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
   __pyx_r = __pyx_v_ax;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":2015
+  /* "pysesa/plot.pyx":2015
  * 
  *    # =========================================================
  *    def _set_ztick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
@@ -18589,7 +18589,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("pysesa._plot.plot._set_ztick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._set_ztick_size", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_tick);
@@ -18598,7 +18598,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":2042
+/* "pysesa/plot.pyx":2042
  * 
  *    # =========================================================
  *    def _rmticks(self, ax):             # <<<<<<<<<<<<<<
@@ -18607,10 +18607,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_44_set_ztick_size(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_47_rmticks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_46_rmticks[] = "\n      anonymous function to remove major and minor ticks\n\n      Syntax\n      ----------\n      [] = p._rmticks(ax)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_47_rmticks = {"_rmticks", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_47_rmticks, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_46_rmticks};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_47_rmticks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_47_rmticks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_46_rmticks[] = "\n      anonymous function to remove major and minor ticks\n\n      Syntax\n      ----------\n      [] = p._rmticks(ax)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_47_rmticks = {"_rmticks", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_47_rmticks, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_46_rmticks};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_47_rmticks(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ax = 0;
   int __pyx_lineno = 0;
@@ -18658,18 +18658,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_47_rmticks(PyObject *__pyx_self, 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_rmticks", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2042; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._rmticks", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._rmticks", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_46_rmticks(__pyx_self, __pyx_v_self, __pyx_v_ax);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_46_rmticks(__pyx_self, __pyx_v_self, __pyx_v_ax);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_46_rmticks(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax) {
   PyObject *__pyx_v_tic = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -18683,7 +18683,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_rmticks", 0);
 
-  /* "pysesa/_plot.pyx":2059
+  /* "pysesa/plot.pyx":2059
  *    	   matplotlib axes handle
  *       '''
  *       for tic in ax.xaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18754,7 +18754,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
     __Pyx_XDECREF_SET(__pyx_v_tic, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "pysesa/_plot.pyx":2060
+    /* "pysesa/plot.pyx":2060
  *       '''
  *       for tic in ax.xaxis.get_major_ticks():
  *          tic.tick1On = tic.tick2On = False             # <<<<<<<<<<<<<<
@@ -18764,7 +18764,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_tic, __pyx_n_s_tick1On, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2060; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_tic, __pyx_n_s_tick2On, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2060; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "pysesa/_plot.pyx":2059
+    /* "pysesa/plot.pyx":2059
  *    	   matplotlib axes handle
  *       '''
  *       for tic in ax.xaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18774,7 +18774,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2061
+  /* "pysesa/plot.pyx":2061
  *       for tic in ax.xaxis.get_major_ticks():
  *          tic.tick1On = tic.tick2On = False
  *       for tic in ax.yaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18845,7 +18845,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
     __Pyx_XDECREF_SET(__pyx_v_tic, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "pysesa/_plot.pyx":2062
+    /* "pysesa/plot.pyx":2062
  *          tic.tick1On = tic.tick2On = False
  *       for tic in ax.yaxis.get_major_ticks():
  *          tic.tick1On = tic.tick2On = False             # <<<<<<<<<<<<<<
@@ -18855,7 +18855,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_tic, __pyx_n_s_tick1On, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2062; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_tic, __pyx_n_s_tick2On, Py_False) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2062; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-    /* "pysesa/_plot.pyx":2061
+    /* "pysesa/plot.pyx":2061
  *       for tic in ax.xaxis.get_major_ticks():
  *          tic.tick1On = tic.tick2On = False
  *       for tic in ax.yaxis.get_major_ticks():             # <<<<<<<<<<<<<<
@@ -18865,7 +18865,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":2063
+  /* "pysesa/plot.pyx":2063
  *       for tic in ax.yaxis.get_major_ticks():
  *          tic.tick1On = tic.tick2On = False
  *       return ax             # <<<<<<<<<<<<<<
@@ -18877,7 +18877,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
   __pyx_r = __pyx_v_ax;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":2042
+  /* "pysesa/plot.pyx":2042
  * 
  *    # =========================================================
  *    def _rmticks(self, ax):             # <<<<<<<<<<<<<<
@@ -18890,7 +18890,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pysesa._plot.plot._rmticks", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._rmticks", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_tic);
@@ -18899,7 +18899,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":2066
+/* "pysesa/plot.pyx":2066
  * 
  *    # =========================================================
  *    def _make_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
@@ -18908,10 +18908,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_46_rmticks(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_49_make_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_48_make_axislabels[] = "\n      anonymous function to label a generic 3d plot\n\n      Syntax\n      ----------\n      [] = p._make_axislabels(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 6]\n   \t   font size (points)\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_49_make_axislabels = {"_make_axislabels", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_49_make_axislabels, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_48_make_axislabels};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_49_make_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_49_make_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_48_make_axislabels[] = "\n      anonymous function to label a generic 3d plot\n\n      Syntax\n      ----------\n      [] = p._make_axislabels(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 6]\n   \t   font size (points)\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_49_make_axislabels = {"_make_axislabels", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_49_make_axislabels, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_48_make_axislabels};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_49_make_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ax = 0;
   PyObject *__pyx_v_size = 0;
@@ -18971,18 +18971,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_49_make_axislabels(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_make_axislabels", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2066; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._make_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._make_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_48_make_axislabels(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_48_make_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -18993,7 +18993,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_make_axislabels", 0);
 
-  /* "pysesa/_plot.pyx":2088
+  /* "pysesa/plot.pyx":2088
  *    	   font size (points)
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -19011,7 +19011,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2089
+  /* "pysesa/plot.pyx":2089
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -19029,7 +19029,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2090
+  /* "pysesa/plot.pyx":2090
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)
  *       ax.set_zlabel('Vertical distance (length)',fontsize=size)             # <<<<<<<<<<<<<<
@@ -19047,7 +19047,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2091
+  /* "pysesa/plot.pyx":2091
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)
  *       ax.set_zlabel('Vertical distance (length)',fontsize=size)
  *       return ax             # <<<<<<<<<<<<<<
@@ -19059,7 +19059,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   __pyx_r = __pyx_v_ax;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":2066
+  /* "pysesa/plot.pyx":2066
  * 
  *    # =========================================================
  *    def _make_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
@@ -19072,7 +19072,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pysesa._plot.plot._make_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._make_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -19080,7 +19080,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":2094
+/* "pysesa/plot.pyx":2094
  * 
  *    # =========================================================
  *    def _make_xy_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
@@ -19089,10 +19089,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_48_make_axislabels(CYTHON_UNUSED 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_51_make_xy_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_50_make_xy_axislabels[] = "\n      anonymous function to label x and y axes\n\n      Syntax\n      ----------\n      [] = p._make_xy_axislabels(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 6]\n   \t   font size (points)\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_51_make_xy_axislabels = {"_make_xy_axislabels", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_51_make_xy_axislabels, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_50_make_xy_axislabels};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_51_make_xy_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_51_make_xy_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_50_make_xy_axislabels[] = "\n      anonymous function to label x and y axes\n\n      Syntax\n      ----------\n      [] = p._make_xy_axislabels(ax, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 6]\n   \t   font size (points)\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_51_make_xy_axislabels = {"_make_xy_axislabels", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_51_make_xy_axislabels, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_50_make_xy_axislabels};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_51_make_xy_axislabels(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ax = 0;
   PyObject *__pyx_v_size = 0;
@@ -19152,18 +19152,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_51_make_xy_axislabels(PyObject *_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_make_xy_axislabels", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2094; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._make_xy_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._make_xy_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_50_make_xy_axislabels(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_size);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_50_make_xy_axislabels(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_size) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -19174,7 +19174,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_make_xy_axislabels", 0);
 
-  /* "pysesa/_plot.pyx":2116
+  /* "pysesa/plot.pyx":2116
  *    	   font size (points)
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -19192,7 +19192,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2117
+  /* "pysesa/plot.pyx":2117
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -19210,7 +19210,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2118
+  /* "pysesa/plot.pyx":2118
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)
  *       return ax             # <<<<<<<<<<<<<<
@@ -19222,7 +19222,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
   __pyx_r = __pyx_v_ax;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":2094
+  /* "pysesa/plot.pyx":2094
  * 
  *    # =========================================================
  *    def _make_xy_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
@@ -19235,7 +19235,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pysesa._plot.plot._make_xy_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._make_xy_axislabels", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -19243,7 +19243,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":2121
+/* "pysesa/plot.pyx":2121
  * 
  *    # =========================================================
  *    def _divide_colorbar(self, ax, im, label, size=6):             # <<<<<<<<<<<<<<
@@ -19252,10 +19252,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_50_make_xy_axislabels(CYTHON_UNUS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_53_divide_colorbar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_52_divide_colorbar[] = "\n      anonymous function to make up a colorbar scaled with axes size\n\n      Syntax\n      ----------\n      [] = p._divide_colorbar(ax, im, label, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      im : object\n   \t   matplotlib image handle\n\n      label : str\n   \t   colorbar ylabel string\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 6]\n   \t   font size (points)\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_53_divide_colorbar = {"_divide_colorbar", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_53_divide_colorbar, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_52_divide_colorbar};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_53_divide_colorbar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_53_divide_colorbar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_52_divide_colorbar[] = "\n      anonymous function to make up a colorbar scaled with axes size\n\n      Syntax\n      ----------\n      [] = p._divide_colorbar(ax, im, label, size)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      ax : object\n   \t   matplotlib axes handle\n\n      im : object\n   \t   matplotlib image handle\n\n      label : str\n   \t   colorbar ylabel string\n\n      Optional Parameters\n      --------------------\n      size : float, *optional* [default = 6]\n   \t   font size (points)\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_53_divide_colorbar = {"_divide_colorbar", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_53_divide_colorbar, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_52_divide_colorbar};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_53_divide_colorbar(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_ax = 0;
   PyObject *__pyx_v_im = 0;
@@ -19333,18 +19333,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_53_divide_colorbar(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_divide_colorbar", 0, 4, 5, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2121; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._divide_colorbar", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._divide_colorbar", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_im, __pyx_v_label, __pyx_v_size);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_52_divide_colorbar(__pyx_self, __pyx_v_self, __pyx_v_ax, __pyx_v_im, __pyx_v_label, __pyx_v_size);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_im, PyObject *__pyx_v_label, PyObject *__pyx_v_size) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_52_divide_colorbar(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_ax, PyObject *__pyx_v_im, PyObject *__pyx_v_label, PyObject *__pyx_v_size) {
   PyObject *__pyx_v_make_axes_locatable = NULL;
   PyObject *__pyx_v_divider = NULL;
   PyObject *__pyx_v_cax = NULL;
@@ -19364,7 +19364,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_divide_colorbar", 0);
 
-  /* "pysesa/_plot.pyx":2149
+  /* "pysesa/plot.pyx":2149
  *    	   font size (points)
  *       '''
  *       from mpl_toolkits.axes_grid1 import make_axes_locatable             # <<<<<<<<<<<<<<
@@ -19386,7 +19386,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":2150
+  /* "pysesa/plot.pyx":2150
  *       '''
  *       from mpl_toolkits.axes_grid1 import make_axes_locatable
  *       divider = make_axes_locatable(ax)             # <<<<<<<<<<<<<<
@@ -19422,7 +19422,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __pyx_v_divider = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":2151
+  /* "pysesa/plot.pyx":2151
  *       from mpl_toolkits.axes_grid1 import make_axes_locatable
  *       divider = make_axes_locatable(ax)
  *       cax = divider.append_axes("right", size="5%", pad=-0.1)             # <<<<<<<<<<<<<<
@@ -19442,7 +19442,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __pyx_v_cax = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pysesa/_plot.pyx":2152
+  /* "pysesa/plot.pyx":2152
  *       divider = make_axes_locatable(ax)
  *       cax = divider.append_axes("right", size="5%", pad=-0.1)
  *       cbar = self._plt.colorbar(im, cax=cax)             # <<<<<<<<<<<<<<
@@ -19470,7 +19470,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __pyx_v_cbar = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2153
+  /* "pysesa/plot.pyx":2153
  *       cax = divider.append_axes("right", size="5%", pad=-0.1)
  *       cbar = self._plt.colorbar(im, cax=cax)
  *       cbar.ax.set_ylabel(label, fontsize=size)             # <<<<<<<<<<<<<<
@@ -19497,7 +19497,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2155
+  /* "pysesa/plot.pyx":2155
  *       cbar.ax.set_ylabel(label, fontsize=size)
  * 
  *       locs, labels = self._plt.yticks()             # <<<<<<<<<<<<<<
@@ -19582,7 +19582,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __pyx_v_labels = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pysesa/_plot.pyx":2156
+  /* "pysesa/plot.pyx":2156
  * 
  *       locs, labels = self._plt.yticks()
  *       self._plt.yticks(locs[::3])             # <<<<<<<<<<<<<<
@@ -19624,7 +19624,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2157
+  /* "pysesa/plot.pyx":2157
  *       locs, labels = self._plt.yticks()
  *       self._plt.yticks(locs[::3])
  *       locs, labels = self._plt.yticks()             # <<<<<<<<<<<<<<
@@ -19709,7 +19709,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __Pyx_DECREF_SET(__pyx_v_labels, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2158
+  /* "pysesa/plot.pyx":2158
  *       self._plt.yticks(locs[::3])
  *       locs, labels = self._plt.yticks()
  *       self._plt.setp(labels, fontsize=size)             # <<<<<<<<<<<<<<
@@ -19736,7 +19736,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "pysesa/_plot.pyx":2121
+  /* "pysesa/plot.pyx":2121
  * 
  *    # =========================================================
  *    def _divide_colorbar(self, ax, im, label, size=6):             # <<<<<<<<<<<<<<
@@ -19753,7 +19753,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("pysesa._plot.plot._divide_colorbar", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._divide_colorbar", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_make_axes_locatable);
@@ -19767,7 +19767,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "pysesa/_plot.pyx":2161
+/* "pysesa/plot.pyx":2161
  * 
  *    #==================================================
  *    def _get_3d_fig(self, mag=5):             # <<<<<<<<<<<<<<
@@ -19776,10 +19776,10 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_52_divide_colorbar(CYTHON_UNUSED 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_55_get_3d_fig(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_5_plot_4plot_54_get_3d_fig[] = "\n      anonymous function to create a 3d mayavi figure\n\n      Syntax\n      ----------\n      [] = p._get_3d_fig(mag)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      mag : float, *optional* [default = 5]\n   \t   the magnification is the scaling between the pixels on the screen, and the pixels in the file saved. \n           If you do not specify it, it will be calculated so that the file is saved with the specified size. \n           If you specify a magnification, Mayavi will use the given size as a screen size, \n           and the file size will be \342\200\230magnification * size\342\200\231.\n      ";
-static PyMethodDef __pyx_mdef_6pysesa_5_plot_4plot_55_get_3d_fig = {"_get_3d_fig", (PyCFunction)__pyx_pw_6pysesa_5_plot_4plot_55_get_3d_fig, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_5_plot_4plot_54_get_3d_fig};
-static PyObject *__pyx_pw_6pysesa_5_plot_4plot_55_get_3d_fig(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_55_get_3d_fig(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_6pysesa_4plot_4plot_54_get_3d_fig[] = "\n      anonymous function to create a 3d mayavi figure\n\n      Syntax\n      ----------\n      [] = p._get_3d_fig(mag)\n\n      Parameters\n      ------------\n      p : instance\n   \t   pysesa.plot instance returned by pysesa::plot\n           e.g. p = pysesa.plot()\n\n      Optional Parameters\n      --------------------\n      mag : float, *optional* [default = 5]\n   \t   the magnification is the scaling between the pixels on the screen, and the pixels in the file saved. \n           If you do not specify it, it will be calculated so that the file is saved with the specified size. \n           If you specify a magnification, Mayavi will use the given size as a screen size, \n           and the file size will be \342\200\230magnification * size\342\200\231.\n      ";
+static PyMethodDef __pyx_mdef_6pysesa_4plot_4plot_55_get_3d_fig = {"_get_3d_fig", (PyCFunction)__pyx_pw_6pysesa_4plot_4plot_55_get_3d_fig, METH_VARARGS|METH_KEYWORDS, __pyx_doc_6pysesa_4plot_4plot_54_get_3d_fig};
+static PyObject *__pyx_pw_6pysesa_4plot_4plot_55_get_3d_fig(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_mag = 0;
   int __pyx_lineno = 0;
@@ -19830,18 +19830,18 @@ static PyObject *__pyx_pw_6pysesa_5_plot_4plot_55_get_3d_fig(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_get_3d_fig", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2161; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
-  __Pyx_AddTraceback("pysesa._plot.plot._get_3d_fig", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._get_3d_fig", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(__pyx_self, __pyx_v_self, __pyx_v_mag);
+  __pyx_r = __pyx_pf_6pysesa_4plot_4plot_54_get_3d_fig(__pyx_self, __pyx_v_self, __pyx_v_mag);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_mag) {
+static PyObject *__pyx_pf_6pysesa_4plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_mag) {
   PyObject *__pyx_v_mlab = NULL;
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_r = NULL;
@@ -19854,7 +19854,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_get_3d_fig", 0);
 
-  /* "pysesa/_plot.pyx":2183
+  /* "pysesa/plot.pyx":2183
  *            and the file size will be magnification * size.
  *       '''
  *       from mayavi import mlab             # <<<<<<<<<<<<<<
@@ -19876,7 +19876,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":2184
+  /* "pysesa/plot.pyx":2184
  *       '''
  *       from mayavi import mlab
  *       fig = mlab.figure()             # <<<<<<<<<<<<<<
@@ -19906,7 +19906,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __pyx_v_fig = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":2185
+  /* "pysesa/plot.pyx":2185
  *       from mayavi import mlab
  *       fig = mlab.figure()
  *       mlab.clf()             # <<<<<<<<<<<<<<
@@ -19935,7 +19935,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":2186
+  /* "pysesa/plot.pyx":2186
  *       fig = mlab.figure()
  *       mlab.clf()
  *       fig.scene.set(magnification=mag)             # <<<<<<<<<<<<<<
@@ -19956,7 +19956,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "pysesa/_plot.pyx":2187
+  /* "pysesa/plot.pyx":2187
  *       mlab.clf()
  *       fig.scene.set(magnification=mag)
  *       fig.scene.set(background=(0.5,0.5,0.5))             # <<<<<<<<<<<<<<
@@ -19977,7 +19977,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2188
+  /* "pysesa/plot.pyx":2188
  *       fig.scene.set(magnification=mag)
  *       fig.scene.set(background=(0.5,0.5,0.5))
  *       return fig             # <<<<<<<<<<<<<<
@@ -19989,7 +19989,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __pyx_r = __pyx_v_fig;
   goto __pyx_L0;
 
-  /* "pysesa/_plot.pyx":2161
+  /* "pysesa/plot.pyx":2161
  * 
  *    #==================================================
  *    def _get_3d_fig(self, mag=5):             # <<<<<<<<<<<<<<
@@ -20002,7 +20002,7 @@ static PyObject *__pyx_pf_6pysesa_5_plot_4plot_54_get_3d_fig(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pysesa._plot.plot._get_3d_fig", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.plot.plot._get_3d_fig", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mlab);
@@ -20023,7 +20023,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "_plot",
+    "plot",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -20267,8 +20267,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_projection, __pyx_k_projection, sizeof(__pyx_k_projection), 0, 0, 1, 1},
   {&__pyx_n_s_pykdtree, __pyx_k_pykdtree, sizeof(__pyx_k_pykdtree), 0, 0, 1, 1},
   {&__pyx_n_s_pykdtree_kdtree, __pyx_k_pykdtree_kdtree, sizeof(__pyx_k_pykdtree_kdtree), 0, 0, 1, 1},
-  {&__pyx_n_s_pysesa__plot, __pyx_k_pysesa__plot, sizeof(__pyx_k_pysesa__plot), 0, 0, 1, 1},
   {&__pyx_n_s_pysesa_file, __pyx_k_pysesa_file, sizeof(__pyx_k_pysesa_file), 0, 0, 1, 1},
+  {&__pyx_n_s_pysesa_plot, __pyx_k_pysesa_plot, sizeof(__pyx_k_pysesa_plot), 0, 0, 1, 1},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_query, __pyx_k_query, sizeof(__pyx_k_query), 0, 0, 1, 1},
   {&__pyx_n_s_r_value, __pyx_k_r_value, sizeof(__pyx_k_r_value), 0, 0, 1, 1},
@@ -20372,7 +20372,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pysesa/_plot.pyx":648
+  /* "pysesa/plot.pyx":648
  *       if pysesa_file is None:
  *          Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
  *          pysesa_file = askopenfilename(filetypes=[("Pysesa output file","*.xyz")], multiple=True)             # <<<<<<<<<<<<<<
@@ -20383,7 +20383,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pysesa/_plot.pyx":655
+  /* "pysesa/plot.pyx":655
  *       self._outfiles = pysesa_file
  * 
  *       self._proctype = int(pysesa_file[0].split('proctype')[1].split('_')[0])             # <<<<<<<<<<<<<<
@@ -20397,7 +20397,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "pysesa/_plot.pyx":756
+  /* "pysesa/plot.pyx":756
  *                mlab.view(distance=distance)
  * 
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))             # <<<<<<<<<<<<<<
@@ -20408,7 +20408,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
 
-  /* "pysesa/_plot.pyx":861
+  /* "pysesa/plot.pyx":861
  *                mlab.view(distance=distance)
  * 
  *                mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+str(key)+'_3d.png',figure=fig,size=(xsize,ysize))             # <<<<<<<<<<<<<<
@@ -20419,7 +20419,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "pysesa/_plot.pyx":939
+  /* "pysesa/plot.pyx":939
  *          mlab.view(distance=distance)
  * 
  *          mlab.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_3d.png',figure=fig,size=(xsize,ysize))             # <<<<<<<<<<<<<<
@@ -20430,7 +20430,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "pysesa/_plot.pyx":1050
+  /* "pysesa/plot.pyx":1050
  * 
  *             fig = self._plt.figure()
  *             ax = fig.add_subplot(2,2,1)             # <<<<<<<<<<<<<<
@@ -20441,7 +20441,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "pysesa/_plot.pyx":1059
+  /* "pysesa/plot.pyx":1059
  *             self._divide_colorbar(ax, im, str(key))
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -20452,7 +20452,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "pysesa/_plot.pyx":1157
+  /* "pysesa/plot.pyx":1157
  * 
  *             fig = self._plt.figure()
  *             ax = fig.add_subplot(2,2,1)             # <<<<<<<<<<<<<<
@@ -20463,7 +20463,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "pysesa/_plot.pyx":1166
+  /* "pysesa/plot.pyx":1166
  *             self._divide_colorbar(ax, im, str(key))
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -20474,7 +20474,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "pysesa/_plot.pyx":1242
+  /* "pysesa/plot.pyx":1242
  * 
  *       fig = self._plt.figure()
  *       ax = fig.add_subplot(2,2,1)             # <<<<<<<<<<<<<<
@@ -20485,7 +20485,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "pysesa/_plot.pyx":1251
+  /* "pysesa/plot.pyx":1251
  *       self._divide_colorbar(ax, im, r"Amplitude")
  * 
  *       plt.savefig(self._outfiles[0].split('.')[-1-1]+'grd_pc',bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -20496,7 +20496,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "pysesa/_plot.pyx":1297
+  /* "pysesa/plot.pyx":1297
  *       fig = self._plt.figure(dpi=dpi)
  *       fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *       ax = fig.add_subplot(221, projection='3d', axisbg='white')             # <<<<<<<<<<<<<<
@@ -20507,7 +20507,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "pysesa/_plot.pyx":1299
+  /* "pysesa/plot.pyx":1299
  *       ax = fig.add_subplot(221, projection='3d', axisbg='white')
  *       ax.view_init(elev=elev, azim=azim)
  *       ax.plot(xyz[:,0]-np.min(xyz[:,0]),xyz[:,1]-np.min(xyz[:,1]),xyz[:,2]-np.min(xyz[:,2]), linestyle="None", color='k',  marker=".", markersize=markersize)             # <<<<<<<<<<<<<<
@@ -20551,7 +20551,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
 
-  /* "pysesa/_plot.pyx":1300
+  /* "pysesa/plot.pyx":1300
  *       ax.view_init(elev=elev, azim=azim)
  *       ax.plot(xyz[:,0]-np.min(xyz[:,0]),xyz[:,1]-np.min(xyz[:,1]),xyz[:,2]-np.min(xyz[:,2]), linestyle="None", color='k',  marker=".", markersize=markersize)
  *       ax.grid(False)             # <<<<<<<<<<<<<<
@@ -20562,7 +20562,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
 
-  /* "pysesa/_plot.pyx":1301
+  /* "pysesa/plot.pyx":1301
  *       ax.plot(xyz[:,0]-np.min(xyz[:,0]),xyz[:,1]-np.min(xyz[:,1]),xyz[:,2]-np.min(xyz[:,2]), linestyle="None", color='k',  marker=".", markersize=markersize)
  *       ax.grid(False)
  *       self._plt.axis('tight')             # <<<<<<<<<<<<<<
@@ -20573,7 +20573,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
 
-  /* "pysesa/_plot.pyx":1307
+  /* "pysesa/plot.pyx":1307
  *       ax = self._make_axislabels(ax, labelsize)
  * 
  *       self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_pc',bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -20584,7 +20584,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
 
-  /* "pysesa/_plot.pyx":1367
+  /* "pysesa/plot.pyx":1367
  *             fig = self._plt.figure(dpi=dpi)
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')             # <<<<<<<<<<<<<<
@@ -20595,7 +20595,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__31);
   __Pyx_GIVEREF(__pyx_tuple__31);
 
-  /* "pysesa/_plot.pyx":1373
+  /* "pysesa/plot.pyx":1373
  *             else:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)             # <<<<<<<<<<<<<<
@@ -20606,7 +20606,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
 
-  /* "pysesa/_plot.pyx":1374
+  /* "pysesa/plot.pyx":1374
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)
  *             self._plt.axis('tight')             # <<<<<<<<<<<<<<
@@ -20617,7 +20617,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
 
-  /* "pysesa/_plot.pyx":1381
+  /* "pysesa/plot.pyx":1381
  *             ax = self._make_axislabels(ax, labelsize)
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -20628,7 +20628,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
 
-  /* "pysesa/_plot.pyx":1438
+  /* "pysesa/plot.pyx":1438
  *             fig = self._plt.figure(dpi=dpi)
  *             fig.subplots_adjust(wspace = -0.15, hspace=-0.15)
  *             ax = fig.add_subplot(221, projection='3d', axisbg='white')             # <<<<<<<<<<<<<<
@@ -20639,7 +20639,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
 
-  /* "pysesa/_plot.pyx":1444
+  /* "pysesa/plot.pyx":1444
  *             else:
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)             # <<<<<<<<<<<<<<
@@ -20650,7 +20650,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
 
-  /* "pysesa/_plot.pyx":1445
+  /* "pysesa/plot.pyx":1445
  *                im=ax.scatter(x-np.min(x),y-np.min(y), z, s=markersize, c=np.log(pcdict[key]), linewidth=0)
  *             ax.grid(False)
  *             self._plt.axis('tight')             # <<<<<<<<<<<<<<
@@ -20661,7 +20661,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
 
-  /* "pysesa/_plot.pyx":1452
+  /* "pysesa/plot.pyx":1452
  *             ax = self._make_axislabels(ax, labelsize)
  * 
  *             self._plt.savefig(self._outfiles[0].split('.')[-1-1]+'xyp_3d_'+key,bbox_inches='tight',dpi=dpi)             # <<<<<<<<<<<<<<
@@ -20672,7 +20672,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
 
-  /* "pysesa/_plot.pyx":1486
+  /* "pysesa/plot.pyx":1486
  *          pc.append(np.genfromtxt(outfile, delimiter=','))
  * 
  *       pc = np.vstack(pc).astype('float32')             # <<<<<<<<<<<<<<
@@ -20683,7 +20683,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
 
-  /* "pysesa/_plot.pyx":1511
+  /* "pysesa/plot.pyx":1511
  *       xyz = []
  *       for outfile in self._outfiles:
  *          infile = outfile.split('_zstat')[0]             # <<<<<<<<<<<<<<
@@ -20694,7 +20694,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
 
-  /* "pysesa/_plot.pyx":1514
+  /* "pysesa/plot.pyx":1514
  *          xyz.append(self._txtread(infile))
  * 
  *       xyz = np.vstack(xyz).astype('float32')             # <<<<<<<<<<<<<<
@@ -20705,7 +20705,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
 
-  /* "pysesa/_plot.pyx":1539
+  /* "pysesa/plot.pyx":1539
  *       f = open(infile, 'rb'); data = f.read(); f.close()
  *       data = data.splitlines()
  *       if len(data[0].split(','))>1: # the file is comma delimited             # <<<<<<<<<<<<<<
@@ -20716,7 +20716,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
 
-  /* "pysesa/_plot.pyx":1540
+  /* "pysesa/plot.pyx":1540
  *       data = data.splitlines()
  *       if len(data[0].split(','))>1: # the file is comma delimited
  *         return np.array([x.split(',',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -20730,7 +20730,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__45);
   __Pyx_GIVEREF(__pyx_slice__45);
 
-  /* "pysesa/_plot.pyx":1543
+  /* "pysesa/plot.pyx":1543
  *       else:
  *          try: # space delimited
  *             return np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -20744,7 +20744,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__48);
   __Pyx_GIVEREF(__pyx_slice__48);
 
-  /* "pysesa/_plot.pyx":1545
+  /* "pysesa/plot.pyx":1545
  *             return np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')
  *          except: #tab delimited
  *             return np.array([x.split('\t',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -20758,7 +20758,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__51);
   __Pyx_GIVEREF(__pyx_slice__51);
 
-  /* "pysesa/_plot.pyx":1574
+  /* "pysesa/plot.pyx":1574
  *       ## proctype = 1 or 2
  *       if (self._proctype==1) or (self._proctype==2):
  *          pcdict['x'] = pc[:,0]             # <<<<<<<<<<<<<<
@@ -20772,7 +20772,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__53);
   __Pyx_GIVEREF(__pyx_tuple__53);
 
-  /* "pysesa/_plot.pyx":1575
+  /* "pysesa/plot.pyx":1575
  *       if (self._proctype==1) or (self._proctype==2):
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]             # <<<<<<<<<<<<<<
@@ -20786,7 +20786,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__55);
   __Pyx_GIVEREF(__pyx_tuple__55);
 
-  /* "pysesa/_plot.pyx":1576
+  /* "pysesa/plot.pyx":1576
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]             # <<<<<<<<<<<<<<
@@ -20800,7 +20800,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__57);
   __Pyx_GIVEREF(__pyx_tuple__57);
 
-  /* "pysesa/_plot.pyx":1577
+  /* "pysesa/plot.pyx":1577
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['slope'] = pc[:,3]             # <<<<<<<<<<<<<<
@@ -20814,7 +20814,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__59);
   __Pyx_GIVEREF(__pyx_tuple__59);
 
-  /* "pysesa/_plot.pyx":1578
+  /* "pysesa/plot.pyx":1578
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['slope'] = pc[:,3]
  *          pcdict['intercept'] = pc[:,4]             # <<<<<<<<<<<<<<
@@ -20828,7 +20828,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__61);
   __Pyx_GIVEREF(__pyx_tuple__61);
 
-  /* "pysesa/_plot.pyx":1579
+  /* "pysesa/plot.pyx":1579
  *          pcdict['slope'] = pc[:,3]
  *          pcdict['intercept'] = pc[:,4]
  *          pcdict['r_value'] = pc[:,5]             # <<<<<<<<<<<<<<
@@ -20842,7 +20842,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__63);
   __Pyx_GIVEREF(__pyx_tuple__63);
 
-  /* "pysesa/_plot.pyx":1580
+  /* "pysesa/plot.pyx":1580
  *          pcdict['intercept'] = pc[:,4]
  *          pcdict['r_value'] = pc[:,5]
  *          pcdict['p_value'] = pc[:,6]             # <<<<<<<<<<<<<<
@@ -20856,7 +20856,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__65);
   __Pyx_GIVEREF(__pyx_tuple__65);
 
-  /* "pysesa/_plot.pyx":1581
+  /* "pysesa/plot.pyx":1581
  *          pcdict['r_value'] = pc[:,5]
  *          pcdict['p_value'] = pc[:,6]
  *          pcdict['std_err'] = pc[:,7]             # <<<<<<<<<<<<<<
@@ -20870,7 +20870,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__67);
   __Pyx_GIVEREF(__pyx_tuple__67);
 
-  /* "pysesa/_plot.pyx":1582
+  /* "pysesa/plot.pyx":1582
  *          pcdict['p_value'] = pc[:,6]
  *          pcdict['std_err'] = pc[:,7]
  *          pcdict['d'] = pc[:,8]             # <<<<<<<<<<<<<<
@@ -20884,7 +20884,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__69);
   __Pyx_GIVEREF(__pyx_tuple__69);
 
-  /* "pysesa/_plot.pyx":1583
+  /* "pysesa/plot.pyx":1583
  *          pcdict['std_err'] = pc[:,7]
  *          pcdict['d'] = pc[:,8]
  *          pcdict['l'] = pc[:,9]             # <<<<<<<<<<<<<<
@@ -20898,7 +20898,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__71);
   __Pyx_GIVEREF(__pyx_tuple__71);
 
-  /* "pysesa/_plot.pyx":1584
+  /* "pysesa/plot.pyx":1584
  *          pcdict['d'] = pc[:,8]
  *          pcdict['l'] = pc[:,9]
  *          pcdict['wmax'] = pc[:,10]             # <<<<<<<<<<<<<<
@@ -20912,7 +20912,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__73);
   __Pyx_GIVEREF(__pyx_tuple__73);
 
-  /* "pysesa/_plot.pyx":1585
+  /* "pysesa/plot.pyx":1585
  *          pcdict['l'] = pc[:,9]
  *          pcdict['wmax'] = pc[:,10]
  *          pcdict['wmean'] = pc[:,11]             # <<<<<<<<<<<<<<
@@ -20926,7 +20926,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__75);
   __Pyx_GIVEREF(__pyx_tuple__75);
 
-  /* "pysesa/_plot.pyx":1586
+  /* "pysesa/plot.pyx":1586
  *          pcdict['wmax'] = pc[:,10]
  *          pcdict['wmean'] = pc[:,11]
  *          pcdict['rms1'] = pc[:,12]             # <<<<<<<<<<<<<<
@@ -20940,7 +20940,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__77);
   __Pyx_GIVEREF(__pyx_tuple__77);
 
-  /* "pysesa/_plot.pyx":1587
+  /* "pysesa/plot.pyx":1587
  *          pcdict['wmean'] = pc[:,11]
  *          pcdict['rms1'] = pc[:,12]
  *          pcdict['rms2'] = pc[:,13]             # <<<<<<<<<<<<<<
@@ -20954,7 +20954,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__79);
   __Pyx_GIVEREF(__pyx_tuple__79);
 
-  /* "pysesa/_plot.pyx":1588
+  /* "pysesa/plot.pyx":1588
  *          pcdict['rms1'] = pc[:,12]
  *          pcdict['rms2'] = pc[:,13]
  *          pcdict['Z'] = pc[:,14]             # <<<<<<<<<<<<<<
@@ -20968,7 +20968,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__81);
   __Pyx_GIVEREF(__pyx_tuple__81);
 
-  /* "pysesa/_plot.pyx":1589
+  /* "pysesa/plot.pyx":1589
  *          pcdict['rms2'] = pc[:,13]
  *          pcdict['Z'] = pc[:,14]
  *          pcdict['E'] = pc[:,15]             # <<<<<<<<<<<<<<
@@ -20982,7 +20982,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__83);
   __Pyx_GIVEREF(__pyx_tuple__83);
 
-  /* "pysesa/_plot.pyx":1590
+  /* "pysesa/plot.pyx":1590
  *          pcdict['Z'] = pc[:,14]
  *          pcdict['E'] = pc[:,15]
  *          pcdict['sigma'] = pc[:,16]             # <<<<<<<<<<<<<<
@@ -20996,7 +20996,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__85);
   __Pyx_GIVEREF(__pyx_tuple__85);
 
-  /* "pysesa/_plot.pyx":1591
+  /* "pysesa/plot.pyx":1591
  *          pcdict['E'] = pc[:,15]
  *          pcdict['sigma'] = pc[:,16]
  *          pcdict['T0_1'] = pc[:,17]             # <<<<<<<<<<<<<<
@@ -21010,7 +21010,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__87);
   __Pyx_GIVEREF(__pyx_tuple__87);
 
-  /* "pysesa/_plot.pyx":1592
+  /* "pysesa/plot.pyx":1592
  *          pcdict['sigma'] = pc[:,16]
  *          pcdict['T0_1'] = pc[:,17]
  *          pcdict['T0_2'] = pc[:,18]             # <<<<<<<<<<<<<<
@@ -21024,7 +21024,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__89);
   __Pyx_GIVEREF(__pyx_tuple__89);
 
-  /* "pysesa/_plot.pyx":1593
+  /* "pysesa/plot.pyx":1593
  *          pcdict['T0_1'] = pc[:,17]
  *          pcdict['T0_2'] = pc[:,18]
  *          pcdict['sw1'] = pc[:,19]             # <<<<<<<<<<<<<<
@@ -21038,7 +21038,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__91);
   __Pyx_GIVEREF(__pyx_tuple__91);
 
-  /* "pysesa/_plot.pyx":1594
+  /* "pysesa/plot.pyx":1594
  *          pcdict['T0_2'] = pc[:,18]
  *          pcdict['sw1'] = pc[:,19]
  *          pcdict['sw2'] = pc[:,20]             # <<<<<<<<<<<<<<
@@ -21052,7 +21052,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__93);
   __Pyx_GIVEREF(__pyx_tuple__93);
 
-  /* "pysesa/_plot.pyx":1595
+  /* "pysesa/plot.pyx":1595
  *          pcdict['sw1'] = pc[:,19]
  *          pcdict['sw2'] = pc[:,20]
  *          pcdict['m0'] = pc[:,21]             # <<<<<<<<<<<<<<
@@ -21066,7 +21066,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__95);
   __Pyx_GIVEREF(__pyx_tuple__95);
 
-  /* "pysesa/_plot.pyx":1596
+  /* "pysesa/plot.pyx":1596
  *          pcdict['sw2'] = pc[:,20]
  *          pcdict['m0'] = pc[:,21]
  *          pcdict['m1'] = pc[:,22]             # <<<<<<<<<<<<<<
@@ -21080,7 +21080,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__97);
   __Pyx_GIVEREF(__pyx_tuple__97);
 
-  /* "pysesa/_plot.pyx":1597
+  /* "pysesa/plot.pyx":1597
  *          pcdict['m0'] = pc[:,21]
  *          pcdict['m1'] = pc[:,22]
  *          pcdict['m2'] = pc[:,23]             # <<<<<<<<<<<<<<
@@ -21094,7 +21094,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__99);
   __Pyx_GIVEREF(__pyx_tuple__99);
 
-  /* "pysesa/_plot.pyx":1598
+  /* "pysesa/plot.pyx":1598
  *          pcdict['m1'] = pc[:,22]
  *          pcdict['m2'] = pc[:,23]
  *          pcdict['m3'] = pc[:,24]             # <<<<<<<<<<<<<<
@@ -21108,7 +21108,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__101);
   __Pyx_GIVEREF(__pyx_tuple__101);
 
-  /* "pysesa/_plot.pyx":1599
+  /* "pysesa/plot.pyx":1599
  *          pcdict['m2'] = pc[:,23]
  *          pcdict['m3'] = pc[:,24]
  *          pcdict['m4'] = pc[:,25]             # <<<<<<<<<<<<<<
@@ -21122,7 +21122,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__103);
   __Pyx_GIVEREF(__pyx_tuple__103);
 
-  /* "pysesa/_plot.pyx":1600
+  /* "pysesa/plot.pyx":1600
  *          pcdict['m3'] = pc[:,24]
  *          pcdict['m4'] = pc[:,25]
  *          pcdict['phi'] = pc[:,26]             # <<<<<<<<<<<<<<
@@ -21136,7 +21136,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__105);
   __Pyx_GIVEREF(__pyx_tuple__105);
 
-  /* "pysesa/_plot.pyx":1604
+  /* "pysesa/plot.pyx":1604
  *       # proctype = 3
  *       if (self._proctype==3):
  *          pcdict['x'] = pc[:,0]             # <<<<<<<<<<<<<<
@@ -21150,7 +21150,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__107);
   __Pyx_GIVEREF(__pyx_tuple__107);
 
-  /* "pysesa/_plot.pyx":1605
+  /* "pysesa/plot.pyx":1605
  *       if (self._proctype==3):
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]             # <<<<<<<<<<<<<<
@@ -21164,7 +21164,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__109);
   __Pyx_GIVEREF(__pyx_tuple__109);
 
-  /* "pysesa/_plot.pyx":1606
+  /* "pysesa/plot.pyx":1606
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]             # <<<<<<<<<<<<<<
@@ -21178,7 +21178,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__111);
   __Pyx_GIVEREF(__pyx_tuple__111);
 
-  /* "pysesa/_plot.pyx":1607
+  /* "pysesa/plot.pyx":1607
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]             # <<<<<<<<<<<<<<
@@ -21192,7 +21192,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__113);
   __Pyx_GIVEREF(__pyx_tuple__113);
 
-  /* "pysesa/_plot.pyx":1608
+  /* "pysesa/plot.pyx":1608
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]             # <<<<<<<<<<<<<<
@@ -21206,7 +21206,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__115);
   __Pyx_GIVEREF(__pyx_tuple__115);
 
-  /* "pysesa/_plot.pyx":1609
+  /* "pysesa/plot.pyx":1609
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]             # <<<<<<<<<<<<<<
@@ -21220,7 +21220,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__117);
   __Pyx_GIVEREF(__pyx_tuple__117);
 
-  /* "pysesa/_plot.pyx":1610
+  /* "pysesa/plot.pyx":1610
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]             # <<<<<<<<<<<<<<
@@ -21234,7 +21234,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__119);
   __Pyx_GIVEREF(__pyx_tuple__119);
 
-  /* "pysesa/_plot.pyx":1611
+  /* "pysesa/plot.pyx":1611
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]             # <<<<<<<<<<<<<<
@@ -21248,7 +21248,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__121);
   __Pyx_GIVEREF(__pyx_tuple__121);
 
-  /* "pysesa/_plot.pyx":1612
+  /* "pysesa/plot.pyx":1612
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]             # <<<<<<<<<<<<<<
@@ -21262,7 +21262,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__123);
   __Pyx_GIVEREF(__pyx_tuple__123);
 
-  /* "pysesa/_plot.pyx":1613
+  /* "pysesa/plot.pyx":1613
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]
  *          pcdict['n'] = pc[:,9]             # <<<<<<<<<<<<<<
@@ -21276,7 +21276,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__125);
   __Pyx_GIVEREF(__pyx_tuple__125);
 
-  /* "pysesa/_plot.pyx":1617
+  /* "pysesa/plot.pyx":1617
  *       # proctype = 4 or 5
  *       if (self._proctype==4) or (self._proctype==5):
  *          pcdict['x'] = pc[:,0]             # <<<<<<<<<<<<<<
@@ -21290,7 +21290,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__127);
   __Pyx_GIVEREF(__pyx_tuple__127);
 
-  /* "pysesa/_plot.pyx":1618
+  /* "pysesa/plot.pyx":1618
  *       if (self._proctype==4) or (self._proctype==5):
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]             # <<<<<<<<<<<<<<
@@ -21304,7 +21304,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__129);
   __Pyx_GIVEREF(__pyx_tuple__129);
 
-  /* "pysesa/_plot.pyx":1619
+  /* "pysesa/plot.pyx":1619
  *          pcdict['x'] = pc[:,0]
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]             # <<<<<<<<<<<<<<
@@ -21318,7 +21318,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__131);
   __Pyx_GIVEREF(__pyx_tuple__131);
 
-  /* "pysesa/_plot.pyx":1620
+  /* "pysesa/plot.pyx":1620
  *          pcdict['y'] = pc[:,1]
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]             # <<<<<<<<<<<<<<
@@ -21332,7 +21332,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__133);
   __Pyx_GIVEREF(__pyx_tuple__133);
 
-  /* "pysesa/_plot.pyx":1621
+  /* "pysesa/plot.pyx":1621
  *          pcdict['z_mean'] = pc[:,2]
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]             # <<<<<<<<<<<<<<
@@ -21346,7 +21346,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__135);
   __Pyx_GIVEREF(__pyx_tuple__135);
 
-  /* "pysesa/_plot.pyx":1622
+  /* "pysesa/plot.pyx":1622
  *          pcdict['z_max'] = pc[:,3]
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]             # <<<<<<<<<<<<<<
@@ -21360,7 +21360,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__137);
   __Pyx_GIVEREF(__pyx_tuple__137);
 
-  /* "pysesa/_plot.pyx":1623
+  /* "pysesa/plot.pyx":1623
  *          pcdict['z_min'] = pc[:,4]
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]             # <<<<<<<<<<<<<<
@@ -21374,7 +21374,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__139);
   __Pyx_GIVEREF(__pyx_tuple__139);
 
-  /* "pysesa/_plot.pyx":1624
+  /* "pysesa/plot.pyx":1624
  *          pcdict['z_range'] = pc[:,5]
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]             # <<<<<<<<<<<<<<
@@ -21388,7 +21388,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__141);
   __Pyx_GIVEREF(__pyx_tuple__141);
 
-  /* "pysesa/_plot.pyx":1625
+  /* "pysesa/plot.pyx":1625
  *          pcdict['sigma'] = pc[:,6]
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]             # <<<<<<<<<<<<<<
@@ -21402,7 +21402,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__143);
   __Pyx_GIVEREF(__pyx_tuple__143);
 
-  /* "pysesa/_plot.pyx":1626
+  /* "pysesa/plot.pyx":1626
  *          pcdict['skewness'] = pc[:,7]
  *          pcdict['kurtosis'] = pc[:,8]
  *          pcdict['n'] =pc[:,9]             # <<<<<<<<<<<<<<
@@ -21416,7 +21416,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__145);
   __Pyx_GIVEREF(__pyx_tuple__145);
 
-  /* "pysesa/_plot.pyx":1627
+  /* "pysesa/plot.pyx":1627
  *          pcdict['kurtosis'] = pc[:,8]
  *          pcdict['n'] =pc[:,9]
  *          pcdict['slope'] = pc[:,10]             # <<<<<<<<<<<<<<
@@ -21430,7 +21430,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__147);
   __Pyx_GIVEREF(__pyx_tuple__147);
 
-  /* "pysesa/_plot.pyx":1628
+  /* "pysesa/plot.pyx":1628
  *          pcdict['n'] =pc[:,9]
  *          pcdict['slope'] = pc[:,10]
  *          pcdict['intercept'] = pc[:,11]             # <<<<<<<<<<<<<<
@@ -21444,7 +21444,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__149);
   __Pyx_GIVEREF(__pyx_tuple__149);
 
-  /* "pysesa/_plot.pyx":1629
+  /* "pysesa/plot.pyx":1629
  *          pcdict['slope'] = pc[:,10]
  *          pcdict['intercept'] = pc[:,11]
  *          pcdict['r_value'] = pc[:,12]             # <<<<<<<<<<<<<<
@@ -21458,7 +21458,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__151);
   __Pyx_GIVEREF(__pyx_tuple__151);
 
-  /* "pysesa/_plot.pyx":1630
+  /* "pysesa/plot.pyx":1630
  *          pcdict['intercept'] = pc[:,11]
  *          pcdict['r_value'] = pc[:,12]
  *          pcdict['p_value'] = pc[:,13]             # <<<<<<<<<<<<<<
@@ -21472,7 +21472,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__153);
   __Pyx_GIVEREF(__pyx_tuple__153);
 
-  /* "pysesa/_plot.pyx":1631
+  /* "pysesa/plot.pyx":1631
  *          pcdict['r_value'] = pc[:,12]
  *          pcdict['p_value'] = pc[:,13]
  *          pcdict['std_err'] = pc[:,14]             # <<<<<<<<<<<<<<
@@ -21486,7 +21486,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__155);
   __Pyx_GIVEREF(__pyx_tuple__155);
 
-  /* "pysesa/_plot.pyx":1632
+  /* "pysesa/plot.pyx":1632
  *          pcdict['p_value'] = pc[:,13]
  *          pcdict['std_err'] = pc[:,14]
  *          pcdict['d'] = pc[:,15]             # <<<<<<<<<<<<<<
@@ -21500,7 +21500,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__157);
   __Pyx_GIVEREF(__pyx_tuple__157);
 
-  /* "pysesa/_plot.pyx":1633
+  /* "pysesa/plot.pyx":1633
  *          pcdict['std_err'] = pc[:,14]
  *          pcdict['d'] = pc[:,15]
  *          pcdict['l'] = pc[:,16]             # <<<<<<<<<<<<<<
@@ -21514,7 +21514,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__159);
   __Pyx_GIVEREF(__pyx_tuple__159);
 
-  /* "pysesa/_plot.pyx":1634
+  /* "pysesa/plot.pyx":1634
  *          pcdict['d'] = pc[:,15]
  *          pcdict['l'] = pc[:,16]
  *          pcdict['wmax'] = pc[:,17]             # <<<<<<<<<<<<<<
@@ -21528,7 +21528,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__161);
   __Pyx_GIVEREF(__pyx_tuple__161);
 
-  /* "pysesa/_plot.pyx":1635
+  /* "pysesa/plot.pyx":1635
  *          pcdict['l'] = pc[:,16]
  *          pcdict['wmax'] = pc[:,17]
  *          pcdict['wmean'] = pc[:,18]             # <<<<<<<<<<<<<<
@@ -21542,7 +21542,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__163);
   __Pyx_GIVEREF(__pyx_tuple__163);
 
-  /* "pysesa/_plot.pyx":1636
+  /* "pysesa/plot.pyx":1636
  *          pcdict['wmax'] = pc[:,17]
  *          pcdict['wmean'] = pc[:,18]
  *          pcdict['rms1'] = pc[:,19]             # <<<<<<<<<<<<<<
@@ -21556,7 +21556,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__165);
   __Pyx_GIVEREF(__pyx_tuple__165);
 
-  /* "pysesa/_plot.pyx":1637
+  /* "pysesa/plot.pyx":1637
  *          pcdict['wmean'] = pc[:,18]
  *          pcdict['rms1'] = pc[:,19]
  *          pcdict['rms2'] = pc[:,20]             # <<<<<<<<<<<<<<
@@ -21570,7 +21570,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__167);
   __Pyx_GIVEREF(__pyx_tuple__167);
 
-  /* "pysesa/_plot.pyx":1638
+  /* "pysesa/plot.pyx":1638
  *          pcdict['rms1'] = pc[:,19]
  *          pcdict['rms2'] = pc[:,20]
  *          pcdict['Z'] = pc[:,21]             # <<<<<<<<<<<<<<
@@ -21584,7 +21584,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__169);
   __Pyx_GIVEREF(__pyx_tuple__169);
 
-  /* "pysesa/_plot.pyx":1639
+  /* "pysesa/plot.pyx":1639
  *          pcdict['rms2'] = pc[:,20]
  *          pcdict['Z'] = pc[:,21]
  *          pcdict['E'] = pc[:,22]             # <<<<<<<<<<<<<<
@@ -21598,7 +21598,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__171);
   __Pyx_GIVEREF(__pyx_tuple__171);
 
-  /* "pysesa/_plot.pyx":1640
+  /* "pysesa/plot.pyx":1640
  *          pcdict['Z'] = pc[:,21]
  *          pcdict['E'] = pc[:,22]
  *          pcdict['sigma'] = pc[:,23]             # <<<<<<<<<<<<<<
@@ -21612,7 +21612,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__173);
   __Pyx_GIVEREF(__pyx_tuple__173);
 
-  /* "pysesa/_plot.pyx":1641
+  /* "pysesa/plot.pyx":1641
  *          pcdict['E'] = pc[:,22]
  *          pcdict['sigma'] = pc[:,23]
  *          pcdict['T0_1'] = pc[:,24]             # <<<<<<<<<<<<<<
@@ -21626,7 +21626,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__175);
   __Pyx_GIVEREF(__pyx_tuple__175);
 
-  /* "pysesa/_plot.pyx":1642
+  /* "pysesa/plot.pyx":1642
  *          pcdict['sigma'] = pc[:,23]
  *          pcdict['T0_1'] = pc[:,24]
  *          pcdict['T0_2'] = pc[:,25]             # <<<<<<<<<<<<<<
@@ -21640,7 +21640,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__177);
   __Pyx_GIVEREF(__pyx_tuple__177);
 
-  /* "pysesa/_plot.pyx":1643
+  /* "pysesa/plot.pyx":1643
  *          pcdict['T0_1'] = pc[:,24]
  *          pcdict['T0_2'] = pc[:,25]
  *          pcdict['sw1'] = pc[:,26]             # <<<<<<<<<<<<<<
@@ -21654,7 +21654,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__179);
   __Pyx_GIVEREF(__pyx_tuple__179);
 
-  /* "pysesa/_plot.pyx":1644
+  /* "pysesa/plot.pyx":1644
  *          pcdict['T0_2'] = pc[:,25]
  *          pcdict['sw1'] = pc[:,26]
  *          pcdict['sw2'] = pc[:,27]             # <<<<<<<<<<<<<<
@@ -21668,7 +21668,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__181);
   __Pyx_GIVEREF(__pyx_tuple__181);
 
-  /* "pysesa/_plot.pyx":1645
+  /* "pysesa/plot.pyx":1645
  *          pcdict['sw1'] = pc[:,26]
  *          pcdict['sw2'] = pc[:,27]
  *          pcdict['m0'] = pc[:,28]             # <<<<<<<<<<<<<<
@@ -21682,7 +21682,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__183);
   __Pyx_GIVEREF(__pyx_tuple__183);
 
-  /* "pysesa/_plot.pyx":1646
+  /* "pysesa/plot.pyx":1646
  *          pcdict['sw2'] = pc[:,27]
  *          pcdict['m0'] = pc[:,28]
  *          pcdict['m1'] = pc[:,29]             # <<<<<<<<<<<<<<
@@ -21696,7 +21696,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__185);
   __Pyx_GIVEREF(__pyx_tuple__185);
 
-  /* "pysesa/_plot.pyx":1647
+  /* "pysesa/plot.pyx":1647
  *          pcdict['m0'] = pc[:,28]
  *          pcdict['m1'] = pc[:,29]
  *          pcdict['m2'] = pc[:,30]             # <<<<<<<<<<<<<<
@@ -21710,7 +21710,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__187);
   __Pyx_GIVEREF(__pyx_tuple__187);
 
-  /* "pysesa/_plot.pyx":1648
+  /* "pysesa/plot.pyx":1648
  *          pcdict['m1'] = pc[:,29]
  *          pcdict['m2'] = pc[:,30]
  *          pcdict['m3'] = pc[:,31]             # <<<<<<<<<<<<<<
@@ -21724,7 +21724,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__189);
   __Pyx_GIVEREF(__pyx_tuple__189);
 
-  /* "pysesa/_plot.pyx":1649
+  /* "pysesa/plot.pyx":1649
  *          pcdict['m2'] = pc[:,30]
  *          pcdict['m3'] = pc[:,31]
  *          pcdict['m4'] = pc[:,32]             # <<<<<<<<<<<<<<
@@ -21738,7 +21738,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__191);
   __Pyx_GIVEREF(__pyx_tuple__191);
 
-  /* "pysesa/_plot.pyx":1650
+  /* "pysesa/plot.pyx":1650
  *          pcdict['m3'] = pc[:,31]
  *          pcdict['m4'] = pc[:,32]
  *          pcdict['phi'] = pc[:,33]             # <<<<<<<<<<<<<<
@@ -21752,7 +21752,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__193);
   __Pyx_GIVEREF(__pyx_tuple__193);
 
-  /* "pysesa/_plot.pyx":1976
+  /* "pysesa/plot.pyx":1976
  *       '''
  *       locs, labels = self._plt.xticks()
  *       self._plt.xticks(locs[::3])             # <<<<<<<<<<<<<<
@@ -21763,7 +21763,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__194);
   __Pyx_GIVEREF(__pyx_slice__194);
 
-  /* "pysesa/_plot.pyx":1981
+  /* "pysesa/plot.pyx":1981
  * 
  *       locs, labels = self._plt.yticks()
  *       self._plt.yticks(locs[::3])             # <<<<<<<<<<<<<<
@@ -21774,7 +21774,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__195);
   __Pyx_GIVEREF(__pyx_slice__195);
 
-  /* "pysesa/_plot.pyx":2088
+  /* "pysesa/plot.pyx":2088
  *    	   font size (points)
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -21785,7 +21785,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__196);
   __Pyx_GIVEREF(__pyx_tuple__196);
 
-  /* "pysesa/_plot.pyx":2089
+  /* "pysesa/plot.pyx":2089
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -21796,7 +21796,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__197);
   __Pyx_GIVEREF(__pyx_tuple__197);
 
-  /* "pysesa/_plot.pyx":2090
+  /* "pysesa/plot.pyx":2090
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)
  *       ax.set_zlabel('Vertical distance (length)',fontsize=size)             # <<<<<<<<<<<<<<
@@ -21807,7 +21807,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__198);
   __Pyx_GIVEREF(__pyx_tuple__198);
 
-  /* "pysesa/_plot.pyx":2116
+  /* "pysesa/plot.pyx":2116
  *    	   font size (points)
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -21818,7 +21818,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__199);
   __Pyx_GIVEREF(__pyx_tuple__199);
 
-  /* "pysesa/_plot.pyx":2117
+  /* "pysesa/plot.pyx":2117
  *       '''
  *       ax.set_xlabel('Horizontal distance (length)', fontsize=size)
  *       ax.set_ylabel('Lateral distance (length)', fontsize=size)             # <<<<<<<<<<<<<<
@@ -21829,7 +21829,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__200);
   __Pyx_GIVEREF(__pyx_tuple__200);
 
-  /* "pysesa/_plot.pyx":2151
+  /* "pysesa/plot.pyx":2151
  *       from mpl_toolkits.axes_grid1 import make_axes_locatable
  *       divider = make_axes_locatable(ax)
  *       cax = divider.append_axes("right", size="5%", pad=-0.1)             # <<<<<<<<<<<<<<
@@ -21840,7 +21840,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__201);
   __Pyx_GIVEREF(__pyx_tuple__201);
 
-  /* "pysesa/_plot.pyx":2156
+  /* "pysesa/plot.pyx":2156
  * 
  *       locs, labels = self._plt.yticks()
  *       self._plt.yticks(locs[::3])             # <<<<<<<<<<<<<<
@@ -21851,7 +21851,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__202);
   __Pyx_GIVEREF(__pyx_slice__202);
 
-  /* "pysesa/_plot.pyx":2187
+  /* "pysesa/plot.pyx":2187
  *       mlab.clf()
  *       fig.scene.set(magnification=mag)
  *       fig.scene.set(background=(0.5,0.5,0.5))             # <<<<<<<<<<<<<<
@@ -21862,7 +21862,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__203);
   __Pyx_GIVEREF(__pyx_tuple__203);
 
-  /* "pysesa/_plot.pyx":566
+  /* "pysesa/plot.pyx":566
  *    '''
  * 
  *    def __init__(self, pysesa_file=None):             # <<<<<<<<<<<<<<
@@ -21877,7 +21877,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__207);
   __Pyx_GIVEREF(__pyx_tuple__207);
 
-  /* "pysesa/_plot.pyx":664
+  /* "pysesa/plot.pyx":664
  * 
  *    #==================================================
  *    def grd_vars_3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -21892,7 +21892,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__210);
   __Pyx_GIVEREF(__pyx_tuple__210);
 
-  /* "pysesa/_plot.pyx":764
+  /* "pysesa/plot.pyx":764
  * 
  *    #==================================================
  *    def grd_var_3d(self, var, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -21907,7 +21907,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__213);
   __Pyx_GIVEREF(__pyx_tuple__213);
 
-  /* "pysesa/_plot.pyx":869
+  /* "pysesa/plot.pyx":869
  * 
  *    #==================================================
  *    def grd_xyz3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
@@ -21922,7 +21922,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__216);
   __Pyx_GIVEREF(__pyx_tuple__216);
 
-  /* "pysesa/_plot.pyx":951
+  /* "pysesa/plot.pyx":951
  * 
  *    #==================================================
  *    def grd_var(self, var, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -21937,7 +21937,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__219);
   __Pyx_GIVEREF(__pyx_tuple__219);
 
-  /* "pysesa/_plot.pyx":1064
+  /* "pysesa/plot.pyx":1064
  * 
  *    #==================================================
  *    def grd_vars(self, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -21952,7 +21952,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__222);
   __Pyx_GIVEREF(__pyx_tuple__222);
 
-  /* "pysesa/_plot.pyx":1172
+  /* "pysesa/plot.pyx":1172
  * 
  *    #==================================================
  *    def grd_xyz(self, res=0.1, thresdist = 0, nn = 1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -21967,7 +21967,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__225);
   __Pyx_GIVEREF(__pyx_tuple__225);
 
-  /* "pysesa/_plot.pyx":1256
+  /* "pysesa/plot.pyx":1256
  * 
  *    #==================================================
  *    def plt_xyz(self,elev=65, azim=-115, markersize=.01, dpi=300, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
@@ -21982,7 +21982,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__228);
   __Pyx_GIVEREF(__pyx_tuple__228);
 
-  /* "pysesa/_plot.pyx":1312
+  /* "pysesa/plot.pyx":1312
  * 
  *    #==================================================
  *    def plt_xy_var(self, var, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
@@ -21997,7 +21997,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__231);
   __Pyx_GIVEREF(__pyx_tuple__231);
 
-  /* "pysesa/_plot.pyx":1387
+  /* "pysesa/plot.pyx":1387
  * 
  *    #==================================================
  *    def plt_xy_vars(self, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
@@ -22012,7 +22012,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__234);
   __Pyx_GIVEREF(__pyx_tuple__234);
 
-  /* "pysesa/_plot.pyx":1462
+  /* "pysesa/plot.pyx":1462
  * 
  *    #==================================================
  *    def get_pc(self):             # <<<<<<<<<<<<<<
@@ -22024,7 +22024,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__235);
   __pyx_codeobj__236 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__235, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_get_pc, 1462, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__236)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1490
+  /* "pysesa/plot.pyx":1490
  * 
  *    #==================================================
  *    def get_xyz(self):             # <<<<<<<<<<<<<<
@@ -22036,7 +22036,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__237);
   __pyx_codeobj__238 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__237, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_get_xyz, 1490, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__238)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1490; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1518
+  /* "pysesa/plot.pyx":1518
  * 
  *    #==================================================
  *    def _txtread(self,infile):             # <<<<<<<<<<<<<<
@@ -22048,7 +22048,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__239);
   __pyx_codeobj__240 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__239, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_txtread, 1518, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__240)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1548
+  /* "pysesa/plot.pyx":1548
  * 
  *    #==================================================
  *    def parse_pc_vars(self):             # <<<<<<<<<<<<<<
@@ -22060,7 +22060,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__241);
   __pyx_codeobj__242 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__241, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_parse_pc_vars, 1548, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__242)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1548; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1660
+  /* "pysesa/plot.pyx":1660
  * 
  *    #==================================================
  *    def _grid_var(self, x, y, z, grid_x, grid_y, res=0.1, thresdist=0, nn=1):             # <<<<<<<<<<<<<<
@@ -22075,7 +22075,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__245);
   __Pyx_GIVEREF(__pyx_tuple__245);
 
-  /* "pysesa/_plot.pyx":1719
+  /* "pysesa/plot.pyx":1719
  * 
  *    # =========================================================
  *    def _getmesh(self, minX, maxX, minY, maxY, res):             # <<<<<<<<<<<<<<
@@ -22087,7 +22087,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__246);
   __pyx_codeobj__247 = (PyObject*)__Pyx_PyCode_New(6, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__246, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_getmesh, 1719, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__247)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1719; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1735
+  /* "pysesa/plot.pyx":1735
  * 
  *    #==================================================
  *    def _get_grid(self, x, y, z, res=0.1, thresdist = 0, nn=1):             # <<<<<<<<<<<<<<
@@ -22102,7 +22102,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__250);
   __Pyx_GIVEREF(__pyx_tuple__250);
 
-  /* "pysesa/_plot.pyx":1793
+  /* "pysesa/plot.pyx":1793
  * 
  *    # =========================================================
  *    def _hillshade(self, dem, dx, dy, azimuth, altitude, zf):             # <<<<<<<<<<<<<<
@@ -22114,7 +22114,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__251);
   __pyx_codeobj__252 = (PyObject*)__Pyx_PyCode_New(7, 0, 12, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__251, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_hillshade, 1793, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__252)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1793; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1861
+  /* "pysesa/plot.pyx":1861
  * 
  *    #==================================================
  *    def _get_dist(self, x, y, z, grid_x, grid_y, res, nn):             # <<<<<<<<<<<<<<
@@ -22126,7 +22126,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__253);
   __pyx_codeobj__254 = (PyObject*)__Pyx_PyCode_New(8, 0, 16, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__253, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_get_dist, 1861, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__254)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1861; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1927
+  /* "pysesa/plot.pyx":1927
  * 
  *    # =========================================================
  *    def _cart2pol(self, x, y):             # <<<<<<<<<<<<<<
@@ -22138,7 +22138,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__255);
   __pyx_codeobj__256 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__255, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_cart2pol, 1927, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__256)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1927; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":1956
+  /* "pysesa/plot.pyx":1956
  * 
  *    # =========================================================
  *    def _dolabels(self, rot=30):             # <<<<<<<<<<<<<<
@@ -22153,7 +22153,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__259);
   __Pyx_GIVEREF(__pyx_tuple__259);
 
-  /* "pysesa/_plot.pyx":1986
+  /* "pysesa/plot.pyx":1986
  * 
  *    # =========================================================
  *    def _set_tick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
@@ -22168,7 +22168,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__262);
   __Pyx_GIVEREF(__pyx_tuple__262);
 
-  /* "pysesa/_plot.pyx":2015
+  /* "pysesa/plot.pyx":2015
  * 
  *    # =========================================================
  *    def _set_ztick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
@@ -22183,7 +22183,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__265);
   __Pyx_GIVEREF(__pyx_tuple__265);
 
-  /* "pysesa/_plot.pyx":2042
+  /* "pysesa/plot.pyx":2042
  * 
  *    # =========================================================
  *    def _rmticks(self, ax):             # <<<<<<<<<<<<<<
@@ -22195,7 +22195,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__266);
   __pyx_codeobj__267 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__266, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_dbuscombe_github_clones_py, __pyx_n_s_rmticks, 2042, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__267)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2042; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "pysesa/_plot.pyx":2066
+  /* "pysesa/plot.pyx":2066
  * 
  *    # =========================================================
  *    def _make_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
@@ -22210,7 +22210,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__270);
   __Pyx_GIVEREF(__pyx_tuple__270);
 
-  /* "pysesa/_plot.pyx":2094
+  /* "pysesa/plot.pyx":2094
  * 
  *    # =========================================================
  *    def _make_xy_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
@@ -22225,7 +22225,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__273);
   __Pyx_GIVEREF(__pyx_tuple__273);
 
-  /* "pysesa/_plot.pyx":2121
+  /* "pysesa/plot.pyx":2121
  * 
  *    # =========================================================
  *    def _divide_colorbar(self, ax, im, label, size=6):             # <<<<<<<<<<<<<<
@@ -22240,7 +22240,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__276);
   __Pyx_GIVEREF(__pyx_tuple__276);
 
-  /* "pysesa/_plot.pyx":2161
+  /* "pysesa/plot.pyx":2161
  * 
  *    #==================================================
  *    def _get_3d_fig(self, mag=5):             # <<<<<<<<<<<<<<
@@ -22324,11 +22324,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC init_plot(void); /*proto*/
-PyMODINIT_FUNC init_plot(void)
+PyMODINIT_FUNC initplot(void); /*proto*/
+PyMODINIT_FUNC initplot(void)
 #else
-PyMODINIT_FUNC PyInit__plot(void); /*proto*/
-PyMODINIT_FUNC PyInit__plot(void)
+PyMODINIT_FUNC PyInit_plot(void); /*proto*/
+PyMODINIT_FUNC PyInit_plot(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -22346,7 +22346,7 @@ PyMODINIT_FUNC PyInit__plot(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__plot(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_plot(void)", 0);
   if ( __Pyx_check_binary_version() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -22368,7 +22368,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_plot", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("plot", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -22385,14 +22385,14 @@ PyMODINIT_FUNC PyInit__plot(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  if (__pyx_module_is_main_pysesa___plot) {
+  if (__pyx_module_is_main_pysesa__plot) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;};
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    if (!PyDict_GetItemString(modules, "pysesa._plot")) {
-      if (unlikely(PyDict_SetItemString(modules, "pysesa._plot", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (!PyDict_GetItemString(modules, "pysesa.plot")) {
+      if (unlikely(PyDict_SetItemString(modules, "pysesa.plot", __pyx_m) < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
   }
   #endif
@@ -22409,7 +22409,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   /*--- Function import code ---*/
   /*--- Execution code ---*/
 
-  /* "pysesa/_plot.pyx":56
+  /* "pysesa/plot.pyx":56
  * # =========================================================
  * from __future__ import division
  * import os, sys, getopt             # <<<<<<<<<<<<<<
@@ -22429,7 +22429,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_getopt, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 56; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":57
+  /* "pysesa/plot.pyx":57
  * from __future__ import division
  * import os, sys, getopt
  * import matplotlib.pylab as plt             # <<<<<<<<<<<<<<
@@ -22447,7 +22447,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 57; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":58
+  /* "pysesa/plot.pyx":58
  * import os, sys, getopt
  * import matplotlib.pylab as plt
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -22459,7 +22459,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":59
+  /* "pysesa/plot.pyx":59
  * import matplotlib.pylab as plt
  * import numpy as np
  * from Tkinter import Tk             # <<<<<<<<<<<<<<
@@ -22480,7 +22480,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":60
+  /* "pysesa/plot.pyx":60
  * import numpy as np
  * from Tkinter import Tk
  * from tkFileDialog import askopenfilename             # <<<<<<<<<<<<<<
@@ -22501,372 +22501,372 @@ PyMODINIT_FUNC PyInit__plot(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":67
+  /* "pysesa/plot.pyx":67
  * 
  * # =========================================================
  * class plot:             # <<<<<<<<<<<<<<
  *    '''
  *    Initialise the pysesa plot class
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_plot, __pyx_n_s_plot, (PyObject *) NULL, __pyx_n_s_pysesa__plot, __pyx_kp_s_Initialise_the_pysesa_plot_clas); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_plot, __pyx_n_s_plot, (PyObject *) NULL, __pyx_n_s_pysesa_plot, __pyx_kp_s_Initialise_the_pysesa_plot_clas); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 67; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "pysesa/_plot.pyx":566
+  /* "pysesa/plot.pyx":566
  *    '''
  * 
  *    def __init__(self, pysesa_file=None):             # <<<<<<<<<<<<<<
  * 
  *       '''
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_1__init__, 0, __pyx_n_s_plot___init, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__206)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_1__init__, 0, __pyx_n_s_plot___init, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__206)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__207);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_init, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 566; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":664
+  /* "pysesa/plot.pyx":664
  * 
  *    #==================================================
  *    def grd_vars_3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
  *       '''
  *       produces a 3d plot of the gridded surface made from each output variable in p.parse_pc_vars()
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_3grd_vars_3d, 0, __pyx_n_s_plot_grd_vars_3d, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__209)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 664; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_3grd_vars_3d, 0, __pyx_n_s_plot_grd_vars_3d, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__209)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 664; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__210);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grd_vars_3d, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 664; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":764
+  /* "pysesa/plot.pyx":764
  * 
  *    #==================================================
  *    def grd_var_3d(self, var, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, log_scale=False, smooth=True, filtsz=3, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
  *       '''
  *       produces 3d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_5grd_var_3d, 0, __pyx_n_s_plot_grd_var_3d, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__212)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_5grd_var_3d, 0, __pyx_n_s_plot_grd_var_3d, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__212)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__213);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grd_var_3d, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 764; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":869
+  /* "pysesa/plot.pyx":869
  * 
  *    #==================================================
  *    def grd_xyz3d(self, res=0.1, thresdist = 0, nn=1, cmap='hot', pitch=10, azimuth=-200, distance=50, xsize=2000, ysize=1000):             # <<<<<<<<<<<<<<
  *       '''
  *       produces 3d plot of the gridded surface made from the Nx3 contents of raw point cloud,
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_7grd_xyz3d, 0, __pyx_n_s_plot_grd_xyz3d, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__215)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 869; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_7grd_xyz3d, 0, __pyx_n_s_plot_grd_xyz3d, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__215)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 869; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__216);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grd_xyz3d, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 869; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":951
+  /* "pysesa/plot.pyx":951
  * 
  *    #==================================================
  *    def grd_var(self, var, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
  *       '''
  *       produces 2d plot of the gridded surface made from 1 output variable in p.parse_pc_vars()
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_9grd_var, 0, __pyx_n_s_plot_grd_var, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__218)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 951; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_9grd_var, 0, __pyx_n_s_plot_grd_var, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__218)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 951; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__219);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grd_var, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 951; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1064
+  /* "pysesa/plot.pyx":1064
  * 
  *    #==================================================
  *    def grd_vars(self, res=0.1, thresdist = 0, nn=1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, log_scale=False, smooth=True, filtsz=3, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
  *       '''
  *       produces a 2d plot of the gridded surface made from each output variable in p.parse_pc_vars()
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_11grd_vars, 0, __pyx_n_s_plot_grd_vars, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__221)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1064; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_11grd_vars, 0, __pyx_n_s_plot_grd_vars, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__221)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1064; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__222);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grd_vars, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1064; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1172
+  /* "pysesa/plot.pyx":1172
  * 
  *    #==================================================
  *    def grd_xyz(self, res=0.1, thresdist = 0, nn = 1, azimuth=315, altitude=45, zf=1, cmap='hot', dpi=300, alpha=0.5, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
  *       '''
  *       produces 2d plot of the gridded [x,y,z] surface made from decimated point cloud,
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_13grd_xyz, 0, __pyx_n_s_plot_grd_xyz, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__224)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_13grd_xyz, 0, __pyx_n_s_plot_grd_xyz, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__224)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__225);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grd_xyz, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1172; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1256
+  /* "pysesa/plot.pyx":1256
  * 
  *    #==================================================
  *    def plt_xyz(self,elev=65, azim=-115, markersize=.01, dpi=300, ticksize=4, labelsize=6):             # <<<<<<<<<<<<<<
  *       '''
  *       produces 3d plot of Nx3 contents of raw point cloud, as returned by p.get_xyz()
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_15plt_xyz, 0, __pyx_n_s_plot_plt_xyz, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__227)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1256; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_15plt_xyz, 0, __pyx_n_s_plot_plt_xyz, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__227)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1256; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__228);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_plt_xyz, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1256; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1312
+  /* "pysesa/plot.pyx":1312
  * 
  *    #==================================================
  *    def plt_xy_var(self, var, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
  *       '''
  *       produces 3d plot of 1 output variable in p.parse_pc_vars(), e.g. p.grd_var('sigma')
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_17plt_xy_var, 0, __pyx_n_s_plot_plt_xy_var, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__230)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1312; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_17plt_xy_var, 0, __pyx_n_s_plot_plt_xy_var, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__230)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1312; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__231);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_plt_xy_var, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1312; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1387
+  /* "pysesa/plot.pyx":1387
  * 
  *    #==================================================
  *    def plt_xy_vars(self, log_scale=True, dpi=300, markersize=5, ticksize=4, labelsize=6, elev=65, azim=-115):             # <<<<<<<<<<<<<<
  *       '''
  *       produces a 3d plot of each output variable in p.parse_pc_vars()
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_19plt_xy_vars, 0, __pyx_n_s_plot_plt_xy_vars, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__233)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1387; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_19plt_xy_vars, 0, __pyx_n_s_plot_plt_xy_vars, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__233)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1387; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__234);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_plt_xy_vars, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1387; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1462
+  /* "pysesa/plot.pyx":1462
  * 
  *    #==================================================
  *    def get_pc(self):             # <<<<<<<<<<<<<<
  *       '''
  *       parse an NxM contents of pysesa_file
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_21get_pc, 0, __pyx_n_s_plot_get_pc, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__236)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_21get_pc, 0, __pyx_n_s_plot_get_pc, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__236)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_get_pc, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1462; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1490
+  /* "pysesa/plot.pyx":1490
  * 
  *    #==================================================
  *    def get_xyz(self):             # <<<<<<<<<<<<<<
  *       '''
  *       parse the Nx3 contents of raw point cloud (the file processed by pysesa::process)
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_23get_xyz, 0, __pyx_n_s_plot_get_xyz, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__238)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1490; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_23get_xyz, 0, __pyx_n_s_plot_get_xyz, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__238)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1490; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_get_xyz, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1490; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1518
+  /* "pysesa/plot.pyx":1518
  * 
  *    #==================================================
  *    def _txtread(self,infile):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous fast(er than numpy's genfromtxt) function to read a Nx3 txt file to numpy array
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_25_txtread, 0, __pyx_n_s_plot__txtread, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__240)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_25_txtread, 0, __pyx_n_s_plot__txtread, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__240)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_txtread, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1518; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1548
+  /* "pysesa/plot.pyx":1548
  * 
  *    #==================================================
  *    def parse_pc_vars(self):             # <<<<<<<<<<<<<<
  *       '''
  *       NxM contents of pysesa_file parsed into dict object
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_27parse_pc_vars, 0, __pyx_n_s_plot_parse_pc_vars, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__242)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1548; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_27parse_pc_vars, 0, __pyx_n_s_plot_parse_pc_vars, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__242)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1548; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_parse_pc_vars, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1548; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1660
+  /* "pysesa/plot.pyx":1660
  * 
  *    #==================================================
  *    def _grid_var(self, x, y, z, grid_x, grid_y, res=0.1, thresdist=0, nn=1):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to produce a gridded surface
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_29_grid_var, 0, __pyx_n_s_plot__grid_var, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__244)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1660; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_29_grid_var, 0, __pyx_n_s_plot__grid_var, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__244)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1660; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__245);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_grid_var, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1660; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1719
+  /* "pysesa/plot.pyx":1719
  * 
  *    # =========================================================
  *    def _getmesh(self, minX, maxX, minY, maxY, res):             # <<<<<<<<<<<<<<
  * 
  *       complete=0
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_31_getmesh, 0, __pyx_n_s_plot__getmesh, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__247)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1719; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_31_getmesh, 0, __pyx_n_s_plot__getmesh, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__247)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1719; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_getmesh, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1719; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1735
+  /* "pysesa/plot.pyx":1735
  * 
  *    #==================================================
  *    def _get_grid(self, x, y, z, res=0.1, thresdist = 0, nn=1):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to produce a gridded surface
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_33_get_grid, 0, __pyx_n_s_plot__get_grid, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__249)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1735; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_33_get_grid, 0, __pyx_n_s_plot__get_grid, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__249)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1735; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__250);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_get_grid, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1735; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1793
+  /* "pysesa/plot.pyx":1793
  * 
  *    # =========================================================
  *    def _hillshade(self, dem, dx, dy, azimuth, altitude, zf):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to produce a shaded relief of a gridded surface
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_35_hillshade, 0, __pyx_n_s_plot__hillshade, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__252)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1793; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_35_hillshade, 0, __pyx_n_s_plot__hillshade, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__252)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1793; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_hillshade, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1793; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1861
+  /* "pysesa/plot.pyx":1861
  * 
  *    #==================================================
  *    def _get_dist(self, x, y, z, grid_x, grid_y, res, nn):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to create a nearest neighbour distance matrix for dem masking
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_37_get_dist, 0, __pyx_n_s_plot__get_dist, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__254)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1861; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_37_get_dist, 0, __pyx_n_s_plot__get_dist, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__254)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1861; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_get_dist, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1861; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1927
+  /* "pysesa/plot.pyx":1927
  * 
  *    # =========================================================
  *    def _cart2pol(self, x, y):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to convert cartesian to polar coordinates
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_39_cart2pol, 0, __pyx_n_s_plot__cart2pol, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__256)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1927; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_39_cart2pol, 0, __pyx_n_s_plot__cart2pol, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__256)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1927; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_cart2pol, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1927; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1956
+  /* "pysesa/plot.pyx":1956
  * 
  *    # =========================================================
  *    def _dolabels(self, rot=30):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to create x and y labels with less density than default and rotate them
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_41_dolabels, 0, __pyx_n_s_plot__dolabels, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__258)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_41_dolabels, 0, __pyx_n_s_plot__dolabels, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__258)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__259);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_dolabels, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1956; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":1986
+  /* "pysesa/plot.pyx":1986
  * 
  *    # =========================================================
  *    def _set_tick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to set tick size of x and y ticks
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_43_set_tick_size, 0, __pyx_n_s_plot__set_tick_size, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__261)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1986; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_43_set_tick_size, 0, __pyx_n_s_plot__set_tick_size, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__261)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1986; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__262);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_set_tick_size, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 1986; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2015
+  /* "pysesa/plot.pyx":2015
  * 
  *    # =========================================================
  *    def _set_ztick_size(self, ax, size=4):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to set tick size of z ticks
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_45_set_ztick_size, 0, __pyx_n_s_plot__set_ztick_size, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__264)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2015; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_45_set_ztick_size, 0, __pyx_n_s_plot__set_ztick_size, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__264)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2015; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__265);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_set_ztick_size, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2015; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2042
+  /* "pysesa/plot.pyx":2042
  * 
  *    # =========================================================
  *    def _rmticks(self, ax):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to remove major and minor ticks
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_47_rmticks, 0, __pyx_n_s_plot__rmticks, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__267)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2042; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_47_rmticks, 0, __pyx_n_s_plot__rmticks, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__267)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2042; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_rmticks, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2042; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2066
+  /* "pysesa/plot.pyx":2066
  * 
  *    # =========================================================
  *    def _make_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to label a generic 3d plot
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_49_make_axislabels, 0, __pyx_n_s_plot__make_axislabels, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__269)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2066; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_49_make_axislabels, 0, __pyx_n_s_plot__make_axislabels, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__269)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2066; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__270);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_axislabels, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2066; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2094
+  /* "pysesa/plot.pyx":2094
  * 
  *    # =========================================================
  *    def _make_xy_axislabels(self, ax, size=6):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to label x and y axes
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_51_make_xy_axislabels, 0, __pyx_n_s_plot__make_xy_axislabels, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__272)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2094; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_51_make_xy_axislabels, 0, __pyx_n_s_plot__make_xy_axislabels, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__272)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2094; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__273);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_xy_axislabels, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2094; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2121
+  /* "pysesa/plot.pyx":2121
  * 
  *    # =========================================================
  *    def _divide_colorbar(self, ax, im, label, size=6):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to make up a colorbar scaled with axes size
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_53_divide_colorbar, 0, __pyx_n_s_plot__divide_colorbar, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__275)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_53_divide_colorbar, 0, __pyx_n_s_plot__divide_colorbar, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__275)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__276);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_divide_colorbar, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":2161
+  /* "pysesa/plot.pyx":2161
  * 
  *    #==================================================
  *    def _get_3d_fig(self, mag=5):             # <<<<<<<<<<<<<<
  *       '''
  *       anonymous function to create a 3d mayavi figure
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_5_plot_4plot_55_get_3d_fig, 0, __pyx_n_s_plot__get_3d_fig, NULL, __pyx_n_s_pysesa__plot, __pyx_d, ((PyObject *)__pyx_codeobj__278)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_6pysesa_4plot_4plot_55_get_3d_fig, 0, __pyx_n_s_plot__get_3d_fig, NULL, __pyx_n_s_pysesa_plot, __pyx_d, ((PyObject *)__pyx_codeobj__278)); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__279);
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_get_3d_fig, __pyx_t_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 2161; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_plot.pyx":67
+  /* "pysesa/plot.pyx":67
  * 
  * # =========================================================
  * class plot:             # <<<<<<<<<<<<<<
@@ -22879,7 +22879,7 @@ PyMODINIT_FUNC PyInit__plot(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_plot.pyx":1
+  /* "pysesa/plot.pyx":1
  * ## PySESA (Python program for Spatially Explicit Spectral Analysis)             # <<<<<<<<<<<<<<
  * ## has been developed at the Grand Canyon Monitorinf & Research Center,
  * ## U.S. Geological Survey
@@ -22897,11 +22897,11 @@ PyMODINIT_FUNC PyInit__plot(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pysesa._plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pysesa.plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pysesa._plot");
+    PyErr_SetString(PyExc_ImportError, "init pysesa.plot");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

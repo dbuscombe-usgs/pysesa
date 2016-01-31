@@ -116,7 +116,7 @@ cmdclass = { }
 
 if USE_CYTHON:
     ext_modules += [
-        Extension("pysesa.plot", [ "pysesa/_plot.pyx" ],
+        Extension("pysesa.plot", [ "pysesa/plot.pyx" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.read", [ "pysesa/_read.pyx" ],
         include_dirs=[np.get_include()]),
@@ -139,7 +139,7 @@ if USE_CYTHON:
     cmdclass.update({ 'build_ext': build_ext })
 else:
     ext_modules += [
-        Extension("pysesa.plot", [ "pysesa/_plot.c" ],
+        Extension("pysesa.plot", [ "pysesa/plot.c" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.read", [ "pysesa/_read.c" ],
         include_dirs=[np.get_include()]),

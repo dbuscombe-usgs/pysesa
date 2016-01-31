@@ -166,8 +166,8 @@ cdef class partition:
       toproc = toproc[~np.isnan(toproc).any(axis=1)]
 
       # pre-allocate arrays
-      cdef list p
-      cdef list allpoints 
+      #cdef list p
+      #cdef list allpoints 
       cdef float xmin = np.min(toproc[:,0])
       cdef float xmax = np.max(toproc[:,0])
       cdef float ymin = np.min(toproc[:,1])
@@ -184,6 +184,8 @@ cdef class partition:
 
       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
+
+      cdef np.ndarray[np.float32_t, ndim=2] p = np.empty((lenx*leny,2), dtype=np.float32)   
    
       #cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
       #cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
@@ -195,7 +197,8 @@ cdef class partition:
       x = np.arange(xmin, xmax, out)
       y = np.arange(ymin, ymax, out)
       xx, yy = np.meshgrid(x, y)
-      p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
+      #p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
+      p = np.vstack([xx.flatten(),yy.flatten()]).transpose().astype('float32')
 
       #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
@@ -204,8 +207,8 @@ cdef class partition:
       #del p #dask
 
       # format points for kd-tree
-      allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
-      del toproc
+      #allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
+      #del toproc
         
       # find all points within 'out' metres of each centroid in p 
       xvec = np.arange(xmin-2*res,xmax+2*res)
@@ -231,13 +234,13 @@ cdef class partition:
 
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
 
-      mytree = KDTree(allpoints, leafsize=len(allpoints)/100)
+      mytree = KDTree(toproc[:,:2]) #, leafsize=len(toproc)/100)
       if pykdtree==1:
          try:
             dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
          except:
             #dask implementation
-            dat = da.from_array(np.asarray(allpoints), chunks=1000)
+            dat = da.from_array(toproc, chunks=1000)
             mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
             dbp = da.from_array(np.asarray(p), chunks=1000) 
             #del p  
@@ -252,7 +255,7 @@ cdef class partition:
             #del p
          finally:
             #dask implementation
-            dat = da.from_array(np.asarray(allpoints), chunks=1000)
+            dat = da.from_array(toproc, chunks=1000)
             mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
             dbp = da.from_array(np.asarray(p), chunks=1000) 
             #del p  
@@ -265,7 +268,7 @@ cdef class partition:
 
       # define null indices
       try:
-         indices[indices==len(allpoints)] = -999
+         indices[indices==len(toproc)] = -999
       except:
          indices[indices==len(dat)] = -999  #dask implementation    
 
@@ -276,12 +279,19 @@ cdef class partition:
       #for k in xrange(len(indices_list)):
       for k from 0 <= k < len(indices_list):
          indices_list[k] = [x for x in indices_list[k] if x!=-999]
+
+      #for k in xrange(len(indices_list)):
+      for k from 0 <= k < len(indices_list):
+         indices_list[k] = [x for x in indices_list[k] if x<len(toproc)]
+
       
       try:
          # get the centroids
          #for k in xrange(len(indices_list)):
          for k from 0 <= k < len(indices_list):
-            w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+            #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+            w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))
+
       except:
          # get the centroids
          #for k in xrange(len(indices_list)):
@@ -291,11 +301,11 @@ cdef class partition:
       cx,cy = zip(*w)
       del w
  
-      try:
-         tree = KDTree(allpoints, leafsize=len(allpoints)/100)
-      except:
-         tree = KDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
-         del dat
+      #try:
+      #   tree = KDTree(allpoints, leafsize=len(allpoints)/100)
+      #except:
+      #   tree = KDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
+      #   del dat
 
       yp, xp = np.meshgrid(yvec, xvec)
 
@@ -303,23 +313,23 @@ cdef class partition:
       # nearest neighbors of those in (xp, yp)"
 
       if pykdtree==1:
-         dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)
+         dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)
       else:
          try:      
-            dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
+            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()], k=1, n_jobs=-1)
          except:
-            dist2, _ = tree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
+            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()], k=1)      
 
       # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
       tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
 
       if pykdtree==1:     
-         dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
+         dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
       else: 
          try:
-            dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
          except:
-            dist3, _ = tree.query(np.c_[cx,cy], distance_upper_bound=win)      
+            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
       
       m2 = np.where(dist3 < out**2)[0]
 

@@ -56,15 +56,15 @@ cimport cython
 from scipy.integrate import trapz
 #from scipy.spatial import cKDTree as KDTree
 
-#try:
-#   from pykdtree.kdtree import KDTree
-#   pykdtree=1   
-#except:
-#   print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
-#   from scipy.spatial import cKDTree as KDTree
-#   pykdtree=0   
+try:
+   from pykdtree.kdtree import KDTree
+   pykdtree=1   
+except:
+   print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
+   from scipy.spatial import cKDTree as KDTree
+   pykdtree=0   
 
-from scipy.spatial import cKDTree as KDTree
+#from scipy.spatial import cKDTree as KDTree
 
 import RunningStats
 
@@ -211,15 +211,15 @@ cdef class lengthscale:
       #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
 
       #tree = KDTree(zip(points[:,0], points[:,1]))
-      tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
-      #tree = KDTree(points[:,:2])
+      #tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
+      tree = KDTree(points[:,:2], leafsize=1000)
 
-      #if pykdtree==1:
-      #   _, inds = tree.query(np.c_[grid_x.flatten(),grid_y.flatten()].astype('float32'), k = 1)
-      #else:
-      #   _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
+      if pykdtree==1:
+         _, inds = tree.query(np.c_[grid_x.flatten(),grid_y.flatten()].astype('float32'), k = 1)
+      else:
+         _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
 
-      _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
+      #_, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
 
       im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
 

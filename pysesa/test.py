@@ -118,8 +118,9 @@ def test():
    taper = 1 # Hann taper
    prc_overlap = 100 # 100% overlap between successive windows
    minpts = 64 # min pts per window
+   bp = 0 # 0=no boundary pruning
 
-   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
+   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, bp)
 
 if __name__ == '__main__':
    test()

@@ -118,18 +118,18 @@ cdef class partition:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    #==================================================
-   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):
+   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0, int bp=0):
 
       '''
       Partition a Nx3 point cloud into M windows of nx3 points
       with specified spacing between centroids of adjacent windows
       and with specified overlap between windows.
       Implemented using a binary search tree for fast nearest neighbour 
-      point check with boundary pruning
+      point check with optional boundary pruning
 
       Syntax
       ----------
-      nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
+      nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap, bp).getdata()
 
       Parameters
       ----------
@@ -176,7 +176,7 @@ cdef class partition:
       cdef int leny = np.ceil((ymax-ymin)/out)
       cdef int lenx2 = lenx/2    
       cdef int leny2 = leny/2   
-      cdef int bp=0 #boundary prining flag
+      #cdef int bp=0 #boundary prining flag
       
       # no idea why this doesnt work
       #cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)

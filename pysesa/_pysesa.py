@@ -126,13 +126,13 @@ def get_spec_spat(pts, spectype, out, detrend, res, method, nbin, lentype, taper
 # =========================================================
 # ==================== begin program ======================
 # =========================================================
-def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0):
+def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0, bp=0):
    '''
    Calculate spectral and spatial statistics of a Nx3 point cloud
 
    Syntax
    ----------
-   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
+   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, bp)
 
    Parameters
    -----------
@@ -383,7 +383,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    #==============================================================================
    print "(2) Partitioning data into windows ... " 
    # get indices to windows
-   nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()
+   nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap, bp).getdata()
 
    #==============================================================================
    print "(3) Processing in parallel using %s processors ... " % (str(cpu_count()))

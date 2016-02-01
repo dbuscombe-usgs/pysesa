@@ -1177,7 +1177,7 @@ static PyObject *__pyx_builtin_zip;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_RuntimeError;
-static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pysesa_9partition_partition *__pyx_v_self, PyArrayObject *__pyx_v_toproc, float __pyx_v_out, float __pyx_v_res, float __pyx_v_mxpts, float __pyx_v_minpts, float __pyx_v_prc_overlap); /* proto */
+static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pysesa_9partition_partition *__pyx_v_self, PyArrayObject *__pyx_v_toproc, float __pyx_v_out, float __pyx_v_res, float __pyx_v_mxpts, float __pyx_v_minpts, float __pyx_v_prc_overlap, int __pyx_v_bp); /* proto */
 static PyObject *__pyx_pf_6pysesa_9partition_9partition_2getdata(struct __pyx_obj_6pysesa_9partition_partition *__pyx_v_self); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
@@ -1201,6 +1201,7 @@ static char __pyx_k_q[] = "q";
 static char __pyx_k_Zd[] = "Zd";
 static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
+static char __pyx_k_bp[] = "bp";
 static char __pyx_k_da[] = "da";
 static char __pyx_k_np[] = "np";
 static char __pyx_k__26[] = "*";
@@ -1281,6 +1282,7 @@ static PyObject *__pyx_n_s_arange;
 static PyObject *__pyx_n_s_asarray;
 static PyObject *__pyx_n_s_astype;
 static PyObject *__pyx_n_s_axis;
+static PyObject *__pyx_n_s_bp;
 static PyObject *__pyx_n_s_c;
 static PyObject *__pyx_n_s_cKDTree;
 static PyObject *__pyx_n_s_ceil;
@@ -1372,14 +1374,14 @@ static PyObject *__pyx_tuple__25;
 /* "pysesa/partition.pyx":121
  *    @cython.nonecheck(False)
  *    #==================================================
- *    def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):             # <<<<<<<<<<<<<<
+ *    def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0, int bp=0):             # <<<<<<<<<<<<<<
  * 
  *       '''
  */
 
 /* Python wrapper */
 static int __pyx_pw_6pysesa_9partition_9partition_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_6pysesa_9partition_9partition___init__[] = "\n      Partition a Nx3 point cloud into M windows of nx3 points\n      with specified spacing between centroids of adjacent windows\n      and with specified overlap between windows.\n      Implemented using a binary search tree for fast nearest neighbour \n      point check with boundary pruning\n\n      Syntax\n      ----------\n      nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap).getdata()\n\n      Parameters\n      ----------\n      toproc : ndarray\n   \t   Nx3 point cloud\n\n      Other Parameters\n      ----------\n      out : float, *optional* [default = 0.5]\n   \t   output grid resolution\n      res : float, *optional* [default = 0.05]\n   \t   spatial grid resolution to create a grid for the boundary pruning\n      mxpts : float, *optional* [default = 1024]\n   \t   maximum number of points allowed in a window\n      minpts : float, *optional* [default = 16]\n   \t   minimum number of points allowed in a window\n      prc_overlap : float, *optional\"  [default = 0]\n   \t   percentage overlap between windows\n\n      Returns\n      ----------\n      self.data: list\n   \t   list of M ndarrays, each containing n indices \n           of original point cloud, toproc, to partition space \n           to create M windows\n\n      ";
+static char __pyx_doc_6pysesa_9partition_9partition___init__[] = "\n      Partition a Nx3 point cloud into M windows of nx3 points\n      with specified spacing between centroids of adjacent windows\n      and with specified overlap between windows.\n      Implemented using a binary search tree for fast nearest neighbour \n      point check with optional boundary pruning\n\n      Syntax\n      ----------\n      nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap, bp).getdata()\n\n      Parameters\n      ----------\n      toproc : ndarray\n   \t   Nx3 point cloud\n\n      Other Parameters\n      ----------\n      out : float, *optional* [default = 0.5]\n   \t   output grid resolution\n      res : float, *optional* [default = 0.05]\n   \t   spatial grid resolution to create a grid for the boundary pruning\n      mxpts : float, *optional* [default = 1024]\n   \t   maximum number of points allowed in a window\n      minpts : float, *optional* [default = 16]\n   \t   minimum number of points allowed in a window\n      prc_overlap : float, *optional\"  [default = 0]\n   \t   percentage overlap between windows\n\n      Returns\n      ----------\n      self.data: list\n   \t   list of M ndarrays, each containing n indices \n           of original point cloud, toproc, to partition space \n           to create M windows\n\n      ";
 #if CYTHON_COMPILING_IN_CPYTHON
 struct wrapperbase __pyx_wrapperbase_6pysesa_9partition_9partition___init__;
 #endif
@@ -1390,6 +1392,7 @@ static int __pyx_pw_6pysesa_9partition_9partition_1__init__(PyObject *__pyx_v_se
   float __pyx_v_mxpts;
   float __pyx_v_minpts;
   float __pyx_v_prc_overlap;
+  int __pyx_v_bp;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1397,12 +1400,13 @@ static int __pyx_pw_6pysesa_9partition_9partition_1__init__(PyObject *__pyx_v_se
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__init__ (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_toproc,&__pyx_n_s_out,&__pyx_n_s_res,&__pyx_n_s_mxpts,&__pyx_n_s_minpts,&__pyx_n_s_prc_overlap,0};
-    PyObject* values[6] = {0,0,0,0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_toproc,&__pyx_n_s_out,&__pyx_n_s_res,&__pyx_n_s_mxpts,&__pyx_n_s_minpts,&__pyx_n_s_prc_overlap,&__pyx_n_s_bp,0};
+    PyObject* values[7] = {0,0,0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
         case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
         case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
         case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
@@ -1442,12 +1446,18 @@ static int __pyx_pw_6pysesa_9partition_9partition_1__init__(PyObject *__pyx_v_se
           PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_prc_overlap);
           if (value) { values[5] = value; kw_args--; }
         }
+        case  6:
+        if (kw_args > 0) {
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_bp);
+          if (value) { values[6] = value; kw_args--; }
+        }
       }
       if (unlikely(kw_args > 0)) {
         if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
         case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
         case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
         case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
@@ -1484,17 +1494,22 @@ static int __pyx_pw_6pysesa_9partition_9partition_1__init__(PyObject *__pyx_v_se
     } else {
       __pyx_v_prc_overlap = ((float)0.0);
     }
+    if (values[6]) {
+      __pyx_v_bp = __Pyx_PyInt_As_int(values[6]); if (unlikely((__pyx_v_bp == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    } else {
+      __pyx_v_bp = ((int)0);
+    }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 6, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 7, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("pysesa.partition.partition.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_toproc), __pyx_ptype_5numpy_ndarray, 1, "toproc", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_r = __pyx_pf_6pysesa_9partition_9partition___init__(((struct __pyx_obj_6pysesa_9partition_partition *)__pyx_v_self), __pyx_v_toproc, __pyx_v_out, __pyx_v_res, __pyx_v_mxpts, __pyx_v_minpts, __pyx_v_prc_overlap);
+  __pyx_r = __pyx_pf_6pysesa_9partition_9partition___init__(((struct __pyx_obj_6pysesa_9partition_partition *)__pyx_v_self), __pyx_v_toproc, __pyx_v_out, __pyx_v_res, __pyx_v_mxpts, __pyx_v_minpts, __pyx_v_prc_overlap, __pyx_v_bp);
 
   /* function exit code */
   goto __pyx_L0;
@@ -1505,7 +1520,7 @@ static int __pyx_pw_6pysesa_9partition_9partition_1__init__(PyObject *__pyx_v_se
   return __pyx_r;
 }
 
-static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pysesa_9partition_partition *__pyx_v_self, PyArrayObject *__pyx_v_toproc, float __pyx_v_out, float __pyx_v_res, float __pyx_v_mxpts, float __pyx_v_minpts, float __pyx_v_prc_overlap) {
+static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pysesa_9partition_partition *__pyx_v_self, PyArrayObject *__pyx_v_toproc, float __pyx_v_out, float __pyx_v_res, float __pyx_v_mxpts, float __pyx_v_minpts, float __pyx_v_prc_overlap, int __pyx_v_bp) {
   float __pyx_v_win;
   float __pyx_v_xmin;
   float __pyx_v_xmax;
@@ -1516,7 +1531,6 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   int __pyx_v_leny;
   int __pyx_v_lenx2;
   int __pyx_v_leny2;
-  int __pyx_v_bp;
   PyArrayObject *__pyx_v_xvec = 0;
   PyArrayObject *__pyx_v_yvec = 0;
   PyArrayObject *__pyx_v_p = 0;
@@ -2028,7 +2042,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *       cdef int leny = np.ceil((ymax-ymin)/out)
  *       cdef int lenx2 = lenx/2             # <<<<<<<<<<<<<<
  *       cdef int leny2 = leny/2
- *       cdef int bp=0 #boundary prining flag
+ *       #cdef int bp=0 #boundary prining flag
  */
   __pyx_v_lenx2 = (((long)__pyx_v_lenx) / 2);
 
@@ -2036,19 +2050,10 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *       cdef int leny = np.ceil((ymax-ymin)/out)
  *       cdef int lenx2 = lenx/2
  *       cdef int leny2 = leny/2             # <<<<<<<<<<<<<<
- *       cdef int bp=0 #boundary prining flag
+ *       #cdef int bp=0 #boundary prining flag
  * 
  */
   __pyx_v_leny2 = (((long)__pyx_v_leny) / 2);
-
-  /* "pysesa/partition.pyx":179
- *       cdef int lenx2 = lenx/2
- *       cdef int leny2 = leny/2
- *       cdef int bp=0 #boundary prining flag             # <<<<<<<<<<<<<<
- * 
- *       # no idea why this doesnt work
- */
-  __pyx_v_bp = 0;
 
   /* "pysesa/partition.pyx":185
  *       #cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
@@ -6462,7 +6467,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   /* "pysesa/partition.pyx":121
  *    @cython.nonecheck(False)
  *    #==================================================
- *    def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0):             # <<<<<<<<<<<<<<
+ *    def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0, int bp=0):             # <<<<<<<<<<<<<<
  * 
  *       '''
  */
@@ -8838,6 +8843,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_asarray, __pyx_k_asarray, sizeof(__pyx_k_asarray), 0, 0, 1, 1},
   {&__pyx_n_s_astype, __pyx_k_astype, sizeof(__pyx_k_astype), 0, 0, 1, 1},
   {&__pyx_n_s_axis, __pyx_k_axis, sizeof(__pyx_k_axis), 0, 0, 1, 1},
+  {&__pyx_n_s_bp, __pyx_k_bp, sizeof(__pyx_k_bp), 0, 0, 1, 1},
   {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
   {&__pyx_n_s_cKDTree, __pyx_k_cKDTree, sizeof(__pyx_k_cKDTree), 0, 0, 1, 1},
   {&__pyx_n_s_ceil, __pyx_k_ceil, sizeof(__pyx_k_ceil), 0, 0, 1, 1},

@@ -108,7 +108,7 @@ def test():
    # general settings   
    infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
 
-   out = 0.5 #m output grid
+   out = 0.25 #m output grid
    detrend = 4 #ODR plane
    proctype = 4 #Processing spatial and spectral parameters (no smoothing)
    mxpts = 1024 # max pts per window
@@ -116,7 +116,7 @@ def test():
    nbin = 20 #number of bins for spectral binning
    lentype = 1 # l<0.5
    taper = 1 # Hann taper
-   prc_overlap = 100 # 100% overlap between successive windows
+   prc_overlap = 200 # 100% overlap between successive windows
    minpts = 64 # min pts per window
    bp = 0 # 0=no boundary pruning
 

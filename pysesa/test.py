@@ -111,13 +111,13 @@ def test():
    out = 0.25 #m output grid
    detrend = 4 #ODR plane
    proctype = 4 #Processing spatial and spectral parameters (no smoothing)
-   mxpts = 1024 # max pts per window
+   mxpts = 2048 # max pts per window
    res = 0.05 #cm internal grid resolution
    nbin = 20 #number of bins for spectral binning
    lentype = 1 # l<0.5
    taper = 1 # Hann taper
    prc_overlap = 200 # 100% overlap between successive windows
-   minpts = 64 # min pts per window
+   minpts = 32 # min pts per window
    bp = 0 # 0=no boundary pruning
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, bp)

@@ -176,6 +176,7 @@ cdef class partition:
       cdef int leny = np.ceil((ymax-ymin)/out)
       cdef int lenx2 = lenx/2    
       cdef int leny2 = leny/2   
+      cdef int bp=0 #boundary prining flag
       
       # no idea why this doesnt work
       #cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
@@ -310,18 +311,22 @@ cdef class partition:
          except:
             dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)      
 
-      # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
-      tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
+      if bp==1: #boundary pruning
+         # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
+         tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
 
-      if pykdtree==1:     
-         dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
-      else: 
-         try:
-            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
-         except:
-            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
+         if pykdtree==1:     
+            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
+         else: 
+            try:
+               dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+            except:
+               dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
       
-      m2 = np.where(dist3 < out**2)[0]
+         m2 = np.where(dist3 < out**2)[0]
+
+      else:
+         m2 = np.where(dist2 < out**2)[0]
 
       # do the pruning
       #for k in xrange(len(m2)):

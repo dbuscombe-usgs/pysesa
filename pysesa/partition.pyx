@@ -62,7 +62,7 @@ except:
    print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
    from scipy.spatial import cKDTree as KDTree
    pykdtree=0   
-   import dask.array as da
+
 #import dask.bag as db
    
 #data_type = np.float64
@@ -236,7 +236,17 @@ cdef class partition:
 
       mytree = KDTree(toproc[:,:2]) #, leafsize=len(toproc)/100)
       if pykdtree==1:
-         dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+
+         complete=0
+         while complete==0:
+            try:
+               dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+               if 'indices' in locals():
+                  complete=1
+            except:
+               mxpts = np.max([1,mxpts-2])
+               print "memory error, using %s max points" % (str(mxpts))         
+
       else:
          try:
             dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
@@ -245,6 +255,7 @@ cdef class partition:
             dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
             #del p
          finally:
+            import dask.array as da
             #dask implementation
             dat = da.from_array(toproc, chunks=1000)
             mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
@@ -278,8 +289,8 @@ cdef class partition:
       
       try:
          # get the centroids
-         #for k in xrange(len(indices_list)):
-         for k from 0 <= k < len(indices_list):
+         for k in xrange(len(indices_list)):
+         #for k from 0 <= k < len(indices_list):
             #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
             w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))
 
@@ -328,9 +339,11 @@ cdef class partition:
       else:
          m2 = np.where(dist2 < out**2)[0]
 
+      m2 = m2[np.where(m2<=len(indices_list))[0]]
+
       # do the pruning
-      #for k in xrange(len(m2)):
-      for k from 0 <= k < len(m2):
+      for k in xrange(len(m2)):
+      #for k from 0 <= k < len(m2):
          if len(indices_list[m2[k]])>minpts:
             indices2.append(indices_list[m2[k]])
 
@@ -366,4 +379,6 @@ cdef class partition:
            to create M windows
       '''
       return self.data
+
+
 

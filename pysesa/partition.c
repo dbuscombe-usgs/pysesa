@@ -1178,7 +1178,6 @@ static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float64_t = { "float64_t"
 int __pyx_module_is_main_pysesa__partition = 0;
 
 /* Implementation of 'pysesa.partition' */
-static PyObject *__pyx_builtin_xrange;
 static PyObject *__pyx_builtin_zip;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
@@ -1268,7 +1267,6 @@ static char __pyx_k_n_jobs[] = "n_jobs";
 static char __pyx_k_tolist[] = "tolist";
 static char __pyx_k_toproc[] = "toproc";
 static char __pyx_k_vstack[] = "vstack";
-static char __pyx_k_xrange[] = "xrange";
 static char __pyx_k_asarray[] = "asarray";
 static char __pyx_k_cKDTree[] = "cKDTree";
 static char __pyx_k_compute[] = "compute";
@@ -1397,7 +1395,6 @@ static PyObject *__pyx_n_s_win;
 static PyObject *__pyx_n_s_x;
 static PyObject *__pyx_n_s_xmax;
 static PyObject *__pyx_n_s_xmin;
-static PyObject *__pyx_n_s_xrange;
 static PyObject *__pyx_n_s_y;
 static PyObject *__pyx_n_s_ymax;
 static PyObject *__pyx_n_s_ymin;
@@ -5107,7 +5104,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  * 
  *       try:             # <<<<<<<<<<<<<<
  *          # get the centroids
- *          for k in xrange(len(indices_list)):
+ *          #for k in xrange(len(indices_list)):
  */
   {
     __Pyx_ExceptionSave(&__pyx_t_28, &__pyx_t_29, &__pyx_t_30);
@@ -5116,23 +5113,22 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
     __Pyx_XGOTREF(__pyx_t_30);
     /*try:*/ {
 
-      /* "pysesa/partition.pyx":292
- *       try:
+      /* "pysesa/partition.pyx":293
  *          # get the centroids
- *          for k in xrange(len(indices_list)):             # <<<<<<<<<<<<<<
- *          #for k from 0 <= k < len(indices_list):
+ *          #for k in xrange(len(indices_list)):
+ *          for k from 0 <= k < len(indices_list):             # <<<<<<<<<<<<<<
  *             #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+ *             w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))
  */
       if (unlikely(__pyx_v_indices_list == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L64_error;}
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 293; __pyx_clineno = __LINE__; goto __pyx_L64_error;}
       }
-      __pyx_t_25 = PyList_GET_SIZE(__pyx_v_indices_list); if (unlikely(__pyx_t_25 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L64_error;}
-      for (__pyx_t_33 = 0; __pyx_t_33 < __pyx_t_25; __pyx_t_33+=1) {
-        __pyx_v_k = __pyx_t_33;
+      __pyx_t_25 = PyList_GET_SIZE(__pyx_v_indices_list); if (unlikely(__pyx_t_25 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 293; __pyx_clineno = __LINE__; goto __pyx_L64_error;}
+      for (__pyx_v_k = 0; __pyx_v_k < __pyx_t_25; __pyx_v_k++) {
 
         /* "pysesa/partition.pyx":295
- *          #for k from 0 <= k < len(indices_list):
+ *          for k from 0 <= k < len(indices_list):
  *             #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
  *             w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))             # <<<<<<<<<<<<<<
  * 
@@ -6786,7 +6782,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *       else:
  *          m2 = np.where(dist2 < out**2)[0]             # <<<<<<<<<<<<<<
  * 
- *       m2 = m2[np.where(m2<=len(indices_list))[0]]
+ *       m2 = m2[np.where(m2<len(indices_list))[0]]
  */
     __pyx_t_19 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 340; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_19);
@@ -6834,7 +6830,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   /* "pysesa/partition.pyx":342
  *          m2 = np.where(dist2 < out**2)[0]
  * 
- *       m2 = m2[np.where(m2<=len(indices_list))[0]]             # <<<<<<<<<<<<<<
+ *       m2 = m2[np.where(m2<len(indices_list))[0]]             # <<<<<<<<<<<<<<
  * 
  *       # do the pruning
  */
@@ -6850,7 +6846,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_t_25 = PyList_GET_SIZE(__pyx_v_indices_list); if (unlikely(__pyx_t_25 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_10 = PyInt_FromSsize_t(__pyx_t_25); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_v_m2, __pyx_t_10, Py_LE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyObject_RichCompare(__pyx_v_m2, __pyx_t_10, Py_LT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 342; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __pyx_t_10 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_1))) {
@@ -6887,20 +6883,19 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __Pyx_DECREF_SET(__pyx_v_m2, __pyx_t_32);
   __pyx_t_32 = 0;
 
-  /* "pysesa/partition.pyx":345
- * 
+  /* "pysesa/partition.pyx":346
  *       # do the pruning
- *       for k in xrange(len(m2)):             # <<<<<<<<<<<<<<
- *       #for k from 0 <= k < len(m2):
+ *       #for k in xrange(len(m2)):
+ *       for k from 0 <= k < len(m2):             # <<<<<<<<<<<<<<
  *          if len(indices_list[m2[k]])>minpts:
+ *             indices2.append(indices_list[m2[k]])
  */
-  __pyx_t_25 = PyObject_Length(__pyx_v_m2); if (unlikely(__pyx_t_25 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  for (__pyx_t_33 = 0; __pyx_t_33 < __pyx_t_25; __pyx_t_33+=1) {
-    __pyx_v_k = __pyx_t_33;
+  __pyx_t_25 = PyObject_Length(__pyx_v_m2); if (unlikely(__pyx_t_25 == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  for (__pyx_v_k = 0; __pyx_v_k < __pyx_t_25; __pyx_v_k++) {
 
     /* "pysesa/partition.pyx":347
- *       for k in xrange(len(m2)):
- *       #for k from 0 <= k < len(m2):
+ *       #for k in xrange(len(m2)):
+ *       for k from 0 <= k < len(m2):
  *          if len(indices_list[m2[k]])>minpts:             # <<<<<<<<<<<<<<
  *             indices2.append(indices_list[m2[k]])
  * 
@@ -6920,7 +6915,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
     if (__pyx_t_31) {
 
       /* "pysesa/partition.pyx":348
- *       #for k from 0 <= k < len(m2):
+ *       for k from 0 <= k < len(m2):
  *          if len(indices_list[m2[k]])>minpts:
  *             indices2.append(indices_list[m2[k]])             # <<<<<<<<<<<<<<
  * 
@@ -9417,7 +9412,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
   {&__pyx_n_s_xmax, __pyx_k_xmax, sizeof(__pyx_k_xmax), 0, 0, 1, 1},
   {&__pyx_n_s_xmin, __pyx_k_xmin, sizeof(__pyx_k_xmin), 0, 0, 1, 1},
-  {&__pyx_n_s_xrange, __pyx_k_xrange, sizeof(__pyx_k_xrange), 0, 0, 1, 1},
   {&__pyx_n_s_y, __pyx_k_y, sizeof(__pyx_k_y), 0, 0, 1, 1},
   {&__pyx_n_s_ymax, __pyx_k_ymax, sizeof(__pyx_k_ymax), 0, 0, 1, 1},
   {&__pyx_n_s_ymin, __pyx_k_ymin, sizeof(__pyx_k_ymin), 0, 0, 1, 1},
@@ -9425,11 +9419,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  #endif
   __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 303; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 215; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 228; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -9550,7 +9539,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_slice__16);
 
   /* "pysesa/partition.pyx":295
- *          #for k from 0 <= k < len(indices_list):
+ *          for k from 0 <= k < len(indices_list):
  *             #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
  *             w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))             # <<<<<<<<<<<<<<
  * 

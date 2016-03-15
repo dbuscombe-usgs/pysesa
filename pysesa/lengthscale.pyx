@@ -189,6 +189,7 @@ cdef class lengthscale:
       cdef float lenx
       cdef int nx, ny, i
 
+
       # enfore square matrix in gridding
       if nny!=nnx:
          lenx = np.ceil(nnx/(res*(nnx/nny)))
@@ -200,43 +201,49 @@ cdef class lengthscale:
 
       cdef np.ndarray[np.float64_t, ndim=2] im = np.empty((lenx,lenx), dtype=np.float64)
 
-      # do the gridding
-      if nny>nnx:
-         grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res*(nnx/nny)), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )      
-      elif nny<nnx:
-         grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res*(nny/nnx)) )      
+      if nnx==0 or nny==0:
+         self.data = np.nan
+         self.lengthscale = 0.0
+
       else:
-         grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )  
 
-      #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
+         # do the gridding
+         if nny>nnx:
+            grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res*(nnx/nny)), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )      
+         elif nny<nnx:
+            grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res*(nny/nnx)) )      
+         else:
+            grid_x, grid_y = np.meshgrid( np.arange(np.min(points,axis=0)[0], np.max(points,axis=0)[0], res), np.arange(np.min(points,axis=0)[1], np.max(points,axis=0)[1], res) )  
 
-      #tree = KDTree(zip(points[:,0], points[:,1]))
-      tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
-      #tree = KDTree(points[:,:2])
+         #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
 
-      #if pykdtree==1:
-      #   _, inds = tree.query(np.c_[grid_x.flatten(),grid_y.flatten()].astype('float32'), k = 1)
-      #else:
-      #   _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
+         #tree = KDTree(zip(points[:,0], points[:,1]))
+         tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
+         #tree = KDTree(points[:,:2])
 
-      _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
+         #if pykdtree==1:
+         #   _, inds = tree.query(np.c_[grid_x.flatten(),grid_y.flatten()].astype('float32'), k = 1)
+         #else:
+         #   _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
 
-      im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
+         _, inds = tree.query(zip(grid_x.flatten(), grid_y.flatten()), k = 1)
 
-      rs1 = RunningStats.RunningStats()
-      for k in im.flatten():
-         rs1.Push(k)
+         im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
 
-      im = im - rs1.Mean() #np.mean(im)
-      ny, nx= np.shape(im)
+         rs1 = RunningStats.RunningStats()
+         for k in im.flatten():
+            rs1.Push(k)
 
-      #taper
-      im = self._taper_im(im, taper)
-      self.data = im
+         im = im - rs1.Mean() #np.mean(im)
+         ny, nx= np.shape(im)
 
-      #get integral lengthscale
-      out = self._get_lengthscale(im, lentype, res, nx, ny)
-      self.lengthscale = out
+         #taper
+         im = self._taper_im(im, taper)
+         self.data = im
+
+         #get integral lengthscale
+         out = self._get_lengthscale(im, lentype, res, nx, ny)
+         self.lengthscale = out
 
 
    # =========================================================

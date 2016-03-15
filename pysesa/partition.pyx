@@ -233,10 +233,8 @@ cdef class partition:
       #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
 
       #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
-
       mytree = KDTree(toproc[:,:2]) #, leafsize=len(toproc)/100)
       if pykdtree==1:
-
          complete=0
          while complete==0:
             try:
@@ -257,7 +255,7 @@ cdef class partition:
          finally:
             import dask.array as da
             #dask implementation
-            dat = da.from_array(toproc, chunks=1000)
+            dat = da.from_array(toproc[:,:2], chunks=1000)
             mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
             dbp = da.from_array(np.asarray(p), chunks=1000) 
             #del p  

@@ -102,26 +102,35 @@ def get_spec(pts, spectype, out, detrend, res, method, nbin, lentype, taper):
    call the spectral analysis routine for detrended window of point cloud
    Gets called by the parallel processing queue
    '''
-   pts = pysesa.detrend(pts, detrend, res, method).getdata()
-   return pysesa.spatial(pts).getcentroid() + pysesa.spectral(pts, nbin, res, spectype, lentype, taper, method).getdata()
-
+   try:   
+      pts = pysesa.detrend(pts, detrend, res, method).getdata()
+      return pysesa.spatial(pts).getcentroid() + pysesa.spectral(pts, nbin, res, spectype, lentype, taper, method).getdata()
+   except:
+      return [np.ones(27)*np.nan]
+      
 #==================================================
 def get_spat(pts, detrend, res, method):
    '''
    call the spatial analysis routine for detrended window of point cloud
    Gets called by the parallel processing queue
    '''
-   pts = pysesa.detrend(pts, detrend, res, method).getdata()
-   return pysesa.spatial(pts).getdata()
-
+   try:
+      pts = pysesa.detrend(pts, detrend, res, method).getdata()
+      return pysesa.spatial(pts).getdata()
+   except:
+      return [np.ones(10)*np.nan]
+      
 #==================================================
 def get_spec_spat(pts, spectype, out, detrend, res, method, nbin, lentype, taper):
    '''
    call the spectral and spatial analysis routine for detrended window of point cloud
    Gets called by the parallel processing queue
    '''
-   pts = pysesa.detrend(pts, detrend, res, method).getdata()
-   return pysesa.spatial(pts).getdata() + pysesa.spectral(pts, nbin, res, spectype, lentype, taper, method).getdata()
+   try:
+      pts = pysesa.detrend(pts, detrend, res, method).getdata()
+      return pysesa.spatial(pts).getdata() + pysesa.spectral(pts, nbin, res, spectype, lentype, taper, method).getdata()
+   except:
+      return [np.ones(34)*np.nan]
 
 # =========================================================
 # ==================== begin program ======================

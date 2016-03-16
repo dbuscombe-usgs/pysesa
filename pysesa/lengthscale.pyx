@@ -64,7 +64,7 @@ except:
    from scipy.spatial import cKDTree as KDTree
    pykdtree=0   
 
-from scipy.spatial import cKDTree as KDTree
+#from scipy.spatial import cKDTree as KDTree
 
 import RunningStats
 

@@ -202,7 +202,7 @@ cdef class partition:
 
       #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
-      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
+      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       #del p #dask
 
@@ -250,9 +250,7 @@ cdef class partition:
          #   dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
          #   #del p
          #except:
-         del dist
-         dist = np.empty((len(p),mxpts), dtype=np.float64)
-         dist, _ = mytree.query(zip(xx.flatten(),yy.flatten()),k=mxpts, distance_upper_bound=win)
+         dist, indices = mytree.query(zip(xx.flatten(),yy.flatten()),k=mxpts, distance_upper_bound=win)
             #del p
          #finally:
          #   import dask.array as da

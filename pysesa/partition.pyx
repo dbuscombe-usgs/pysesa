@@ -202,7 +202,7 @@ cdef class partition:
 
       #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
-      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
+      #cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       #del p #dask
 

@@ -53,7 +53,6 @@ from __future__ import division
 import numpy as np
 cimport numpy as np
 cimport cython
-#from scipy.spatial import cKDTree
 
 try:
    from pykdtree.kdtree import KDTree
@@ -62,13 +61,6 @@ except:
    print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
    from scipy.spatial import cKDTree as KDTree
    pykdtree=0   
-
-#import dask.bag as db
-   
-#data_type = np.float64
-#ctypedef np.float64_t data_type_f64t
-
-#ctypedef double (*metric_ptr)(double[:, ::1], np.intp_t, np.intp_t)
 
 # =========================================================
 cdef class partition:
@@ -164,9 +156,7 @@ cdef class partition:
       #remove any rows containing NaNs
       toproc = toproc[~np.isnan(toproc).any(axis=1)]
 
-      # pre-allocate arrays
-      #cdef list p
-      #cdef list allpoints 
+      # pre-allocate arrays     
       cdef float xmin = np.min(toproc[:,0])
       cdef float xmax = np.max(toproc[:,0])
       cdef float ymin = np.min(toproc[:,1])
@@ -176,19 +166,11 @@ cdef class partition:
       cdef int leny = np.ceil((ymax-ymin)/out)
       cdef int lenx2 = lenx/2    
       cdef int leny2 = leny/2   
-      #cdef int bp=0 #boundary prining flag
-      
-      # no idea why this doesnt work
-      #cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
-      #cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
-
+            
       cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
 
       cdef np.ndarray[np.float32_t, ndim=2] p = np.empty((lenx*leny,2), dtype=np.float32)   
-   
-      #cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
-      #cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
 
       cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((leny,lenx), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((leny,lenx), dtype=np.float64)
@@ -197,18 +179,10 @@ cdef class partition:
       x = np.arange(xmin, xmax, out)
       y = np.arange(ymin, ymax, out)
       xx, yy = np.meshgrid(x, y)
-      #p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose())
       p = np.vstack([xx.flatten(),yy.flatten()]).transpose().astype('float32')
 
-      #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
-
-      #cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
+      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
-      #del p #dask
-
-      # format points for kd-tree
-      #allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
-      #del toproc
         
       # find all points within 'out' metres of each centroid in p 
       xvec = np.arange(xmin-2*res,xmax+2*res)
@@ -221,18 +195,10 @@ cdef class partition:
       cdef list w = []
       cdef list indices2 = []
 
-      #cdef np.ndarray[np.float64_t, ndim=2] indices = np.empty((len(p),mxpts), dtype=np.int64)
       cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float32_t, ndim=1] dist2 = np.empty((len(xvec)*len(yvec),), dtype=np.float32)
  
-      # get the tree for the entire point cloud
-      #mytree = cKDTree(allpoints) 
-      
-      # largest inscribed square has side length = sqrt(2)*radius
-      #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
-
-      #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
       mytree = KDTree(toproc[:,:2]) #, leafsize=len(toproc)/100)
       if pykdtree==1:
          complete=0
@@ -246,7 +212,6 @@ cdef class partition:
                print "memory error, using %s max points" % (str(mxpts))         
 
       else:
-         mytree = KDTree(toproc[:,:2].astype('float64')) #, leafsize=len(toproc)/100)      
          try:
             dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
             #del p
@@ -263,9 +228,6 @@ cdef class partition:
             dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #.astype('float32')
             del dbp
 
-      import dask.array as da
-      dat = da.from_array(toproc[:,:2], chunks=1000)
-      
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
       dist = np.squeeze(dist[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])
@@ -288,7 +250,6 @@ cdef class partition:
       for k from 0 <= k < len(indices_list):
          indices_list[k] = [x for x in indices_list[k] if x<len(toproc)]
 
-      
       try:
          # get the centroids
          #for k in xrange(len(indices_list)):
@@ -304,12 +265,6 @@ cdef class partition:
 
       cx,cy = zip(*w)
       del w
- 
-      #try:
-      #   tree = KDTree(allpoints, leafsize=len(allpoints)/100)
-      #except:
-      #   tree = KDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
-      #   del dat
 
       yp, xp = np.meshgrid(yvec, xvec)
 
@@ -383,4 +338,42 @@ cdef class partition:
       return self.data
 
 
+      #cdef np.ndarray[np.float64_t, ndim=2] indices = np.empty((len(p),mxpts), dtype=np.int64)
+       #cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
+      #cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((int(np.ceil((ymax-ymin)/out)),int(np.ceil((xmax-xmin)/out))), dtype=np.float64)
+      #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
+      #del p #dask
 
+      # format points for kd-tree
+      #allpoints = zip(toproc[:,0].ravel(), toproc[:,1].ravel())
+      #del toproc
+       
+      # get the tree for the entire point cloud
+      #mytree = cKDTree(allpoints) 
+      
+      # largest inscribed square has side length = sqrt(2)*radius
+      #dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+
+      #dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #dask implementation 1
+      
+      #cdef int bp=0 #boundary prining flag
+      
+      # no idea why this doesnt work
+      #cdef np.ndarray[np.float64_t, ndim=1] x = np.empty(lenx, dtype=np.float64)
+      #cdef np.ndarray[np.float64_t, ndim=1] y = np.empty(leny, dtype=np.float64)
+      #try:
+      #   tree = KDTree(allpoints, leafsize=len(allpoints)/100)
+      #except:
+      #   tree = KDTree(dat, leafsize=len(dat)/100) #dask implementation 2 # leafsize=len(dat)
+      #   del dat
+      #p = list(np.vstack([xx.flatten(),yy.flatten()]).transpose()) 
+      #cdef list p
+      #cdef list allpoints 
+#from scipy.spatial import cKDTree
+#import dask.bag as db
+   
+#data_type = np.float64
+#ctypedef np.float64_t data_type_f64t
+
+#ctypedef double (*metric_ptr)(double[:, ::1], np.intp_t, np.intp_t)
+            

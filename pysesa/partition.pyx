@@ -304,6 +304,9 @@ cdef class partition:
          if len(indices_list[m2[k]])>minpts:
             indices2.append(indices_list[m2[k]])
 
+      if len(indices2)<1:
+         print "no returned windows: either increase 'out' or 'prc_overlap'"
+
       self.data = indices2
 
    # =========================================================

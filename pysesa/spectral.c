@@ -2478,7 +2478,7 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
  *                # interpolate background spectrum onto wavenumber array
  *                s_b = np.interp(k,k_back,s_b)             # <<<<<<<<<<<<<<
  * 
- *                k = k[2:] #Nyquist frequency up
+ *                k = k[1:] #Nyquist frequency up
  */
           __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 451; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_7);
@@ -2540,11 +2540,11 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
           /* "pysesa/spectral.pyx":453
  *                s_b = np.interp(k,k_back,s_b)
  * 
- *                k = k[2:] #Nyquist frequency up             # <<<<<<<<<<<<<<
- *                s = s[2:]
- *                s_b = s_b[2:]
+ *                k = k[1:] #Nyquist frequency up             # <<<<<<<<<<<<<<
+ *                s = s[1:]
+ *                s_b = s_b[1:]
  */
-          __pyx_t_1 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_k), 2, 0, NULL, NULL, &__pyx_slice__3, 1, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_1 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_k), 1, 0, NULL, NULL, &__pyx_slice__3, 1, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_1);
           if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __pyx_t_24 = ((PyArrayObject *)__pyx_t_1);
@@ -2570,12 +2570,12 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
 
           /* "pysesa/spectral.pyx":454
  * 
- *                k = k[2:] #Nyquist frequency up
- *                s = s[2:]             # <<<<<<<<<<<<<<
- *                s_b = s_b[2:]
+ *                k = k[1:] #Nyquist frequency up
+ *                s = s[1:]             # <<<<<<<<<<<<<<
+ *                s_b = s_b[1:]
  * 
  */
-          __pyx_t_1 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s), 2, 0, NULL, NULL, &__pyx_slice__4, 1, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_1 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s), 1, 0, NULL, NULL, &__pyx_slice__4, 1, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_1);
           if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __pyx_t_19 = ((PyArrayObject *)__pyx_t_1);
@@ -2600,13 +2600,13 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
           __pyx_t_1 = 0;
 
           /* "pysesa/spectral.pyx":455
- *                k = k[2:] #Nyquist frequency up
- *                s = s[2:]
- *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
+ *                k = k[1:] #Nyquist frequency up
+ *                s = s[1:]
+ *                s_b = s_b[1:]             # <<<<<<<<<<<<<<
  * 
  *                # wavelengths and rms amplitudes
  */
-          __pyx_t_1 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s_b), 2, 0, NULL, NULL, &__pyx_slice__5, 1, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
+          __pyx_t_1 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s_b), 1, 0, NULL, NULL, &__pyx_slice__5, 1, 0, 0); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __Pyx_GOTREF(__pyx_t_1);
           if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L6_error;}
           __pyx_t_23 = ((PyArrayObject *)__pyx_t_1);
@@ -3324,7 +3324,7 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
  *                # interpolate background spectrum onto wavenumber array
  *                s_b = np.interp(k,k_back,s_b)             # <<<<<<<<<<<<<<
  * 
- *                k = k[2:]
+ *                k = k[1:]
  */
           __pyx_t_34 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_34)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 484; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_34);
@@ -3386,11 +3386,11 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
           /* "pysesa/spectral.pyx":486
  *                s_b = np.interp(k,k_back,s_b)
  * 
- *                k = k[2:]             # <<<<<<<<<<<<<<
- *                s = s[2:]
- *                s_b = s_b[2:]
+ *                k = k[1:]             # <<<<<<<<<<<<<<
+ *                s = s[1:]
+ *                s_b = s_b[1:]
  */
-          __pyx_t_32 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_k), 2, 0, NULL, NULL, &__pyx_slice__7, 1, 0, 0); if (unlikely(!__pyx_t_32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 486; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_32 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_k), 1, 0, NULL, NULL, &__pyx_slice__7, 1, 0, 0); if (unlikely(!__pyx_t_32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 486; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_32);
           if (!(likely(((__pyx_t_32) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_32, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 486; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __pyx_t_24 = ((PyArrayObject *)__pyx_t_32);
@@ -3416,12 +3416,12 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
 
           /* "pysesa/spectral.pyx":487
  * 
- *                k = k[2:]
- *                s = s[2:]             # <<<<<<<<<<<<<<
- *                s_b = s_b[2:]
+ *                k = k[1:]
+ *                s = s[1:]             # <<<<<<<<<<<<<<
+ *                s_b = s_b[1:]
  * 
  */
-          __pyx_t_32 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s), 2, 0, NULL, NULL, &__pyx_slice__8, 1, 0, 0); if (unlikely(!__pyx_t_32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_32 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s), 1, 0, NULL, NULL, &__pyx_slice__8, 1, 0, 0); if (unlikely(!__pyx_t_32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_32);
           if (!(likely(((__pyx_t_32) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_32, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __pyx_t_19 = ((PyArrayObject *)__pyx_t_32);
@@ -3446,13 +3446,13 @@ static int __pyx_pf_6pysesa_8spectral_8spectral___init__(struct __pyx_obj_6pyses
           __pyx_t_32 = 0;
 
           /* "pysesa/spectral.pyx":488
- *                k = k[2:]
- *                s = s[2:]
- *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
+ *                k = k[1:]
+ *                s = s[1:]
+ *                s_b = s_b[1:]             # <<<<<<<<<<<<<<
  * 
  *                # wavelengths and rms amplitudes
  */
-          __pyx_t_32 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s_b), 2, 0, NULL, NULL, &__pyx_slice__9, 1, 0, 0); if (unlikely(!__pyx_t_32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
+          __pyx_t_32 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_s_b), 1, 0, NULL, NULL, &__pyx_slice__9, 1, 0, 0); if (unlikely(!__pyx_t_32)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __Pyx_GOTREF(__pyx_t_32);
           if (!(likely(((__pyx_t_32) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_32, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L16_error;}
           __pyx_t_23 = ((PyArrayObject *)__pyx_t_32);
@@ -10693,33 +10693,33 @@ static int __Pyx_InitCachedConstants(void) {
   /* "pysesa/spectral.pyx":453
  *                s_b = np.interp(k,k_back,s_b)
  * 
- *                k = k[2:] #Nyquist frequency up             # <<<<<<<<<<<<<<
- *                s = s[2:]
- *                s_b = s_b[2:]
+ *                k = k[1:] #Nyquist frequency up             # <<<<<<<<<<<<<<
+ *                s = s[1:]
+ *                s_b = s_b[1:]
  */
-  __pyx_slice__3 = PySlice_New(__pyx_int_2, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_slice__3 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 453; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
   /* "pysesa/spectral.pyx":454
  * 
- *                k = k[2:] #Nyquist frequency up
- *                s = s[2:]             # <<<<<<<<<<<<<<
- *                s_b = s_b[2:]
+ *                k = k[1:] #Nyquist frequency up
+ *                s = s[1:]             # <<<<<<<<<<<<<<
+ *                s_b = s_b[1:]
  * 
  */
-  __pyx_slice__4 = PySlice_New(__pyx_int_2, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_slice__4 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 454; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
 
   /* "pysesa/spectral.pyx":455
- *                k = k[2:] #Nyquist frequency up
- *                s = s[2:]
- *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
+ *                k = k[1:] #Nyquist frequency up
+ *                s = s[1:]
+ *                s_b = s_b[1:]             # <<<<<<<<<<<<<<
  * 
  *                # wavelengths and rms amplitudes
  */
-  __pyx_slice__5 = PySlice_New(__pyx_int_2, Py_None, Py_None); if (unlikely(!__pyx_slice__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_slice__5 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 455; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
@@ -10737,33 +10737,33 @@ static int __Pyx_InitCachedConstants(void) {
   /* "pysesa/spectral.pyx":486
  *                s_b = np.interp(k,k_back,s_b)
  * 
- *                k = k[2:]             # <<<<<<<<<<<<<<
- *                s = s[2:]
- *                s_b = s_b[2:]
+ *                k = k[1:]             # <<<<<<<<<<<<<<
+ *                s = s[1:]
+ *                s_b = s_b[1:]
  */
-  __pyx_slice__7 = PySlice_New(__pyx_int_2, Py_None, Py_None); if (unlikely(!__pyx_slice__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 486; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_slice__7 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 486; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_slice__7);
   __Pyx_GIVEREF(__pyx_slice__7);
 
   /* "pysesa/spectral.pyx":487
  * 
- *                k = k[2:]
- *                s = s[2:]             # <<<<<<<<<<<<<<
- *                s_b = s_b[2:]
+ *                k = k[1:]
+ *                s = s[1:]             # <<<<<<<<<<<<<<
+ *                s_b = s_b[1:]
  * 
  */
-  __pyx_slice__8 = PySlice_New(__pyx_int_2, Py_None, Py_None); if (unlikely(!__pyx_slice__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_slice__8 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 487; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
   /* "pysesa/spectral.pyx":488
- *                k = k[2:]
- *                s = s[2:]
- *                s_b = s_b[2:]             # <<<<<<<<<<<<<<
+ *                k = k[1:]
+ *                s = s[1:]
+ *                s_b = s_b[1:]             # <<<<<<<<<<<<<<
  * 
  *                # wavelengths and rms amplitudes
  */
-  __pyx_slice__9 = PySlice_New(__pyx_int_2, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_slice__9 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 488; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_slice__9);
   __Pyx_GIVEREF(__pyx_slice__9);
 

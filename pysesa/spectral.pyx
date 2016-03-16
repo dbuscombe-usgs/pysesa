@@ -450,9 +450,9 @@ cdef class spectral:
                # interpolate background spectrum onto wavenumber array
                s_b = np.interp(k,k_back,s_b)
 
-               k = k[2:] #Nyquist frequency up
-               s = s[2:]
-               s_b = s_b[2:]
+               k = k[1:] #Nyquist frequency up
+               s = s[1:]
+               s_b = s_b[1:]
 
                # wavelengths and rms amplitudes
                wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
@@ -483,9 +483,9 @@ cdef class spectral:
                # interpolate background spectrum onto wavenumber array
                s_b = np.interp(k,k_back,s_b)
 
-               k = k[2:]
-               s = s[2:]
-               s_b = s_b[2:]
+               k = k[1:]
+               s = s[1:]
+               s_b = s_b[1:]
 
                # wavelengths and rms amplitudes
                wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)

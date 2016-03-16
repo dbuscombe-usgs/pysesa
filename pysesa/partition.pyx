@@ -250,6 +250,7 @@ cdef class partition:
          #   dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
          #   #del p
          #except:
+         del dist
          dist, indices = mytree.query(p.astype('float32'),mxpts.astype('float32'), distance_upper_bound=win)
             #del p
          #finally:

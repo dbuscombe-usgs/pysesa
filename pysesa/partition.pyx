@@ -202,7 +202,7 @@ cdef class partition:
 
       #dbp = db.from_sequence(p, npartitions = 1000) #dask bag
 
-      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float64)
+      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
       cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
       #del p #dask
 
@@ -246,21 +246,22 @@ cdef class partition:
                print "memory error, using %s max points" % (str(mxpts))         
 
       else:
-         #try:
-         #   dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
-         #   #del p
-         #except:
-         dist, indices = mytree.query(zip(xx.flatten(),yy.flatten()),k=mxpts, distance_upper_bound=win)
+         mytree = KDTree(toproc[:,:2].astype('float64')) #, leafsize=len(toproc)/100)      
+         try:
+            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
             #del p
-         #finally:
-         #   import dask.array as da
-         #   #dask implementation
-         #   dat = da.from_array(toproc[:,:2], chunks=1000)
-         #   mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
-         #   dbp = da.from_array(np.asarray(p), chunks=1000) 
-         #   #del p  
-         #   dist, indices = mytree.query(dbp.astype('float32'),mxpts, distance_upper_bound=win)
-         #   del dbp
+         except:
+            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
+            del p
+         finally:
+            import dask.array as da
+            #dask implementation
+            dat = da.from_array(toproc[:,:2].astype('float64'), chunks=1000)
+            mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+            dbp = da.from_array(np.asarray(p), chunks=1000) 
+            #del p  
+            dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win) #.astype('float32')
+            del dbp
 
       import dask.array as da
       dat = da.from_array(toproc[:,:2], chunks=1000)

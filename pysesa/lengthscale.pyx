@@ -56,13 +56,13 @@ cimport cython
 from scipy.integrate import trapz
 #from scipy.spatial import cKDTree as KDTree
 
-#try:
-#   from pykdtree.kdtree import KDTree
-#   pykdtree=1   
-#except:
-#   print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
-#   from scipy.spatial import cKDTree as KDTree
-#   pykdtree=0   
+try:
+   from pykdtree.kdtree import KDTree
+   pykdtree=1   
+except:
+   #print "install pykdtree for faster kd-tree operations: https://github.com/storpipfugl/pykdtree"
+   from scipy.spatial import cKDTree as KDTree
+   pykdtree=0   
 
 from scipy.spatial import cKDTree as KDTree
 

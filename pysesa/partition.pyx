@@ -260,7 +260,7 @@ cdef class partition:
             mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
             dbp = da.from_array(np.asarray(p), chunks=1000) 
             #del p  
-            dist, indices = mytree.query(dbp,mxpts, distance_upper_bound=win) #.astype('float32')
+            dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #.astype('float32')
             del dbp
 
       import dask.array as da

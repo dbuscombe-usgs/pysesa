@@ -218,7 +218,7 @@ cdef class lengthscale:
          #im = griddata(points[:,:2], points[:,2], (grid_x, grid_y), method=method)
 
          #tree = KDTree(zip(points[:,0], points[:,1]))
-         tree = KDTree(zip(points[:,0], points[:,1]), leafsize=1000)
+         tree = KDTree(zip(points[:,0], points[:,1])) #, leafsize=1000)
          #tree = KDTree(points[:,:2])
 
          #if pykdtree==1:

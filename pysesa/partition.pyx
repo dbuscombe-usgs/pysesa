@@ -251,7 +251,7 @@ cdef class partition:
          #   #del p
          #except:
          del dist
-         dist, indices = mytree.query(p.astype('float32'),mxpts.astype('float32'), distance_upper_bound=win)
+         dist, indices = mytree.query(p.astype('float32'),mxpts, distance_upper_bound=win)
             #del p
          #finally:
          #   import dask.array as da

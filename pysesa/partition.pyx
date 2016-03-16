@@ -251,7 +251,7 @@ cdef class partition:
          #   #del p
          #except:
          del dist
-         dist = np.empty((len(p),mxpts), dtype=np.float32)
+         dist = np.empty((len(p),mxpts), dtype=np.float64)
          dist, indices = mytree.query(zip(xx.flatten(),yy.flatten()),k=mxpts, distance_upper_bound=win)
             #del p
          #finally:

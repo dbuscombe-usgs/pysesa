@@ -167,13 +167,13 @@ cdef class partition:
       cdef int lenx2 = lenx/2    
       cdef int leny2 = leny/2   
             
-      cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
+#      cdef np.ndarray[np.float64_t, ndim=1] xvec = np.empty((lenx2,), dtype=np.float64)
+#      cdef np.ndarray[np.float64_t, ndim=1] yvec = np.empty((leny2,), dtype=np.float64)   
 
-      cdef np.ndarray[np.float32_t, ndim=2] p = np.empty((lenx*leny,2), dtype=np.float32)   
+#      cdef np.ndarray[np.float32_t, ndim=2] p = np.empty((lenx*leny,2), dtype=np.float32)   
 
-      cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((leny,lenx), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((leny,lenx), dtype=np.float64)
+#      cdef np.ndarray[np.float64_t, ndim=2] xx = np.empty((leny,lenx), dtype=np.float64)
+#      cdef np.ndarray[np.float64_t, ndim=2] yy = np.empty((leny,lenx), dtype=np.float64)
 
       # create output grid
       x = np.arange(xmin, xmax, out)
@@ -181,9 +181,9 @@ cdef class partition:
       xx, yy = np.meshgrid(x, y)
       p = np.vstack([xx.flatten(),yy.flatten()]).transpose().astype('float32')
 
-      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
-      cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
-        
+#      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
+#      cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
+#        
       # find all points within 'out' metres of each centroid in p 
       xvec = np.arange(xmin-2*res,xmax+2*res)
       yvec = np.arange(ymin-2*res,ymax+2*res)            
@@ -195,10 +195,10 @@ cdef class partition:
       cdef list w = []
       cdef list indices2 = []
 
-      cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
-      cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
-      cdef np.ndarray[np.float32_t, ndim=1] dist2 = np.empty((len(xvec)*len(yvec),), dtype=np.float32)
- 
+#      cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
+#      cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
+#      cdef np.ndarray[np.float32_t, ndim=1] dist2 = np.empty((len(xvec)*len(yvec),), dtype=np.float32)
+# 
       mytree = KDTree(toproc[:,:2]) #, leafsize=len(toproc)/100)
       if pykdtree==1:
          complete=0

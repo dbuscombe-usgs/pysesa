@@ -729,13 +729,13 @@ cdef class spectral:
          if nx%2==0:
             s = field(x_space, target=k_space, val=im).power(smooth=1)
          else:
-            s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=1)
+            s = field(x_space, target=k_space, val=im[:-1,:-1].T).power(smooth=1)
       else:
          # and get the power spectrum
          if nx%2==0:
             s = field(x_space, target=k_space, val=im).power(smooth=0) 
          else:
-            s = field(x_space, target=k_space, val=im[:-1,:-1]).power(smooth=0) 
+            s = field(x_space, target=k_space, val=im[:-1,:-1].T).power(smooth=0) 
 
       k = k_space.power_indices["kindex"]*res 
       # generate synthetic field and get binned power spectrum

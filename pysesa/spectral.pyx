@@ -423,7 +423,9 @@ cdef class spectral:
      
       #cdef double[::1] s
       cdef np.ndarray[np.float64_t, ndim=2] im 
- 
+      
+      points = points - np.nanmin(points, axis=0)
+       
       r = pysesa.lengthscale(points, res, lentype, taper, method)
       im = r.getdata()
       l = r.getlengthscale()

@@ -183,12 +183,13 @@ cdef class lengthscale:
 
       '''
 
+      points = points - np.nanmin(points, axis=0)
+      
       # pre-allocate some more arrays and get the ranges of x and y
       cdef float nnx = np.max(points[:,0]) - np.min(points[:,0])
       cdef float nny = np.max(points[:,1]) - np.min(points[:,1])
       cdef float lenx
       cdef int nx, ny, i
-
 
       # enfore square matrix in gridding
       if nny!=nnx:

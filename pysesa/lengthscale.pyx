@@ -231,11 +231,11 @@ cdef class lengthscale:
 
          im = points[:,2].flatten()[inds].reshape(np.shape(grid_x))
 
-         rs1 = RunningStats.RunningStats()
-         for k in im.flatten():
-            rs1.Push(k)
+         #rs1 = RunningStats.RunningStats()
+         #for k in im.flatten():
+         #   rs1.Push(k)
 
-         im = im - rs1.Mean() #np.mean(im)
+         #im = im - rs1.Mean() #np.mean(im)
          ny, nx= np.shape(im)
 
          #taper

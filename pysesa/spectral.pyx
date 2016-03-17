@@ -439,71 +439,79 @@ cdef class spectral:
 
       else:
 
-         if proctype==1: #no spectral smoothing
+         #if proctype==1: #no spectral smoothing
 
-            try:
+         try:
 
-               s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
-               slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)
-               self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
+            s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
+            slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)
+            self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
                
-               # interpolate background spectrum onto wavenumber array
-               s_b = np.interp(k,k_back,s_b)
+            # interpolate background spectrum onto wavenumber array
+            s_b = np.interp(k,k_back,s_b)
 
-               k = k[1:] #Nyquist frequency up
-               s = s[1:]
-               s_b = s_b[1:]
+            k = k[1:] #Nyquist frequency up
+            s = s[1:]
+            s_b = s_b[1:]
 
-               # wavelengths and rms amplitudes
-               wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
-               self.lengths = [wmax, wmean, rms1, rms2]
+            # wavelengths and rms amplitudes
+            wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
+            self.lengths = [wmax, wmean, rms1, rms2]
                
-               # moments and moment parameters
-               Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
-               self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
+            # moments and moment parameters
+            Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
+            self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
 
-               # concetanate and add effective slope
-               #self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
-               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]
+            # concetanate and add effective slope
+            #self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
+            self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]
 
-            except:
+         except:
                      
-               self.data = [np.ones(24)*np.nan] 
+            self.data = [np.ones(24)*np.nan] 
 
-            return
+         return
 
-         elif proctype==2: # with spectral smoothing
+#         elif proctype==2: # with spectral smoothing
 
-            try:
+#            try:
 
-               s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
-               slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)
-               self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
-                              
-               # interpolate background spectrum onto wavenumber array
-               s_b = np.interp(k,k_back,s_b)
+#               s, s_b, k, k_back = self._psd(im, nx, ny, nbin, res, proctype)
+#               slope, intercept, r_value, p_value, std_err, d = self._psparams(k_back, s_b, res)
+#               self.psdparams = [slope, intercept, r_value, p_value, std_err, d]
+#                              
+#               # interpolate background spectrum onto wavenumber array
+#               s_b = np.interp(k,k_back,s_b)
 
-               k = k[1:]
-               s = s[1:]
-               s_b = s_b[1:]
+#               k = k[1:]
+#               s = s[1:]
+#               s_b = s_b[1:]
 
-               # wavelengths and rms amplitudes
-               wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
-               self.lengths = [wmax, wmean, rms1, rms2]
-                              
-               # moments and moment parameters
-               Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
-               self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
+#               # wavelengths and rms amplitudes
+#               wmax, wmean, rms1, rms2 = self._wav_rms(k, s, s_b, res)
+#               self.lengths = [wmax, wmean, rms1, rms2]
+#                              
+#               # moments and moment parameters
+#               Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4 = self._moments(k, s_b, res)
+#               self.moments = [Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4]
 
-               # concetanate and add effective slope
-               #self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
-               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]
+#               # concetanate and add effective slope
+#               #self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(np.pi/180)]
+#               self.data = self.psdparams + [self.lengthscale] + self.lengths + self.moments + [np.arctan(sigma/l)/(pi/180)]
 
-            except:
+#            except:
 
-               self.data = [np.ones(24)*np.nan] 
+#               self.data = [np.ones(24)*np.nan] 
 
-            return
+#            return
+
+   # =========================================================
+   @cython.boundscheck(False)
+   @cython.cdivision(True)
+   @cython.wraparound(False)
+   @cython.nonecheck(False)
+   cpdef np.ndarray _movingaverage(self, np.ndarray[np.float64_t, ndim=1] interval, int window_size):
+      return np.convolve(interval, np.ones(int(window_size))/float(window_size), 'same')
 
    # =========================================================
    @cython.boundscheck(False)
@@ -630,10 +638,14 @@ cdef class spectral:
       '''
       cdef double wmax, wmean, rms1, rms2
 
-      cdef float pi = 3.14159265
+      #cdef float pi = 3.14159265
+      cdef np.ndarray[np.float64_t, ndim=1] ssb = np.empty(len(s),dtype=np.float64)
+            
+      ssb = self._movingaverage(s/s_b,len(s)/10)      
       
       # get peak wavelength
-      wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))] 
+      wmax = res*(2*np.pi)/k[np.argmax(ssb)]       
+      #wmax = res*(2*np.pi)/k[np.argmax(np.abs(s/s_b))] 
       #wmax = res*(2*pi)/k[np.argmax(abs(s/s_b))] 
 
       # mean wavelength
@@ -642,7 +654,8 @@ cdef class spectral:
 
       # get rms amplitudes
       rms1 = np.sqrt(np.abs(trapz(s, k)))/res
-      rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res
+      rms2 = np.sqrt(np.abs(trapz(ssb, k)))/res
+      #rms2 = np.sqrt(np.abs(trapz(s_b, k)))/res      
       #rms1 = sqrt(abs(trapz(s, k)))/res
       #rms2 = sqrt(abs(trapz(s_b, k)))/res
          

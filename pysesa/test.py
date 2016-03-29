@@ -116,8 +116,8 @@ def test():
    nbin = 20 #number of bins for spectral binning
    lentype = 1 # l<0.5
    taper = 1 # Hann taper
-   prc_overlap = 200 # 100% overlap between successive windows
-   minpts = 32 # min pts per window
+   prc_overlap = 300 # 300% overlap between successive windows
+   minpts = 16 # min pts per window
    bp = 0 # 0=no boundary pruning
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, bp)

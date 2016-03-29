@@ -116,7 +116,7 @@ def test():
    nbin = 20 #number of bins for spectral binning
    lentype = 1 # l<0.5
    taper = 1 # Hann taper
-   prc_overlap = 300 # 300% overlap between successive windows
+   prc_overlap = 100 # 300% overlap between successive windows
    minpts = 16 # min pts per window
    bp = 0 # 0=no boundary pruning
 

@@ -180,10 +180,7 @@ cdef class partition:
       y = np.arange(ymin, ymax, out)
       xx, yy = np.meshgrid(x, y)
       p = np.vstack([xx.flatten(),yy.flatten()]).transpose().astype('float32')
-
-#      cdef np.ndarray[np.float32_t, ndim=2] dist = np.empty((len(p),mxpts), dtype=np.float32)
-#      cdef np.ndarray[np.float64_t, ndim=1] dist3 = np.empty((len(p),), dtype=np.float64)
-#        
+    
       # find all points within 'out' metres of each centroid in p 
       xvec = np.arange(xmin-2*res,xmax+2*res)
       yvec = np.arange(ymin-2*res,ymax+2*res)            
@@ -250,64 +247,64 @@ cdef class partition:
       for k from 0 <= k < len(indices_list):
          indices_list[k] = [x for x in indices_list[k] if x<len(toproc)]
 
-      try:
-         # get the centroids
-         #for k in xrange(len(indices_list)):
-         for k from 0 <= k < len(indices_list):
-            #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
-            w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))
+      #try:
+      #   # get the centroids
+      #   #for k in xrange(len(indices_list)):
+      #   for k from 0 <= k < len(indices_list):
+      #      #w.append(np.mean([allpoints[i] for i in indices_list[k]], axis=0))
+      #      w.append(np.mean([toproc[i,:2] for i in indices_list[k]], axis=0))
 
-      except:
-         # get the centroids
-         #for k in xrange(len(indices_list)):
-         for k from 0 <= k < len(indices_list):
-            w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
+      #except:
+      #   # get the centroids
+      #   #for k in xrange(len(indices_list)):
+      #   for k from 0 <= k < len(indices_list):
+      #      w.append(dat[indices_list[k],:2].mean(axis=0).compute()) #dask implementation
 
-      cx,cy = zip(*w)
-      del w
+      #cx,cy = zip(*w)
+      #del w
 
-      yp, xp = np.meshgrid(yvec, xvec)
+      #yp, xp = np.meshgrid(yvec, xvec)
 
       # Use KDTree to answer the question: "which point of set (x,y) is the
       # nearest neighbors of those in (xp, yp)"
 
-      if pykdtree==1:
-         dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)
-      else:
-         try:      
-            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1, n_jobs=-1)
-         except:
-            dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)      
+      #if pykdtree==1:
+      #   dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)
+      #else:
+      #   try:      
+      #      dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1, n_jobs=-1)
+      #   except:
+      #      dist2, _ = mytree.query(np.c_[xp.ravel(), yp.ravel()].astype('float32'), k=1)      
 
-      if bp==1: #boundary pruning
-         # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
-         tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(res, res))], yp.ravel()[(dist2 > np.hypot(res, res))]])
+      #if bp==1: #boundary pruning
+      #   # Select points sufficiently far away (use hypoteneuse of the triangle made by res and res)
+      #   tree2 = KDTree(np.c_[xp.ravel()[(dist2 > np.hypot(out, out))], yp.ravel()[(dist2 > np.hypot(out, out))]])
 
-         if pykdtree==1:     
-            dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
-         else: 
-            try:
-               dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
-            except:
-               dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
+      #   if pykdtree==1:     
+      #      dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win) #distance_upper_bound=out)
+      #   else: 
+      #      try:
+      #         dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win, n_jobs=-1) #distance_upper_bound=out)
+      #      except:
+      #         dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
       
-         m2 = np.where(dist3 < out*2)[0]
+      #   m2 = np.where(dist3 < np.hypot(out, out))[0]
 
-      else:
-         m2 = np.where(dist2 < out*2)[0]
+      #else:
+      #   m2 = np.where(dist2 < np.hypot(out, out))[0]
 
-      m2 = m2[np.where(m2<len(indices_list))[0]]
+      #m2 = m2[np.where(m2<len(indices_list))[0]]
 
-      # do the pruning
-      #for k in xrange(len(m2)):
-      for k from 0 <= k < len(m2):
-         if len(indices_list[m2[k]])>minpts:
-            indices2.append(indices_list[m2[k]])
+      ## do the pruning
+      ##for k in xrange(len(m2)):
+      #for k from 0 <= k < len(m2):
+      #   if len(indices_list[m2[k]])>minpts:
+      #      indices2.append(indices_list[m2[k]])
 
-      if len(indices2)<1:
-         print "no returned windows: either increase 'out' or 'prc_overlap'"
+      #if len(indices2)<1:
+      #   print "no returned windows: either increase 'out' or 'prc_overlap'"
 
-      self.data = indices2
+      self.data = indices_list #indices2
 
    # =========================================================
    @cython.boundscheck(False)

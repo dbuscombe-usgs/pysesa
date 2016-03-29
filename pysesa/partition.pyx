@@ -291,10 +291,10 @@ cdef class partition:
             except:
                dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)      
       
-         m2 = np.where(dist3 < out**2)[0]
+         m2 = np.where(dist3 < out*2)[0]
 
       else:
-         m2 = np.where(dist2 < out**2)[0]
+         m2 = np.where(dist2 < out*2)[0]
 
       m2 = m2[np.where(m2<len(indices_list))[0]]
 

@@ -6215,7 +6215,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
  *             except:
  *                dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)             # <<<<<<<<<<<<<<
  * 
- *          m2 = np.where(dist3 < out**2)[0]
+ *          m2 = np.where(dist3 < out*2)[0]
  */
           __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_tree2, __pyx_n_s_query); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 292; __pyx_clineno = __LINE__; goto __pyx_L107_except_error;}
           __Pyx_GOTREF(__pyx_t_3);
@@ -6330,7 +6330,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
     /* "pysesa/partition.pyx":294
  *                dist3, _ = tree2.query(np.c_[cx,cy], distance_upper_bound=win)
  * 
- *          m2 = np.where(dist3 < out**2)[0]             # <<<<<<<<<<<<<<
+ *          m2 = np.where(dist3 < out*2)[0]             # <<<<<<<<<<<<<<
  * 
  *       else:
  */
@@ -6339,7 +6339,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
     __pyx_t_24 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_where); if (unlikely(!__pyx_t_24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_24);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyFloat_FromDouble(powf(__pyx_v_out, 2.0)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_4 = PyFloat_FromDouble((__pyx_v_out * 2.0)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_2 = PyObject_RichCompare(__pyx_v_dist3, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -6381,7 +6381,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
     /* "pysesa/partition.pyx":297
  * 
  *       else:
- *          m2 = np.where(dist2 < out**2)[0]             # <<<<<<<<<<<<<<
+ *          m2 = np.where(dist2 < out*2)[0]             # <<<<<<<<<<<<<<
  * 
  *       m2 = m2[np.where(m2<len(indices_list))[0]]
  */
@@ -6390,7 +6390,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
     __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_where); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 297; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = PyFloat_FromDouble(powf(__pyx_v_out, 2.0)); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 297; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_10 = PyFloat_FromDouble((__pyx_v_out * 2.0)); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 297; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_10);
     __pyx_t_2 = PyObject_RichCompare(__pyx_v_dist2, __pyx_t_10, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 297; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -6429,7 +6429,7 @@ static int __pyx_pf_6pysesa_9partition_9partition___init__(struct __pyx_obj_6pys
   __pyx_L101:;
 
   /* "pysesa/partition.pyx":299
- *          m2 = np.where(dist2 < out**2)[0]
+ *          m2 = np.where(dist2 < out*2)[0]
  * 
  *       m2 = m2[np.where(m2<len(indices_list))[0]]             # <<<<<<<<<<<<<<
  * 

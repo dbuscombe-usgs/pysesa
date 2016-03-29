@@ -110,7 +110,7 @@ cdef class partition:
    @cython.wraparound(False)
    @cython.nonecheck(False)
    #==================================================
-   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float res=0.05, float mxpts=1024, float minpts=16, float prc_overlap=0, int bp=0):
+   def __init__(self, np.ndarray[np.float32_t, ndim=2] toproc, float out=0.5, float mxpts=1024, float minpts=16, float prc_overlap=0): #float res=0.05, int bp=0):
 
       '''
       Partition a Nx3 point cloud into M windows of nx3 points
@@ -121,7 +121,7 @@ cdef class partition:
 
       Syntax
       ----------
-      nr_pts = pysesa.partition(toproc, out, res, mxpts, minpts, prc_overlap, bp).getdata()
+      nr_pts = pysesa.partition(toproc, out, mxpts, minpts, prc_overlap).getdata()
 
       Parameters
       ----------
@@ -132,8 +132,6 @@ cdef class partition:
       ----------
       out : float, *optional* [default = 0.5]
    	   output grid resolution
-      res : float, *optional* [default = 0.05]
-   	   spatial grid resolution to create a grid for the boundary pruning
       mxpts : float, *optional* [default = 1024]
    	   maximum number of points allowed in a window
       minpts : float, *optional* [default = 16]
@@ -182,15 +180,15 @@ cdef class partition:
       p = np.vstack([xx.flatten(),yy.flatten()]).transpose().astype('float32')
     
       # find all points within 'out' metres of each centroid in p 
-      xvec = np.arange(xmin-2*res,xmax+2*res)
-      yvec = np.arange(ymin-2*res,ymax+2*res)            
+      xvec = np.arange(xmin-2*out,xmax+2*out)
+      yvec = np.arange(ymin-2*out,ymax+2*out)            
 
       # pre-allocate more arrays
       cdef int k
-      cdef tuple cx, cy
+      #cdef tuple cx, cy
       cdef list indices_list
-      cdef list w = []
-      cdef list indices2 = []
+      #cdef list w = []
+      #cdef list indices2 = []
 
       cdef np.ndarray[np.float64_t, ndim=2] xp = np.empty((len(yvec), len(xvec)), dtype=np.float64)
       cdef np.ndarray[np.float64_t, ndim=2] yp = np.empty((len(yvec), len(xvec)), dtype=np.float64)

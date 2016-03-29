@@ -108,7 +108,7 @@ def test():
    # general settings   
    infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
 
-   out = 0.25 #m output grid
+   out = 0.5 #m output grid
    detrend = 4 #ODR plane
    proctype = 4 #Processing spatial and spectral parameters (no smoothing)
    mxpts = 2048 # max pts per window
@@ -117,7 +117,7 @@ def test():
    lentype = 1 # l<0.5
    taper = 1 # Hann taper
    prc_overlap = 100 # 300% overlap between successive windows
-   minpts = 16 # min pts per window
+   minpts = 32 # min pts per window
    bp = 0 # 0=no boundary pruning
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, bp)

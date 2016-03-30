@@ -356,11 +356,11 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    if lentype:
       lentype = int(lentype)
       if lentype==1:
-         print "lengthscale type: l<0"
+         print "lengthscale type: l<0.5"
       elif lentype==2:
          print "lengthscale type: l<1/e"
       elif lentype==3:
-         print "lengthscale type: l<0.5"
+         print "lengthscale type: l<0"
 
    if taper:
       taper = np.asarray(taper,int)

@@ -211,17 +211,32 @@ cdef class partition:
             dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
             #del p
          except:
-            dist, indices = mytree.query(p,mxpts, distance_upper_bound=win, n_jobs=-1)
-            del p
+            complete=0
+            while complete==0:
+               try:
+                  dist, indices = mytree.query(p,mxpts, distance_upper_bound=win)
+               except:
+                  mxpts = np.max([1,mxpts-2])
+                  print "memory error, using %s max points" % (str(mxpts))         
+
          finally:
             import dask.array as da
-            #dask implementation
-            dat = da.from_array(toproc[:,:2].astype('float64'), chunks=1000)
-            mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
-            dbp = da.from_array(np.asarray(p), chunks=1000) 
-            #del p  
-            dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #.astype('float32')
-            del dbp
+            complete=0
+            while complete==0:
+               try:
+                  #dask implementation
+                  dat = da.from_array(toproc[:,:2].astype('float64'), chunks=1000)
+                  mytree = KDTree(dat, leafsize=len(dat)/100) # adding this leafsize option speeds up considerably
+                  dbp = da.from_array(np.asarray(p), chunks=1000) 
+                  #del p  
+                  dist, indices = mytree.query(dbp.compute(),mxpts, distance_upper_bound=win) #.astype('float32')
+                  del dbp
+                  if 'indices' in locals():
+                     complete=1
+               except:
+                  mxpts = np.max([1,mxpts-2])
+                  print "memory error, using %s max points" % (str(mxpts))         
+
 
       # remove any indices associated with 'inf' distance
       indices = np.squeeze(indices[np.where(np.all(np.isinf(dist),axis=1) ==  False),:])

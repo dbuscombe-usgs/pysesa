@@ -384,10 +384,10 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    #==============================================================================
    print "(1) Reading data from file ..."
    # read in ascii 3-column file containing point cloud data
-   toproc = pysesa.read.txtread(infile)
+   toproc_init = pysesa.read.txtread(infile)
    
-   toproc2 = np.array_split(toproc,10)
-   del toproc
+   toproc2 = np.array_split(toproc_init,10)
+   del toproc_init
 
    counter = 0
    for toproc in toproc2:

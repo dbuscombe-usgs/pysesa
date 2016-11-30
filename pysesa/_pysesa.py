@@ -135,13 +135,13 @@ def get_spec_spat(pts, spectype, out, detrend, res, method, nbin, lentype, taper
 # =========================================================
 # ==================== begin program ======================
 # =========================================================
-def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0): # bp=0
+def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0, nchunks=1): # bp=0
    '''
    Calculate spectral and spatial statistics of a Nx3 point cloud
 
    Syntax
    ----------
-   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap)
+   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
 
    Parameters
    -----------
@@ -187,7 +187,9 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
         4 = Bartlett
    prc_overlap : float, *optional"  [default = 0]
         percentage overlap between windows
-
+   nchunks : int, *optional"  [default = 1]
+        split data into nchunks and process each separately
+        use only if receiving memory errors with very large datasets
 
    Returns [proctype = 1 or proctype = 2]
    ---------------------------------------
@@ -373,6 +375,10 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
       else:
          print 'Bartlett taper'
 
+   if nchunks:
+      nchunks = np.asarray(nchunks,int)
+      print 'Number of chunks to process separately is %s' % (str(nchunks))
+	  
    # start timer
    if os.name=='posix': # true if linux/mac or cygwin on windows
       start1 = time()
@@ -386,10 +392,10 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    # read in ascii 3-column file containing point cloud data
    toproc_init = pysesa.read.txtread(infile)
    
-   toproc2 = np.array_split(toproc_init,10)
+   toproc2 = np.array_split(toproc_init, nchunks)
    del toproc_init
 
-   counter = 0
+   counter = 1
    for toproc in toproc2:
    
       print "Working on chunk %s out of %s chunks ... " % (str(counter), str(len(toproc2)))

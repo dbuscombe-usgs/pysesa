@@ -64,11 +64,13 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
     
 """
 
-__version__ = '0.0.28'
+__version__ = '0.0.29'
 
 #-----------------------------------------------------------------------------
 # Imports
 #-----------------------------------------------------------------------------
+import matplotlib
+matplotlib.use('TKagg')
 
 from pysesa._pysesa import process
 from pysesa.test import *

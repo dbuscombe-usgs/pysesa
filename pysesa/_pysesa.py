@@ -385,145 +385,168 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    print "(1) Reading data from file ..."
    # read in ascii 3-column file containing point cloud data
    toproc = pysesa.read.txtread(infile)
-
-   ## number of points, undecimated
-   orig_pts = len(toproc)
-
-   #==============================================================================
-   print "(2) Partitioning data into windows ... " 
-   # get indices to windows
-   nr_pts = pysesa.partition(toproc, out, mxpts, minpts, prc_overlap).getdata() #res, bp
-
-   #==============================================================================
-   print "(3) Processing in parallel using %s processors ... " % (str(cpu_count()))
-
-   #==============================================================================
-   if (proctype==1) or (proctype==2):
-
-      #spectral, no smooth
-      if proctype==1:
-         try: #parallel processing with all available cores
-            w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
-         except: #fall back to serial
-            w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
-
-      #spectral, with smooth
-      if proctype==2:
-         try: #parallel processing with all available cores
-            w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
-         except: #fall back to serial
-            w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
-
-      try:
-         x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w)
-      except:
-         w2 = []
-         for k in xrange(len(w)):
-            if len(w[k])==27:
-               w2.append(w[k])
-         x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w2)
-         del w2   
-
-      del w
-
-      # combine into single matrix for writing to file
-      towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)),ascol(np.asarray(z)),ascol(np.asarray(slope)),ascol(np.asarray(intercept)),ascol(np.asarray(r_value)),ascol(np.asarray(p_value)),ascol(np.asarray(std_err)),ascol(np.asarray(d)),ascol(np.asarray(l)),ascol(np.asarray(wmax)),ascol(np.asarray(wmean)),ascol(np.asarray(rms1)),ascol(np.asarray(rms2)),ascol(np.asarray(Z)),ascol(np.asarray(E)),ascol(np.asarray(sigma)),ascol(np.asarray(T0_1)),ascol(np.asarray(T0_2)),ascol(np.asarray(sw1)),ascol(np.asarray(sw2)),ascol(np.asarray(m0)),ascol(np.asarray(m1)),ascol(np.asarray(m2)),ascol(np.asarray(m3)),ascol(np.asarray(m4)),ascol(np.asarray(phi)) ))
-
-      del x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi
-
-      # remove rows with any NaNs
-      towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
-
-      # make a header string for the output file
-      header = 'x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi'
-
-   #==============================================================================
-   elif proctype==3: #spatial only
-
-      try: #parallel processing with all available cores
-         w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts))) 
-      except: #fall back to serial
-         w = Parallel(n_jobs=1, verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts)))
-
-      try:
-         x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n = zip(*w)
-      except:
-         w2 = []
-         for k in xrange(len(w)):
-            if len(w[k])==10:
-               w2.append(w[k])
-         x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n = zip(*w2)
-         del w2   
-
-      del w
-
-      # combine into single matrix for writing to file
-      towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)),ascol(np.asarray(z_mean)),ascol(np.asarray(z_max)),ascol(np.asarray(z_min)),ascol(np.asarray(z_range)),ascol(np.asarray(sigma)),ascol(np.asarray(skewness)),ascol(np.asarray(kurtosis)), ascol(np.asarray(n)) ))
-
-      del x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n 
-
-      # remove rows with any NaNs
-      towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
-
-      # make a header string for the output file
-      header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n'
-
-   #==============================================================================
-   elif (proctype==4) or (proctype==5): #spectral and spatial
-
-      #spatial + spectral, no smooth
-      if proctype==4:
-         try: #parallel processing with all available cores
-            w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
-         except: #fall back to serial
-            w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
-
-      #spatial + spectral, with smooth
-      if proctype==5:
-         try: #parallel processing with all available cores
-            w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
-         except: #fall back to serial
-            w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
-
-      try:
-         x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w)
-      except:
-         w2 = []
-         for k in xrange(len(w)):
-            if len(w[k])==34:
-               w2.append(w[k])
-         x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w2)
-         del w2   
-
-      del w
-
-      # combine into single matrix for writing to file
-      towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)), ascol(np.asarray(z_mean)),ascol(np.asarray(z_max)),ascol(np.asarray(z_min)),ascol(np.asarray(z_range)),ascol(np.asarray(sigma)),ascol(np.asarray(skewness)),ascol(np.asarray(kurtosis)), ascol(np.asarray(n)), ascol(np.asarray(slope)),ascol(np.asarray(intercept)),ascol(np.asarray(r_value)),ascol(np.asarray(p_value)),ascol(np.asarray(std_err)),ascol(np.asarray(d)),ascol(np.asarray(l)),ascol(np.asarray(wmax)),ascol(np.asarray(wmean)),ascol(np.asarray(rms1)),ascol(np.asarray(rms2)),ascol(np.asarray(Z)),ascol(np.asarray(E)),ascol(np.asarray(sigma)),ascol(np.asarray(T0_1)),ascol(np.asarray(T0_2)),ascol(np.asarray(sw1)),ascol(np.asarray(sw2)),ascol(np.asarray(m0)),ascol(np.asarray(m1)),ascol(np.asarray(m2)),ascol(np.asarray(m3)),ascol(np.asarray(m4)),ascol(np.asarray(phi)) ))
-
-      del x, y, z_mean, z_max, z_min, z_range,  skewness, kurtosis, n #,sigma 
-      del slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi
-
-      # remove rows with any NaNs
-      towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
-
-      # make a header string for the output file
-      header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi'
-
-
-   #==============================================================================
-   print "(4) Writing data to file ..."
-
-   # create a string for the output file
-   outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'.xyz' 
-
-   try:
-      # write the data to the file
-      pysesa.write.txtwrite(outfile, towrite, header)
    
-   except:
-      with open(outfile, 'wb') as f:
-         np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) 
+   toproc2 = np.array_split(toproc,10)
+   del toproc
 
+   counter = 0
+   for toproc in toproc2:
+   
+      print "Working on chunk %s out of %s chunks ... " % (str(counter), str(len(toproc2)))
+      counter += 1
+ 
+      ## number of points, undecimated
+      orig_pts = len(toproc)
+
+      #==============================================================================
+      print "(2) Partitioning data into windows ... " 
+      # get indices to windows
+      nr_pts = pysesa.partition(toproc, out, mxpts, minpts, prc_overlap).getdata() #res, bp
+
+      #==============================================================================
+      print "(3) Processing in parallel using %s processors ... " % (str(cpu_count()))
+
+	  TOWRITE = []
+	  
+      #==============================================================================
+      if (proctype==1) or (proctype==2):
+
+		  #spectral, no smooth
+		  if proctype==1:
+			 try: #parallel processing with all available cores
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+			 except: #fall back to serial
+				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
+
+		  #spectral, with smooth
+		  if proctype==2:
+			 try: #parallel processing with all available cores
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+			 except: #fall back to serial
+				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
+
+		  try:
+			 x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w)
+		  except:
+			 w2 = []
+			 for k in xrange(len(w)):
+				if len(w[k])==27:
+				   w2.append(w[k])
+			 x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w2)
+			 del w2   
+
+		  del w
+
+		  # combine into single matrix for writing to file
+		  towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)),ascol(np.asarray(z)),ascol(np.asarray(slope)),ascol(np.asarray(intercept)),ascol(np.asarray(r_value)),ascol(np.asarray(p_value)),ascol(np.asarray(std_err)),ascol(np.asarray(d)),ascol(np.asarray(l)),ascol(np.asarray(wmax)),ascol(np.asarray(wmean)),ascol(np.asarray(rms1)),ascol(np.asarray(rms2)),ascol(np.asarray(Z)),ascol(np.asarray(E)),ascol(np.asarray(sigma)),ascol(np.asarray(T0_1)),ascol(np.asarray(T0_2)),ascol(np.asarray(sw1)),ascol(np.asarray(sw2)),ascol(np.asarray(m0)),ascol(np.asarray(m1)),ascol(np.asarray(m2)),ascol(np.asarray(m3)),ascol(np.asarray(m4)),ascol(np.asarray(phi)) ))
+
+		  del x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi
+
+		  # remove rows with any NaNs
+		  towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
+		  
+		  TOWRITE.append(towrite)
+		  del towrite
+
+		  # make a header string for the output file
+		  header = 'x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi'
+
+      #==============================================================================
+      elif proctype==3: #spatial only
+
+		  try: #parallel processing with all available cores
+			 w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts))) 
+		  except: #fall back to serial
+			 w = Parallel(n_jobs=1, verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts)))
+
+		  try:
+			 x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n = zip(*w)
+		  except:
+			 w2 = []
+			 for k in xrange(len(w)):
+				if len(w[k])==10:
+				   w2.append(w[k])
+			 x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n = zip(*w2)
+			 del w2   
+
+		  del w
+
+		  # combine into single matrix for writing to file
+		  towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)),ascol(np.asarray(z_mean)),ascol(np.asarray(z_max)),ascol(np.asarray(z_min)),ascol(np.asarray(z_range)),ascol(np.asarray(sigma)),ascol(np.asarray(skewness)),ascol(np.asarray(kurtosis)), ascol(np.asarray(n)) ))
+
+		  del x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n 
+
+		  # remove rows with any NaNs
+		  towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
+
+		  TOWRITE.append(towrite)
+		  del towrite
+		  
+		  # make a header string for the output file
+		  header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n'
+
+      #==============================================================================
+      elif (proctype==4) or (proctype==5): #spectral and spatial
+
+		  #spatial + spectral, no smooth
+		  if proctype==4:
+			 try: #parallel processing with all available cores
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+			 except: #fall back to serial
+				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
+
+		  #spatial + spectral, with smooth
+		  if proctype==5:
+			 try: #parallel processing with all available cores
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+			 except: #fall back to serial
+				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
+
+		  try:
+			 x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w)
+		  except:
+			 w2 = []
+			 for k in xrange(len(w)):
+				if len(w[k])==34:
+				   w2.append(w[k])
+			 x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w2)
+			 del w2   
+
+		  del w
+
+		  # combine into single matrix for writing to file
+		  towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)), ascol(np.asarray(z_mean)),ascol(np.asarray(z_max)),ascol(np.asarray(z_min)),ascol(np.asarray(z_range)),ascol(np.asarray(sigma)),ascol(np.asarray(skewness)),ascol(np.asarray(kurtosis)), ascol(np.asarray(n)), ascol(np.asarray(slope)),ascol(np.asarray(intercept)),ascol(np.asarray(r_value)),ascol(np.asarray(p_value)),ascol(np.asarray(std_err)),ascol(np.asarray(d)),ascol(np.asarray(l)),ascol(np.asarray(wmax)),ascol(np.asarray(wmean)),ascol(np.asarray(rms1)),ascol(np.asarray(rms2)),ascol(np.asarray(Z)),ascol(np.asarray(E)),ascol(np.asarray(sigma)),ascol(np.asarray(T0_1)),ascol(np.asarray(T0_2)),ascol(np.asarray(sw1)),ascol(np.asarray(sw2)),ascol(np.asarray(m0)),ascol(np.asarray(m1)),ascol(np.asarray(m2)),ascol(np.asarray(m3)),ascol(np.asarray(m4)),ascol(np.asarray(phi)) ))
+
+		  del x, y, z_mean, z_max, z_min, z_range,  skewness, kurtosis, n #,sigma 
+		  del slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi
+
+		  # remove rows with any NaNs
+		  towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
+		  
+		  TOWRITE.append(towrite)
+		  del towrite
+		  
+		  # make a header string for the output file
+		  header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi'
+
+      towrite = np.hstack(TOWRITE)
+	  
+      #==============================================================================
+      print "(4) Writing data to file ..."
+
+      # create a string for the output file
+      outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'.xyz' 
+
+      try:
+         # write the data to the file
+         pysesa.write.txtwrite(outfile, towrite, header)
+   
+      except:
+         with open(outfile, 'wb') as f:
+            np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) 
+
+			
+			
    # stop the clock
    if os.name=='posix': # true if linux/mac
       elapsed = (time() - start1)

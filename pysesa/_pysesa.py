@@ -405,7 +405,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 
       #==============================================================================
       print "(3) Processing in parallel using %s processors ... " % (str(cpu_count()))
-
+	  
 	  TOWRITE = []
 	  
       #==============================================================================

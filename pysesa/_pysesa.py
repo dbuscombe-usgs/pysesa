@@ -384,7 +384,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 	  
    if filt:
       filt = np.asarray(filt,int)
-	  if filt==1:
+      if filt==1:
          print 'Point cloud will be filtered'
 	  	  
    # start timer

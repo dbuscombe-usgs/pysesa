@@ -430,7 +430,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    del toproc_init
 
    ## number of points, undecimated
-   orig_pts = len(toproc2)
+   orig_pts = len(np.hstack(toproc2))
 
    counter = 1
    for toproc in toproc2:
@@ -584,7 +584,21 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
          with open(outfile, 'wb') as f:
             np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1])
 
+      x = np.copy(towrite)[6:,:]
+      x_normed = (x - x.min(1)) / x.ptp(1)
+	  towrite2 = np.hstack((towrite[:6,:], x_normed))
+	  
+	  outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'_norm.xyz'
 
+      try:
+         # write the data to the file
+         pysesa.write.txtwrite(outfile, towrite2, header)
+
+      except:
+         with open(outfile, 'wb') as f:
+            np.savetxt(f, towrite2[np.where(towrite2[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite2)[1])[:-1])
+	  
+			
    # stop the clock
    if os.name=='posix': # true if linux/mac
       elapsed = (time() - start1)

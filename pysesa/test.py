@@ -121,14 +121,14 @@ def test():
    nchunks = 1 # split data into nchunks
    filt = 0 #no filter
 
-   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
+   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks, filt)
 
    # work on the 2,000,000 point data set
    infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_2000000pts.xyz'
    nchunks = 2 # split data into nchunks
    filt = 1 #apply filter
 
-   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
+   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks, filt)
 
 if __name__ == '__main__':
    test()

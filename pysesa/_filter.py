@@ -93,4 +93,4 @@ def filt_stdev(coords, k=3, std_dev=2):
    distance_threshold = mean + std_dev * stddev
    idx = np.nonzero(distances < distance_threshold)
 
-   return np.copy(coords[idx])
+   return idx, np.copy(coords[idx])

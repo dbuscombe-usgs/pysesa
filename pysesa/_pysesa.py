@@ -408,23 +408,22 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    #==============================================================================
    # if requested, filter data
    if filt==1:
-       from pysesa.filter import filt_stdev
        print "(1b) Filtering data ..."
-       print "Size of original data: %s" % (str(len(toproc_init))
+       print "Size of original data: %s" % (str(len(toproc_init)))
        # initial pass
-       toproc_init_f = filt_stdev(toproc_init, k = k, std_dev = std_dev)
+       _, toproc_init_f = pysesa.filter.filt_stdev(toproc_init, k = k, std_dev = std_dev)
        del toproc_init
        #iterate through n_iter to refine filtering
        for nn in range(n_iter):
-           toproc_init_f = filt_stdev(toproc_init_f, k = k, std_dev = std_dev)
-           toproc_init = np.copy(toproc_init_f)
-           del toproc_init_f
-       print "Size of filtered data: %s" % (str(len(toproc_init))
+           _, toproc_init_f = pysesa.filter.filt_stdev(toproc_init_f, k = k, std_dev = std_dev)
+       toproc_init = np.copy(toproc_init_f)
+       del toproc_init_f
+       print "Size of filtered data: %s" % (str(len(toproc_init)))
 
        infile = infile.split('.')[-2]+'_filt.xyz'
        print "Writing filtered data to file: "+infile
        with open(infile, 'wb') as f:
-          np.savetxt(f, toproc_init[np.where(toproc_init[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(toproc_init)[1])[:-1])
+          np.savetxt(f, toproc_init[np.where(toproc_init[:,-1])[0],:], fmt=' '.join(['%8.6f,'] * np.shape(toproc_init)[1])[:-1])
 
    #==============================================================================
    toproc2 = np.array_split(toproc_init, nchunks)

@@ -1,13 +1,13 @@
-## PySESA (Python program for Spatially Explicit Spectral Analysis) 
+## PySESA (Python program for Spatially Explicit Spectral Analysis)
 ## has been developed at the Grand Canyon Monitoring & Research Center,
 ## U.S. Geological Survey
 ##
 ## Author: Daniel Buscombe
 ## Project homepage: <https://github.com/dbuscombe-usgs/pysesa>
 ##
-##This software is in the public domain because it contains materials that originally came from 
-##the United States Geological Survey, an agency of the United States Department of Interior. 
-##For more information, see the official USGS copyright policy at 
+##This software is in the public domain because it contains materials that originally came from
+##the United States Geological Survey, an agency of the United States Department of Interior.
+##For more information, see the official USGS copyright policy at
 ##http://www.usgs.gov/visual-id/credit_usgs.html#copyright
 ##
 ## This program is free software: you can redistribute it and/or modify
@@ -26,14 +26,14 @@
 """
 PySESA - a Python framework for Spatially Explicit Spectral Analysis
 
-PySESA is an open-source project dedicated to provide a generic Python framework 
-for spatially explicit statistical analyses of point clouds and other geospatial data, 
+PySESA is an open-source project dedicated to provide a generic Python framework
+for spatially explicit statistical analyses of point clouds and other geospatial data,
 in the spatial and frequency domains, for use in the geosciences
 
 The program is detailed in:
    Buscombe, D. (2016) "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", 86, 92-108, 10.1016/j.cageo.2015.10.004.
 
-:Author:  
+:Author:
     Daniel Buscombe
     Grand Canyon Monitoring and Research Center
     United States Geological Survey
@@ -45,22 +45,22 @@ For more information visit http://dbuscombe-usgs.github.io/pysesa/
 :install:
     python setup.py install
     sudo python setup.py install
-    
+
 :test:
     python -c "import pysesa; pysesa.test()"
 
 :license:
     GNU Lesser General Public License, Version 3
     (http://www.gnu.org/copyleft/lesser.html)
-    
+
     This software is in the public domain because it contains materials that
     originally came from the United States Geological Survey, an agency of the
-    United States Department of Interior. For more information, 
+    United States Department of Interior. For more information,
     see the official USGS copyright policy at
     http://www.usgs.gov/visual-id/credit_usgs.html#copyright
-    Any use of trade, product, or firm names is for descriptive purposes only 
+    Any use of trade, product, or firm names is for descriptive purposes only
     and does not imply endorsement by the U.S. government.
-    
+
 """
 
 # =========================================================
@@ -102,12 +102,12 @@ def get_spec(pts, spectype, out, detrend, res, method, nbin, lentype, taper):
    call the spectral analysis routine for detrended window of point cloud
    Gets called by the parallel processing queue
    '''
-   try:   
+   try:
       pts = pysesa.detrend(pts, detrend, res, method).getdata()
       return pysesa.spatial(pts).getcentroid() + pysesa.spectral(pts, nbin, res, spectype, lentype, taper, method).getdata()
    except:
       return [np.ones(27)*np.nan]
-      
+
 #==================================================
 def get_spat(pts, detrend, res, method):
    '''
@@ -119,7 +119,7 @@ def get_spat(pts, detrend, res, method):
       return pysesa.spatial(pts).getdata()
    except:
       return [np.ones(10)*np.nan]
-      
+
 #==================================================
 def get_spec_spat(pts, spectype, out, detrend, res, method, nbin, lentype, taper):
    '''
@@ -193,7 +193,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    filt : int, *optional"  [default = 0]
         if filt==1, point cloud will be filtered prior to analysis
         using a simple thresholded standard deviation approach
-		
+
    Returns [proctype = 1 or proctype = 2]
    ---------------------------------------
    data: list
@@ -216,7 +216,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
         sigma = RMS amplitude
         T0_1 = average spatial period (m_0/m_1)
         T0_2 = average spatial period (m_0/m_2)^0.5
-        sw1 = spectral width 
+        sw1 = spectral width
         sw2 = spectral width (normalised radius of gyration)
         m0 = zeroth moment of spectrum
         m1 = first moment of spectrum
@@ -269,7 +269,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
         sigma = RMS amplitude
         T0_1 = average spatial period (m_0/m_1)
         T0_2 = average spatial period (m_0/m_2)^0.5
-        sw1 = spectral width 
+        sw1 = spectral width
         sw2 = spectral width (normalised radius of gyration)
         m0 = zeroth moment of spectrum
         m1 = first moment of spectrum
@@ -281,12 +281,12 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    '''
 
    print """
-       ..  _ __  _   _   ___  ___  ___  __ _ 
+       ..  _ __  _   _   ___  ___  ___  __ _
        .. | '_ \| | | | / __|/ _ \/ __|/ _` |
        .. | |_) | |_| | \__ \  __/\__ \ (_| |
        .. | .__/ \__, | |___/\___||___/\__,_|
-       .. |_|    |___/ 
-       .. 
+       .. |_|    |___/
+       ..
        .. +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
        .. |b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
        .. +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
@@ -381,12 +381,12 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    if nchunks:
       nchunks = np.asarray(nchunks,int)
       print 'Number of chunks to process separately is %s' % (str(nchunks))
-	  
+
    if filt:
       filt = np.asarray(filt,int)
       if filt==1:
          print 'Point cloud will be filtered'
-	  	  
+
    # start timer
    if os.name=='posix': # true if linux/mac or cygwin on windows
       start1 = time()
@@ -394,7 +394,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
       start1 = clock()
 
    method = 'nearest'
-   
+
    #internal parameters for filtering
    k = 10 #number of neighbours
    std_dev = 2 #standard deviation multiplier
@@ -404,7 +404,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    print "(1) Reading data from file ..."
    # read in ascii 3-column file containing point cloud data
    toproc_init = pysesa.read.txtread(infile)
-   
+
    #==============================================================================
    # if requested, filter data
    if filt==1:
@@ -420,11 +420,11 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 	  toproc_init = np.copy(toproc_init_f)
 	  del toproc_init_f
 	  print "Size of filtered data: %s" % (str(len(toproc_init))
-   
+
       infile = infile.split('.')[-2]+'_filt.xyz'
 	  print "Writing filtered data to file: "+infile
       with open(infile, 'wb') as f:
-         np.savetxt(f, toproc_init[np.where(toproc_init[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(toproc_init)[1])[:-1]) 
+         np.savetxt(f, toproc_init[np.where(toproc_init[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(toproc_init)[1])[:-1])
 
    #==============================================================================   
    toproc2 = np.array_split(toproc_init, nchunks)
@@ -432,36 +432,36 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 
    ## number of points, undecimated
    orig_pts = len(toproc_init)
-	  
+
    counter = 1
    for toproc in toproc2:
-   
+
       print "Working on chunk %s out of %s chunks ... " % (str(counter), str(len(toproc2)))
       counter += 1
 
       #==============================================================================
-      print "(2) Partitioning data into windows ... " 
+      print "(2) Partitioning data into windows ... "
       # get indices to windows
       nr_pts = pysesa.partition(toproc, out, mxpts, minpts, prc_overlap).getdata() #res, bp
 
       #==============================================================================
       print "(3) Processing in parallel using %s processors ... " % (str(cpu_count()))
       TOWRITE = []
-	  
+
       #==============================================================================
       if (proctype==1) or (proctype==2):
 
 		  #spectral, no smooth
 		  if proctype==1:
 			 try: #parallel processing with all available cores
-				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 			 except: #fall back to serial
 				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 
 		  #spectral, with smooth
 		  if proctype==2:
 			 try: #parallel processing with all available cores
-				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 			 except: #fall back to serial
 				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 
@@ -473,7 +473,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 				if len(w[k])==27:
 				   w2.append(w[k])
 			 x, y, z, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w2)
-			 del w2   
+			 del w2
 
 		  del w
 
@@ -484,7 +484,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 
 		  # remove rows with any NaNs
 		  towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
-		  
+
 		  TOWRITE.append(towrite)
 		  del towrite
 
@@ -495,7 +495,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
       elif proctype==3: #spatial only
 
 		  try: #parallel processing with all available cores
-			 w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts))) 
+			 w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts)))
 		  except: #fall back to serial
 			 w = Parallel(n_jobs=1, verbose=0)(delayed(get_spat)(toproc[nr_pts[k],:3], detrend, res, method) for k in xrange(len(nr_pts)))
 
@@ -507,21 +507,21 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 				if len(w[k])==10:
 				   w2.append(w[k])
 			 x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n = zip(*w2)
-			 del w2   
+			 del w2
 
 		  del w
 
 		  # combine into single matrix for writing to file
 		  towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)),ascol(np.asarray(z_mean)),ascol(np.asarray(z_max)),ascol(np.asarray(z_min)),ascol(np.asarray(z_range)),ascol(np.asarray(sigma)),ascol(np.asarray(skewness)),ascol(np.asarray(kurtosis)), ascol(np.asarray(n)) ))
 
-		  del x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n 
+		  del x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n
 
 		  # remove rows with any NaNs
 		  towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
 
 		  TOWRITE.append(towrite)
 		  del towrite
-		  
+
 		  # make a header string for the output file
 		  header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n'
 
@@ -531,14 +531,14 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 		  #spatial + spectral, no smooth
 		  if proctype==4:
 			 try: #parallel processing with all available cores
-				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 			 except: #fall back to serial
 				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 1, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 
 		  #spatial + spectral, with smooth
 		  if proctype==5:
 			 try: #parallel processing with all available cores
-				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts))) 
+				w = Parallel(n_jobs=cpu_count(), verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 			 except: #fall back to serial
 				w = Parallel(n_jobs=1, verbose=0)(delayed(get_spec_spat)(toproc[nr_pts[k],:3], 2, out, detrend, res, method, nbin, lentype, taper) for k in xrange(len(nr_pts)))
 
@@ -550,47 +550,46 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 				if len(w[k])==34:
 				   w2.append(w[k])
 			 x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi = zip(*w2)
-			 del w2   
+			 del w2
 
 		  del w
 
 		  # combine into single matrix for writing to file
 		  towrite = np.hstack(( ascol(np.asarray(x)),ascol(np.asarray(y)), ascol(np.asarray(z_mean)),ascol(np.asarray(z_max)),ascol(np.asarray(z_min)),ascol(np.asarray(z_range)),ascol(np.asarray(sigma)),ascol(np.asarray(skewness)),ascol(np.asarray(kurtosis)), ascol(np.asarray(n)), ascol(np.asarray(slope)),ascol(np.asarray(intercept)),ascol(np.asarray(r_value)),ascol(np.asarray(p_value)),ascol(np.asarray(std_err)),ascol(np.asarray(d)),ascol(np.asarray(l)),ascol(np.asarray(wmax)),ascol(np.asarray(wmean)),ascol(np.asarray(rms1)),ascol(np.asarray(rms2)),ascol(np.asarray(Z)),ascol(np.asarray(E)),ascol(np.asarray(sigma)),ascol(np.asarray(T0_1)),ascol(np.asarray(T0_2)),ascol(np.asarray(sw1)),ascol(np.asarray(sw2)),ascol(np.asarray(m0)),ascol(np.asarray(m1)),ascol(np.asarray(m2)),ascol(np.asarray(m3)),ascol(np.asarray(m4)),ascol(np.asarray(phi)) ))
 
-		  del x, y, z_mean, z_max, z_min, z_range,  skewness, kurtosis, n #,sigma 
+		  del x, y, z_mean, z_max, z_min, z_range,  skewness, kurtosis, n #,sigma
 		  del slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi
 
 		  # remove rows with any NaNs
 		  towrite = towrite[np.where(np.logical_not(np.any(np.isnan(towrite),axis=1)))[0],:]
-		  
+
 		  TOWRITE.append(towrite)
 		  del towrite
-		  
+
 		  # make a header string for the output file
 		  header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi'
 
       towrite = np.hstack(TOWRITE)
-	  
+
       #==============================================================================
       print "(4) Writing data to file ..."
 
       # create a string for the output file
-      outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'.xyz' 
+      outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'.xyz'
 
       try:
          # write the data to the file
          pysesa.write.txtwrite(outfile, towrite, header)
-   
+
       except:
          with open(outfile, 'wb') as f:
-            np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) 
+            np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1])
 
-			
+
    # stop the clock
    if os.name=='posix': # true if linux/mac
       elapsed = (time() - start1)
    else: # windows
       elapsed = (clock() - start1)
 
-   print "Done! %s points decimated to %s points. Program ran for %s seconds" % (str(orig_pts), str(len(towrite)), str(elapsed))        
-
+   print "Done! %s points decimated to %s points. Program ran for %s seconds" % (str(orig_pts), str(len(towrite)), str(elapsed))

@@ -135,13 +135,13 @@ def get_spec_spat(pts, spectype, out, detrend, res, method, nbin, lentype, taper
 # =========================================================
 # ==================== begin program ======================
 # =========================================================
-def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0, nchunks=1): # bp=0
+def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20, lentype=1, minpts=64, taper=1, prc_overlap=0, nchunks=1, filt=0): # bp=0
    '''
    Calculate spectral and spatial statistics of a Nx3 point cloud
 
    Syntax
    ----------
-   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
+   () = pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks, filt)
 
    Parameters
    -----------
@@ -190,7 +190,10 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    nchunks : int, *optional"  [default = 1]
         split data into nchunks and process each separately
         use only if receiving memory errors with very large datasets
-
+   filt : int, *optional"  [default = 0]
+        if filt==1, point cloud will be filtered prior to analysis
+        using a simple thresholded standard deviation approach
+		
    Returns [proctype = 1 or proctype = 2]
    ---------------------------------------
    data: list
@@ -379,6 +382,11 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
       nchunks = np.asarray(nchunks,int)
       print 'Number of chunks to process separately is %s' % (str(nchunks))
 	  
+   if filt:
+      filt = np.asarray(filt,int)
+	  if filt==1:
+         print 'Point cloud will be filtered'
+	  	  
    # start timer
    if os.name=='posix': # true if linux/mac or cygwin on windows
       start1 = time()
@@ -386,23 +394,50 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
       start1 = clock()
 
    method = 'nearest'
+   
+   #internal parameters for filtering
+   k = 10 #number of neighbours
+   std_dev = 2 #standard deviation multiplier
+   n_iter = 2 #number of iterations
 
    #==============================================================================
    print "(1) Reading data from file ..."
    # read in ascii 3-column file containing point cloud data
    toproc_init = pysesa.read.txtread(infile)
    
+   #==============================================================================
+   # if requested, filter data
+   if filt==1:
+      from pysesa.filter import filt_stdev
+      print "(1b) Filtering data ..."
+	  print "Size of original data: %s" % (str(len(toproc_init))
+	  # initial pass
+      _, toproc_init_f = filt_stdev(toproc_init, k = k, std_dev = std_dev)
+	  del toproc_init
+	  #iterate through n_iter to refine filtering
+	  for nn in range(n_iter):
+	     _, toproc_init_f = filt_stdev(toproc_init_f, k = k, std_dev = std_dev)
+	  toproc_init = np.copy(toproc_init_f)
+	  del toproc_init_f
+	  print "Size of filtered data: %s" % (str(len(toproc_init))
+   
+      infile = infile.split('.')[-2]+'_filt.xyz'
+	  print "Writing filtered data to file: "+infile
+      with open(infile, 'wb') as f:
+         np.savetxt(f, toproc_init[np.where(toproc_init[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(toproc_init)[1])[:-1]) 
+
+   #==============================================================================   
    toproc2 = np.array_split(toproc_init, nchunks)
    del toproc_init
 
+   ## number of points, undecimated
+   orig_pts = len(toproc_init)
+	  
    counter = 1
    for toproc in toproc2:
    
       print "Working on chunk %s out of %s chunks ... " % (str(counter), str(len(toproc2)))
       counter += 1
- 
-      ## number of points, undecimated
-      orig_pts = len(toproc)
 
       #==============================================================================
       print "(2) Partitioning data into windows ... " 
@@ -550,7 +585,6 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
          with open(outfile, 'wb') as f:
             np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1]) 
 
-			
 			
    # stop the clock
    if os.name=='posix': # true if linux/mac

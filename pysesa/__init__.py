@@ -86,4 +86,6 @@ from pysesa.detrend import detrend
 
 from pysesa.plot import plot
 
+import pysesa.filter
+
 

@@ -105,7 +105,7 @@ def test():
    dircopy(pysesa.__path__[0], os.path.expanduser("~")+os.sep+'pysesa_test')
    shutil.copy(pysesa.__path__[0]+os.sep+'example_100000pts.xyz', os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz')
 
-   # general settings   
+   # work on the 100,000 point data set
    infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
 
    out = 0.5 #m output grid
@@ -119,9 +119,17 @@ def test():
    prc_overlap = 100 # 300% overlap between successive windows
    minpts = 32 # min pts per window
    nchunks = 1 # split data into nchunks
+   filt = 0 #no filter
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
 
+   # work on the 1,000,000 point data set
+   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_1000000pts.xyz' 
+   nchunks = 2 # split data into nchunks
+   filt = 1 #apply filter
+   
+   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)   
+   
 if __name__ == '__main__':
    test()
 

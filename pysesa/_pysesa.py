@@ -412,11 +412,11 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
        print "(1b) Filtering data ..."
        print "Size of original data: %s" % (str(len(toproc_init))
        # initial pass
-       _, toproc_init_f = filt_stdev(toproc_init, k = k, std_dev = std_dev)
+       toproc_init_f = filt_stdev(toproc_init, k = k, std_dev = std_dev)
        del toproc_init
        #iterate through n_iter to refine filtering
        for nn in range(n_iter):
-           _, toproc_init_f = filt_stdev(toproc_init_f, k = k, std_dev = std_dev)
+           toproc_init_f = filt_stdev(toproc_init_f, k = k, std_dev = std_dev)
            toproc_init = np.copy(toproc_init_f)
            del toproc_init_f
        print "Size of filtered data: %s" % (str(len(toproc_init))

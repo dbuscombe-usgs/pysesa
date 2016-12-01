@@ -1,13 +1,13 @@
-## PySESA (Python program for Spatially Explicit Spectral Analysis) 
+## PySESA (Python program for Spatially Explicit Spectral Analysis)
 ## has been developed at the Grand Canyon Monitoring & Research Center,
 ## U.S. Geological Survey
 ##
 ## Author: Daniel Buscombe
 ## Project homepage: <https://github.com/dbuscombe-usgs/pysesa>
 ##
-##This software is in the public domain because it contains materials that originally came from 
-##the United States Geological Survey, an agency of the United States Department of Interior. 
-##For more information, see the official USGS copyright policy at 
+##This software is in the public domain because it contains materials that originally came from
+##the United States Geological Survey, an agency of the United States Department of Interior.
+##For more information, see the official USGS copyright policy at
 ##http://www.usgs.gov/visual-id/credit_usgs.html#copyright
 ##
 ## This program is free software: you can redistribute it and/or modify
@@ -24,11 +24,11 @@
 ## along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #"""
-# ___      ___ ___ ___   _     _   _ 
+# ___      ___ ___ ___   _     _   _
 #| _ \_  _/ __| __/ __| /_\   (_) (_)
-#|  _/ || \__ \ _|\__ \/ _ \   _   _ 
+#|  _/ || \__ \ _|\__ \/ _ \   _   _
 #|_|  \_, |___/___|___/_/ \_\ (_) (_)
-#     |__/                           
+#     |__/
 
 #+-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+-+-+
 #|b|y| |D|a|n|i|e|l| |B|u|s|c|o|m|b|e|
@@ -65,14 +65,14 @@ def test():
    """
    PySESA - a Python framework for Spatially Explicit Spectral Analysis
 
-   PySESA is an open-source project dedicated to provide a generic Python framework 
-   for spatially explicit statistical analyses of point clouds and other geospatial data, 
+   PySESA is an open-source project dedicated to provide a generic Python framework
+   for spatially explicit statistical analyses of point clouds and other geospatial data,
    in the spatial and frequency domains, for use in the geosciences
 
    The program is detailed in:
    Buscombe, D. (2016) "Computational considerations for spatially explicit spectral analysis of point clouds and geospatial data", 86, 92-108, 10.1016/j.cageo.2015.10.004.
 
-   :Author:  
+   :Author:
        Daniel Buscombe
        Grand Canyon Monitoring and Research Center
        United States Geological Survey
@@ -84,29 +84,29 @@ def test():
    :install:
        python setup.py install
        sudo python setup.py install
-    
+
    :test:
        python -c "import pysesa; pysesa.test()"
 
    :license:
        GNU Lesser General Public License, Version 3
        (http://www.gnu.org/copyleft/lesser.html)
-    
+
        This software is in the public domain because it contains materials that
        originally came from the United States Geological Survey, an agency of the
-       United States Department of Interior. For more information, 
+       United States Department of Interior. For more information,
        see the official USGS copyright policy at
        http://www.usgs.gov/visual-id/credit_usgs.html#copyright
-       Any use of trade, product, or firm names is for descriptive purposes only 
+       Any use of trade, product, or firm names is for descriptive purposes only
        and does not imply endorsement by the U.S. government.
-    
+
    """
    # copy files over to somewhere read/writeable
    dircopy(pysesa.__path__[0], os.path.expanduser("~")+os.sep+'pysesa_test')
    shutil.copy(pysesa.__path__[0]+os.sep+'example_100000pts.xyz', os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz')
 
    # work on the 100,000 point data set
-   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz' 
+   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_100000pts.xyz'
 
    out = 0.5 #m output grid
    detrend = 4 #ODR plane
@@ -123,14 +123,12 @@ def test():
 
    pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
 
-   # work on the 1,000,000 point data set
-   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_1000000pts.xyz' 
+   # work on the 2,000,000 point data set
+   infile = os.path.expanduser("~")+os.sep+'pysesa_test'+os.sep+'example_2000000pts.xyz'
    nchunks = 2 # split data into nchunks
    filt = 1 #apply filter
-   
-   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)   
-   
+
+   pysesa.process(infile, out, detrend, proctype, mxpts, res, nbin, lentype, minpts, taper, prc_overlap, nchunks)
+
 if __name__ == '__main__':
    test()
-
-

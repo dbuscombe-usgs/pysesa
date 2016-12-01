@@ -430,7 +430,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    del toproc_init
 
    ## number of points, undecimated
-   orig_pts = len(toproc_init)
+   orig_pts = len(toproc2)
 
    counter = 1
    for toproc in toproc2:

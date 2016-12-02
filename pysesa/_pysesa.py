@@ -80,6 +80,7 @@ np.seterr(over='ignore')
 np.seterr(under='ignore')
 
 import pysesa
+from scipy.stats import boxcox
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -585,6 +586,13 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
             np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1])
 
       x = np.copy(towrite)[:,6:]
+      for nn in range(np.shape(x)[1]):
+         try:
+            x[:,nn] = boxcox(1+x[:,nn])[0]
+         except:
+            x[:,nn] = boxcox(100+x[:,nn])[0]
+
+
       x_normed = (x - x.min(0)) / x.ptp(0)
       towrite2 = np.hstack((towrite[:,:6], x_normed))
       outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'_norm1.xyz'

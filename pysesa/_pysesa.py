@@ -80,7 +80,6 @@ np.seterr(over='ignore')
 np.seterr(under='ignore')
 
 import pysesa
-from scipy.stats import boxcox
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -431,7 +430,9 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
    del toproc_init
 
    ## number of points, undecimated
-   orig_pts = len(np.vstack(toproc2))
+   orig_pts = len(np.hstack(toproc2))
+
+   TOWRITE = []
 
    counter = 1
    for toproc in toproc2:
@@ -446,7 +447,6 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 
       #==============================================================================
       print "(3) Processing in parallel using %s processors ... " % (str(cpu_count()))
-      TOWRITE = []
 
       #==============================================================================
       if (proctype==1) or (proctype==2):
@@ -571,51 +571,43 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 
       towrite = np.hstack(TOWRITE)
 
-      #==============================================================================
-      print "(4) Writing data to file ..."
+   #==============================================================================
+   print "(4) Writing data to file ..."
 
-      # create a string for the output file
-      outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'.xyz'
+   # create a string for the output file
+   outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'.xyz'
 
-      try:
-         # write the data to the file
-         pysesa.write.txtwrite(outfile, towrite, header)
+   try:
+      # write the data to the file
+      pysesa.write.txtwrite(outfile, towrite, header)
 
-      except:
-         with open(outfile, 'wb') as f:
-            np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1])
+   except:
+      with open(outfile, 'wb') as f:
+      np.savetxt(f, towrite[np.where(towrite[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite)[1])[:-1])
 
-      x = np.copy(towrite)[:,6:]
-      for nn in range(np.shape(x)[1]):
-         try:
-            x[:,nn] = boxcox(1+x[:,nn])[0]
-         except:
-            x[:,nn] = boxcox(100+x[:,nn])[0]
+   x = np.copy(towrite)[:,6:]
+   x_normed = (x - x.min(0)) / x.ptp(0)
+   towrite2 = np.hstack((towrite[:,:6], x_normed))
+   outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'_norm1.xyz'
 
+   try:
+      # write the data to the file
+      pysesa.write.txtwrite(outfile, towrite2, header)
 
-      x_normed = (x - x.min(0)) / x.ptp(0)
-      towrite2 = np.hstack((towrite[:,:6], x_normed))
-      outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'_norm1.xyz'
+   except:
+      with open(outfile, 'wb') as f:
+         np.savetxt(f, towrite2[np.where(towrite2[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite2)[1])[:-1])
 
-      try:
-         # write the data to the file
-         pysesa.write.txtwrite(outfile, towrite2, header)
+   towrite2 = np.hstack((towrite[:,:6], x_normed*255))
+   outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'_norm255.xyz'
 
-      except:
-         with open(outfile, 'wb') as f:
-            np.savetxt(f, towrite2[np.where(towrite2[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite2)[1])[:-1])
+   try:
+      # write the data to the file
+      pysesa.write.txtwrite(outfile, towrite2, header)
 
-      towrite2 = np.hstack((towrite[:,:6], x_normed*255))
-      outfile = infile+'_zstat_detrend'+str(detrend)+'_outres'+str(out)+'_proctype'+str(proctype)+'_mxpts'+str(mxpts)+'_minpts'+str(minpts)+'_norm255.xyz'
-
-      try:
-         # write the data to the file
-         pysesa.write.txtwrite(outfile, towrite2, header)
-
-      except:
-         with open(outfile, 'wb') as f:
-            np.savetxt(f, towrite2[np.where(towrite2[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite2)[1])[:-1])
-
+   except:
+      with open(outfile, 'wb') as f:
+         np.savetxt(f, towrite2[np.where(towrite2[:,-1])[0],:], header = header, fmt=' '.join(['%8.6f,'] * np.shape(towrite2)[1])[:-1])
 
    # stop the clock
    if os.name=='posix': # true if linux/mac

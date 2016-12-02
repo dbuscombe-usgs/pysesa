@@ -569,7 +569,7 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 		  # make a header string for the output file
 		  header = 'x, y, z_mean, z_max, z_min, z_range, sigma, skewness, kurtosis, n, slope, intercept, r_value, p_value, std_err, d, l, wmax, wmean, rms1, rms2, Z, E, sigma, T0_1, T0_2, sw1, sw2, m0, m1, m2, m3, m4, phi'
 
-   towrite = np.hstack(TOWRITE)
+   towrite = np.vstack(TOWRITE)
 
    #==============================================================================
    print "(4) Writing data to file ..."

@@ -402,8 +402,14 @@ def process(infile, out=1, detrend=4, proctype=1, mxpts=1024, res=0.05, nbin=20,
 
    #==============================================================================
    print "(1) Reading data from file ..."
-   # read in ascii 3-column file containing point cloud data
-   toproc_init = pysesa.read.txtread(infile)
+   
+   # check first for laz/las format
+   if 'las' in infile[-3:]:
+      toproc_init = pysesa.read.lasread(infile)
+   elif 'laz' in infile[-3:]:
+      toproc_init = pysesa.read.lasread(infile)
+   else: # read in ascii 3-column file containing point cloud data
+      toproc_init = pysesa.read.txtread(infile)
 
    #==============================================================================
    # if requested, filter data

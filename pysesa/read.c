@@ -266,8 +266,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__pysesa___read
-#define __PYX_HAVE_API__pysesa___read
+#define __PYX_HAVE__pysesa__read
+#define __PYX_HAVE_API__pysesa__read
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
@@ -510,7 +510,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "pysesa/_read.pyx",
+  "pysesa/read.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -1271,14 +1271,14 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'pysesa._read' */
-static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *, int __pyx_skip_dispatch); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *, int __pyx_skip_dispatch); /*proto*/
+/* Module declarations from 'pysesa.read' */
+static PyArrayObject *__pyx_f_6pysesa_4read_lasread(PyObject *, int __pyx_skip_dispatch); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_4read_txtread(PyObject *, int __pyx_skip_dispatch); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float32_t = { "float32_t", NULL, sizeof(__pyx_t_5numpy_float32_t), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "pysesa._read"
-int __pyx_module_is_main_pysesa___read = 0;
+#define __Pyx_MODULE_NAME "pysesa.read"
+int __pyx_module_is_main_pysesa__read = 0;
 
-/* Implementation of 'pysesa._read' */
+/* Implementation of 'pysesa.read' */
 static PyObject *__pyx_builtin_open;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
@@ -1320,16 +1320,16 @@ static const char __pyx_k_las_file[] = "las_file";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_laspy_file[] = "laspy.file";
 static const char __pyx_k_splitlines[] = "splitlines";
+static const char __pyx_k_pysesa_read[] = "pysesa.read";
 static const char __pyx_k_x_dimension[] = "x_dimension";
 static const char __pyx_k_y_dimension[] = "y_dimension";
 static const char __pyx_k_z_dimension[] = "z_dimension";
 static const char __pyx_k_RuntimeError[] = "RuntimeError";
-static const char __pyx_k_pysesa__read[] = "pysesa._read";
 static const char __pyx_k_scaled_x_dimension[] = "scaled_x_dimension";
 static const char __pyx_k_scaled_y_dimension[] = "scaled_y_dimension";
 static const char __pyx_k_scaled_z_dimension[] = "scaled_z_dimension";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
-static const char __pyx_k_home_filfy_github_pysesa_pysesa[] = "/home/filfy/github/pysesa/pysesa/_read.pyx";
+static const char __pyx_k_home_filfy_github_pysesa_pysesa[] = "/home/filfy/github/pysesa/pysesa/read.pyx";
 static const char __pyx_k_unknown_dtype_code_in_numpy_pxd[] = "unknown dtype code in numpy.pxd (%d)";
 static const char __pyx_k_Format_string_allocated_too_shor[] = "Format string allocated too short, see comment in numpy.pxd";
 static const char __pyx_k_Non_native_byte_order_not_suppor[] = "Non-native byte order not supported";
@@ -1369,7 +1369,7 @@ static PyObject *__pyx_n_s_np;
 static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_n_s_offset;
 static PyObject *__pyx_n_s_open;
-static PyObject *__pyx_n_s_pysesa__read;
+static PyObject *__pyx_n_s_pysesa_read;
 static PyObject *__pyx_n_s_r;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_rb;
@@ -1387,12 +1387,12 @@ static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_x_dimension;
 static PyObject *__pyx_n_s_y_dimension;
 static PyObject *__pyx_n_s_z_dimension;
-static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_arr); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_read_8lasread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile); /* proto */
-static PyObject *__pyx_pf_6pysesa_5_read_10txtread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile); /* proto */
+static PyObject *__pyx_pf_6pysesa_4read_ascol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_arr); /* proto */
+static PyObject *__pyx_pf_6pysesa_4read_2scaled_x_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file); /* proto */
+static PyObject *__pyx_pf_6pysesa_4read_4scaled_y_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file); /* proto */
+static PyObject *__pyx_pf_6pysesa_4read_6scaled_z_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file); /* proto */
+static PyObject *__pyx_pf_6pysesa_4read_8lasread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile); /* proto */
+static PyObject *__pyx_pf_6pysesa_4read_10txtread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static PyObject *__pyx_int_0;
@@ -1422,7 +1422,7 @@ static PyObject *__pyx_codeobj__21;
 static PyObject *__pyx_codeobj__23;
 static PyObject *__pyx_codeobj__25;
 
-/* "pysesa/_read.pyx":60
+/* "pysesa/read.pyx":60
  * 
  * # ==== functions for rescaling las/laz data
  * def ascol( arr ):             # <<<<<<<<<<<<<<
@@ -1431,21 +1431,21 @@ static PyObject *__pyx_codeobj__25;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_read_1ascol(PyObject *__pyx_self, PyObject *__pyx_v_arr); /*proto*/
-static char __pyx_doc_6pysesa_5_read_ascol[] = "\n    reshapes row matrix to be a column matrix (N,1).\n    ";
-static PyMethodDef __pyx_mdef_6pysesa_5_read_1ascol = {"ascol", (PyCFunction)__pyx_pw_6pysesa_5_read_1ascol, METH_O, __pyx_doc_6pysesa_5_read_ascol};
-static PyObject *__pyx_pw_6pysesa_5_read_1ascol(PyObject *__pyx_self, PyObject *__pyx_v_arr) {
+static PyObject *__pyx_pw_6pysesa_4read_1ascol(PyObject *__pyx_self, PyObject *__pyx_v_arr); /*proto*/
+static char __pyx_doc_6pysesa_4read_ascol[] = "\n    reshapes row matrix to be a column matrix (N,1).\n    ";
+static PyMethodDef __pyx_mdef_6pysesa_4read_1ascol = {"ascol", (PyCFunction)__pyx_pw_6pysesa_4read_1ascol, METH_O, __pyx_doc_6pysesa_4read_ascol};
+static PyObject *__pyx_pw_6pysesa_4read_1ascol(PyObject *__pyx_self, PyObject *__pyx_v_arr) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("ascol (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_read_ascol(__pyx_self, ((PyObject *)__pyx_v_arr));
+  __pyx_r = __pyx_pf_6pysesa_4read_ascol(__pyx_self, ((PyObject *)__pyx_v_arr));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_arr) {
+static PyObject *__pyx_pf_6pysesa_4read_ascol(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_arr) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1458,7 +1458,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_RefNannySetupContext("ascol", 0);
   __Pyx_INCREF(__pyx_v_arr);
 
-  /* "pysesa/_read.pyx":64
+  /* "pysesa/read.pyx":64
  *     reshapes row matrix to be a column matrix (N,1).
  *     '''
  *     if len( arr.shape ) == 1: arr = arr.reshape( ( arr.shape[0], 1 ) )             # <<<<<<<<<<<<<<
@@ -1516,7 +1516,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_sel
     __pyx_t_1 = 0;
   }
 
-  /* "pysesa/_read.pyx":65
+  /* "pysesa/read.pyx":65
  *     '''
  *     if len( arr.shape ) == 1: arr = arr.reshape( ( arr.shape[0], 1 ) )
  *     return arr             # <<<<<<<<<<<<<<
@@ -1528,7 +1528,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_r = __pyx_v_arr;
   goto __pyx_L0;
 
-  /* "pysesa/_read.pyx":60
+  /* "pysesa/read.pyx":60
  * 
  * # ==== functions for rescaling las/laz data
  * def ascol( arr ):             # <<<<<<<<<<<<<<
@@ -1543,7 +1543,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("pysesa._read.ascol", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.ascol", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_arr);
@@ -1552,7 +1552,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "pysesa/_read.pyx":67
+/* "pysesa/read.pyx":67
  *     return arr
  * 
  * def scaled_x_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -1561,20 +1561,20 @@ static PyObject *__pyx_pf_6pysesa_5_read_ascol(CYTHON_UNUSED PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_read_3scaled_x_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file); /*proto*/
-static PyMethodDef __pyx_mdef_6pysesa_5_read_3scaled_x_dimension = {"scaled_x_dimension", (PyCFunction)__pyx_pw_6pysesa_5_read_3scaled_x_dimension, METH_O, 0};
-static PyObject *__pyx_pw_6pysesa_5_read_3scaled_x_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
+static PyObject *__pyx_pw_6pysesa_4read_3scaled_x_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file); /*proto*/
+static PyMethodDef __pyx_mdef_6pysesa_4read_3scaled_x_dimension = {"scaled_x_dimension", (PyCFunction)__pyx_pw_6pysesa_4read_3scaled_x_dimension, METH_O, 0};
+static PyObject *__pyx_pw_6pysesa_4read_3scaled_x_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("scaled_x_dimension (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_read_2scaled_x_dimension(__pyx_self, ((PyObject *)__pyx_v_las_file));
+  __pyx_r = __pyx_pf_6pysesa_4read_2scaled_x_dimension(__pyx_self, ((PyObject *)__pyx_v_las_file));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
+static PyObject *__pyx_pf_6pysesa_4read_2scaled_x_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
   PyObject *__pyx_v_x_dimension = NULL;
   PyObject *__pyx_v_scale = NULL;
   PyObject *__pyx_v_offset = NULL;
@@ -1584,7 +1584,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("scaled_x_dimension", 0);
 
-  /* "pysesa/_read.pyx":68
+  /* "pysesa/read.pyx":68
  * 
  * def scaled_x_dimension(las_file):
  *     x_dimension = las_file.X             # <<<<<<<<<<<<<<
@@ -1596,7 +1596,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   __pyx_v_x_dimension = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":69
+  /* "pysesa/read.pyx":69
  * def scaled_x_dimension(las_file):
  *     x_dimension = las_file.X
  *     scale = las_file.header.scale[0]             # <<<<<<<<<<<<<<
@@ -1614,7 +1614,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   __pyx_v_scale = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":70
+  /* "pysesa/read.pyx":70
  *     x_dimension = las_file.X
  *     scale = las_file.header.scale[0]
  *     offset = las_file.header.offset[0]             # <<<<<<<<<<<<<<
@@ -1632,7 +1632,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   __pyx_v_offset = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":71
+  /* "pysesa/read.pyx":71
  *     scale = las_file.header.scale[0]
  *     offset = las_file.header.offset[0]
  *     return(x_dimension*scale + offset)             # <<<<<<<<<<<<<<
@@ -1649,7 +1649,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_read.pyx":67
+  /* "pysesa/read.pyx":67
  *     return arr
  * 
  * def scaled_x_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -1661,7 +1661,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pysesa._read.scaled_x_dimension", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.scaled_x_dimension", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_x_dimension);
@@ -1672,7 +1672,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "pysesa/_read.pyx":73
+/* "pysesa/read.pyx":73
  *     return(x_dimension*scale + offset)
  * 
  * def scaled_y_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -1681,20 +1681,20 @@ static PyObject *__pyx_pf_6pysesa_5_read_2scaled_x_dimension(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_read_5scaled_y_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file); /*proto*/
-static PyMethodDef __pyx_mdef_6pysesa_5_read_5scaled_y_dimension = {"scaled_y_dimension", (PyCFunction)__pyx_pw_6pysesa_5_read_5scaled_y_dimension, METH_O, 0};
-static PyObject *__pyx_pw_6pysesa_5_read_5scaled_y_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
+static PyObject *__pyx_pw_6pysesa_4read_5scaled_y_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file); /*proto*/
+static PyMethodDef __pyx_mdef_6pysesa_4read_5scaled_y_dimension = {"scaled_y_dimension", (PyCFunction)__pyx_pw_6pysesa_4read_5scaled_y_dimension, METH_O, 0};
+static PyObject *__pyx_pw_6pysesa_4read_5scaled_y_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("scaled_y_dimension (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_read_4scaled_y_dimension(__pyx_self, ((PyObject *)__pyx_v_las_file));
+  __pyx_r = __pyx_pf_6pysesa_4read_4scaled_y_dimension(__pyx_self, ((PyObject *)__pyx_v_las_file));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
+static PyObject *__pyx_pf_6pysesa_4read_4scaled_y_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
   PyObject *__pyx_v_y_dimension = NULL;
   PyObject *__pyx_v_scale = NULL;
   PyObject *__pyx_v_offset = NULL;
@@ -1704,7 +1704,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("scaled_y_dimension", 0);
 
-  /* "pysesa/_read.pyx":74
+  /* "pysesa/read.pyx":74
  * 
  * def scaled_y_dimension(las_file):
  *     y_dimension = las_file.Y             # <<<<<<<<<<<<<<
@@ -1716,7 +1716,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   __pyx_v_y_dimension = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":75
+  /* "pysesa/read.pyx":75
  * def scaled_y_dimension(las_file):
  *     y_dimension = las_file.Y
  *     scale = las_file.header.scale[1]             # <<<<<<<<<<<<<<
@@ -1734,7 +1734,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   __pyx_v_scale = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":76
+  /* "pysesa/read.pyx":76
  *     y_dimension = las_file.Y
  *     scale = las_file.header.scale[1]
  *     offset = las_file.header.offset[1]             # <<<<<<<<<<<<<<
@@ -1752,7 +1752,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   __pyx_v_offset = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":77
+  /* "pysesa/read.pyx":77
  *     scale = las_file.header.scale[1]
  *     offset = las_file.header.offset[1]
  *     return(y_dimension*scale + offset)             # <<<<<<<<<<<<<<
@@ -1769,7 +1769,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_read.pyx":73
+  /* "pysesa/read.pyx":73
  *     return(x_dimension*scale + offset)
  * 
  * def scaled_y_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -1781,7 +1781,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pysesa._read.scaled_y_dimension", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.scaled_y_dimension", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_y_dimension);
@@ -1792,7 +1792,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "pysesa/_read.pyx":79
+/* "pysesa/read.pyx":79
  *     return(y_dimension*scale + offset)
  * 
  * def scaled_z_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -1801,20 +1801,20 @@ static PyObject *__pyx_pf_6pysesa_5_read_4scaled_y_dimension(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_read_7scaled_z_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file); /*proto*/
-static PyMethodDef __pyx_mdef_6pysesa_5_read_7scaled_z_dimension = {"scaled_z_dimension", (PyCFunction)__pyx_pw_6pysesa_5_read_7scaled_z_dimension, METH_O, 0};
-static PyObject *__pyx_pw_6pysesa_5_read_7scaled_z_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
+static PyObject *__pyx_pw_6pysesa_4read_7scaled_z_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file); /*proto*/
+static PyMethodDef __pyx_mdef_6pysesa_4read_7scaled_z_dimension = {"scaled_z_dimension", (PyCFunction)__pyx_pw_6pysesa_4read_7scaled_z_dimension, METH_O, 0};
+static PyObject *__pyx_pw_6pysesa_4read_7scaled_z_dimension(PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("scaled_z_dimension (wrapper)", 0);
-  __pyx_r = __pyx_pf_6pysesa_5_read_6scaled_z_dimension(__pyx_self, ((PyObject *)__pyx_v_las_file));
+  __pyx_r = __pyx_pf_6pysesa_4read_6scaled_z_dimension(__pyx_self, ((PyObject *)__pyx_v_las_file));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
+static PyObject *__pyx_pf_6pysesa_4read_6scaled_z_dimension(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_las_file) {
   PyObject *__pyx_v_z_dimension = NULL;
   PyObject *__pyx_v_scale = NULL;
   PyObject *__pyx_v_offset = NULL;
@@ -1824,7 +1824,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("scaled_z_dimension", 0);
 
-  /* "pysesa/_read.pyx":80
+  /* "pysesa/read.pyx":80
  * 
  * def scaled_z_dimension(las_file):
  *     z_dimension = las_file.Z             # <<<<<<<<<<<<<<
@@ -1836,7 +1836,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   __pyx_v_z_dimension = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":81
+  /* "pysesa/read.pyx":81
  * def scaled_z_dimension(las_file):
  *     z_dimension = las_file.Z
  *     scale = las_file.header.scale[2]             # <<<<<<<<<<<<<<
@@ -1854,7 +1854,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   __pyx_v_scale = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":82
+  /* "pysesa/read.pyx":82
  *     z_dimension = las_file.Z
  *     scale = las_file.header.scale[2]
  *     offset = las_file.header.offset[2]             # <<<<<<<<<<<<<<
@@ -1872,7 +1872,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   __pyx_v_offset = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":83
+  /* "pysesa/read.pyx":83
  *     scale = las_file.header.scale[2]
  *     offset = las_file.header.offset[2]
  *     return(z_dimension*scale + offset)             # <<<<<<<<<<<<<<
@@ -1889,7 +1889,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_read.pyx":79
+  /* "pysesa/read.pyx":79
  *     return(y_dimension*scale + offset)
  * 
  * def scaled_z_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -1901,7 +1901,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pysesa._read.scaled_z_dimension", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.scaled_z_dimension", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_z_dimension);
@@ -1912,7 +1912,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "pysesa/_read.pyx":90
+/* "pysesa/read.pyx":90
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef np.ndarray lasread(str infile):             # <<<<<<<<<<<<<<
@@ -1920,8 +1920,8 @@ static PyObject *__pyx_pf_6pysesa_5_read_6scaled_z_dimension(CYTHON_UNUSED PyObj
  *    Laz/las file x,y,z to numpy array (just for elevation point clouds)
  */
 
-static PyObject *__pyx_pw_6pysesa_5_read_9lasread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *__pyx_v_infile, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_4read_9lasread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_4read_lasread(PyObject *__pyx_v_infile, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_v_inFile = NULL;
   PyArrayObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -1936,7 +1936,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *__pyx_v_infile, C
   PyObject *__pyx_t_9 = NULL;
   __Pyx_RefNannySetupContext("lasread", 0);
 
-  /* "pysesa/_read.pyx":111
+  /* "pysesa/read.pyx":111
  *    '''
  * 
  *    inFile = File(infile, mode='r')             # <<<<<<<<<<<<<<
@@ -1961,7 +1961,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *__pyx_v_infile, C
   __pyx_v_inFile = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "pysesa/_read.pyx":113
+  /* "pysesa/read.pyx":113
  *    inFile = File(infile, mode='r')
  * 
  *    return np.c_[ascol(scaled_x_dimension(inFile)), ascol(scaled_y_dimension(inFile)), ascol(scaled_z_dimension(inFile))].astype('float32')             # <<<<<<<<<<<<<<
@@ -2165,7 +2165,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *__pyx_v_infile, C
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "pysesa/_read.pyx":90
+  /* "pysesa/read.pyx":90
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef np.ndarray lasread(str infile):             # <<<<<<<<<<<<<<
@@ -2184,7 +2184,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *__pyx_v_infile, C
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pysesa._read.lasread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.lasread", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_inFile);
@@ -2194,14 +2194,14 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_lasread(PyObject *__pyx_v_infile, C
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_read_9lasread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
-static char __pyx_doc_6pysesa_5_read_8lasread[] = "\n   Laz/las file x,y,z to numpy array (just for elevation point clouds)\n\n\n   Syntax\n   ----------\n   pts = pysesa_read.lasread(infile)\n\n   Parameters\n   ------------\n   infile : str\n   \tLAS or LAZ file containing Nx3 point cloud\n\n   Returns\n   ----------\n   data: ndarray\n   \tNx3 point cloud, 32 bit precision\n\n   ";
-static PyObject *__pyx_pw_6pysesa_5_read_9lasread(PyObject *__pyx_self, PyObject *__pyx_v_infile) {
+static PyObject *__pyx_pw_6pysesa_4read_9lasread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
+static char __pyx_doc_6pysesa_4read_8lasread[] = "\n   Laz/las file x,y,z to numpy array (just for elevation point clouds)\n\n\n   Syntax\n   ----------\n   pts = pysesa_read.lasread(infile)\n\n   Parameters\n   ------------\n   infile : str\n   \tLAS or LAZ file containing Nx3 point cloud\n\n   Returns\n   ----------\n   data: ndarray\n   \tNx3 point cloud, 32 bit precision\n\n   ";
+static PyObject *__pyx_pw_6pysesa_4read_9lasread(PyObject *__pyx_self, PyObject *__pyx_v_infile) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lasread (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_infile), (&PyString_Type), 1, "infile", 1))) __PYX_ERR(0, 90, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6pysesa_5_read_8lasread(__pyx_self, ((PyObject*)__pyx_v_infile));
+  __pyx_r = __pyx_pf_6pysesa_4read_8lasread(__pyx_self, ((PyObject*)__pyx_v_infile));
 
   /* function exit code */
   goto __pyx_L0;
@@ -2212,13 +2212,13 @@ static PyObject *__pyx_pw_6pysesa_5_read_9lasread(PyObject *__pyx_self, PyObject
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_read_8lasread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile) {
+static PyObject *__pyx_pf_6pysesa_4read_8lasread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("lasread", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_5_read_lasread(__pyx_v_infile, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_4read_lasread(__pyx_v_infile, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2227,7 +2227,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_8lasread(CYTHON_UNUSED PyObject *__pyx_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._read.lasread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.lasread", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2235,7 +2235,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_8lasread(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "pysesa/_read.pyx":121
+/* "pysesa/read.pyx":121
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef np.ndarray txtread(str infile):             # <<<<<<<<<<<<<<
@@ -2243,8 +2243,8 @@ static PyObject *__pyx_pf_6pysesa_5_read_8lasread(CYTHON_UNUSED PyObject *__pyx_
  *    Custom fast (up to 3.5x faster than numpy's genfromtxt) txt file to numpy array
  */
 
-static PyObject *__pyx_pw_6pysesa_5_read_11txtread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
-static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_6pysesa_4read_11txtread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
+static PyArrayObject *__pyx_f_6pysesa_4read_txtread(PyObject *__pyx_v_infile, CYTHON_UNUSED int __pyx_skip_dispatch) {
   PyObject *__pyx_v_f = NULL;
   PyObject *__pyx_v_data = NULL;
   PyArrayObject *__pyx_v_out = 0;
@@ -2278,7 +2278,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
   __pyx_pybuffernd_out.data = NULL;
   __pyx_pybuffernd_out.rcbuffer = &__pyx_pybuffer_out;
 
-  /* "pysesa/_read.pyx":142
+  /* "pysesa/read.pyx":142
  * 
  *    '''
  *    f = open(infile, 'rb'); data = f.read(); f.close()             # <<<<<<<<<<<<<<
@@ -2342,7 +2342,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":143
+  /* "pysesa/read.pyx":143
  *    '''
  *    f = open(infile, 'rb'); data = f.read(); f.close()
  *    data = data.splitlines()             # <<<<<<<<<<<<<<
@@ -2372,7 +2372,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
   __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":145
+  /* "pysesa/read.pyx":145
  *    data = data.splitlines()
  * 
  *    cdef np.ndarray[np.float32_t, ndim=2] out = np.empty((len(data),3),dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2428,7 +2428,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
   __pyx_v_out = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "pysesa/_read.pyx":147
+  /* "pysesa/read.pyx":147
  *    cdef np.ndarray[np.float32_t, ndim=2] out = np.empty((len(data),3),dtype=np.float32)
  * 
  *    if len(data[0].split(','))>1: # the file is comma delimited             # <<<<<<<<<<<<<<
@@ -2448,7 +2448,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
   __pyx_t_8 = ((__pyx_t_4 > 1) != 0);
   if (__pyx_t_8) {
 
-    /* "pysesa/_read.pyx":148
+    /* "pysesa/read.pyx":148
  * 
  *    if len(data[0].split(','))>1: # the file is comma delimited
  *       out = np.array([x.split(',',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -2550,7 +2550,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
     __Pyx_DECREF_SET(__pyx_v_out, ((PyArrayObject *)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "pysesa/_read.pyx":149
+    /* "pysesa/read.pyx":149
  *    if len(data[0].split(','))>1: # the file is comma delimited
  *       out = np.array([x.split(',',2)[0:3] for x in data], dtype='float32')
  *       return out             # <<<<<<<<<<<<<<
@@ -2562,7 +2562,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
     __pyx_r = ((PyArrayObject *)__pyx_v_out);
     goto __pyx_L0;
 
-    /* "pysesa/_read.pyx":147
+    /* "pysesa/read.pyx":147
  *    cdef np.ndarray[np.float32_t, ndim=2] out = np.empty((len(data),3),dtype=np.float32)
  * 
  *    if len(data[0].split(','))>1: # the file is comma delimited             # <<<<<<<<<<<<<<
@@ -2571,7 +2571,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
  */
   }
 
-  /* "pysesa/_read.pyx":151
+  /* "pysesa/read.pyx":151
  *       return out
  *    else:
  *       try: # space delimited             # <<<<<<<<<<<<<<
@@ -2588,7 +2588,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
       __Pyx_XGOTREF(__pyx_t_11);
       /*try:*/ {
 
-        /* "pysesa/_read.pyx":152
+        /* "pysesa/read.pyx":152
  *    else:
  *       try: # space delimited
  *          out = np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -2690,7 +2690,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
         __Pyx_DECREF_SET(__pyx_v_out, ((PyArrayObject *)__pyx_t_3));
         __pyx_t_3 = 0;
 
-        /* "pysesa/_read.pyx":153
+        /* "pysesa/read.pyx":153
  *       try: # space delimited
  *          out = np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')
  *          return out             # <<<<<<<<<<<<<<
@@ -2702,7 +2702,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
         __pyx_r = ((PyArrayObject *)__pyx_v_out);
         goto __pyx_L10_try_return;
 
-        /* "pysesa/_read.pyx":151
+        /* "pysesa/read.pyx":151
  *       return out
  *    else:
  *       try: # space delimited             # <<<<<<<<<<<<<<
@@ -2718,7 +2718,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "pysesa/_read.pyx":154
+      /* "pysesa/read.pyx":154
  *          out = np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')
  *          return out
  *       except: #tab delimited             # <<<<<<<<<<<<<<
@@ -2726,13 +2726,13 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
  *          return out
  */
       /*except:*/ {
-        __Pyx_AddTraceback("pysesa._read.txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("pysesa.read.txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_1, &__pyx_t_2) < 0) __PYX_ERR(0, 154, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_2);
 
-        /* "pysesa/_read.pyx":155
+        /* "pysesa/read.pyx":155
  *          return out
  *       except: #tab delimited
  *          out = np.array([x.split('\t',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -2834,7 +2834,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
         __Pyx_DECREF_SET(__pyx_v_out, ((PyArrayObject *)__pyx_t_18));
         __pyx_t_18 = 0;
 
-        /* "pysesa/_read.pyx":156
+        /* "pysesa/read.pyx":156
  *       except: #tab delimited
  *          out = np.array([x.split('\t',2)[0:3] for x in data], dtype='float32')
  *          return out             # <<<<<<<<<<<<<<
@@ -2851,7 +2851,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
       }
       __pyx_L8_except_error:;
 
-      /* "pysesa/_read.pyx":151
+      /* "pysesa/read.pyx":151
  *       return out
  *    else:
  *       try: # space delimited             # <<<<<<<<<<<<<<
@@ -2881,7 +2881,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
     }
   }
 
-  /* "pysesa/_read.pyx":121
+  /* "pysesa/read.pyx":121
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cpdef np.ndarray txtread(str infile):             # <<<<<<<<<<<<<<
@@ -2905,7 +2905,7 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
     __Pyx_ErrFetch(&__pyx_type, &__pyx_value, &__pyx_tb);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_out.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("pysesa._read.txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   goto __pyx_L2;
   __pyx_L0:;
@@ -2921,14 +2921,14 @@ static PyArrayObject *__pyx_f_6pysesa_5_read_txtread(PyObject *__pyx_v_infile, C
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_6pysesa_5_read_11txtread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
-static char __pyx_doc_6pysesa_5_read_10txtread[] = "\n   Custom fast (up to 3.5x faster than numpy's genfromtxt) txt file to numpy array\n   accepts comma, tab or space delimited files of 3 columns: x, y, and amplitude\n\n\n   Syntax\n   ----------\n   pts = pysesa_read.txtread(infile)\n\n   Parameters\n   ------------\n   infile : str\n   \t3-column ASCII file containing Nx3 point cloud\n\n   Returns\n   ----------\n   data: ndarray\n   \tNx3 point cloud, 32 bit precision\n\n   ";
-static PyObject *__pyx_pw_6pysesa_5_read_11txtread(PyObject *__pyx_self, PyObject *__pyx_v_infile) {
+static PyObject *__pyx_pw_6pysesa_4read_11txtread(PyObject *__pyx_self, PyObject *__pyx_v_infile); /*proto*/
+static char __pyx_doc_6pysesa_4read_10txtread[] = "\n   Custom fast (up to 3.5x faster than numpy's genfromtxt) txt file to numpy array\n   accepts comma, tab or space delimited files of 3 columns: x, y, and amplitude\n\n\n   Syntax\n   ----------\n   pts = pysesa_read.txtread(infile)\n\n   Parameters\n   ------------\n   infile : str\n   \t3-column ASCII file containing Nx3 point cloud\n\n   Returns\n   ----------\n   data: ndarray\n   \tNx3 point cloud, 32 bit precision\n\n   ";
+static PyObject *__pyx_pw_6pysesa_4read_11txtread(PyObject *__pyx_self, PyObject *__pyx_v_infile) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("txtread (wrapper)", 0);
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_infile), (&PyString_Type), 1, "infile", 1))) __PYX_ERR(0, 121, __pyx_L1_error)
-  __pyx_r = __pyx_pf_6pysesa_5_read_10txtread(__pyx_self, ((PyObject*)__pyx_v_infile));
+  __pyx_r = __pyx_pf_6pysesa_4read_10txtread(__pyx_self, ((PyObject*)__pyx_v_infile));
 
   /* function exit code */
   goto __pyx_L0;
@@ -2939,13 +2939,13 @@ static PyObject *__pyx_pw_6pysesa_5_read_11txtread(PyObject *__pyx_self, PyObjec
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_6pysesa_5_read_10txtread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile) {
+static PyObject *__pyx_pf_6pysesa_4read_10txtread(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_infile) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("txtread", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_5_read_txtread(__pyx_v_infile, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_6pysesa_4read_txtread(__pyx_v_infile, 0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2954,7 +2954,7 @@ static PyObject *__pyx_pf_6pysesa_5_read_10txtread(CYTHON_UNUSED PyObject *__pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pysesa._read.txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pysesa.read.txtread", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5085,8 +5085,8 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
 }
 
 static PyMethodDef __pyx_methods[] = {
-  {"lasread", (PyCFunction)__pyx_pw_6pysesa_5_read_9lasread, METH_O, __pyx_doc_6pysesa_5_read_8lasread},
-  {"txtread", (PyCFunction)__pyx_pw_6pysesa_5_read_11txtread, METH_O, __pyx_doc_6pysesa_5_read_10txtread},
+  {"lasread", (PyCFunction)__pyx_pw_6pysesa_4read_9lasread, METH_O, __pyx_doc_6pysesa_4read_8lasread},
+  {"txtread", (PyCFunction)__pyx_pw_6pysesa_4read_11txtread, METH_O, __pyx_doc_6pysesa_4read_10txtread},
   {0, 0, 0, 0}
 };
 
@@ -5097,7 +5097,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "_read",
+    "read",
     0, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -5143,7 +5143,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
   {&__pyx_n_s_offset, __pyx_k_offset, sizeof(__pyx_k_offset), 0, 0, 1, 1},
   {&__pyx_n_s_open, __pyx_k_open, sizeof(__pyx_k_open), 0, 0, 1, 1},
-  {&__pyx_n_s_pysesa__read, __pyx_k_pysesa__read, sizeof(__pyx_k_pysesa__read), 0, 0, 1, 1},
+  {&__pyx_n_s_pysesa_read, __pyx_k_pysesa_read, sizeof(__pyx_k_pysesa_read), 0, 0, 1, 1},
   {&__pyx_n_s_r, __pyx_k_r, sizeof(__pyx_k_r), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_rb, __pyx_k_rb, sizeof(__pyx_k_rb), 0, 0, 1, 1},
@@ -5177,7 +5177,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "pysesa/_read.pyx":113
+  /* "pysesa/read.pyx":113
  *    inFile = File(infile, mode='r')
  * 
  *    return np.c_[ascol(scaled_x_dimension(inFile)), ascol(scaled_y_dimension(inFile)), ascol(scaled_z_dimension(inFile))].astype('float32')             # <<<<<<<<<<<<<<
@@ -5188,7 +5188,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "pysesa/_read.pyx":147
+  /* "pysesa/read.pyx":147
  *    cdef np.ndarray[np.float32_t, ndim=2] out = np.empty((len(data),3),dtype=np.float32)
  * 
  *    if len(data[0].split(','))>1: # the file is comma delimited             # <<<<<<<<<<<<<<
@@ -5199,7 +5199,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "pysesa/_read.pyx":148
+  /* "pysesa/read.pyx":148
  * 
  *    if len(data[0].split(','))>1: # the file is comma delimited
  *       out = np.array([x.split(',',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -5213,7 +5213,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "pysesa/_read.pyx":152
+  /* "pysesa/read.pyx":152
  *    else:
  *       try: # space delimited
  *          out = np.array([x.split(' ',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -5227,7 +5227,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__8);
   __Pyx_GIVEREF(__pyx_slice__8);
 
-  /* "pysesa/_read.pyx":155
+  /* "pysesa/read.pyx":155
  *          return out
  *       except: #tab delimited
  *          out = np.array([x.split('\t',2)[0:3] for x in data], dtype='float32')             # <<<<<<<<<<<<<<
@@ -5307,7 +5307,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "pysesa/_read.pyx":60
+  /* "pysesa/read.pyx":60
  * 
  * # ==== functions for rescaling las/laz data
  * def ascol( arr ):             # <<<<<<<<<<<<<<
@@ -5319,7 +5319,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_filfy_github_pysesa_pysesa, __pyx_n_s_ascol, 60, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 60, __pyx_L1_error)
 
-  /* "pysesa/_read.pyx":67
+  /* "pysesa/read.pyx":67
  *     return arr
  * 
  * def scaled_x_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -5331,7 +5331,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__20);
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_filfy_github_pysesa_pysesa, __pyx_n_s_scaled_x_dimension, 67, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 67, __pyx_L1_error)
 
-  /* "pysesa/_read.pyx":73
+  /* "pysesa/read.pyx":73
  *     return(x_dimension*scale + offset)
  * 
  * def scaled_y_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -5343,7 +5343,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__22);
   __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_filfy_github_pysesa_pysesa, __pyx_n_s_scaled_y_dimension, 73, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 73, __pyx_L1_error)
 
-  /* "pysesa/_read.pyx":79
+  /* "pysesa/read.pyx":79
  *     return(y_dimension*scale + offset)
  * 
  * def scaled_z_dimension(las_file):             # <<<<<<<<<<<<<<
@@ -5373,11 +5373,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC init_read(void); /*proto*/
-PyMODINIT_FUNC init_read(void)
+PyMODINIT_FUNC initread(void); /*proto*/
+PyMODINIT_FUNC initread(void)
 #else
-PyMODINIT_FUNC PyInit__read(void); /*proto*/
-PyMODINIT_FUNC PyInit__read(void)
+PyMODINIT_FUNC PyInit_read(void); /*proto*/
+PyMODINIT_FUNC PyInit_read(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -5392,7 +5392,7 @@ PyMODINIT_FUNC PyInit__read(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit__read(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_read(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -5421,7 +5421,7 @@ PyMODINIT_FUNC PyInit__read(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("_read", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("read", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -5438,14 +5438,14 @@ PyMODINIT_FUNC PyInit__read(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_pysesa___read) {
+  if (__pyx_module_is_main_pysesa__read) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "pysesa._read")) {
-      if (unlikely(PyDict_SetItemString(modules, "pysesa._read", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "pysesa.read")) {
+      if (unlikely(PyDict_SetItemString(modules, "pysesa.read", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -5477,7 +5477,7 @@ PyMODINIT_FUNC PyInit__read(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "pysesa/_read.pyx":52
+  /* "pysesa/read.pyx":52
  * 
  * # import libraries
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -5489,7 +5489,7 @@ PyMODINIT_FUNC PyInit__read(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "pysesa/_read.pyx":57
+  /* "pysesa/read.pyx":57
  * 
  * ##https://github.com/grantbrown/laspy
  * from laspy.file import File             # <<<<<<<<<<<<<<
@@ -5510,55 +5510,55 @@ PyMODINIT_FUNC PyInit__read(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":60
+  /* "pysesa/read.pyx":60
  * 
  * # ==== functions for rescaling las/laz data
  * def ascol( arr ):             # <<<<<<<<<<<<<<
  *     '''
  *     reshapes row matrix to be a column matrix (N,1).
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_5_read_1ascol, NULL, __pyx_n_s_pysesa__read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_4read_1ascol, NULL, __pyx_n_s_pysesa_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_ascol, __pyx_t_2) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":67
+  /* "pysesa/read.pyx":67
  *     return arr
  * 
  * def scaled_x_dimension(las_file):             # <<<<<<<<<<<<<<
  *     x_dimension = las_file.X
  *     scale = las_file.header.scale[0]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_5_read_3scaled_x_dimension, NULL, __pyx_n_s_pysesa__read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_4read_3scaled_x_dimension, NULL, __pyx_n_s_pysesa_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_scaled_x_dimension, __pyx_t_2) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":73
+  /* "pysesa/read.pyx":73
  *     return(x_dimension*scale + offset)
  * 
  * def scaled_y_dimension(las_file):             # <<<<<<<<<<<<<<
  *     y_dimension = las_file.Y
  *     scale = las_file.header.scale[1]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_5_read_5scaled_y_dimension, NULL, __pyx_n_s_pysesa__read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_4read_5scaled_y_dimension, NULL, __pyx_n_s_pysesa_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_scaled_y_dimension, __pyx_t_2) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":79
+  /* "pysesa/read.pyx":79
  *     return(y_dimension*scale + offset)
  * 
  * def scaled_z_dimension(las_file):             # <<<<<<<<<<<<<<
  *     z_dimension = las_file.Z
  *     scale = las_file.header.scale[2]
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_5_read_7scaled_z_dimension, NULL, __pyx_n_s_pysesa__read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_6pysesa_4read_7scaled_z_dimension, NULL, __pyx_n_s_pysesa_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_scaled_z_dimension, __pyx_t_2) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "pysesa/_read.pyx":1
+  /* "pysesa/read.pyx":1
  * ## PySESA (Python program for Spatially Explicit Spectral Analysis)             # <<<<<<<<<<<<<<
  * ## has been developed at the Grand Canyon Monitorinf & Research Center,
  * ## U.S. Geological Survey
@@ -5584,11 +5584,11 @@ PyMODINIT_FUNC PyInit__read(void)
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init pysesa._read", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init pysesa.read", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init pysesa._read");
+    PyErr_SetString(PyExc_ImportError, "init pysesa.read");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

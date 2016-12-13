@@ -118,7 +118,7 @@ if USE_CYTHON:
     ext_modules += [
         Extension("pysesa.plot", [ "pysesa/plot.pyx" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.read", [ "pysesa/_read.pyx" ],
+        Extension("pysesa.read", [ "pysesa/read.pyx" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.write", [ "pysesa/_write.pyx" ],
         include_dirs=[np.get_include()]),
@@ -141,7 +141,7 @@ else:
     ext_modules += [
         Extension("pysesa.plot", [ "pysesa/plot.c" ],
         include_dirs=[np.get_include()]),
-        Extension("pysesa.read", [ "pysesa/_read.c" ],
+        Extension("pysesa.read", [ "pysesa/read.c" ],
         include_dirs=[np.get_include()]),
         Extension("pysesa.write", [ "pysesa/_write.c" ],
         include_dirs=[np.get_include()]),
@@ -160,7 +160,7 @@ else:
         Extension('_RunningStats',sources=['pysesa/RunningStats_wrap.cxx', 'pysesa/RunningStats.cpp']),
     ]
 install_requires = [
-    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty', 'joblib','dask', 'toolz', 'dill'
+    'numpy','scipy','matplotlib', 'cython', 'statsmodels', 'ift_nifty', 'joblib','dask', 'toolz', 'dill', 'laspy'
 ]
 
 def setupPackage():

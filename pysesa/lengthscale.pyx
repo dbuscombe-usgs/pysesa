@@ -243,7 +243,7 @@ cdef class lengthscale:
          self.data = im
 
          #get integral lengthscale
-         out = self._get_lengthscale(im, lentype, res, nx, ny)
+         out = self._get_lengthscale(im-np.mean(im), lentype, res, nx, ny)
          self.lengthscale = out
 
 

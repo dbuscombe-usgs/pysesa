@@ -123,14 +123,13 @@ The programs in this package are as follows:
 1. read: read a 3-column space, comma or tab delimited text file
 2. partition: partition a Nx3 point cloud into M windows of nx3 points with specified spacing between centroids of adjacent windows and with specified overlap between windows.
 3. detrend: returns detrended amplitudes of a Nx3 point cloud
-4. sgolay: returns the Savitsky-Golay digital filter of a 2D signal
-5. spatial: calculate spatial statistics of a Nx3 point cloud
-6. RunningStats: called by \spatial} to compute sigma, skewness and kurtosis
-7. lengthscale: calculates the integral lengthscale of a Nx3 point cloud
-8. spectral: calculate spectral statistics of a Nx3 point cloud
-9. process: allows control of inputs to all modules (full workflow)
-10. write: write program outputs to a comma delimited text file
-11. test: program testing suite
+4. spatial: calculate spatial statistics of a Nx3 point cloud
+5. RunningStats: called by \spatial} to compute sigma, skewness and kurtosis
+6. lengthscale: calculates the integral lengthscale of a Nx3 point cloud
+7. spectral: calculate spectral statistics of a Nx3 point cloud
+8. process: allows control of inputs to all modules (full workflow)
+9. write: write program outputs to a comma delimited text file
+10. test: program testing suite
 
 These are all command-line/modular programs which take a number of input (some required, some optional). Please see the individual files for a comprehensive list of input options
 
@@ -214,7 +213,6 @@ These are all command-line/modular programs which take a number of input (some r
         2 = remove Ordinary least squares plane
         3 = remove Robust linear model plane
         4 = remove Orthogonal Distance Regression plane
-        5 = remove Savitsky-Golay digital filter, order 1
 
     Other Parameters
     ----------

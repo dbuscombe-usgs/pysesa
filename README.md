@@ -1,4 +1,3 @@
-![alt tag](http://dbuscombe-usgs.github.io/figs/pysesa_colour.jpg)
 
 PySESA - a Python framework for Spatially Explicit Spectral Analysis
 

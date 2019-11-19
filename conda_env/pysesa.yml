@@ -1,0 +1,19 @@
+#conda env create -f pysesa/pysesa.yml
+#conda activate pysesa
+name: pysesa
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.7
+  - ipython
+  - cython
+  - numpy
+  - matplotlib
+  - joblib
+  - dill
+  - laspy
+  - statsmodels
+  - pip
+pip:
+  - scikit-learn

@@ -1,0 +1,7 @@
+pysesa.RunningStats module
+==========================
+
+.. automodule:: pysesa.RunningStats
+    :members:
+    :undoc-members:
+    :show-inheritance:

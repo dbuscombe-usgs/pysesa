@@ -8,15 +8,13 @@ in the spatial and frequency domains, for use in the geosciences
 The program is detailed in:
    Buscombe, D. (2016) "spatially explicit spectral analysis of point clouds and geospatial data", computers and geosciences 86, 92-108, 10.1016/j.cageo.2015.10.004.
 
-For more information visit http://dbuscombe-usgs.github.io/pysesa/
-
-    This software is in the public domain because it contains materials that
-    originally came from the United States Geological Survey, an agency of the
-    United States Department of Interior. For more information,
-    see the official USGS copyright policy at
-    http://www.usgs.gov/visual-id/credit_usgs.html#copyright
-    Any use of trade, product, or firm names is for descriptive purposes only
-    and does not imply endorsement by the U.S. government.
+This software is in the public domain because it contains materials that
+originally came from the United States Geological Survey, an agency of the
+United States Department of Interior. For more information,
+see the official USGS copyright policy at
+ttp://www.usgs.gov/visual-id/credit_usgs.html#copyright
+Any use of trade, product, or firm names is for descriptive purposes only
+and does not imply endorsement by the U.S. government.
 
 ### Contributing & Credits
 

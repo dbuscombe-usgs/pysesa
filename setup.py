@@ -53,11 +53,11 @@ setup(
 )
 
 
-extensions = [Extension("plot", ["src/_plot.pyx"], include_dirs=[np.get_include()])]
-setup(
-    name="plot",
-    ext_modules=cythonize(extensions),
-)
+# extensions = [Extension("plot", ["src/_plot.pyx"], include_dirs=[np.get_include()])]
+# setup(
+#     name="plot",
+#     ext_modules=cythonize(extensions),
+# )
 
 
 extensions = [Extension("partition", ["src/_partition.pyx"], include_dirs=[np.get_include()])]
